@@ -1,0 +1,2 @@
+Hooks.on('ready', function () {
+});

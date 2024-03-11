@@ -1,0 +1,86 @@
+{
+  "pf2e-automations": {
+    "targetType": {
+      "None": "None",
+      "SelfEffect": "Apply effect to self when action is used",
+      "SelfEffectActorNextTurn": "Apply effect to self when action is used until Actor next turn(For Saving Throws)",
+      "TargetEffect": "Apply effect to target when is used",
+      "TargetEffectActorNextTurn": "Apply effect to target when is used until Actor next turn",
+      "SelfOrTargetEffect": "Apply effect to self or 1 target when action is used",
+      "TargetsEffect": "Apply effect to all targets when action is used",
+      "SelfOrTargetsEffect": "Apply effect to self or targets when action is used",
+      "TargetRemoveCondition": "Remove condition from target",
+      "TargetRemoveEffect": "Remove effect from target",
+      "SelfRemoveCondition": "Remove condition from self",
+      "SelfRemoveEffect": "Remove effect from self",
+      "SelfAddCondition": "Add condition to self",
+      "TargetAddCondition": "Add condition to target",
+      "SelfDamage": "Damage yourself",
+      "TargetDamage": "Damage target",
+      "RunMacro": "Run Macro"
+    },
+    "requirementType": {
+      "None": "None",
+      "Success": "Message outcome is success",
+      "CriticalSuccess": "Message outcome is critical success",
+      "AnySuccess": "Message outcome is any success",
+      "Failure": "Message outcome is failure",
+      "CriticalFailure": "Message outcome is critical failure",
+      "AnyFailure": "Message outcome is any failure",
+      "ActorHasEffect": "Actor under Effect",
+      "ActorHasFeat": "Actor has Feat",
+      "ActorHasCondition": "Actor under Condition",
+      "TargetHasEffect": "Target under Effect",
+      "TargetHasCondition": "Target under Condition",
+      "TargetHasTrait": "Target has Trait",
+      "ItemHasTrait": "Item has Trait",
+      "ActorName": "Actor name is",
+      "LvlGte": "Item level great or equals",
+      "LvlLess": "Item level less than",
+      "TargetsNumber": "Number of Targets",
+      "UseEquipment": "Equipment is used",
+      "MessageDCLabel": "Message DC Label includes text",
+      "WieldLoadedOneHandedRanged": "Actor wield a loaded one-handed ranged weapon"
+    },
+    "triggerType": {
+      "None": "None",
+      "EqualsSlug": "Message slug Equals to",
+      "HasOption": "Message Has Option",
+      "HasDomain": "Message Has Domain",
+      "HasRune": "Item Has Rune",
+      "EqualsSourceId": "Message Item SourceId Equals to"
+    },
+    "operator": {
+      "AND": "And",
+      "OR": "Or",
+      "NOT": "Not"
+    },
+    "SETTINGS": {
+      "messageCreateHandlers": {
+        "name": "Message create handlers",
+        "label": "Manage Handlers",
+        "hint": ""
+      },
+      "updateActorHandlers": {
+        "name": "Update Actor Handlers",
+        "label": "Manage Handlers",
+        "hint": ""
+      },
+      "updateItemHandlers": {
+        "name": "Update Item Handlers",
+        "label": "Manage Handlers",
+        "hint": ""
+      },
+      "deleteItemHandlers": {
+        "name": "Delete Item Handlers",
+        "label": "Manage Handlers",
+        "hint": ""
+      },
+      "createItemHandlers": {
+        "name": "Create Item Handlers",
+        "label": "Manage Handlers",
+        "hint": ""
+      }
+    }
+  }
+}

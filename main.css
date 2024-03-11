@@ -1,0 +1,84 @@
+.create-rule {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rule-header h3 {
+  border-bottom: none;
+}
+
+.rule-header .rule-controls {
+  display: flex;
+  margin: 0 0 0 4px;
+  align-items: baseline;
+  gap: 2px;
+}
+
+form .rule-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rule a.object img {
+  width: 16px;
+  height: 16px;
+}
+
+a.object {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}
+
+.rule > div {
+  align-items: center;
+}
+
+.tc {
+  text-align: center;
+}
+
+.remove-rule-trigger,
+.remove-rule-requirement {
+  text-align: right;
+  padding: 3px;
+}
+
+.active-controls {
+  display: flex;
+  align-items: center;
+}
+
+.item-controls {
+  display: flex;
+}
+
+.right-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.remove-handler {
+  flex: 0.1;
+}
+
+#pf2e-automations-updateActorHandlers .package-list div.title,
+#pf2e-automations-updateItemHandlers .package-list div.title,
+#pf2e-automations-createItemHandlers .package-list div.title,
+#pf2e-automations-deleteItemHandlers .package-list div.title,
+#pf2e-automations-messageCreateHandlers .package-list div.title,
+#pf2e-automations-settings .package-list div.title {
+  color: var(--color-text-dark-primary);
+}

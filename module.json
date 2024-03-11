@@ -1,0 +1,56 @@
+{
+  "id": "pf2e-automations",
+  "title": "PF2e Automations",
+  "description": "Module for automate action/feats/spells",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Reyzor",
+      "url": "https://github.com/reyzor1991",
+      "discord": "reyzor1991"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "esmodules": [
+    "main.js"
+  ],
+  "styles": [
+    "main.css"
+  ],
+  "packFolders": [],
+  "packs": [],
+  "socket": true,
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.315"
+  },
+  "url": "https://github.com/reyzor1991",
+  "manifest": "https://www.dropbox.com/scl/fi/3ja67czs3etptyohdulkh/module.json?rlkey=81k0h98sre35669vr7jqhdp9j&dl=1",
+  "download": "https://www.dropbox.com/scl/fi/357yrzp24ymvfaahk8g7f/pf2e-automations.zip?rlkey=lyv67aw7qrazykmiu8yhykt0p&dl=1",
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "5.14.1",
+          "verified": "5.14.1"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "socketlib",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-socketlib/master/module.json"
+      }
+    ]
+  }
+}

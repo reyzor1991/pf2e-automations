@@ -1,1 +1,4 @@
-# pf2e-automations
+For create package.json
+
+```npm init –y```
+

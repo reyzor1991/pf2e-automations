@@ -1,0 +1,54 @@
+<h3>Triggers{{#if name}} for {{name}}{{/if}}</h3>
+{{#each triggers as |t tIndex|}}
+    {{> triggerGroup t=t operatorChoices=../operatorChoices triggerChoices=../triggerChoices mainKey=(concat (concat ../ruleIndex ".triggers.") tIndex) }}
+    <hr/>
+{{/each}}
+<div class="create-rule">
+    <a class="add-rule-trigger" data-idx="{{ruleIndex}}" title="Add Trigger Group"><i class="fas fa-add"></i>Add Trigger Group</a>
+</div>
+
+{{#*inline "triggerGroup"}}
+    <fieldset class="row">
+        <div class="rule form-group" style="border:1px solid black">
+            <label class="tc">Operator</label>
+            <select name="{{mainKey}}.operator" class="trigger">
+                {{#each operatorChoices as |v k|}}
+                    <option value="{{k}}" {{#if (eq k ../t.operator)}} selected {{/if}}>{{v}}</option>
+                {{/each}}
+            </select>
+            <div class="rule-controls right-end">
+                <a class="add-rule-trigger-sub" data-key={{concat mainKey '.values'}} title="Add Trigger"><i class="fas fa-add"></i></a>
+                <a class="add-rule-trigger-sub-group" data-key={{concat mainKey '.values'}} title="Add Trigger Group"><i class="fas fa-plus-circle"></i></a>
+                <a class="remove-rule-trigger" data-key="{{mainKey}}" title="Remove Group"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+        {{#each t.values as |v vIndex|}}
+            {{#if (eq v.objType 'item')}}
+                {{> triggerRow t=v vIndex=vIndex triggerChoices=../triggerChoices mainKey=(concat (concat ../mainKey ".values.") vIndex)  }}
+            {{else}}
+                {{> triggerGroup mainKey=(concat (concat ../mainKey ".values.") vIndex) t=v operatorChoices=../operatorChoices triggerChoices=../triggerChoices }}
+            {{/if}}
+        {{/each}}
+
+    </fieldset>
+{{/inline}}
+
+{{#*inline "triggerRow"}}
+<div class="rule form-group" style="border:1px solid black">
+    <label class="tc">Trigger {{add vIndex 1}}</label>
+
+    <select name="{{mainKey}}.trigger" class="trigger">
+        {{#each triggerChoices as |v k|}}
+            <option value="{{k}}" {{#if (eq k ../t.trigger)}} selected {{/if}}>{{v}}</option>
+        {{/each}}
+    </select>
+
+    <label class="tc">Slug,Option</label>
+    <input type="text" name="{{mainKey}}.value" value="{{t.value}}"/>
+    <label class="tc">Message Type</label>
+    <input type="text" name="{{mainKey}}.messageType" value="{{t.messageType}}"/>
+    <label class="tc">Active Encounter</label>
+    <input type="checkbox" name="{{mainKey}}.battle" {{#if t.battle}} checked {{/if}}/>
+    <a class="right-end remove-rule-trigger-sub" data-key={{mainKey}} title="Remove"><i class="fas fa-trash"></i></a>
+</div>
+{{/inline}}

@@ -1,0 +1,22 @@
+<form autocomplete="off" onsubmit="event.preventDefault();">
+    <ul id="module-list" class="directory-list package-list">
+        {{#each handlers as |handler|}}
+            <li class="package flexcol active">
+                <div class="package-overview flexrow">
+                    <label class="package-title checkbox" style="height: unset;display: flex;">
+                        <input type="checkbox" class="active" name="isActive" data-dtype="Boolean" {{#if handler.isActive}} checked {{/if}}>
+                        <div class="title-group" title="{{handler.description}}">
+                            <div class="title">{{handler.name}}</div>
+                        </div>
+                    </label>
+                    <a class="remove-handler" data-idx="{{@index}}" title="Remove Handler"><i class="fas fa-trash"></i></a>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    <div class="form-group buttons">
+        <button type="submit" name="submit">
+            <i class="far fa-save"></i> Save
+        </button>
+    </div>
+</form>
