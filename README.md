@@ -1,5 +1,9 @@
 ## Module for automate action/feats/spells.
 
+![](https://img.shields.io/github/downloads/reyzor1991/pf2e-automations/total?label=All%20downloads)
+![](https://img.shields.io/github/downloads-pre/reyzor1991/pf2e-automations/latest/total)
+![](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fpf2e-automations&colorB=4aa94a)
+
 Applyx effect/condition automatically, when fail saving throw/crit specialization/cast spell.
 
 When module was installed, need to press Sync Rules button to apply new rules to system
