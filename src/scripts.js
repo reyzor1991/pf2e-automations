@@ -174,6 +174,31 @@ async function setEffectToActorOrTarget(message, effectUUID) {
     }
 };
 
+async function addItemToActorId(actorUuid, item) {
+    await addItemToActor(await fromUuid(actorUuid), item);
+};
+
+async function addItemToActor(actor, item) {
+    if (!hasPermissions(actor)) {
+        socketlibSocket._sendRequest("addItemToActorId", [actor.uuid, item], 0);
+        return;
+    }
+    await actor.createEmbeddedDocuments("Item", [item]);
+};
+
+async function deleteItemById(itemUuid) {
+    await deleteItem(await fromUuid(itemUuid));
+};
+
+async function deleteItem(item) {
+    if (!item) { return; }
+    if (!hasPermissions(item)) {
+        socketlibSocket._sendRequest("deleteItemById", [item.uuid], 0);
+    } else {
+        await item.delete();
+    }
+};
+
 async function removeConditionFromActorId(actorId, condition, forceRemove = false) {
     await removeConditionFromActor(await fromUuid(actorId), condition, forceRemove);
 };

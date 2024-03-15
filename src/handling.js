@@ -11,6 +11,7 @@ const setupSocket = () => {
         socketlibSocket.register("removeConditionFromActorId", removeConditionFromActorId);
         socketlibSocket.register("applyDamageById", applyDamageById);
         socketlibSocket.register("removeEffectFromActorId", removeEffectFromActorId);
+        socketlibSocket.register("addItemToActorId", addItemToActorId);
 
     	socketlibSocket.register("updateActiveRules", updateActiveRules);
     }
