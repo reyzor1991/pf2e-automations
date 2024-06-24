@@ -50,7 +50,7 @@ Hooks.once("ready", () => {
       }
     })
     .then(async (json) => {
-      if ((json.version ?? 0) > cur) {
+      if ((json.version ?? 0) > cur && isGM()) {
         ui.notifications.warn(`Module has new rules, please sync it`);
       }
     });
