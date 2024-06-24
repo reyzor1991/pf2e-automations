@@ -28,7 +28,7 @@
   "socket": true,
   "compatibility": {
     "minimum": "11",
-    "verified": "11.315"
+    "verified": "12.327"
   },
   "url": "https://github.com/reyzor1991",
   "manifest": "https://github.com/reyzor1991/pf2e-automations/releases/latest/download/module.json",
