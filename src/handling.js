@@ -51,7 +51,7 @@ Hooks.once("ready", () => {
     })
     .then(async (json) => {
       if ((json.version ?? 0) > cur && isGM()) {
-        ui.notifications.warn(`Module has new rules, please sync it`);
+        ui.notifications.warn(`pf2e-automations has new rules, please sync it`);
       }
     });
 });
