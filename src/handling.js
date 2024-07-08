@@ -11,7 +11,12 @@ const setupSocket = () => {
         socketlibSocket.register("removeConditionFromActorId", removeConditionFromActorId);
         socketlibSocket.register("applyDamageById", applyDamageById);
         socketlibSocket.register("removeEffectFromActorId", removeEffectFromActorId);
+        socketlibSocket.register("deleteItemById", deleteItemById);
         socketlibSocket.register("addItemToActorId", addItemToActorId);
+        socketlibSocket.register("deleteEffectFromActorId", deleteEffectFromActorId);
+        socketlibSocket.register("updateItemById", updateItemById);
+
+    	socketlibSocket.register("createDocumentsParent", createDocumentsParent);
 
     	socketlibSocket.register("updateActiveRules", updateActiveRules);
     }
@@ -34,32 +39,34 @@ Hooks.on("automations.updateRules", () => {
 function updateActiveRules() {
     ACTIVE_RULES = game.settings
         .get(moduleName, "rules")
-        .filter((a) => a.isActive && a.value.length > 0 && a.target != "None");
+        .filter((a) => a.isActive && a.target != "None" && (a.value?.length > 0 || a.values?.length > 0));
 };
 
 Hooks.once("ready", () => {
-  const cur = getSetting("ruleVersion") ?? 0;
+    const cur = getSetting("ruleVersion") ?? 0;
 
-  fetch(`modules/${moduleName}/rules/rules.json`)
+    fetch(`modules/${moduleName}/rules/rules.json`)
     .then(async (response) => {
-      if (response.ok) {
-        return await response.json();
-      } else {
-        ui.notifications.info(`Sync file not found`);
-        throw new Error("Sync file not found");
-      }
+        if (response.ok) {
+            return await response.json();
+        } else {
+            ui.notifications.info(`Sync file not found`);
+            throw new Error("Sync file not found");
+        }
     })
     .then(async (json) => {
-      if ((json.version ?? 0) > cur && isGM()) {
-        ui.notifications.warn(`pf2e-automations has new rules, please sync it`);
-      }
+        if ((json.version ?? 0) > cur && isGM()) {
+            ui.notifications.warn(`Module ${game.modules.get(moduleName).title} has new rules, please sync it`);
+        }
     });
 });
 
 Hooks.on("createChatMessage", async (message, options, userId) => {
     if (game.userId != userId) { return }
     if (hasOption(message, "skip-handling-message")) return;
-    let item = message.item ?? await fromUuid(message?.flags?.pf2e?.origin?.uuid);
+    let item = message.item
+        ?? await fromUuid(message?.flags?.pf2e?.origin?.sourceId)
+        ?? await fromUuid(message?.flags?.pf2e?.origin?.uuid);
 
     setTimeout(
         () => {
@@ -70,16 +77,27 @@ Hooks.on("createChatMessage", async (message, options, userId) => {
 });
 
 async function handleCreateChatMessage(message, _obj) {
-    ACTIVE_RULES
-        .forEach(async (rule) => {
-            await handleMessages(rule, message, _obj);
-        });
+    try {
+        await Promise.all(
+            ACTIVE_RULES.map(async (rule) => {
+                await handleMessages(rule, message, _obj);
+            })
+        );
 
-    (getSetting("messageCreateHandlers") ?? [])
-        .filter((a) => a.isActive)
-        .forEach(async (handler) => {
-            await registeredMessageCreateHandler[handler.name]?.call(this, message);
-        });
+        let activeHandlers = (getSetting("messageCreateHandlers") ?? []).filter((a) => a.isActive);
+
+        await Promise.all(
+            activeHandlers.map(async (handler) => {
+                await registeredMessageCreateHandler[handler.name]?.call(this, message);
+            })
+        );
+    } catch (error) {
+        console.log(error);
+    } finally {
+        setTimeout(() => {
+            Hooks.callAll("pf2e-automations.rulesHandled", message);
+        }, 100);
+    }
 };
 
 async function handleMessages(rule, message, _obj = undefined) {
@@ -87,7 +105,7 @@ async function handleMessages(rule, message, _obj = undefined) {
         return;
     }
     if (rule.triggers.some((a) => handleTriggerGroup(a, message, _obj))) {
-        handleTarget(rule, message, _obj);
+        rule?.type === 'complex' ? handleComplexRuleTarget(rule, message, _obj) : handleTarget(rule, message, _obj);
     }
 };
 
@@ -121,8 +139,18 @@ function handleRequirement(req, message, _obj) {
         return criticalFailureMessageOutcome(message);
     } else if (req.requirement === "AnyFailure") {
         return anyFailureMessageOutcome(message);
+    } else if (req.requirement === "SelfOrTargetHasEffect") {
+        if (game.user.targets.size === 0 && !message.target) {
+            return hasEffectBySourceId(message?.actor, req.value);
+        } else if (message.target) {
+            return hasEffectBySourceId(message.target.actor, req.value);
+        } else if (game.user.targets.size === 1) {
+            return hasEffectBySourceId(game.user.targets.first().actor, req.value);
+        }
     } else if (req.requirement === "ActorHasEffect") {
         return hasEffectBySourceId(message?.actor, req.value);
+    } else if (req.requirement === "ActorHasEffectBySlug") {
+        return hasEffect(message?.actor, req.value);
     } else if (req.requirement === "ActorHasFeat") {
         return hasFeatBySourceId(message?.actor, req.value);
     } else if (req.requirement === "ActorHasCondition") {
@@ -193,7 +221,7 @@ function handleTrigger(t, message, _obj) {
         return handleTriggerGroup(t, message, _obj);
     }
 
-    if (t.battle && !game?.combats?.active) {
+    if (t.encounter && !game?.combats?.active) {
         return false;
     }
     if (t.trigger === "EqualsSlug" && _obj?.slug != t.value) {
@@ -217,28 +245,188 @@ function handleTrigger(t, message, _obj) {
     return true;
 };
 
+function durationIsValid(duration) {
+    return duration.expiry != null || duration.sustained != null || duration.unit != null || duration.value != null
+}
+
+async function handleComplexRuleTarget(rule, message, _obj = undefined) {
+    for (const value of rule.values) {
+        await handleComplexRuleTargetValue(rule, value, message, _obj)
+    }
+}
+
+const EMPTY_EFFECT = {
+    "_id": "",
+    "img": "systems/pf2e/icons/effects/critical-effect.webp",
+    "name": "Generated effect - ",
+    "system": {
+        "description": {
+            "value": ""
+        },
+        "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "unlimited",
+            "value": -1
+        },
+        "level": {
+            "value": 1
+        },
+        "rules": [
+        ],
+        "source": {
+            "value": ""
+        },
+        "start": {
+            "initiative": null,
+            "value": 0
+        },
+        "target": null,
+        "tokenIcon": {
+            "show": true
+        },
+        "traits": {
+            "rarity": "common",
+            "value": []
+        },
+        "slug": ""
+    },
+    "type": "effect"
+}
+
+async function handleComplexRuleTargetValue(rule, value, message, _obj = undefined) {
+    let targetActor = undefined;
+    let originData = undefined;
+    switch (rule.target) {
+        case 'SelfEffect':
+            targetActor = message.actor
+            break;
+        case 'SelfEffectActorNextTurn':
+            targetActor = message.actor
+
+            originData = {
+                origin: {
+                    actor: message?.flags?.pf2e?.origin?.actor ?? message?.flags?.pf2e?.context?.origin?.actor,
+                    item: _obj?.uuid
+                }
+            }
+            break;
+        case 'TargetEffect':
+            targetActor = message.target?.actor || game.user.targets.first()?.actor
+            break;
+        case 'TargetEffectActorNextTurn':
+            targetActor = message.target?.actor || game.user.targets.first()?.actor
+
+            originData = {
+                origin: {
+                    actor: message?.flags?.pf2e?.origin?.actor ?? message?.flags?.pf2e?.context?.origin?.actor,
+                    item: _obj?.uuid
+                }
+            }
+            break;
+        default:
+            break;
+    }
+
+    if (!targetActor) {return}
+    if (!durationIsValid(value.duration)) {
+        for (let condition of value.conditions) {
+            let result = parseCondition(condition);
+            if (result) {
+                await increaseConditionForActor(targetActor, result.name, result.value);
+            }
+        }
+        for (let effect of value.effects) {
+            await setEffectToActor(targetActor, effect, _obj?.level, preparedOptionalData(message));
+        }
+    } else {
+        if (value.conditions.length) {
+            let newEffect = foundry.utils.deepClone(EMPTY_EFFECT);
+            newEffect._id = foundry.utils.randomID()
+            newEffect.system.duration.expiry = value.duration.expiry || "turn-start";
+            newEffect.system.duration.sustained = value.duration.sustained || false;
+            newEffect.system.duration.unit = value.duration.unit || "unlimited";
+            newEffect.system.duration.value = value.duration.value ?? -1;
+
+            for (let condition of value.conditions) {
+                let result = parseCondition(condition);
+                if (result) {
+                    let cond = game.pf2e.ConditionManager.getCondition(result.name)
+                    let newRule = {
+                        "key": "GrantItem",
+                        "onDeleteActions": { "grantee": "restrict" },
+                        "uuid": cond.sourceId
+                    };
+                    if (result.value > 1) {
+                        newRule["alterations"] = [{
+                            "mode": "override",
+                            "property": "badge-value",
+                            "value": 2
+                        }];
+                    }
+                    newEffect.name = rule.name
+                    newEffect.system.rules.push(newRule)
+                }
+            }
+
+            if (originData) {
+                newEffect.system.context = foundry.utils.mergeObject(newEffect.system.context ?? {}, {
+                    origin: originData.origin,
+                });
+            }
+
+            await addItemToActor(targetActor, newEffect);
+        }
+        for (let effect of value.effects) {
+            let newEffect = (await fromUuid(effect))?.toObject();
+            if (newEffect) {
+                newEffect.name = `${rule.name}`;
+                newEffect.system.description.value = `Generated effect for ${rule.name}`;
+                if (value.duration.expiry != null) {
+                    newEffect.system.duration.expiry = value.duration.expiry;
+                }
+                if (value.duration.sustained != null) {
+                    newEffect.system.duration.sustained = value.duration.sustained;
+                }
+                if (value.duration.unit != null) {
+                    newEffect.system.duration.unit = value.duration.unit;
+                }
+                if (value.duration.value != null) {
+                    newEffect.system.duration.value = value.duration.value;
+                }
+            }
+            if (originData) {
+                newEffect.system.context = foundry.utils.mergeObject(newEffect.system.context ?? {}, {
+                    origin: originData.origin,
+                });
+            }
+            await addItemToActor(targetActor, newEffect);
+        }
+    }
+}
+
 async function handleTarget(rule, message, _obj = undefined) {
     if (rule.target === "SelfEffect") {
-        await setEffectToActor(message.actor, rule.value, message?.item?.level, preparedOptionalData(message));
+        await setEffectToActor(message.actor, rule.value, _obj?.level, preparedOptionalData(message));
     } else if (rule.target === "TargetEffect") {
-        await setEffectToTarget(message, rule.value);
+        await setEffectToTarget(message, rule.value, _obj?.level, preparedOptionalData(message));
     } else if (rule.target === "TargetEffectActorNextTurn") {
         await setEffectToTargetActorNextTurn(message, rule.value);
     } else if (rule.target === "SelfEffectActorNextTurn") {
         await setEffectToSelfActorNextTurn(message, rule);
     } else if (rule.target === "SelfOrTargetEffect") {
-        await setEffectToActorOrTarget(message, rule.value);
+        await setEffectToActorOrTarget(message, rule.value, preparedOptionalData(message));
     } else if (rule.target === "TargetsEffect") {
         game.user.targets.forEach(async (tt) => {
-            await setEffectToActor(tt.actor, rule.value, message?.item?.level);
+            await setEffectToActor(tt.actor, rule.value, _obj?.level, preparedOptionalData(message));
 
         });
     } else if (rule.target === "SelfOrTargetsEffect") {
         if (game.user.targets.size === 0) {
-            await setEffectToActor(message.actor, rule.value, message?.item?.level);
+            await setEffectToActor(message.actor, rule.value, _obj?.level, preparedOptionalData(message));
         } else {
             game.user.targets.forEach(async (tt) => {
-                await setEffectToActor(tt.actor, rule.value, message?.item?.level);
+                await setEffectToActor(tt.actor, rule.value, _obj?.level, preparedOptionalData(message));
             });
         }
     } else if (rule.target === "TargetRemoveCondition") {
@@ -280,5 +468,10 @@ async function handleTarget(rule, message, _obj = undefined) {
         }
     } else if (rule.target === "RunMacro") {
         (await fromUuid(rule.value))?.execute();
+    } else if (rule.target === "PartyEffect") {
+        let members = [...message.actor.parties.map(p=>p.members)].flat();
+        for (let m of members) {
+            await setEffectToActor(m, rule.value, _obj?.level, preparedOptionalData(message));
+        }
     }
 };

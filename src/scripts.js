@@ -104,12 +104,12 @@ async function setEffectToActor(
         if (optionalData?.icon) {
             source.img = optionalData.icon;
         }
-        source.flags = mergeObject(source.flags ?? {}, { core: { sourceId: effUuid } });
+        source.flags = foundry.utils.mergeObject(source.flags ?? {}, { core: { sourceId: effUuid } });
         if (level) {
             source.system.level = { value: level };
         }
         if (optionalData?.origin) {
-            source.system.context = mergeObject(source.system.context ?? {}, {
+            source.system.context = foundry.utils.mergeObject(source.system.context ?? {}, {
                 origin: optionalData?.origin,
             });
         }
@@ -304,4 +304,50 @@ function preparedOptionalData(message) {
         return data;
     }
     return undefined;
+};
+
+function effectUUID(id) {
+    return `Compendium.${moduleName}.effects.Item.${id}`
+};
+
+function actionUUID(id) {
+    return `Compendium.${moduleName}.actions.Item.${id}`
+};
+
+function equipmentUUID(id) {
+    return `Compendium.${moduleName}.equipment.Item.${id}`
+};
+
+async function createDocumentsParent(data, parentUuid) {
+     let parent = await fromUuid(parentUuid);
+     if (!parent) {return}
+
+     await CONFIG.Item.documentClass.createDocuments(data, {parent})
+};
+
+async function deleteEffectFromActorId(actorId, slug) {
+  await deleteEffectFromActor(await fromUuid(actorId), slug);
+};
+
+async function deleteEffectFromActor(actor, slug) {
+    const effect = actor.itemTypes.effect.find((c) => slug === c.slug);
+    if (!effect) { return; }
+    if (hasPermissions(actor)) {
+        await actor.deleteEmbeddedDocuments("Item", [effect._id]);
+    } else {
+        socketlibSocket._sendRequest("deleteEffectFromActorId", [actor.uuid, slug], 0);
+    }
+};
+
+async function updateItemById(uuid, data) {
+  await updateItem(await fromUuid(uuid), data);
+}
+
+async function updateItem(item, data) {
+    if (!hasPermissions(item)) {
+        socketlibSocket._sendRequest("updateItemById", [item.uuid, data], 0);
+        return
+    }
+
+    item.update(data);
 };

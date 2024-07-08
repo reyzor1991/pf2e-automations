@@ -24,27 +24,38 @@
                         <a class="remove-rule" data-idx="{{rule.uuid}}" title="Remove"><i class="fas fa-trash"></i></a>
                     </div>
                 </div>
-
-                <div class="rule form-group">
-                    <label class="short">Effect UUID / Condition</label>
-                    <div class="rule-flex-row">
-                        <input type="text" name="{{rule.uuid}}.value" value="{{rule.value}}"/>
-                        {{#if rule.effObj}}
-                            <a class="object content-link" data-uuid="{{r.effObj.uuid}}">
-                                <img src="{{rule.effObj.img}}"/>
-                                {{rule.effObj.name}}
-                            </a>
-                        {{/if}}
+                {{#unless rule.type}}
+                    <div class="rule form-group">
+                        <label class="short">Effect UUID / Condition</label>
+                        <div class="rule-flex-row">
+                            <input type="text" name="{{rule.uuid}}.value" value="{{rule.value}}"/>
+                            {{#if rule.effObj}}
+                                <a class="object content-link" data-uuid="{{r.effObj.uuid}}">
+                                    <img src="{{rule.effObj.img}}"/>
+                                    {{rule.effObj.name}}
+                                </a>
+                            {{/if}}
+                        </div>
                     </div>
-                </div>
-                <div class="rule form-group">
-                    <label>Target of rule</label>
-                    <select name="{{rule.uuid}}.target" class="trigger">
-                        {{#each targetChoices as |v k|}}
-                            <option value="{{k}}" {{#if (eq k ../rule.target)}} selected {{/if}}>{{v}}</option>
-                        {{/each}}
-                    </select>
-                </div>
+                    <div class="rule form-group">
+                        <label>Target of rule</label>
+                        <select name="{{rule.uuid}}.target" class="trigger">
+                            {{#each targetChoices as |v k|}}
+                                <option value="{{k}}" {{#if (eq k ../rule.target)}} selected {{/if}}>{{v}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                {{/unless}}
+                {{#if rule.type}}
+                    <div class="rule form-group">
+                        <label>Target of rule</label>
+                        <select name="{{rule.uuid}}.target" class="trigger">
+                            {{#each complexTargetChoices as |v k|}}
+                                <option value="{{k}}" {{#if (eq k ../rule.target)}} selected {{/if}}>{{v}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                {{/if}}
                 <div class="rule form-group">
                     <label>Triggers - {{rule.triggerCount}}</label>
                     <div class="rule-controls">
@@ -56,6 +67,13 @@
                         <a class="edit-rule-requirement" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
                         <a class="add-rule-requirement" data-idx="{{rule.uuid}}" title="Add Requirement Group"><i class="fas fa-add" style="color:red"></i></a>
                     </div>
+                    {{#if rule.type}}
+                        <label>Generated rules - {{rule.generatedRuleCount}}</label>
+                        <div class="rule-controls">
+                            <a class="edit-generated-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
+                            <a class="add-generated-rule" data-idx="{{rule.uuid}}" title="Add Generated Rule"><i class="fas fa-add" style="color:red"></i></a>
+                        </div>
+                    {{/if}}
                 </div>
             </fieldset>
         </div>

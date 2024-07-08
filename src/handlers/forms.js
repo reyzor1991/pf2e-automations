@@ -28,7 +28,7 @@ class AbstractHandlers extends FormApplication {
     }
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             title: `${moduleName}.SETTINGS.${this.settingName}.name`,
             id: `${moduleName}-${this.settingName}`,
             classes: ["settings-menu"],
@@ -68,7 +68,7 @@ class AbstractHandlers extends FormApplication {
     }
 
     async getData() {
-        return mergeObject(super.getData(), {
+        return foundry.utils.mergeObject(super.getData(), {
             handlers: this.items,
         });
     }

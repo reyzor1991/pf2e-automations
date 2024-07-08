@@ -7,13 +7,6 @@ Hooks.on("init", () => {
     UpdateItemHandlers.init();
 });
 
-Hooks.on("renderApplication", (setting, html) => {
-    html
-        .find(`[data-category="${moduleName}"]`)
-        .find(`[data-setting-id="${moduleName}.ruleVersion"]`)
-        .hide();
-});
-
 Hooks.on("renderSettingsConfig", (app, html) => {
     const target = html.find(`[data-category="${moduleName}"]`);
 
@@ -51,8 +44,6 @@ Hooks.on("renderSettingsConfig", (app, html) => {
                     ui.notifications.info(`Rules were synced`);
 
                     Hooks.callAll("automations.updateRules");
-
-                    app.close()
                 })
                 .catch((error) => {
                     console.error("Sync rules error:", error);

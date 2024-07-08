@@ -1,0 +1,72 @@
+<h3>Generated Rules{{#if name}} for {{name}}{{/if}}</h3>
+{{#each values as |v vIndex|}}
+    {{> generatedRule v=v vIndex=vIndex ruleIndex=../ruleIndex mainKey=(concat (concat ../ruleIndex ".values.") vIndex) timeunits=../timeunits sustainState=../sustainState expirys=../expirys}}
+    <hr/>
+{{/each}}
+<div class="create-rule">
+    <a class="add-generated-rule" data-idx="{{ruleIndex}}" title="Add Generated Rule"><i class="fas fa-add"></i>Add Generated Rule</a>
+</div>
+
+
+{{#*inline "generatedRule"}}
+    <fieldset class="row">
+        <div class="rule-controls right-end">
+            <a class="remove-generated-rule" data-parent="{{ruleIndex}}" data-idx="{{vIndex}}" title="Remove"><i class="fas fa-trash"></i></a>
+        </div>
+        </br>
+        <div class="duration" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex;">
+                <label>{{localize "PF2E.Time.Duration"}}</label>
+                <input type="number" name="{{mainKey}}.duration.value" value="{{v.duration.value}}" data-dtype="Number" style=" width: 50px; margin: 0 5px 0 5px; "/>
+                <select name="{{mainKey}}.duration.unit">
+                    {{selectOptions timeunits selected=v.duration.unit }}
+                </select>
+            </div>
+            <div>
+                <label>{{localize "PF2E.Item.Spell.Sustained.Label"}}</label>
+                <select name="{{mainKey}}.duration.sustained">
+                    {{selectOptions sustainState selected=v.duration.sustained valueAttr="value" labelAttr="label"}}
+                </select>
+            </div>
+            <div>
+                <label>{{localize "PF2E.Item.Effect.Expiry.ExpiresOn"}}</label>
+                <select name="{{mainKey}}.duration.expiry">
+                    {{selectOptions expirys selected=v.duration.expiry }}
+                </select>
+            </div>
+        </div>
+        </br>
+        <div class="rule-conditions-input">
+            <div class="input">
+                <i class="fa fa-tags"></i>
+                <div>
+                    <input type="text" class="rule-condition-ip" placeholder="Enter condition" data-key="{{mainKey}}.conditions">
+                </div>
+            </div>
+            <div class="tags input-element-tags rule-condition-list" name="{{mainKey}}.conditions">
+                {{#each v.conditions as |c cIndex|}}
+                    <div class="tag" data-key="{{c}}">
+                        <span>{{c}}</span>
+                        <a class="remove-condition remove fa-solid fa-times" data-key="{{../mainKey}}.conditions.{{cIndex}}" data-tooltip="Remove condition" aria-label="Remove condition"></a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="rule-effect-input">
+            <div class="input">
+                <i class="fa fa-tags"></i>
+                <div>
+                    <input type="text" class="rule-effect-ip" placeholder="Enter effect" data-key="{{mainKey}}.effects">
+                </div>
+            </div>
+            <div class="tags input-element-tags rule-effect-list" name="{{mainKey}}.effects">
+                {{#each v.effects as |e eIndex|}}
+                    <div class="tag" data-key="{{e}}">
+                        <span>{{e}}</span>
+                        <a class="remove-effect remove fa-solid fa-times" data-key="{{../mainKey}}.effects.{{eIndex}}" data-tooltip="Remove effect" aria-label="Remove effect"></a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </fieldset>
+{{/inline}}

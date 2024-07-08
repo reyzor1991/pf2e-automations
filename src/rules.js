@@ -59,7 +59,7 @@ class RuleTriggerGroup {
 
 class Rule {
     constructor() {
-        this.uuid = randomID();
+        this.uuid = foundry.utils.randomID();
         this.name = "";
         this.value = "";
         this.isActive = false;

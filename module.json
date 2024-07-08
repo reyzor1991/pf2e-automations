@@ -2,7 +2,7 @@
   "id": "pf2e-automations",
   "title": "PF2e Automations",
   "description": "Module for automate action/feats/spells",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "authors": [
     {
       "name": "Reyzor",
@@ -28,7 +28,7 @@
   "socket": true,
   "compatibility": {
     "minimum": "11",
-    "verified": "12.327"
+    "verified": "12.328"
   },
   "url": "https://github.com/reyzor1991",
   "manifest": "https://github.com/reyzor1991/pf2e-automations/releases/latest/download/module.json",
@@ -41,7 +41,7 @@
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
           "minimum": "5.14.1",
-          "verified": "5.14.1"
+          "verified": "6.0.4"
         }
       }
     ],

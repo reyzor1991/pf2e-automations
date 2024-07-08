@@ -1,3 +1,7 @@
+### Version 0.1.0
+- Adapt to v12
+- Add basic rules
+
 ### Version 0.0.4
 - Adapt sync rule message
 

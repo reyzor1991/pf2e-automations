@@ -17,7 +17,8 @@
       "TargetAddCondition": "Add condition to target",
       "SelfDamage": "Damage yourself",
       "TargetDamage": "Damage target",
-      "RunMacro": "Run Macro"
+      "RunMacro": "Run Macro",
+      "PartyEffect": "Apply effect to members of Party"
     },
     "requirementType": {
       "None": "None",
@@ -28,11 +29,13 @@
       "CriticalFailure": "Message outcome is critical failure",
       "AnyFailure": "Message outcome is any failure",
       "ActorHasEffect": "Actor under Effect",
+      "ActorHasEffectBySlug": "Actor under Effect (slug)",
       "ActorHasFeat": "Actor has Feat",
       "ActorHasCondition": "Actor under Condition",
       "TargetHasEffect": "Target under Effect",
       "TargetHasCondition": "Target under Condition",
       "TargetHasTrait": "Target has Trait",
+      "SelfOrTargetHasEffect": "Actor or Target has Trait",
       "ItemHasTrait": "Item has Trait",
       "ActorName": "Actor name is",
       "LvlGte": "Item level great or equals",

@@ -10,6 +10,7 @@ async function parseEffect(effect) {
 };
 
 function parseCondition(effect) {
+    if (!effect) { return undefined; }
     let result = [...effect.matchAll(/([a-z-]{1,})( [0-9]{1,})?/g)];
     if (result?.length > 0) {
         return { name: result[0][1], value: Number(result[0][2]?.trim()) || 1 };
@@ -22,6 +23,7 @@ class RuleSettings extends FormApplication {
 
     editRequirement = false;
     editTrigger = false;
+    editComplex = false;
     editIndex = null;
 
     constructor() {
@@ -30,9 +32,9 @@ class RuleSettings extends FormApplication {
     }
 
     refreshRules() {
-        const _e = getSetting("rules");
+        const _e = foundry.utils.deepClone(getSetting("rules"));
         if (_e) {
-            this.rules = _e.map((a) => Rule.fromObj(a));
+            this.rules = _e.map((a) => a?.type === 'complex' ? ComplexRule.fromObj(a) : Rule.fromObj(a));
         }
     }
 
@@ -41,6 +43,9 @@ class RuleSettings extends FormApplication {
     }
 
     async updateValue(key, value) {
+        if (value === "null") {value = null}
+        if (value === "false") {value = false}
+        if (value === "true") {value = true}
         const qq = key.split(".");
 
         const r = this.findByUUID(qq[0]);
@@ -62,6 +67,8 @@ class RuleSettings extends FormApplication {
 
         await game.settings.set(moduleName, "rules", this.rawValue());
         Hooks.callAll("automations.updateRules");
+
+        this.close()
     }
 
     updateForm(event) {
@@ -74,38 +81,7 @@ class RuleSettings extends FormApplication {
     rawValue() {
         const res = [];
         for (let i = 0; i < this.rules.length; i++) {
-            res.push({
-                uuid: this.rules[i].uuid,
-                name: this.rules[i].name,
-                value: this.rules[i].value,
-                isActive: this.rules[i].isActive,
-                target: this.rules[i].target,
-                group: this.rules[i].group,
-                triggers: this.rules[i].triggers.map((a) => {
-                    return {
-                        operator: a.operator,
-                        objType: a.objType,
-                        values: a.values.map((b) => {
-                            return {
-                                objType: b.objType,
-                                trigger: b.trigger,
-                                encounter: b.encounter,
-                                value: b.value,
-                                messageType: b?.messageType?.trim(),
-                            };
-                        }),
-                    };
-                }),
-                requirements: this.rules[i].requirements.map((a) => {
-                    return {
-                        operator: a.operator,
-                        objType: a.objType,
-                        values: a.values.map((b) => {
-                            return { objType: b.objType, requirement: b.requirement, value: b.value };
-                        }),
-                    };
-                }),
-            });
+            res.push(this.rules[i].rawValue());
         }
         return res;
     }
@@ -311,9 +287,38 @@ class RuleSettings extends FormApplication {
             this.render();
         });
 
+        html.find(".add-generated-rule").click(async (event) => {
+            this.updateForm(event);
+
+            const r = this.findByUUID($(event.currentTarget).data().idx);
+            if (r) {
+                r.values.push(new RuleGenerator());
+            }
+            this.render();
+        });
+
+        html.find(".edit-generated-rule").click(async (event) => {
+            this.updateForm(event);
+            this.editIndex = $(event.currentTarget).data().idx;
+            this.editComplex = true;
+            this.render();
+        });
+
+        html.find(".remove-generated-rule").click(async (event) => {
+            this.updateForm(event);
+
+            const r = this.findByUUID($(event.currentTarget).data().parent);
+            if (r) {
+                r.values.splice($(event.currentTarget).data().idx, 1);
+            }
+
+            this.render();
+        });
+
         html.find("button[data-action=close]")?.click(async (event) => {
             this.editRequirement = false;
             this.editTrigger = false;
+            this.editComplex = false;
             this.editIndex = null;
             this.render();
         });
@@ -325,6 +330,7 @@ class RuleSettings extends FormApplication {
 
             this.editRequirement = false;
             this.editTrigger = false;
+            this.editComplex = false;
             this.editIndex = null;
             this.render();
         });
@@ -332,6 +338,7 @@ class RuleSettings extends FormApplication {
         html.find("button[data-action=close-sub]")?.click(async (event) => {
             this.editRequirement = false;
             this.editTrigger = false;
+            this.editComplex = false;
             this.render();
         });
 
@@ -342,6 +349,7 @@ class RuleSettings extends FormApplication {
 
             this.editRequirement = false;
             this.editTrigger = false;
+            this.editComplex = false;
             this.render();
         });
 
@@ -358,17 +366,98 @@ class RuleSettings extends FormApplication {
             })
             .show();
         });
+
+        html.find(".remove-condition").click(async (event) => {
+            const qq = $(event.currentTarget).data().key.split(".");
+            const r = this.findByUUID(qq[0]);
+
+            let _temp = r;
+            qq.slice(1, -1).forEach((i) => {
+                _temp = _temp[i];
+            });
+
+            _temp.splice(qq[4], 1);
+
+            this.render()
+        });
+
+        html.find(".remove-effect").click(async (event) => {
+            const qq = $(event.currentTarget).data().key.split(".");
+            const r = this.findByUUID(qq[0]);
+
+            let _temp = r;
+            qq.slice(1, -1).forEach((i) => {
+                _temp = _temp[i];
+            });
+
+            _temp.splice(qq[4], 1);
+
+            this.render()
+        });
+
+        html.find(".rule-condition-ip").keyup(async (event) => {
+            let code = event.keyCode ? event.keyCode : event.which;
+            if (code != 13) {return}
+            let val = $(event.target).val().trim();
+            let cond = parseCondition(val);
+            if (!cond) {return}
+
+            if (!CONFIG.PF2E.conditionTypes[cond.name]) {
+                ui.notifications.warn(`Try to add not exists condition`);
+                return
+            }
+
+            const qq = $(event.target).data().key.split(".");
+            const r = this.findByUUID(qq[0]);
+
+            let _temp = r;
+            qq.slice(1).forEach((i) => {
+                _temp = _temp[i];
+            });
+
+            if (!_temp.includes(val)) {
+                _temp.push(val)
+            }
+
+            this.render()
+        });
+
+        html.find(".rule-effect-ip").keyup(async (event) => {
+            let code = event.keyCode ? event.keyCode : event.which;
+            if (code != 13) {return}
+            let val = $(event.target).val().trim();
+
+            let cond = fromUuidSync(val);
+            if (!cond) {
+                ui.notifications.warn(`Effect not exists`);
+                return;
+            }
+
+            const qq = $(event.target).data().key.split(".");
+            const r = this.findByUUID(qq[0]);
+
+            let _temp = r;
+            qq.slice(1).forEach((i) => {
+                _temp = _temp[i];
+            });
+
+            if (!_temp.includes(val)) {
+                _temp.push(val)
+            }
+
+            this.render()
+        });
     }
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             title: "Settings",
             id: `${moduleName}-settings`,
             classes: ["settings-menu"],
             template: `modules/${moduleName}/templates/rules.hbs`,
             width: 1000,
             height: "auto",
-            closeOnSubmit: true,
+            closeOnSubmit: false,
             resizable: true,
         });
     }
@@ -393,7 +482,7 @@ class RuleSettings extends FormApplication {
         game.settings.register(moduleName, "ruleVersion", {
             name: "Rule Version",
             scope: "world",
-            config: true,
+            config: false,
             default: 0,
             type: Number,
         });
@@ -404,38 +493,43 @@ class RuleSettings extends FormApplication {
             const a = this.findByUUID(this.editIndex);
             let effObj = undefined;
 
-            let template = "<p>FAIL TEMPLATE</p>";
+            let editTemplate = "<p>FAIL TEMPLATE</p>";
             if (this.editTrigger) {
                 const form = new TriggerForm(this.editIndex, a.name, a.triggers);
-                template = await form.render();
+                editTemplate = await form.render();
             } else if (this.editRequirement) {
                 const form = new RequirementForm(this.editIndex, a.name, a.requirements);
-                template = await form.render();
-            } else {
+                editTemplate = await form.render();
+            }  else if (this.editComplex) {
+                const form = new ComplexForm(this.editIndex, a.name, a.values);
+                editTemplate = await form.render();
+            } else if (!a.type) {
                 effObj = await parseEffect(a.value);
             }
 
-            return mergeObject(super.getData(), {
-                subEdit: this.editTrigger || this.editRequirement,
+            return foundry.utils.mergeObject(super.getData(), {
+                subEdit: this.editTrigger || this.editRequirement || this.editComplex,
                 editGroup: true,
-                editTemplate: template,
+                editTemplate,
                 rule: {
+                    type: a.type,
                     uuid: a.uuid,
                     value: a.value,
                     isActive: a.isActive,
                     name: a.name,
                     target: a.target,
-                    group: a.group,
 
                     triggerCount: a.triggers.map((a) => a.values).flat().length,
                     requirementCount: a.requirements.map((a) => a.values).flat().length,
+                    generatedRuleCount: a.values?.map((a) => a.values)?.flat()?.length,
 
-                    effObj: effObj,
+                    effObj,
                 },
                 targetChoices: TargetType,
+                complexTargetChoices: ComplexTargetType,
             });
         } else {
-            return mergeObject(super.getData(), await this.getMainData());
+            return foundry.utils.mergeObject(super.getData(), await this.getMainData());
         }
     }
 

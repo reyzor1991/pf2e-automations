@@ -117,7 +117,7 @@ Hooks.on("preUpdateItem",  (item, data, options, id) => {
 });
 
 Hooks.on("init", () => {
-    game.pf2eautomations = mergeObject(game.pf2eautomations ?? {}, {
+    game.pf2eautomations = foundry.utils.mergeObject(game.pf2eautomations ?? {}, {
         registerMessageCreateHandler: registerMessageCreateHandler,
         registerUpdateActorHandler: registerUpdateActorHandler,
         registerDeleteItemHandler: registerDeleteItemHandler,
