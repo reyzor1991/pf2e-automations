@@ -1,3 +1,6 @@
+### Version 0.1.1
+- Fix handling delete effects after damage
+ 
 ### Version 0.1.0
 - Adapt to v12
 - Add basic rules

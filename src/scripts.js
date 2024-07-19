@@ -318,6 +318,10 @@ function equipmentUUID(id) {
     return `Compendium.${moduleName}.equipment.Item.${id}`
 };
 
+function hasEffect(actor, eff) {
+    return actor?.itemTypes?.effect?.find((c) => eff === c.slug);
+}
+
 async function createDocumentsParent(data, parentUuid) {
      let parent = await fromUuid(parentUuid);
      if (!parent) {return}
