@@ -1000,6 +1000,33 @@ async function grabImproved(message) {
     }
 };
 
+async function knockdown(message) {
+    if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
+        if (message.item?.system?.attackEffects?.value?.includes('knockdown') || message.item?.system?.attackEffects?.value?.includes('improved-knockdown')) {
+            const confirm = await Dialog.confirm({
+                title: message.item?.system?.attackEffects?.value?.includes('improved-knockdown') ? "Improved Knockdown free action" : "Knockdown action",
+                content: "Do you want to knockdown target?",
+            });
+            if (!confirm) { return }
+
+            game.pf2e.actions.trip({actors: [message.actor]})
+        }
+    }
+};
+
+async function push(message) {
+    if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
+        if (message.item?.system?.attackEffects?.value?.includes('push')) {
+            const confirm = await Dialog.confirm({
+                title: "Push Action",
+                content: "Do you want to push target?",
+            });
+            if (!confirm) { return }
+
+            game.pf2e.actions.shove({actors: [message.actor]})
+        }
+    }
+};
 
 async function battleMedicineAction(message) {
     if (!isCorrectMessageType(message, "skill-check")) { return }
@@ -1543,6 +1570,8 @@ Hooks.on('ready', function () {
     registerMessageCreateHandler('Disarm', disarm)
     registerMessageCreateHandler('Escape', escape)
     registerMessageCreateHandler('Grab', grab, "Handle Additional Attack Effects - Grab")
+    registerMessageCreateHandler('Knockdown', knockdown, "Handle Additional Attack Effects - Knockdown")
+    registerMessageCreateHandler('Push', push, "Handle Additional Attack Effects - Push")
     registerMessageCreateHandler('Improved Grab', grabImproved, "Handle Additional Attack Effects - Improved Grab")
     registerMessageCreateHandler('Grapple trait', grapple, "Handle Grapple weapon trait")
     registerMessageCreateHandler('Battle Medicine', battleMedicineAction)

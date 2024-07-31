@@ -1,3 +1,7 @@
+### Version 0.1.2
+- Add Push for NPC
+- Add Knockdown for NPC
+ 
 ### Version 0.1.1
 - Fix handling delete effects after damage
  
