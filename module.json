@@ -24,7 +24,19 @@
     "main.css"
   ],
   "packFolders": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "effects",
+      "label": "pf2e Automations Effects",
+      "path": "packs/effects",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+	  }
+  ],
   "socket": true,
   "compatibility": {
     "minimum": "11",
