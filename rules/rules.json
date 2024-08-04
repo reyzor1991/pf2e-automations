@@ -1,6 +1,46 @@
 {
   "rules": [
     {
+      "uuid": "cI1LQy6RK5zfPCSd",
+      "value": "Compendium.pf2e-automations.effects.Item.Vh5E1Qgp34sTKfVs",
+      "isActive": true,
+      "name": "Tumble Behind Swashbuckler",
+      "target": "TargetEffectActorNextTurn",
+      "triggers": [
+        {
+          "operator": "AND",
+          "objType": "group",
+          "values": [
+            {
+              "objType": "item",
+              "trigger": "HasOption",
+              "encounter": true,
+              "value": "action:tumble-through",
+              "messageType": "skill-check"
+            }
+          ]
+        }
+      ],
+      "requirements": [
+        {
+          "operator": "AND",
+          "objType": "group",
+          "values": [
+            {
+              "objType": "item",
+              "requirement": "AnySuccess",
+              "value": ""
+            },
+            {
+              "objType": "item",
+              "requirement": "ActorHasFeat",
+              "value": "Compendium.pf2e.feats-srd.Item.fU7d5P6WrfAirgip"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "uuid": "tI1mDm1YN0Ew7dsB",
       "value": "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj",
       "isActive": true,
@@ -7833,5 +7873,5 @@
   ],
   "forceUpdate": [
   ],
-  "version": 2
+  "version": 3
 }
