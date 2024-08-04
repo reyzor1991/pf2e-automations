@@ -79,7 +79,7 @@ class AbstractHandlers extends FormApplication {
             this.render();
         });
     }
-};
+}
 
 class MessageHandlers extends AbstractHandlers {
     static settingName = "messageCreateHandlers";
@@ -93,7 +93,7 @@ class MessageHandlers extends AbstractHandlers {
             }
         }
     }
-};
+}
 
 class UpdateActorHandlers extends AbstractHandlers {
     static settingName = "updateActorHandlers";
@@ -107,7 +107,7 @@ class UpdateActorHandlers extends AbstractHandlers {
             }
         }
     }
-};
+}
 
 class DeleteItemHandlers extends AbstractHandlers {
     static settingName = "deleteItemHandlers";
@@ -121,7 +121,7 @@ class DeleteItemHandlers extends AbstractHandlers {
             }
         }
     }
-};
+}
 
 class CreateItemHandlers extends AbstractHandlers {
     static settingName = "createItemHandlers";
@@ -135,7 +135,7 @@ class CreateItemHandlers extends AbstractHandlers {
             }
         }
     }
-};
+}
 
 class UpdateItemHandlers extends AbstractHandlers {
     static settingName = "updateItemHandlers";
@@ -149,4 +149,4 @@ class UpdateItemHandlers extends AbstractHandlers {
             }
         }
     }
-};
+}

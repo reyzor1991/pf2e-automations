@@ -2,74 +2,74 @@ const moduleName = "pf2e-automations";
 
 function hasPermissions(item) {
   return 3 === item?.ownership[game.user.id] || isGM();
-};
+}
 
 function isGM() {
     return game.user.isGM;
-};
+}
 
 function translate(value) {
     return game.i18n.localize(`${moduleName}.${value}`)
-};
+}
 
 function hasOption(message, opt) {
     return message?.flags?.pf2e?.context?.options?.includes(opt);
-};
+}
 
 function hasDomain(message, opt) {
     return message?.flags?.pf2e?.context?.domains?.includes(opt);
-};
+}
 
 function hasCondition(actor, con) {
     return actor?.itemTypes?.condition?.find((c) => con === c.slug);
-};
+}
 
 function getSetting(name) {
     return game.settings.get(moduleName, name);
-};
+}
 
 function failureMessageOutcome(message) {
     return "failure" === message?.flags?.pf2e?.context?.outcome;
-};
+}
 
 function criticalFailureMessageOutcome(message) {
     return "criticalFailure" === message?.flags?.pf2e?.context?.outcome;
-};
+}
 
 function successMessageOutcome(message) {
     return "success" === message?.flags?.pf2e?.context?.outcome;
-};
+}
 
 function criticalSuccessMessageOutcome(message) {
     return "criticalSuccess" === message?.flags?.pf2e?.context?.outcome;
-};
+}
 
 function anyFailureMessageOutcome(message) {
     return failureMessageOutcome(message) || criticalFailureMessageOutcome(message);
-};
+}
 
 function anySuccessMessageOutcome(message) {
     return successMessageOutcome(message) || criticalSuccessMessageOutcome(message);
-};
+}
 
 function hasEffectBySourceId(actor, eff) {
     return actor?.itemTypes?.effect?.find((c) => eff === c.sourceId);
-};
+}
 
 function hasFeatBySourceId(actor, eff) {
     return actor?.itemTypes?.feat?.find((c) => eff === c.sourceId);
-};
+}
 
 function messageDCLabelHas(message, l) {
     return message?.flags?.pf2e?.context?.dc?.label?.includes(l);
-};
+}
 
 function isCorrectMessageType(message, type) {
     if (type === "undefined") {
         return undefined === message?.flags?.pf2e?.context?.type;
     }
     return type === message?.flags?.pf2e?.context?.type;
-};
+}
 
 //----------------------
 //----------------------
@@ -115,10 +115,10 @@ async function setEffectToActor(
         }
         await actor.createEmbeddedDocuments("Item", [source]);
     }
-};
+}
 
 async function setEffectToTarget(message, effectUUID) {
-    if (!message.target && game.user.targets.size != 1) {
+    if (!message.target && game.user.targets.size !== 1) {
         ui.notifications.info(`${message.actor.name} chose incorrect count of targets for effect`);
         return;
     }
@@ -126,10 +126,10 @@ async function setEffectToTarget(message, effectUUID) {
     const targetActor = message.target?.actor ?? game.user.targets.first()?.actor;
 
     await setEffectToActor(targetActor, effectUUID, message?.item?.level);
-};
+}
 
 async function setEffectToTargetActorNextTurn(message, effectUUID) {
-    if (!message.target && game.user.targets.size != 1) {
+    if (!message.target && game.user.targets.size !== 1) {
         ui.notifications.info(`${message.actor.name} chose incorrect count of targets for effect`);
         return;
     }
@@ -139,7 +139,7 @@ async function setEffectToTargetActorNextTurn(message, effectUUID) {
     await setEffectToActor(targetActor, effectUUID, message?.item?.level, {
         origin: { actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid },
     });
-};
+}
 
 async function setEffectToSelfActorNextTurn(message, rule) {
     let effectUUID = rule.value;
@@ -158,7 +158,7 @@ async function setEffectToSelfActorNextTurn(message, rule) {
             });
         }
     }
-};
+}
 
 
 
@@ -172,11 +172,11 @@ async function setEffectToActorOrTarget(message, effectUUID) {
     } else {
         ui.notifications.info(`${message.actor.name} chose incorrect count of targets for effect`);
     }
-};
+}
 
 async function addItemToActorId(actorUuid, item) {
     await addItemToActor(await fromUuid(actorUuid), item);
-};
+}
 
 async function addItemToActor(actor, item) {
     if (!hasPermissions(actor)) {
@@ -184,11 +184,11 @@ async function addItemToActor(actor, item) {
         return;
     }
     await actor.createEmbeddedDocuments("Item", [item]);
-};
+}
 
 async function deleteItemById(itemUuid) {
     await deleteItem(await fromUuid(itemUuid));
-};
+}
 
 async function deleteItem(item) {
     if (!item) { return; }
@@ -197,11 +197,11 @@ async function deleteItem(item) {
     } else {
         await item.delete();
     }
-};
+}
 
 async function removeConditionFromActorId(actorId, condition, forceRemove = false) {
     await removeConditionFromActor(await fromUuid(actorId), condition, forceRemove);
-};
+}
 
 async function removeConditionFromActor(actor, condition, forceRemove = false) {
     if (!hasPermissions(actor)) {
@@ -210,11 +210,11 @@ async function removeConditionFromActor(actor, condition, forceRemove = false) {
     }
 
     await actor.decreaseCondition(condition, { forceRemove: forceRemove });
-};
+}
 
 async function removeEffectFromActorId(actor, effect) {
     await removeEffectFromActor(await fromUuid(actorId), effect);
-};
+}
 
 async function removeEffectFromActor(actor, effect) {
     if (!actor) { return }
@@ -224,15 +224,15 @@ async function removeEffectFromActor(actor, effect) {
     }
 
     actor.itemTypes.effect.find((a) => a.flags?.core?.sourceId === effect)?.delete();
-};
+}
 
 function parseFormula(actor, formula) {
     return `${formula.replace("@actor.level", actor.level)}`;
-};
+}
 
 async function applyDamageById(actorUUID, tokenUUID, formula) {
     await applyDamage(await fromUuid(actorUUID), await fromUuid(tokenUUID), formula);
-};
+}
 
 async function applyDamage(actor, token, formula) {
     if (!hasPermissions(actor)) {
@@ -244,11 +244,11 @@ async function applyDamage(actor, token, formula) {
     await roll.evaluate({ async: true });
     actor.applyDamage({ damage: roll, token });
     roll.toMessage({ speaker: { alias: actor.name } });
-};
+}
 
 async function increaseConditionForActorId(actorId, condition, value = undefined) {
     await increaseConditionForActor(await fromUuid(actorId), condition, value);
-};
+}
 
 async function increaseConditionForActor(actor, condition, value = undefined) {
     if (!hasPermissions(actor)) {
@@ -270,11 +270,11 @@ async function increaseConditionForActor(actor, condition, value = undefined) {
     }
 
     await actor.increaseCondition(condition, valueObj);
-};
+}
 
 async function decreaseConditionForActorId(actorId, condition, value = undefined) {
     await decreaseConditionForActor(await fromUuid(actorId), condition, value);
-};
+}
 
 async function decreaseConditionForActor(actor, condition, value = undefined) {
     if (!hasPermissions(actor)) {
@@ -290,7 +290,7 @@ async function decreaseConditionForActor(actor, condition, value = undefined) {
     for (let i = 0; i < value; i++) {
         await actor.decreaseCondition(condition);
     }
-};
+}
 
 function preparedOptionalData(message) {
     if (message?.item?.type === "spell") {
@@ -298,25 +298,24 @@ function preparedOptionalData(message) {
         const { mod } = message.actor?.abilities?.[attribute];
         const spellcasting = { tradition, attribute: { type: attribute, mod } };
 
-        let data = {
-            origin: { actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid, spellcasting },
+        return {
+            origin: {actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid, spellcasting},
         };
-        return data;
     }
     return undefined;
-};
+}
 
 function effectUUID(id) {
     return `Compendium.${moduleName}.effects.Item.${id}`
-};
+}
 
 function actionUUID(id) {
     return `Compendium.${moduleName}.actions.Item.${id}`
-};
+}
 
 function equipmentUUID(id) {
     return `Compendium.${moduleName}.equipment.Item.${id}`
-};
+}
 
 function hasEffect(actor, eff) {
     return actor?.itemTypes?.effect?.find((c) => eff === c.slug);
@@ -327,11 +326,11 @@ async function createDocumentsParent(data, parentUuid) {
      if (!parent) {return}
 
      await CONFIG.Item.documentClass.createDocuments(data, {parent})
-};
+}
 
 async function deleteEffectFromActorId(actorId, slug) {
   await deleteEffectFromActor(await fromUuid(actorId), slug);
-};
+}
 
 async function deleteEffectFromActor(actor, slug) {
     const effect = actor.itemTypes.effect.find((c) => slug === c.slug);
@@ -341,7 +340,7 @@ async function deleteEffectFromActor(actor, slug) {
     } else {
         socketlibSocket._sendRequest("deleteEffectFromActorId", [actor.uuid, slug], 0);
     }
-};
+}
 
 async function updateItemById(uuid, data) {
   await updateItem(await fromUuid(uuid), data);
@@ -354,4 +353,4 @@ async function updateItem(item, data) {
     }
 
     item.update(data);
-};
+}

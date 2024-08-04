@@ -51,7 +51,7 @@ async function registerDeleteItemHandler(name, callback, description) {
 }
 
 Hooks.on("deleteItem", async (effect, data, id) => {
-    if (game.userId != id) {
+    if (game.userId !== id) {
         return;
     }
 
@@ -80,7 +80,7 @@ async function registerCreateItemHandler(name, callback, description) {
 }
 
 Hooks.on("createItem", async (effect, data, id) => {
-    if (game.userId != id) {
+    if (game.userId !== id) {
         return;
     }
 

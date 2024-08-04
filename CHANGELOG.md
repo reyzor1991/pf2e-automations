@@ -1,3 +1,6 @@
+### Version 0.2.1
+- Code style
+
 ### Version 0.2.0
 - Tumble Behind Swashbuckler
 

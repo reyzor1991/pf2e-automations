@@ -16,9 +16,9 @@ const setupSocket = () => {
         socketlibSocket.register("deleteEffectFromActorId", deleteEffectFromActorId);
         socketlibSocket.register("updateItemById", updateItemById);
 
-    	socketlibSocket.register("createDocumentsParent", createDocumentsParent);
+        socketlibSocket.register("createDocumentsParent", createDocumentsParent);
 
-    	socketlibSocket.register("updateActiveRules", updateActiveRules);
+        socketlibSocket.register("updateActiveRules", updateActiveRules);
     }
     return !!globalThis.socketlib;
 };
@@ -39,30 +39,32 @@ Hooks.on("automations.updateRules", () => {
 function updateActiveRules() {
     ACTIVE_RULES = game.settings
         .get(moduleName, "rules")
-        .filter((a) => a.isActive && a.target != "None" && (a.value?.length > 0 || a.values?.length > 0));
-};
+        .filter((a) => a.isActive && a.target !== "None" && (a.value?.length > 0 || a.values?.length > 0));
+}
 
 Hooks.once("ready", () => {
     const cur = getSetting("ruleVersion") ?? 0;
 
     fetch(`modules/${moduleName}/rules/rules.json`)
-    .then(async (response) => {
-        if (response.ok) {
-            return await response.json();
-        } else {
-            ui.notifications.info(`Sync file not found`);
-            throw new Error("Sync file not found");
-        }
-    })
-    .then(async (json) => {
-        if ((json.version ?? 0) > cur && isGM()) {
-            ui.notifications.warn(`Module ${game.modules.get(moduleName).title} has new rules, please sync it`);
-        }
-    });
+        .then(async (response) => {
+            if (response.ok) {
+                return await response.json();
+            } else {
+                ui.notifications.info(`Sync file not found`);
+                throw new Error("Sync file not found");
+            }
+        })
+        .then(async (json) => {
+            if ((json.version ?? 0) > cur && isGM()) {
+                ui.notifications.warn(`Module ${game.modules.get(moduleName).title} has new rules, please sync it`);
+            }
+        });
 });
 
 Hooks.on("createChatMessage", async (message, options, userId) => {
-    if (game.userId != userId) { return }
+    if (game.userId !== userId) {
+        return
+    }
     if (hasOption(message, "skip-handling-message")) return;
     let item = message.item
         ?? await fromUuid(message?.flags?.pf2e?.origin?.sourceId)
@@ -98,7 +100,7 @@ async function handleCreateChatMessage(message, _obj) {
             Hooks.callAll("pf2e-automations.rulesHandled", message);
         }, 100);
     }
-};
+}
 
 async function handleMessages(rule, message, _obj = undefined) {
     if (!rule.requirements.every((a) => handleRequirementGroup(a, message, _obj))) {
@@ -107,7 +109,7 @@ async function handleMessages(rule, message, _obj = undefined) {
     if (rule.triggers.some((a) => handleTriggerGroup(a, message, _obj))) {
         rule?.type === 'complex' ? handleComplexRuleTarget(rule, message, _obj) : handleTarget(rule, message, _obj);
     }
-};
+}
 
 function handleRequirementGroup(group, message, _obj) {
     if (group.operator === "AND") {
@@ -118,7 +120,7 @@ function handleRequirementGroup(group, message, _obj) {
         return !group.values.some((a) => handleRequirement(a, message, _obj));
     }
     return false;
-};
+}
 
 function handleRequirement(req, message, _obj) {
     if (req.objType === "group") {
@@ -156,7 +158,7 @@ function handleRequirement(req, message, _obj) {
     } else if (req.requirement === "ActorHasCondition") {
         return hasCondition(message?.actor, req.value);
     } else if (req.requirement === "TargetHasEffect") {
-        if (game.user.targets.size != 1 && !message.target) {
+        if (game.user.targets.size !== 1 && !message.target) {
             return false;
         }
         if (message.target) {
@@ -165,7 +167,7 @@ function handleRequirement(req, message, _obj) {
             return hasEffectBySourceId(game.user.targets.first().actor, req.value);
         }
     } else if (req.requirement === "TargetHasCondition") {
-        if (game.user.targets.size != 1 && !message.target) {
+        if (game.user.targets.size !== 1 && !message.target) {
             return false;
         }
         if (message.target) {
@@ -174,7 +176,7 @@ function handleRequirement(req, message, _obj) {
             return hasCondition(game.user.targets.first().actor, req.value);
         }
     } else if (req.requirement === "TargetHasTrait") {
-        if (game.user.targets.size != 1 && !message.target) {
+        if (game.user.targets.size !== 1 && !message.target) {
             return false;
         }
         if (message.target) {
@@ -183,7 +185,9 @@ function handleRequirement(req, message, _obj) {
             return game.user.targets.first().actor?.traits?.has(req.value);
         }
     } else if (req.requirement === "ItemHasTrait") {
-        if (!message.item) { return false; }
+        if (!message.item) {
+            return false;
+        }
         let v = message.item.system?.traits?.value ?? [];
         let o = message.item.system?.traits?.otherTags ?? [];
         return [...v, ...o].includes(req.value)
@@ -203,7 +207,7 @@ function handleRequirement(req, message, _obj) {
         return messageDCLabelHas(message, req.value);
     }
     return false;
-};
+}
 
 function handleTriggerGroup(group, message, _obj) {
     if (group.operator === "AND") {
@@ -214,7 +218,7 @@ function handleTriggerGroup(group, message, _obj) {
         return !group.values.some((a) => handleTrigger(a, message, _obj));
     }
     return false;
-};
+}
 
 function handleTrigger(t, message, _obj) {
     if (t.objType === "group") {
@@ -224,7 +228,7 @@ function handleTrigger(t, message, _obj) {
     if (t.encounter && !game?.combats?.active) {
         return false;
     }
-    if (t.trigger === "EqualsSlug" && _obj?.slug != t.value) {
+    if (t.trigger === "EqualsSlug" && _obj?.slug !== t.value) {
         return false;
     }
     if (t.trigger === "HasOption" && !hasOption(message, t.value)) {
@@ -236,14 +240,14 @@ function handleTrigger(t, message, _obj) {
     if (t.trigger === "HasRune" && !message.item?.system?.runes?.property?.includes(t.value)) {
         return false;
     }
-    if (t.trigger === "EqualsSourceId" && _obj?.sourceId != t.value) {
+    if (t.trigger === "EqualsSourceId" && _obj?.sourceId !== t.value) {
         return false;
     }
     if (t.messageType && !isCorrectMessageType(message, t.messageType)) {
         return false;
     }
     return true;
-};
+}
 
 function durationIsValid(duration) {
     return duration.expiry != null || duration.sustained != null || duration.unit != null || duration.value != null
@@ -272,8 +276,7 @@ const EMPTY_EFFECT = {
         "level": {
             "value": 1
         },
-        "rules": [
-        ],
+        "rules": [],
         "source": {
             "value": ""
         },
@@ -328,7 +331,9 @@ async function handleComplexRuleTargetValue(rule, value, message, _obj = undefin
             break;
     }
 
-    if (!targetActor) {return}
+    if (!targetActor) {
+        return
+    }
     if (!durationIsValid(value.duration)) {
         for (let condition of value.conditions) {
             let result = parseCondition(condition);
@@ -354,7 +359,7 @@ async function handleComplexRuleTargetValue(rule, value, message, _obj = undefin
                     let cond = game.pf2e.ConditionManager.getCondition(result.name)
                     let newRule = {
                         "key": "GrantItem",
-                        "onDeleteActions": { "grantee": "restrict" },
+                        "onDeleteActions": {"grantee": "restrict"},
                         "uuid": cond.sourceId
                     };
                     if (result.value > 1) {
@@ -469,9 +474,9 @@ async function handleTarget(rule, message, _obj = undefined) {
     } else if (rule.target === "RunMacro") {
         (await fromUuid(rule.value))?.execute();
     } else if (rule.target === "PartyEffect") {
-        let members = [...message.actor.parties.map(p=>p.members)].flat();
+        let members = [...message.actor.parties.map(p => p.members)].flat();
         for (let m of members) {
             await setEffectToActor(m, rule.value, _obj?.level, preparedOptionalData(message));
         }
     }
-};
+}

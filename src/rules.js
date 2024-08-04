@@ -8,7 +8,7 @@ class RuleRequirement {
     static fromObj(obj) {
         return Object.assign(new RuleRequirement(), obj);
     }
-};
+}
 
 class RuleRequirementGroup {
     constructor() {
@@ -23,7 +23,7 @@ class RuleRequirementGroup {
         rg.values = rg.values.map((a) => RuleRequirement.fromObj(a));
         return rg;
     }
-};
+}
 
 class RuleTrigger {
     constructor() {
@@ -37,7 +37,7 @@ class RuleTrigger {
     static fromObj(obj) {
         return Object.assign(new RuleTrigger(), obj);
     }
-};
+}
 
 class RuleTriggerGroup {
     constructor() {
@@ -55,7 +55,7 @@ class RuleTriggerGroup {
         });
         return rg;
     }
-};
+}
 
 class Rule {
     constructor() {
@@ -75,4 +75,8 @@ class Rule {
         r.requirements = r.requirements.map((a) => RuleRequirementGroup.fromObj(a));
         return r;
     }
-};
+
+    rawValue() {
+        return JSON.parse(JSON.stringify(this))
+    }
+}
