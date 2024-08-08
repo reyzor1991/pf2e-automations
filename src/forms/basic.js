@@ -7,7 +7,7 @@ async function parseEffect(effect) {
         }
     }
     return effObj;
-};
+}
 
 function parseCondition(effect) {
     if (!effect) { return undefined; }
@@ -16,7 +16,7 @@ function parseCondition(effect) {
         return { name: result[0][1], value: Number(result[0][2]?.trim()) || 1 };
     }
     return undefined;
-};
+}
 
 class RuleSettings extends FormApplication {
     rules = [];
@@ -456,7 +456,7 @@ class RuleSettings extends FormApplication {
             classes: ["settings-menu"],
             template: `modules/${moduleName}/templates/rules.hbs`,
             width: 1000,
-            height: "auto",
+            height: 450,
             closeOnSubmit: false,
             resizable: true,
         });
@@ -554,4 +554,4 @@ class RuleSettings extends FormApplication {
         this.editIndex = null;
         return super.close(options);
     }
-};
+}

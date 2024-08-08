@@ -1,3 +1,6 @@
+### Version 0.2.2
+- Fix css
+
 ### Version 0.2.1
 - Code style
 

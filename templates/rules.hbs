@@ -84,13 +84,13 @@
     </form>
 {{else}}
     <form class="editable" autocomplete="off" onsubmit="event.preventDefault();">
-        <div>
-            <div class="create-rule">
-                {{#if (gt rules.length 10)}}
-                    <input class="FilterSearch" type="search" placeholder="Filter" value="" style="width: 30%; left: 8px; position: absolute;">
-                {{/if}}
-                <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
-            </div>
+        <div class="create-rule">
+            {{#if (gt rules.length 10)}}
+                <input class="FilterSearch" type="search" placeholder="Filter" value="" style="width: 30%; left: 8px; position: absolute;">
+            {{/if}}
+            <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
+        </div>
+        <div class="data">
             <ul id="rule-list" class="directory-list package-list rule-list">
                 {{#each rules as |rule|}}
                     <li class="package flexcol active">
