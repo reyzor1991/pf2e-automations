@@ -87,11 +87,11 @@
         <div>
             <div class="create-rule">
                 {{#if (gt rules.length 10)}}
-                    <input class="FilterSearch" type="search" placeholder="Filter" value="" style="width: 30%; left: 8px; position: absolute;">
+                    <input class="FilterSearch" type="search" placeholder="Filter" value="" style="top: 15px; bottom: 30px; position: relative; overflow-y: auto;">
                 {{/if}}
                 <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
             </div>
-            <ul id="rule-list" class="directory-list package-list rule-list">
+            <ul id="rule-list" class="directory-list package-list rule-list" style="position: absolute;">
                 {{#each rules as |rule|}}
                     <li class="package flexcol active">
                         <div class="package-overview flexrow">
@@ -111,7 +111,7 @@
                 {{/each}}
             </ul>
         </div>
-        <div class="form-group buttons">
+        <div class="form-group buttons" style="position: absolute; bottom: 5px; width: 98%;">
             <button type="submit" name="submit">
                 <i class="far fa-save"></i> Save
             </button>
