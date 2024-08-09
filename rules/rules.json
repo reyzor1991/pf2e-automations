@@ -7884,8 +7884,7 @@
                 "objType": "item",
                 "encounter": false,
                 "messageType": "undefined",
-                "value": "defensive-advance",
-                "battle": false
+                "value": "defensive-advance"
               }
             ]
           }
@@ -7897,5 +7896,5 @@
   ],
   "forceUpdate": [
   ],
-  "version": 3
+  "version": 4
 }
