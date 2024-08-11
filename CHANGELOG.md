@@ -1,3 +1,6 @@
+### Version 0.4.0
+- Add Polish
+
 ### Version 0.3.0
 - Defensive Advance
 
