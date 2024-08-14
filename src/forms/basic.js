@@ -134,6 +134,18 @@ class RuleSettings extends FormApplication {
             this.editIndex = $(event.currentTarget).data().idx;
             this.render();
         });
+        html.find(".export-rule").click(async (event) => {
+            let idx = $(event.currentTarget).data().idx;
+            const rule = this.findByUUID(idx);
+
+            const a = document.createElement("a");
+            const file = new Blob([JSON.stringify(rule.rawValue())], { type: "text/plain" });
+            a.href = URL.createObjectURL(file);
+            a.download = `${rule.name || 'rule'}.json`;
+            a.click();
+
+            ui.notifications.info(`Rules were exported`);
+        });
         html.find(".remove-rule").click(async (event) => {
             this.updateForm(event);
 

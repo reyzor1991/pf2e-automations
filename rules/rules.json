@@ -2478,7 +2478,7 @@
       "uuid": "8Ll1y7SuvKPitmC4",
       "value": "Compendium.botanical-bestiary.effects.DwxpHXwlTPuXq2wT",
       "isActive": true,
-      "name": "Rose’s Tranquility",
+      "name": "Rose's Tranquility",
       "target": "SelfEffect",
       "triggers": [
         {
@@ -7869,28 +7869,28 @@
       "requirements": []
     },
     {
-        "uuid": "ghWhkY1XHVyZbHaB",
-        "name": "Defensive Advance",
-        "value": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr",
-        "isActive": true,
-        "target": "SelfEffect",
-        "triggers": [
-          {
-            "operator": "AND",
-            "objType": "group",
-            "values": [
-              {
-                "trigger": "EqualsSlug",
-                "objType": "item",
-                "encounter": false,
-                "messageType": "undefined",
-                "value": "defensive-advance"
-              }
-            ]
-          }
-        ],
-        "requirements": []
-      }
+      "uuid": "ghWhkY1XHVyZbHaB",
+      "name": "Defensive Advance",
+      "value": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr",
+      "isActive": true,
+      "target": "SelfEffect",
+      "triggers": [
+        {
+          "operator": "AND",
+          "objType": "group",
+          "values": [
+            {
+              "trigger": "EqualsSlug",
+              "objType": "item",
+              "encounter": false,
+              "messageType": "undefined",
+              "value": "defensive-advance"
+            }
+          ]
+        }
+      ],
+      "requirements": []
+    }
   ],
   "removeIds": [
   ],

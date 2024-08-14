@@ -1,0 +1,23 @@
+{
+  "uuid": "Q9ot9WdD2RfdtDer",
+  "name": "Remove Champion's Resistance",
+  "value": "Compendium.pf2e.feat-effects.Item.DawVHfoPKbPJsz4k",
+  "isActive": true,
+  "target": "SelfRemoveEffect",
+  "triggers": [
+    {
+      "operator": "AND",
+      "objType": "group",
+      "values": [
+        {
+          "trigger": "None",
+          "objType": "item",
+          "encounter": false,
+          "messageType": "damage-taken",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "requirements": []
+}
