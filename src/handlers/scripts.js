@@ -431,19 +431,19 @@ async function createDialogDamageOrSelfEffect(message, spell, damageEff, selfSpe
         },
         default: "cancel",
     }).render(true);
-};
+}
 
 async function bloodlineAberrant(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.UQ7vZgmfK0VSFS8A", targetCharacters(message.actor), "Compendium.pf2e.feat-effects.Item.UQ7vZgmfK0VSFS8A");
-};
+}
 
 async function bloodlineAngelic(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.s1tulrmW6teTFjVd", targetCharacters(message.actor), "Compendium.pf2e.feat-effects.Item.s1tulrmW6teTFjVd");
-};
+}
 
 async function bloodlineDemonic(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.aKRo5TIhUtu0kyEr", targetNpcs(message.actor), "Compendium.pf2e.feat-effects.Item.yfbP64r4a9e5oyli");
-};
+}
 
 async function bloodlineDiabolic(message, spell) {
     const damageEff = effectUUID('2yWSBNLWWYXXSfKZ');//Additional damage
@@ -456,11 +456,11 @@ async function bloodlineDiabolic(message, spell) {
         [],//combo
         (await fromUuid("Compendium.pf2e.feat-effects.Item.n1vhmOd7aNiuR3nk")).toObject()
     )
-};
+}
 
 async function bloodlineDraconic(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.FNTTeJHiK6iOjrSq", targetCharacters(message.actor), "Compendium.pf2e.feat-effects.Item.FNTTeJHiK6iOjrSq");
-};
+}
 
 async function bloodlineElemental(message, spell, isElem = false) {
     const damageEff = effectUUID('2yWSBNLWWYXXSfKZ');
@@ -486,34 +486,34 @@ async function bloodlineElemental(message, spell, isElem = false) {
         [],//combo
         (await fromUuid("Compendium.pf2e.feat-effects.Item.3gGBZHcUFsHLJeQH")).toObject()
     )
-};
+}
 
 async function bloodlineFey(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.rJpkKaPRGaH0pLse", targetCharacters(message.actor), "Compendium.pf2e.feat-effects.Item.rJpkKaPRGaH0pLse");
-};
+}
 
 async function bloodlineGenie(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.9AUcoY48H5LrVZiF", targetNpcs(message.actor), "Compendium.pf2e.feat-effects.Item.KVbS7AbhQdeuA0J6");
-};
+}
 
 async function bloodlineHag(message) {
     const effect = (await fromUuid("Compendium.pf2e.feat-effects.Item.6fb15XuSV4TNuVAT")).toObject();
     effect.system.level = { value: message?.item?.level ?? 1 };
 
     message.actor.createEmbeddedDocuments("Item", [effect]);
-};
+}
 
 async function bloodlineHarrow(message) {
     setEffectToActor(message.actor, effectUUID('SbYoI8G8Ze6oE4we'))
-};
+}
 
 async function bloodlineImperial(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.vguxP8ukwVTWWWaA", targetCharacters(message.actor), "Compendium.pf2e.feat-effects.Item.vguxP8ukwVTWWWaA");
-};
+}
 
 async function bloodlineNymph(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.SVGW8CLKwixFlnTv", targetNpcs(message.actor), "Compendium.pf2e.feat-effects.Item.ruRAfGJnik7lRavk");
-};
+}
 
 async function bloodlinePhoenix(message, spell) {
     const damageEff = effectUUID('2yWSBNLWWYXXSfKZ');
@@ -525,7 +525,7 @@ async function bloodlinePhoenix(message, spell) {
         ["remove-curse", "cleanse-affliction", "breath-of-life", "moment-of-renewal"],
         ["rejuvenating-flames"]
     )
-};
+}
 
 async function bloodlinePsychopomp(message, spell) {
     const damageEff = effectUUID('CUMpeosjhqDpj4KK');
@@ -538,7 +538,7 @@ async function bloodlinePsychopomp(message, spell) {
         [],//combo
         (await fromUuid("Compendium.pf2e.feat-effects.Item.7BFd8A9HFrmg6vwL")).toObject()
     )
-};
+}
 
 async function bloodlineShadow(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.OqH6IaeOwRWkGPrk", targetNpcs(message.actor), "Compendium.pf2e.feat-effects.Item.Nv70aqcQgCBpDYp8");
@@ -554,11 +554,11 @@ async function bloodlineUndead(message, spell) {
         ["remove-curse"],
         ["harm", "undeaths-blessing"]
     )
-};
+}
 
 async function bloodlineWyrmblessed(message) {
     createDialog(message.actor.uuid, "Compendium.pf2e.feat-effects.Item.fILVhS5NuCtGXfri", targetNpcs(message.actor), "Compendium.pf2e.feat-effects.Item.aqnx6IDcB7ARLxS5");
-};
+}
 
 const bloodlineFeatMap = {
     "bloodline-aberrant": { spells: bloodlineAberrantSpells, handler: bloodlineAberrant },
@@ -581,11 +581,11 @@ const bloodlineFeatMap = {
 
 function targetNpcs(self) {
     return game.combat ? game.combat.turns.filter(a => a.actor.isEnemyOf(self)).map(a => a.actor) : [];
-};
+}
 
 function targetCharacters(self) {
     return game.combat ? game.combat.turns.filter(a => a.actor.isAllyOf(self)).map(a => a.actor) : [];
-};
+}
 
 async function bloodlines(message) {
     if (!isCorrectMessageType(message, undefined) && !isCorrectMessageType(message, "spell-cast")) { return }
@@ -607,7 +607,7 @@ async function bloodlines(message) {
             return;
         }
     }
-};
+}
 
 async function updateConcussiveRoll(message) {
     let roll = message.rolls[0];
@@ -620,7 +620,7 @@ async function updateConcussiveRoll(message) {
     await roll.evaluate({ async: true })
 
     await message.update({ rolls: [roll] })
-};
+}
 
 async function updateConcussiveDamageInstance(damageInstance) {
     if (damageInstance.type === 'piercing') {
@@ -638,7 +638,7 @@ async function updateConcussiveDamageInstance(damageInstance) {
     if (damageInstance?.resetFormula) {
         damageInstance?.resetFormula()
     }
-};
+}
 
 async function handleConcussiveDamage(message, user, _options, userId) {
     if (!isCorrectMessageType(message, "damage-roll")) { return }
@@ -726,7 +726,7 @@ async function explorationEffects(actor, data) {
             })
         }
     }
-};
+}
 
 async function notifyExplorationActivity(actor, data) {
     if (!data?.system?.exploration) { return; }
@@ -768,7 +768,7 @@ async function notifyExplorationActivity(actor, data) {
             content: messages.join(' ')
         });
     }
-};
+}
 
 async function fortissimoComposition(message) {
     if (!isCorrectMessageType(message, undefined) && !isCorrectMessageType(message, "spell-cast")) { return }
@@ -779,7 +779,7 @@ async function fortissimoComposition(message) {
     if (pack) {
         executeMacro((await pack.getDocuments()).find((i) => i.name === 'Inspire Heroics / Fortissimo Composition')?.toObject())
     }
-};
+}
 
 async function selfEffectMessage(message) {
     if (!isCorrectMessageType(message, 'self-effect')) { return }
@@ -791,7 +791,7 @@ async function selfEffectMessage(message) {
             await setEffectToActor(message.actor, _eff)
         }
     }
-};
+}
 
 async function demoralize(message) {
     if (!isCorrectMessageType(message, "skill-check")) { return }
@@ -818,7 +818,7 @@ async function demoralize(message) {
             await setEffectToActor(message?.target?.actor, effectUUID('DFLW2gzu0PGeX6zu'), undefined, { name: `Effect: Demoralize Immunity 10 minutes (${message.actor.name})`, icon: message.token.texture.src, origin: { actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid }, duplication: true })
         }
     }
-};
+}
 
 async function feint(message) {
     if (!isCorrectMessageType(message, "skill-check")) { return }
@@ -846,7 +846,7 @@ async function feint(message) {
             setFeintEffect(message, true, true)
         }
     }
-};
+}
 
 async function setFeintEffect(message, isCrit = false, isCritFail = false) {
     const actor = isCritFail ? message.target.actor : message.actor;
@@ -892,7 +892,7 @@ async function setFeintEffect(message, isCrit = false, isCritFail = false) {
             await addItem(actor.uuid, qq);
         }
     }
-};
+}
 
 
 
@@ -941,7 +941,7 @@ async function disarm(message) {
     }]);
 
     ui.notifications.info(`${message.actor.name} disarmed target`);
-};
+}
 
 
 
@@ -956,7 +956,7 @@ function escape(message) {
             await deleteItem(a);
         });
     }
-};
+}
 
 async function grab(message) {
     if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
@@ -970,7 +970,7 @@ async function grab(message) {
             game.pf2e.actions.grapple({actors: [message.actor]})
         }
     }
-};
+}
 
 async function grapple(message) {
     if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
@@ -984,7 +984,7 @@ async function grapple(message) {
             game.pf2e.actions.grapple({actors: [message.actor]})
         }
     }
-};
+}
 
 async function grabImproved(message) {
     if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
@@ -998,7 +998,7 @@ async function grabImproved(message) {
             game.pf2e.actions.grapple({actors: [message.actor]})
         }
     }
-};
+}
 
 async function knockdown(message) {
     if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
@@ -1012,7 +1012,7 @@ async function knockdown(message) {
             game.pf2e.actions.trip({actors: [message.actor]})
         }
     }
-};
+}
 
 async function push(message) {
     if (anySuccessMessageOutcome(message) && isCorrectMessageType(message, "attack-roll")) {
@@ -1026,7 +1026,7 @@ async function push(message) {
             game.pf2e.actions.shove({actors: [message.actor]})
         }
     }
-};
+}
 
 async function battleMedicineAction(message) {
     if (!isCorrectMessageType(message, "skill-check")) { return }
@@ -1077,7 +1077,7 @@ async function battleMedicineAction(message) {
             }
         }
     }
-};
+}
 
 async function tamper(message) {
     if (!hasOption(message, "action:tamper")) { return }
@@ -1146,7 +1146,7 @@ async function tamper(message) {
             socketlibSocket._sendRequest("createDocumentsParent", [[itemSource], parent.uuid], 0);
         }
     }
-};
+}
 
 async function toggleGravityWeapon(message) {
     if (isCorrectMessageType(message, "damage-roll")
@@ -1156,7 +1156,7 @@ async function toggleGravityWeapon(message) {
             await message.actor.toggleRollOption("damage-roll", "gravity-weapon")
         }
     }
-};
+}
 
 async function toggleFirstAttack(message) {
     if (hasOption(message, "first-attack") && isCorrectMessageType(message, "damage-roll")
@@ -1173,7 +1173,7 @@ async function toggleFirstAttack(message) {
             await message.actor.toggleRollOption("all", "first-attack")
         }
     }
-};
+}
 
 async function deleteEffectsAfterDamage(message) {
     if (!isCorrectMessageType(message, "damage-roll")) { return }
@@ -1189,7 +1189,7 @@ async function deleteEffectsAfterDamage(message) {
             await deleteItem(pan)
         }
     }
-};
+}
 
 async function deleteShieldEffect(message) {
     // maybe delete shield because it was used?
@@ -1204,7 +1204,7 @@ async function deleteShieldEffect(message) {
             }
         }
     }
-};
+}
 
 function messageWeapon(message) {
     if (message.item?.type === 'weapon' || message.item?.type === 'feat') {
@@ -1214,7 +1214,7 @@ function messageWeapon(message) {
     } else if (message.flags?.pf2e?.strike?.name === "Fist") {
         return message.actor?.system?.actions?.filter(h => h.visible && h.item?.isMelee && h.item?.name === 'Fist')[0]?.item
     }
-};
+}
 
 function isCriticalSpecialization(message) {
     if (!isCorrectMessageType(message, 'damage-roll')) { return false; }
@@ -1224,7 +1224,7 @@ function isCriticalSpecialization(message) {
     if (["crossbow", "dart", "knife", "pick"].includes(weapon.group)) { return false; }
     return message.actor.synthetics.criticalSpecializations.standard.some(b => b(weapon, message.flags.pf2e?.context?.options))
         || message.actor.synthetics.criticalSpecializations.alternate.some(b => b(weapon, message.flags.pf2e?.context?.options))
-};
+}
 
 
 
@@ -1234,7 +1234,7 @@ async function criticalSpecializationSword(message) {
     if (weapon.group === "sword") {
         await setEffectToTargetActorNextTurn(message, effectUUID('YsNqG4OocHoErbc9'))
     }
-};
+}
 
 async function getDcValue(message, target) {
     return (
@@ -1248,7 +1248,7 @@ async function getDcValue(message, target) {
             options: new Set(message.flags.pf2e.context.options ?? []),
         })
     ).dc.value;
-};
+}
 
 async function handleAddDamage(message, target, lastAttack, totalDamage, damageType) {
     let newDc = await getDcValue(message, target)
@@ -1276,7 +1276,7 @@ async function handleAddDamage(message, target, lastAttack, totalDamage, damageT
         }
       );
     }
-};
+}
 
 async function criticalSpecializationAxe(message) {
     if (!isCriticalSpecialization(message)) { return; }
@@ -1336,7 +1336,7 @@ async function criticalSpecializationAxe(message) {
             });
         }
     }
-};
+}
 
 async function criticalSpecializationSpear(message) {
     if (!isCriticalSpecialization(message)) { return; }
@@ -1344,7 +1344,7 @@ async function criticalSpecializationSpear(message) {
     if (weapon.group === "spear") {
         await setEffectToTargetActorNextTurn(message, effectUUID('lsICo0LAyrWy2cDm'))
     }
-};
+}
 
 async function criticalSpecializationBow(message) {
     if (!isCriticalSpecialization(message)) { return; }
@@ -1352,7 +1352,7 @@ async function criticalSpecializationBow(message) {
     if (weapon.group === "bow" && message.target.token.elevation === 0) {
         increaseConditionForActor(message.target.actor, "immobilized");
     }
-};
+}
 
 async function stunningFist(message) {
     if (!isCorrectMessageType(message, 'damage-roll')) { return false; }
@@ -1400,7 +1400,7 @@ async function criticalSpecializationRollSavingThrow(message) {
             })
         }
     }
-};
+}
 
 async function knownWeaknesses(message) {
     if (!isCorrectMessageType(message, undefined)) { return }
@@ -1411,7 +1411,7 @@ async function knownWeaknesses(message) {
     party.members.filter(a => a.uuid != message.actor.uuid).forEach(async (tt) => {
         await setEffectToActor(tt, "Compendium.pf2e.feat-effects.Item.DvyyA11a63FBwV7x", undefined, { origin: { actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid } })
     })
-};
+}
 
 async function lingeringComposition(message) {
     if (!isCorrectMessageType(message, undefined) && !isCorrectMessageType(message, "spell-cast")) { return }
@@ -1422,7 +1422,7 @@ async function lingeringComposition(message) {
     if (pack) {
         executeMacro((await pack.getDocuments()).find((i) => i.name === 'XDY DO_NOT_IMPORT Lingering Fortissimo')?.toObject())
     }
-};
+}
 
 async function removeStances(item, data, id) {
     if (item.sourceId != "Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf") {return}//Unconscious
@@ -1435,7 +1435,7 @@ async function removeStances(item, data, id) {
 
         hasEffectBySourceId(item.actor, "Compendium.pf2e.feat-effects.Item.z3uyCMBddrPK5umr")?.delete();
         hasEffectBySourceId(item.actor, "Compendium.pf2e.feat-effects.Item.RoGEt7lrCdfaueB9")?.delete();
-};
+}
 
 async function treatWounds(message, target) {
     if (!hasEffectBySourceId(target, "Compendium.pf2e.feat-effects.Lb4q2bBAgxamtix5")) {
@@ -1445,7 +1445,7 @@ async function treatWounds(message, target) {
     } else {
         ui.notifications.info(`${target.name} has Treat Wounds Immunity`);
     }
-};
+}
 
 function treatWoundsAction(message) {
     if (!isCorrectMessageType(message, "skill-check")) { return }
@@ -1461,7 +1461,7 @@ function treatWoundsAction(message) {
             ui.notifications.info(`Need to select 1 token as target`);
         }
     }
-};
+}
 
 function trueShapeBomb(message) {
     if (!isCorrectMessageType(message, 'saving-throw')) { return }
@@ -1470,33 +1470,28 @@ function trueShapeBomb(message) {
             ui.notifications.info(`${message.actor.name} fails saving-throw. Need to delete morph/polymorph effects from actor`);
         }
     }
-};
+}
 
-async function baneSpell(message) {
-    if (!isCorrectMessageType(message, undefined) && !isCorrectMessageType(message, "spell-cast")) { return }
-    const _obj = message.item ?? (await fromUuid(message?.flags?.pf2e?.origin?.uuid));
-    if (_obj?.slug != "bane") { return }
-
-    if (_obj.spellcasting.statistic.dc.value) {
-        const dc = _obj.spellcasting.statistic.dc.value;
-        const baneLevel = (hasEffect(message.actor, "spell-effect-aura-bane")?.system?.badge?.value ?? 0) + 1;
-        const all = enemyCombatants(message.actor)
-            .filter(a => !hasEffectBySourceId(a.actor, "Compendium.pf2e.spell-effects.Item.UTLp7omqsiC36bso"))//bane
-            .filter(a => !hasEffect(a.actor, effectUUID('kLpCaiCZjenXCebV')))
-            .filter(a => distanceIsCorrect(message.token, a.token, 10 * baneLevel))
-
-        setTimeout(async function () {
-            await rollDCBane(all, dc, _obj, _obj?.actor ?? message.actor);
-        }, 1000)
+async function baneEffectImmunity(item) {
+    if ("Compendium.pf2e.spell-effects.Item.UTLp7omqsiC36bso" !== item.sourceId) {
+        return
     }
-};
+    if (!item.origin) {return}
+    let aura = item.origin.itemTypes.effect.find(e=>e.sourceId === effectUUID("FcUe8TT7bhqlURIf"))
+    if (!aura) {return}
+    let source = await fromUuid(aura.system?.context?.origin?.item)
+    if (!source) {return}
+
+    const dc = source.spellcasting.statistic.dc.value;
+    item.actor.saves.will.roll({skipDialog: true, dc: {value: dc}, item: source, origin: item.origin})
+}
 
 async function saveBane(message) {
     if (hasOption(message, 'item:slug:bane') && anySuccessMessageOutcome(message)) {
         await setEffectToActor(message.actor, effectUUID('kLpCaiCZjenXCebV'))
         await deleteEffectFromActor(message.actor, "Compendium.pf2e.spell-effects.Item.UTLp7omqsiC36bso")
     }
-};
+}
 
 
 async function huntPrey(message) {
@@ -1541,7 +1536,7 @@ async function huntPrey(message) {
     if (!message.actor.rollOptions.all['hunted-prey']) {
         await message.actor.toggleRollOption("all", "hunted-prey")
     }
-};
+}
 
 async function executeMacro(macroData) {
     if (!macroData) {return}
@@ -1556,7 +1551,7 @@ async function reactiveShield(message) {
     if (_obj?.slug != "reactive-shield") { return }
 
     (await fromUuid('Compendium.pf2e.action-macros.4hfQEMiEOBbqelAh'))?.execute()
-};
+}
 
 Hooks.on('ready', function () {
     registerMessageCreateHandler('Furious Anatomy', furiousAnatomy, "Furious Anatomy from Barbarians+")
@@ -1589,7 +1584,6 @@ Hooks.on('ready', function () {
     registerMessageCreateHandler('Known Weaknesses', knownWeaknesses)
     registerMessageCreateHandler('Treat Wounds', treatWoundsAction)
     registerMessageCreateHandler('Trueshape Bomb', trueShapeBomb)
-    registerMessageCreateHandler('Bane Spell', baneSpell)
     registerMessageCreateHandler('Bane Save', saveBane)
     registerMessageCreateHandler('Hunt Prey', huntPrey)
     registerMessageCreateHandler('Reactive Shield', reactiveShield)
@@ -1598,4 +1592,6 @@ Hooks.on('ready', function () {
     registerUpdateActorHandler('Exploration Activity notifications', notifyExplorationActivity, "Notify when actor change Exploration Activity")
 
     registerCreateItemHandler('Remove effects', removeStances, "Remove effects when Unconscious")
+    registerCreateItemHandler('Bane effect', baneEffectImmunity, "Roll bane saving throw")
+
 });

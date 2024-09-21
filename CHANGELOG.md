@@ -1,3 +1,6 @@
+### Version 0.5.1
+- Change logic of handling Bane
+
 ### Version 0.5.0
 - Add export 1 rule
 
