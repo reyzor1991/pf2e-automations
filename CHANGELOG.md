@@ -1,3 +1,6 @@
+### Version 0.5.2
+- Fix Lay On Hands
+
 ### Version 0.5.1
 - Change logic of handling Bane
 

@@ -205,6 +205,8 @@ function handleRequirement(req, message, _obj) {
         return message.actor.name === req.value;
     } else if (req.requirement === "MessageDCLabel") {
         return messageDCLabelHas(message, req.value);
+    } else if (req.requirement === "TargetIsAnother") {
+        return message.actor?.uuid !== (message.target?.uuid || game.user.targets.first()?.actor?.uuid);
     }
     return false;
 }

@@ -46,6 +46,7 @@ Hooks.on("ready", () => {
         ActorHasEffect: translate('requirementType.ActorHasEffect'),
         ActorHasEffectBySlug: translate('requirementType.ActorHasEffectBySlug'),
         ActorHasFeat: translate('requirementType.ActorHasFeat'),
+        TargetIsAnother: translate('requirementType.TargetIsAnother'),
         ActorHasCondition: translate('requirementType.ActorHasCondition'),
         TargetHasEffect: translate('requirementType.TargetHasEffect'),
         TargetHasCondition: translate('requirementType.TargetHasCondition'),

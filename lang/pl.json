@@ -31,6 +31,7 @@
       "ActorHasEffect": "Aktor pod wpływem efektu",
       "ActorHasEffectBySlug": "Aktor pod wpływem efektu (slug)",
       "ActorHasFeat": "Aktor posiada atut",
+      "TargetIsAnother": "Cel to kolejny aktor",
       "ActorHasCondition": "Aktor pod wpływem stanu",
       "TargetHasEffect": "Cel pod wpływem efektu",
       "TargetHasCondition": "Cel pod wpływem stanu",

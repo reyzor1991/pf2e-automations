@@ -2220,6 +2220,17 @@
               "value": "Compendium.pf2e.feats-srd.Item.aiHbS8FGNYAQBF62"
             }
           ]
+        },
+        {
+          "operator": "AND",
+          "objType": "group",
+          "values": [
+            {
+              "objType": "item",
+              "requirement": "TargetIsAnother",
+              "value": ""
+            }
+          ]
         }
       ]
     },
@@ -7895,6 +7906,7 @@
   "removeIds": [
   ],
   "forceUpdate": [
+    "YhDaPJftm5VFo1Ai"
   ],
-  "version": 4
+  "version": 5
 }

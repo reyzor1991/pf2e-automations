@@ -31,6 +31,7 @@
       "ActorHasEffect": "Actor under Effect",
       "ActorHasEffectBySlug": "Actor under Effect (slug)",
       "ActorHasFeat": "Actor has Feat",
+      "TargetIsAnother": "Target is another actor",
       "ActorHasCondition": "Actor under Condition",
       "TargetHasEffect": "Target under Effect",
       "TargetHasCondition": "Target under Condition",
