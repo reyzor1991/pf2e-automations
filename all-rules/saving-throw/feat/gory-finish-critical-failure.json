@@ -1,0 +1,18 @@
+{
+  "uuid": "lqdrMAp4g7oxQzEY",
+  "triggerType": "saving-throw",
+  "value": "sickened 3",
+  "isActive": false,
+  "name": "Gory Finish (Critical Failure)",
+  "source": [
+    "Compendium.barbarians.barbarians-feats.Item.H1biwWiZTZNBQdIN"
+  ],
+  "labels": [],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:criticalFailure",
+    "origin:item:gory-finish"
+  ],
+  "triggers": [],
+  "requirements": []
+}

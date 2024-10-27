@@ -1,0 +1,20 @@
+{
+  "uuid": "y8KnDd4KxQDgoqND",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.ZsO5juyylVoxUkXh",
+  "isActive": false,
+  "name": "Bone Spikes",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.cy9jqlHz75GTjg7l"
+  ],
+  "labels": [
+    "deviant",
+    "magical"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:bone-spikes"
+  ],
+  "triggers": [],
+  "requirements": []
+}

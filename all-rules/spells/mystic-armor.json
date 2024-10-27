@@ -1,0 +1,20 @@
+{
+  "uuid": "ldiZoC2dhSZJVUun",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.qkwb5DD3zmKwvbk0",
+  "isActive": false,
+  "name": "Mystic Armor",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:mystic-armor"
+  ],
+  "triggers": [],
+  "requirements": []
+}

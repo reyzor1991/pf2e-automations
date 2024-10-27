@@ -1,0 +1,20 @@
+{
+  "uuid": "J5x5Fai5WKNnvlvX",
+  "triggerType": "skill-check",
+  "value": "@actor.level[fire]",
+  "isActive": false,
+  "name": "Overdrive (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.classfeatures.Item.oP5zM5Yu41xcx3iu"
+  ],
+  "labels": [
+    "inventor"
+  ],
+  "target": "SelfDamage",
+  "predicate": [
+    "action:overdrive",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

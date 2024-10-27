@@ -1,0 +1,19 @@
+{
+  "uuid": "P3EpLIci8fQBGPDf",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX",
+  "isActive": false,
+  "name": "Aid",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW"
+  ],
+  "labels": [
+    "general"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "origin:item:aid"
+  ],
+  "triggers": [],
+  "requirements": []
+}

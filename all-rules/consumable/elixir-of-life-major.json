@@ -1,0 +1,23 @@
+{
+  "uuid": "GqtARqDufF26r8De",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.equipment-effects.Item.PpLxndUSgzgs6dd0",
+  "isActive": false,
+  "name": "Elixir of Life (Major)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.AmxSqEoFhRLMYd1W"
+  ],
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "healing"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "useEquipment",
+    "consumable:elixir-of-life-major"
+  ],
+  "triggers": [],
+  "requirements": []
+}

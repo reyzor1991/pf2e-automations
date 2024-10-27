@@ -1,0 +1,27 @@
+{
+  "uuid": "WezQYOKQ1WkwNBfB",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.PQHP7Oph3BQX1GhF",
+  "isActive": false,
+  "name": "Tailwind",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KcLVELhCUcKXxiKE"
+  ],
+  "labels": [
+    "air",
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:tailwind",
+    {
+      "lt": [
+        "origin:item:level",
+        2
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

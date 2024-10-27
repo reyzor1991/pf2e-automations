@@ -1,0 +1,16 @@
+{
+  "uuid": "yPECFKZyK0pKmMEJ",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.KnjwOiVZr5Twwoum",
+  "isActive": false,
+  "name": "Thundering Rune (Critical Failure)",
+  "source": [],
+  "labels": [],
+  "target": "SelfEffect",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:rune:property:thundering"
+  ],
+  "triggers": [],
+  "requirements": []
+}

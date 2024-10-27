@@ -1,0 +1,26 @@
+{
+  "uuid": "BNzYAy5sVdgRR5Ck",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.con2Hzt47JjpuUej",
+  "isActive": false,
+  "name": "Resist Energy (Heightened 7)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Fr58LDSrbndgld9n"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfOrTargetsEffect",
+  "predicate": [
+    "origin:item:resist-energy",
+    {
+      "gte": [
+        "origin:item:level",
+        7
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

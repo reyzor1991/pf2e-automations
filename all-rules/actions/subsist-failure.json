@@ -1,0 +1,21 @@
+{
+  "uuid": "mn2TZ1MzwHhT0dKb",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e-automations.effects.Item.JaZMkZA7LCBLiOf0",
+  "isActive": false,
+  "name": "Subsist (Failure)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.49y9Ec4bDii8pcD3"
+  ],
+  "labels": [
+    "downtime",
+    "skill"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "action:subsist",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

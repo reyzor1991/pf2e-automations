@@ -1,0 +1,21 @@
+{
+  "uuid": "49AoLbLHhJsPTjnZ",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.8olfnTmWh0GGPDqX",
+  "isActive": false,
+  "name": "Inner Upheaval",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.ZL8NTvB22NeEWhVG"
+  ],
+  "labels": [
+    "concentrate",
+    "focus",
+    "monk"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:inner-upheaval"
+  ],
+  "triggers": [],
+  "requirements": []
+}

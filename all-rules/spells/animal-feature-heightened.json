@@ -1,0 +1,29 @@
+{
+  "uuid": "IPjS4i2EcD3QQlZE",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.Dcva6SCHr9vWE7nJ",
+  "isActive": false,
+  "name": "Animal Feature (Heightened)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.vGEgI8e7AW6FQ3tP"
+  ],
+  "labels": [
+    "concentrate",
+    "focus",
+    "manipulate",
+    "morph",
+    "ranger"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:animal-feature",
+    {
+      "gte": [
+        "origin:item:level",
+        4
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

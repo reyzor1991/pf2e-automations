@@ -1,0 +1,19 @@
+{
+  "uuid": "GBshMbjZYj1z3u2y",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.JQUoBlZKT5N5zO5k",
+  "isActive": false,
+  "name": "Avenge In Glory",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.gKDRnsBPBdhJB0FI"
+  ],
+  "labels": [
+    "dwarf"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:avenge-in-glory"
+  ],
+  "triggers": [],
+  "requirements": []
+}

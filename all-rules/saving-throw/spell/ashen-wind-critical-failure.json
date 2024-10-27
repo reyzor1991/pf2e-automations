@@ -1,0 +1,24 @@
+{
+  "uuid": "WfKIMxeFCcevBc08",
+  "triggerType": "saving-throw",
+  "value": "sickened 2",
+  "isActive": false,
+  "name": "Ashen Wind (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.NtzNCW32UlPdY2xS"
+  ],
+  "labels": [
+    "concentrate",
+    "cursebound",
+    "focus",
+    "manipulate",
+    "oracle"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:slug:ashen-wind"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "so8g8tnpXdDUSgOJ",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e-automations.effects.Item.Vh5E1Qgp34sTKfVs",
+  "isActive": false,
+  "name": "Tumble Behind",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.YKqMuuC8j35NFh92"
+  ],
+  "labels": [
+    "rogue"
+  ],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    "action:tumble-through",
+    {
+      "or": [
+        "outcome:success",
+        "outcome:criticalSuccess"
+      ]
+    },
+    {
+      "or": [
+        "feat:tumble-behind-rogue",
+        "feat:tumble-behind-swashbuckler"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

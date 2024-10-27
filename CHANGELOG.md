@@ -1,3 +1,6 @@
+### Version 1.0.0
+- Migrate to V2 UI
+
 ### Version 0.5.2
 - Fix Lay On Hands
 

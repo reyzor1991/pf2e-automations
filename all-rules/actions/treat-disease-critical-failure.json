@@ -1,0 +1,22 @@
+{
+  "uuid": "Z5C0VcNkRLuKnwi5",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.equipment-effects.Item.5oYKYXAexr0vhx84",
+  "isActive": false,
+  "name": "Treat Disease (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.TC7OcDa7JlWbqMaN"
+  ],
+  "labels": [
+    "downtime",
+    "manipulate",
+    "skill"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "action:treat-disease",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

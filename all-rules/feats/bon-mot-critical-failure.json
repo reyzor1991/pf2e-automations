@@ -1,0 +1,26 @@
+{
+  "uuid": "UUw8LMfO1glB9Vk9",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.feat-effects.Item.GoSls6SKCFmSoDxT",
+  "isActive": false,
+  "name": "Bon Mot (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.0GF2j54roPFIDmXf"
+  ],
+  "labels": [
+    "auditory",
+    "concentrate",
+    "emotion",
+    "general",
+    "linguistic",
+    "mental",
+    "skill"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "action:bon-mot",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

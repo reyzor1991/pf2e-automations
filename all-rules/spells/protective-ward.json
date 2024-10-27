@@ -1,0 +1,22 @@
+{
+  "uuid": "eGhbqPSQeTbIBY5A",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.5p3bKvWsJgo83FS1",
+  "isActive": false,
+  "name": "Protective Ward",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.lY9fOk1qBDDhBT8s"
+  ],
+  "labels": [
+    "aura",
+    "focus",
+    "manipulate",
+    "wizard"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:protective-ward"
+  ],
+  "triggers": [],
+  "requirements": []
+}

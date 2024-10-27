@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <div class="data">
+        <ul class="directory-list package-list rule-list rule-list-tab">
+            {{#each list as |rule|}}
+                <li class="package flexcol active" data-labels="{{rule.labels}}" data-uuid="{{rule.uuid}}">
+                    <div class="package-overview flexrow">
+                        <div>
+                            <label class="package-title checkbox" style="display: flex;">
+                                <input type="checkbox" class="active" name="{{rule.uuid}}"
+                                       data-dtype="Boolean" {{#if rule.isActive}} checked {{/if}}>
+                            </label>
+                        </div>
+                        <div class="title-group" title="{{rule.description}}">
+                            <div class="title">{{rule.name}}</div>
+                        </div>
+
+                        <div class="rule-controls" style="align-items: center;">
+                            <a class="export-rule" data-idx="{{rule.uuid}}"><i
+                                    class="fas fa-file-export"></i></a>
+                            <a class="edit-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
+                            <a class="remove-rule" data-idx="{{rule.uuid}}" title="Remove"><i
+                                    class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

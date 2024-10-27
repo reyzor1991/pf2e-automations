@@ -1,0 +1,23 @@
+{
+  "uuid": "mjoXnLaaWvPMk4tc",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.39ZPxVV3WYb54951",
+  "isActive": false,
+  "name": "Adapt Self",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.GUnw9YXaW3YyaCAU"
+  ],
+  "labels": [
+    "cleric",
+    "concentrate",
+    "focus",
+    "manipulate",
+    "morph"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:adapt-self"
+  ],
+  "triggers": [],
+  "requirements": []
+}

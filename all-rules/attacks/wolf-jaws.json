@@ -1,0 +1,24 @@
+{
+  "uuid": "23bTQJXKXDLYZLjK",
+  "triggerType": "attack-roll",
+  "value": "prone",
+  "isActive": false,
+  "name": "Wolf Jaws",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.uJpghjJtNbqKUxRd"
+  ],
+  "labels": [],
+  "target": "TargetAddCondition",
+  "predicate": [
+    "origin:item:wolf-jaws",
+    "wolf-drag",
+    {
+      "or": [
+        "outcome:success",
+        "outcome:criticalSuccess"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

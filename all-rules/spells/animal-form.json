@@ -1,0 +1,21 @@
+{
+  "uuid": "NVNWx9HSFYC35N1k",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.h68Fr3fht1319txv",
+  "isActive": false,
+  "name": "Animal Form",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.wp09USMB3GIW1qbp"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:animal-form"
+  ],
+  "triggers": [],
+  "requirements": []
+}

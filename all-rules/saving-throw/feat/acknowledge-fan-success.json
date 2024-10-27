@@ -1,0 +1,23 @@
+{
+  "uuid": "9je9K90FRskR5RP0",
+  "triggerType": "saving-throw",
+  "value": "stunned",
+  "isActive": false,
+  "name": "Acknowledge Fan (Success)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.arnSyCl9XfN1qviJ"
+  ],
+  "labels": [
+    "incapacitation",
+    "archetype",
+    "mental",
+    "visual"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:success",
+    "item:slug:acknowledge-fan"
+  ],
+  "triggers": [],
+  "requirements": []
+}

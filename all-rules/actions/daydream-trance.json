@@ -1,0 +1,20 @@
+{
+  "uuid": "bfMom7NwJFJRCUqu",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.RATDyLyxXN3qmOas",
+  "isActive": false,
+  "name": "Daydream Trance",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.5LW1k5DUkzbbYuYL"
+  ],
+  "labels": [
+    "mental",
+    "occult"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:daydream-trance"
+  ],
+  "triggers": [],
+  "requirements": []
+}

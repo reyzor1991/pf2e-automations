@@ -1,0 +1,21 @@
+{
+  "uuid": "HiExAPn816TrH6IB",
+  "triggerType": "skill-check",
+  "value": "1d6[bludgeoning]",
+  "isActive": false,
+  "name": "Trip (Critical Success)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP"
+  ],
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "target": "TargetDamage",
+  "predicate": [
+    "action:trip",
+    "outcome:criticalSuccess"
+  ],
+  "triggers": [],
+  "requirements": []
+}

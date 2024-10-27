@@ -1,0 +1,20 @@
+{
+  "uuid": "G2Vf1cNKiHb0eKZ8",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.rp6hA52dWVwtuu5F",
+  "isActive": false,
+  "name": "Harrower Dedication",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.0i4zOM1p0rFxnc5m"
+  ],
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:harrower-dedication"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,17 @@
+{
+  "uuid": "Ul7JHBnLJ1ypWCqh",
+  "triggerType": "postInfo",
+  "value": "Compendium.botanical-bestiary.effects.AwLeak2GPIH6E4b5",
+  "isActive": false,
+  "name": "Lichen's Tenacity",
+  "source": [
+    "Compendium.botanical-bestiary.actions.Item.0H0bWF5d3PY1qfQz"
+  ],
+  "labels": [],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:lichens-tenacity"
+  ],
+  "triggers": [],
+  "requirements": []
+}

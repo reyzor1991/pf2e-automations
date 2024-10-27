@@ -1,0 +1,22 @@
+{
+  "uuid": "OTuaJ8jwTSSdx5B5",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.68qdwHfv7nm4Czyr",
+  "isActive": false,
+  "name": "Blur",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.3JG1t3T4mWn6vTke"
+  ],
+  "labels": [
+    "concentrate",
+    "illusion",
+    "manipulate",
+    "visual"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:blur"
+  ],
+  "triggers": [],
+  "requirements": []
+}

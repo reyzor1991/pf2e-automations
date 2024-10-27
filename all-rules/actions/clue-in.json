@@ -1,0 +1,20 @@
+{
+  "uuid": "QYfUaovxV3smcErk",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.vhSYlQiAQMLuXqoc",
+  "isActive": false,
+  "name": "Clue In",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.25WDi1cVUrW92sUj"
+  ],
+  "labels": [
+    "concentrate",
+    "investigator"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:clue-in"
+  ],
+  "triggers": [],
+  "requirements": []
+}

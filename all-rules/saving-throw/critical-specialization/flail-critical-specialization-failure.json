@@ -1,0 +1,21 @@
+{
+  "uuid": "YOkdtt6ozVlXUxFj",
+  "triggerType": "saving-throw",
+  "value": "prone",
+  "isActive": false,
+  "name": "Flail Critical Specialization (Failure)",
+  "source": [],
+  "labels": [],
+  "target": "SelfAddCondition",
+  "predicate": [
+    {
+      "or": [
+        "outcome:failure",
+        "outcome:criticalFailure"
+      ]
+    },
+    "Flail Critical Specialization DC"
+  ],
+  "triggers": [],
+  "requirements": []
+}

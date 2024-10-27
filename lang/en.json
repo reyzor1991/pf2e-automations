@@ -18,7 +18,10 @@
       "SelfDamage": "Damage yourself",
       "TargetDamage": "Damage target",
       "RunMacro": "Run Macro",
-      "PartyEffect": "Apply effect to members of Party"
+      "TargetAllyWithinRange": "Target Self And Ally within range",
+      "DecreaseDamageBadgeEffect": "Decrease Badge Value of Damage Effect",
+      "PartyEffect": "Apply effect to members of Party",
+      "TurnOnOption": "Turn On Option"
     },
     "requirementType": {
       "None": "None",

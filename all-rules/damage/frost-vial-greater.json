@@ -1,0 +1,23 @@
+{
+  "uuid": "ZEDbtNsnpQ4NmIeX",
+  "triggerType": "damage-roll",
+  "value": "Compendium.pf2e.equipment-effects.Item.nJRoiSyd67eQ1dYj",
+  "isActive": false,
+  "name": "Frost Vial (Greater)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.intVPcEzbE9o4NQd"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "cold",
+    "consumable",
+    "splash"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "item:frost-vial-greater"
+  ],
+  "triggers": [],
+  "requirements": []
+}

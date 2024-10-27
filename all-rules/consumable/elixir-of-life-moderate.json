@@ -1,0 +1,23 @@
+{
+  "uuid": "77BDby9Ypl2t5pMF",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.equipment-effects.Item.Yxssrnh9UZJAM0V7",
+  "isActive": false,
+  "name": "Elixir of Life (Moderate)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.c21stU5rhN4F2fZl"
+  ],
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "healing"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "useEquipment",
+    "consumable:elixir-of-life-moderate"
+  ],
+  "triggers": [],
+  "requirements": []
+}

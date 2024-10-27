@@ -1,0 +1,21 @@
+{
+  "uuid": "Ks1jFZbu7lP5wbcd",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.263Cd5JMj8Lgc9yz",
+  "isActive": false,
+  "name": "Radiant Circuitry",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.2XmdYW8OsAvjGDG3"
+  ],
+  "labels": [
+    "android",
+    "concentrate",
+    "light"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:radiant-circuitry"
+  ],
+  "triggers": [],
+  "requirements": []
+}

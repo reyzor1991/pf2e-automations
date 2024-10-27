@@ -1,0 +1,32 @@
+{
+  "uuid": "fH0L1XXLqe0iAHRr",
+  "triggerType": "attack-roll",
+  "value": "Compendium.pf2e-automations.effects.Item.FCKm1dZKZzF7Jkxl",
+  "isActive": false,
+  "name": "Glue Bomb (Critical Hit)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.5Qkz4RVJr2Kx3RL6",
+    "Compendium.pf2e.equipment-srd.Item.T6Appwwl6nUl56Xj",
+    "Compendium.pf2e.equipment-srd.Item.BxJNWWvpxacDIsdt",
+    "Compendium.pf2e.equipment-srd.Item.evBPzM1VsuYcoenn"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "outcome:criticalSuccess",
+    {
+      "or": [
+        "item:glue-bomb-lesser",
+        "item:glue-bomb-moderate",
+        "item:glue-bomb-greater",
+        "item:glue-bomb-major"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

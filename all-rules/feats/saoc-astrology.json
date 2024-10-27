@@ -1,0 +1,20 @@
+{
+  "uuid": "VGdOIZU8NIEdMuAY",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.6ACbQIpmmemxmoBJ",
+  "isActive": false,
+  "name": "Saoc Astrology",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.csoGdGuWasEw3boD"
+  ],
+  "labels": [
+    "concentrate",
+    "human"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:saoc-astrology"
+  ],
+  "triggers": [],
+  "requirements": []
+}

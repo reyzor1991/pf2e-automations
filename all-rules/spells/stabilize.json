@@ -1,0 +1,24 @@
+{
+  "uuid": "542sk49Daya02RL1",
+  "triggerType": "spell-cast",
+  "value": "dying",
+  "isActive": false,
+  "name": "Stabilize",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.SnjhtQYexDtNDdEg"
+  ],
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "target": "TargetRemoveCondition",
+  "predicate": [
+    "origin:item:stabilize",
+    "target:condition:dying"
+  ],
+  "triggers": [],
+  "requirements": []
+}

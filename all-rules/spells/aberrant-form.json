@@ -1,0 +1,21 @@
+{
+  "uuid": "cG9iGt6rvrNQWtFo",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.iOBUgipEjgu7jA5k",
+  "isActive": false,
+  "name": "Aberrant Form",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Fu8Ml47ZfXpSYe7E"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:aberrant-form"
+  ],
+  "triggers": [],
+  "requirements": []
+}

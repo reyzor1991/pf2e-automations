@@ -1,0 +1,50 @@
+{
+  "uuid": "FoY0u2bh8YWvyG5Y",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.hjRzAPSPxweSrSCe",
+  "isActive": false,
+  "name": "Enlarge (Heightened 6)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.wzctak6BxOW8xvFV"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "target": "SelfOrTargetsEffect",
+  "predicate": [],
+  "triggers": [
+    {
+      "operator": "AND",
+      "objType": "group",
+      "values": [
+        {
+          "objType": "item",
+          "trigger": "EqualsSlug",
+          "encounter": false,
+          "value": "enlarge",
+          "messageType": "undefined"
+        }
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "operator": "AND",
+      "objType": "group",
+      "values": [
+        {
+          "objType": "item",
+          "requirement": "LvlGte",
+          "value": "6"
+        },
+        {
+          "objType": "item",
+          "requirement": "TargetsNumber",
+          "value": "10"
+        }
+      ]
+    }
+  ]
+}

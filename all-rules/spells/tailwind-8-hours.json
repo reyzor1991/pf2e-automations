@@ -1,0 +1,27 @@
+{
+  "uuid": "qM5P5ewWBCPypUL5",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.7vIUF5zbvHzVcJA0",
+  "isActive": false,
+  "name": "Tailwind 8 hours",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KcLVELhCUcKXxiKE"
+  ],
+  "labels": [
+    "air",
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:tailwind",
+    {
+      "lge": [
+        "origin:item:level",
+        2
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

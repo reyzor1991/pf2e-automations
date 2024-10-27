@@ -1,0 +1,25 @@
+{
+  "uuid": "t9H4lt2Z71d1fg44",
+  "triggerType": "saving-throw",
+  "value": "frightened",
+  "isActive": false,
+  "name": "Ancestral Touch (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.d2pi7laQkzlr3wrS"
+  ],
+  "labels": [
+    "emotion",
+    "fear",
+    "focus",
+    "manipulate",
+    "mental",
+    "oracle"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:ancestral-touch"
+  ],
+  "triggers": [],
+  "requirements": []
+}

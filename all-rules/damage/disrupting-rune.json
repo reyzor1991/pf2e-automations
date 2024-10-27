@@ -1,0 +1,17 @@
+{
+  "uuid": "gB16ROt6pBbhkoSM",
+  "triggerType": "damage-roll",
+  "value": "Compendium.pf2e-automations.effects.Item.NKue7w68dX1yH4bA",
+  "isActive": false,
+  "name": "Disrupting Rune",
+  "source": [],
+  "labels": [],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    "item:rune:property:disrupting",
+    "outcome:criticalSuccess",
+    "target:trait:undead"
+  ],
+  "triggers": [],
+  "requirements": []
+}

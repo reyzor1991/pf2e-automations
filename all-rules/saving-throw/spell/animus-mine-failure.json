@@ -1,0 +1,27 @@
+{
+  "uuid": "V7I2p1KW6GSQYCrB",
+  "triggerType": "saving-throw",
+  "value": "stunned",
+  "isActive": false,
+  "name": "Animus Mine (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.fWU7Qjp1JiX9g6eg"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    {
+      "or": [
+        "outcome:failure",
+        "outcome:criticalFailure"
+      ]
+    },
+    "item:slug:animus-mine"
+  ],
+  "triggers": [],
+  "requirements": []
+}

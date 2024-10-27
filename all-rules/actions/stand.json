@@ -1,0 +1,20 @@
+{
+  "uuid": "Iqikrj8z8XKryJTZ",
+  "triggerType": "postInfo",
+  "value": "prone",
+  "isActive": false,
+  "name": "Stand",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.OdIUybJ3ddfL7wzj"
+  ],
+  "labels": [
+    "general",
+    "move"
+  ],
+  "target": "SelfRemoveCondition",
+  "predicate": [
+    "origin:item:stand"
+  ],
+  "triggers": [],
+  "requirements": []
+}

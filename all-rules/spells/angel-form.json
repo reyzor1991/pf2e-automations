@@ -1,0 +1,21 @@
+{
+  "uuid": "hl57Vw4QjKypss3D",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.3Hd6ZtQYlel5fYIC",
+  "isActive": false,
+  "name": "Angel Form",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.E3zIZ4pjlOuWeGRz"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:angel-form"
+  ],
+  "triggers": [],
+  "requirements": []
+}

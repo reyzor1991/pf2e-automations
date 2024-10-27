@@ -1,0 +1,26 @@
+{
+  "uuid": "2PKPLtQwqiY359nZ",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.U6JZ3NYNtxjXeVdE",
+  "isActive": false,
+  "name": "Haste",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.o6YCGx4lycsYpww4"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:haste",
+    {
+      "lt": [
+        "origin:item:level",
+        7
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

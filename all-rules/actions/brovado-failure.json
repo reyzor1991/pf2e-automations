@@ -1,0 +1,34 @@
+{
+  "type": "complex",
+  "uuid": "2e3zf8FY7vrh1Plq",
+  "triggerType": "skill-check",
+  "values": [
+    {
+      "conditions": [],
+      "effects": [
+        "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj"
+      ],
+      "duration": {
+        "expiry": "turn-end",
+        "sustained": false,
+        "unit": "rounds",
+        "value": 1
+      }
+    }
+  ],
+  "isActive": false,
+  "name": "Brovado (Failure)",
+  "source": [
+    "Compendium.pf2e.classes.Item.uJ5aCzlw34GGdWjp"
+  ],
+  "labels": [
+    "swashbuckler"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "item:trait:bravado",
+    "outcome:failure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

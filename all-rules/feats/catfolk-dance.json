@@ -1,0 +1,25 @@
+{
+  "uuid": "1UvcZPhq6xIjy5mJ",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.feat-effects.Item.5bEnBqVOgdp4gROP",
+  "isActive": false,
+  "name": "Catfolk Dance",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.Iqv8qj7ym63YjexN"
+  ],
+  "labels": [
+    "catfolk"
+  ],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    "action:catfolk-dance",
+    {
+      "or": [
+        "outcome:success",
+        "outcome:criticalSuccess"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

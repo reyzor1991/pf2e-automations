@@ -1,0 +1,20 @@
+{
+  "uuid": "qnmJcnsSbhRwaiVQ",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.U1MpMtRnFqEDBJwd",
+  "isActive": false,
+  "name": "Emblazon Armament",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.7RFjTTzznsdPcaYB"
+  ],
+  "labels": [
+    "cleric",
+    "exploration"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:emblazon-armament"
+  ],
+  "triggers": [],
+  "requirements": []
+}

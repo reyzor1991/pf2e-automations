@@ -1,0 +1,24 @@
+{
+  "uuid": "ZjnRAl0AUj3iODsB",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.g2LBvDHPRZBabiU2",
+  "isActive": false,
+  "name": "Rallying Anthem",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.bH0kPuf7UKxRvi2P"
+  ],
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "mental"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:rallying-anthem"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,37 @@
+{
+  "uuid": "AmIFneygd8pEEdmx",
+  "triggerType": "damage-roll",
+  "value": "frightened",
+  "isActive": false,
+  "name": "Dread Ampoule Critical Hit",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.IvFEJqp2MUew65nQ",
+    "Compendium.pf2e.equipment-srd.Item.MCHYtxP8E7njLC3s",
+    "Compendium.pf2e.equipment-srd.Item.ds0OdA989ZZw9km1",
+    "Compendium.pf2e.equipment-srd.Item.kpJmjm843vaMZjIu"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable",
+    "emotion",
+    "fear",
+    "mental",
+    "poison",
+    "splash"
+  ],
+  "target": "TargetAddCondition",
+  "predicate": [
+    "outcome:criticalSuccess",
+    {
+      "or": [
+        "origin:item:dread-ampoule-lesser",
+        "origin:item:dread-ampoule-moderate",
+        "origin:item:dread-ampoule-greater",
+        "origin:item:dread-ampoule-major"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

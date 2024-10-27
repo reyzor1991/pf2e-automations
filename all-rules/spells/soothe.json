@@ -1,0 +1,23 @@
+{
+  "uuid": "CA51LQbspZEHWAAe",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.nkk4O5fyzrC0057i",
+  "isActive": false,
+  "name": "Soothe",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.szIyEsvihc5e1w8n"
+  ],
+  "labels": [
+    "concentrate",
+    "emotion",
+    "healing",
+    "manipulate",
+    "mental"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:soothe"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "caovk9lIyaWPJDRO",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.zt5GIv9435SF0fYn",
+  "isActive": false,
+  "name": "Aberrant Whispers (Immunity)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qhJfRnkCRrMI4G1O"
+  ],
+  "labels": [
+    "auditory",
+    "concentrate",
+    "focus",
+    "mental",
+    "sorcerer"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    {
+      "not": "self:effect:aberrant-whispers-immunity"
+    },
+    "item:aberrant-whispers"
+  ],
+  "triggers": [],
+  "requirements": []
+}

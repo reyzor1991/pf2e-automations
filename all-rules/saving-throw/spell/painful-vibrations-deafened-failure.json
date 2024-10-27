@@ -1,0 +1,22 @@
+{
+  "uuid": "GbpG7JaP28zOrZce",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.7roTkQ4QHWDWZkJM",
+  "isActive": false,
+  "name": "Painful Vibrations Deafened (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qTzvVnAMWL05VitC"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sonic"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:painful-vibrations"
+  ],
+  "triggers": [],
+  "requirements": []
+}

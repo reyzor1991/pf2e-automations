@@ -1,0 +1,23 @@
+{
+  "uuid": "7QpFM4bGobBqjbWL",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e-automations.effects.Item.w9i0aY2IQ3jvCX9K",
+  "isActive": false,
+  "name": "Intimidating Strike",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.lkcM4V3VDAtjlR9P"
+  ],
+  "labels": [
+    "barbarian",
+    "emotion",
+    "fear",
+    "fighter",
+    "mental"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:intimidating-strike"
+  ],
+  "triggers": [],
+  "requirements": []
+}

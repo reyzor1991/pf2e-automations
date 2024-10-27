@@ -1,0 +1,21 @@
+{
+  "uuid": "Oizklzi4JaFWZIrb",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.GvqB4M8LrHpzYEvl",
+  "isActive": false,
+  "name": "Fane's Fourberie",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.80CEAB05TP5ki9iW"
+  ],
+  "labels": [
+    "rogue",
+    "stance",
+    "swashbuckler"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:fanes-fourberie"
+  ],
+  "triggers": [],
+  "requirements": []
+}

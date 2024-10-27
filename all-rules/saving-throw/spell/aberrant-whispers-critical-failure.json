@@ -1,0 +1,24 @@
+{
+  "uuid": "zZ3nkCqCPYh0qI36",
+  "triggerType": "saving-throw",
+  "value": "confused",
+  "isActive": false,
+  "name": "Aberrant Whispers (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qhJfRnkCRrMI4G1O"
+  ],
+  "labels": [
+    "auditory",
+    "concentrate",
+    "focus",
+    "mental",
+    "sorcerer"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:slug:aberrant-whispers"
+  ],
+  "triggers": [],
+  "requirements": []
+}

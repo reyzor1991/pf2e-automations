@@ -6,7 +6,7 @@
             <button type="button" data-action="apply-sub">{{localize "PF2E.Item.Rules.Apply"}}</button>
         </div>
     </form>
-{{else if editGroup}}
+{{else}}
     <form class="editable" autocomplete="off" onsubmit="event.preventDefault();">
         <div>
             <fieldset class="row">
@@ -19,10 +19,10 @@
                         <label class="tc">Is Active</label>
                         <input type="checkbox" name="{{rule.uuid}}.isActive" {{#if rule.isActive}} checked {{/if}}/>
                     </div>
-
-                    <div class="rule-controls" style="align-items: center;">
-                        <a class="remove-rule" data-idx="{{rule.uuid}}" title="Remove"><i class="fas fa-trash"></i></a>
-                    </div>
+                </div>
+                <div class="rule form-group" style="flex: 0.7;">
+                    <label style="width: 120px;">Trigger type</label>
+                    <input type="text" name="{{rule.uuid}}.triggerType" value="{{rule.triggerType}}"/>
                 </div>
                 {{#unless rule.type}}
                     <div class="rule form-group">
@@ -57,21 +57,38 @@
                     </div>
                 {{/if}}
                 <div class="rule form-group">
+                    <label>Labels</label>
+                    <multi-select id="traits" name="{{rule.uuid}}.labels">
+                        {{ selectOptions labels selected=selectedLabels localize=true }}
+                    </multi-select>
+                </div>
+                <div class="rule form-group">
+                    <label>Range</label>
+                    <input type="number" name="{{rule.uuid}}.range" value="{{rule.range}}"/>
+                </div>
+                <div class="rule form-group">
+                    <label>Predicate (Json array) (Has bigger priority then trigger&requirement)</label>
+                    <textarea name="{{rule.uuid}}.predicate" spellcheck="false">{{json rule.predicate}}</textarea>
+                </div>
+                <div class="rule form-group">
                     <label>Triggers - {{rule.triggerCount}}</label>
                     <div class="rule-controls">
                         <a class="edit-rule-trigger" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                        <a class="add-rule-trigger" data-idx="{{rule.uuid}}" title="Add Trigger Group"><i class="fas fa-add"></i></a>
+                        <a class="add-rule-trigger" data-idx="{{rule.uuid}}" title="Add Trigger Group"><i
+                                class="fas fa-add"></i></a>
                     </div>
                     <label>Requirements - {{rule.requirementCount}}</label>
                     <div class="rule-controls">
                         <a class="edit-rule-requirement" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                        <a class="add-rule-requirement" data-idx="{{rule.uuid}}" title="Add Requirement Group"><i class="fas fa-add" style="color:red"></i></a>
+                        <a class="add-rule-requirement" data-idx="{{rule.uuid}}" title="Add Requirement Group"><i
+                                class="fas fa-add" style="color:red"></i></a>
                     </div>
                     {{#if rule.type}}
                         <label>Generated rules - {{rule.generatedRuleCount}}</label>
                         <div class="rule-controls">
                             <a class="edit-generated-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                            <a class="add-generated-rule" data-idx="{{rule.uuid}}" title="Add Generated Rule"><i class="fas fa-add" style="color:red"></i></a>
+                            <a class="add-generated-rule" data-idx="{{rule.uuid}}" title="Add Generated Rule"><i
+                                    class="fas fa-add" style="color:red"></i></a>
                         </div>
                     {{/if}}
                 </div>
@@ -80,42 +97,6 @@
         <div class="item-controls">
             <button type="button" data-action="close">{{localize "PF2E.Item.Rules.Close"}}</button>
             <button type="button" data-action="apply">{{localize "PF2E.Item.Rules.Apply"}}</button>
-        </div>
-    </form>
-{{else}}
-    <form class="editable" autocomplete="off" onsubmit="event.preventDefault();">
-        <div class="create-rule">
-            {{#if (gt rules.length 10)}}
-                <input class="FilterSearch" type="search" placeholder="Filter" value="" style="width: 30%; left: 8px; position: absolute;">
-            {{/if}}
-            <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
-        </div>
-        <div class="data">
-            <ul id="rule-list" class="directory-list package-list rule-list">
-                {{#each rules as |rule|}}
-                    <li class="package flexcol active">
-                        <div class="package-overview flexrow">
-                            <label class="package-title checkbox" style="display: flex;">
-                                <input type="checkbox" class="active" name="{{rule.uuid}}.isActive" data-dtype="Boolean" {{#if rule.isActive}} checked {{/if}}>
-                                <div class="title-group" title="{{rule.description}}">
-                                    <div class="title">{{rule.name}}</div>
-                                </div>
-                            </label>
-
-                            <div class="rule-controls" style="align-items: center;">
-                                <a class="export-rule" data-idx="{{rule.uuid}}"><i class="fas fa-file-export"></i></a>
-                                <a class="edit-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                                <a class="remove-rule" data-idx="{{rule.uuid}}" title="Remove"><i class="fas fa-trash"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                {{/each}}
-            </ul>
-        </div>
-        <div class="form-group buttons">
-            <button type="submit" name="submit">
-                <i class="far fa-save"></i> Save
-            </button>
         </div>
     </form>
 {{/if}}

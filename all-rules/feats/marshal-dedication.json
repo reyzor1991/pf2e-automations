@@ -1,0 +1,20 @@
+{
+  "uuid": "KlKQTBcjW7PYSFLA",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.Ru4BNABCZ0hUbX7S",
+  "isActive": false,
+  "name": "Marshal Dedication",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.MYzRfNExDYp25rro"
+  ],
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:marshal-dedication"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "nADDkvmOhe57CxSU",
+  "triggerType": "damage-roll",
+  "value": "Compendium.pf2e-automations.effects.Item.KC8ScCZQpH2lN14h",
+  "isActive": false,
+  "name": "Ghost Charge (Enfeebled)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.LNd5u19GqC51ngby",
+    "Compendium.pf2e.equipment-srd.Item.Wf94e8YNhZdIvWc9"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable",
+    "vitality"
+  ],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    {
+      "or": [
+        "item:ghost-charge-lesser",
+        "item:ghost-charge-moderate"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

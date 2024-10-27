@@ -1,0 +1,25 @@
+{
+  "uuid": "0cIJnLPnWNHLnpGY",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.3eHMqVx30JGiJqtM",
+  "isActive": false,
+  "name": "Twinned Defense",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.xjLbabfyQzBNT4y1"
+  ],
+  "labels": [
+    "fighter",
+    "stance"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    {
+      "or": [
+        "origin:item:twinned-defense-swashbuckler",
+        "origin:item:twinned-defense-fighter"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

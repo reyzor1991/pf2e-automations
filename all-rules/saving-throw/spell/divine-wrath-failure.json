@@ -1,0 +1,23 @@
+{
+  "uuid": "vLYd0jdiMCRcBDbF",
+  "triggerType": "saving-throw",
+  "value": "sickened",
+  "isActive": false,
+  "name": "Divine Wrath (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.hVU9msO9yGkxKZ3J"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sanctified",
+    "spirit"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:divine-wrath"
+  ],
+  "triggers": [],
+  "requirements": []
+}

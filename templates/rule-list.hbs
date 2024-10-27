@@ -1,0 +1,100 @@
+<div class="rule-list">
+    <nav class="sheet-tabs tabs" data-application-part="tabs">
+        <a class="{{#if (eq tabGroups.base "attack-roll")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="attack-roll">
+            <i class=""></i> <label>Attacks</label>
+        </a>
+        <a class="{{#if (eq tabGroups.base "damage-roll")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="damage-roll">
+            <i class=""></i> <label>Damage</label>
+        </a>
+        <a class="{{#if (eq tabGroups.base "skill-check")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="skill-check">
+            <i class=""></i> <label>Skills</label>
+        </a>
+        <a class="{{#if (eq tabGroups.base "spell-cast")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="spell-cast">
+            <i class=""></i> <label>Spells</label>
+        </a>
+        <a class="{{#if (eq tabGroups.base "saving-throw")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="saving-throw">
+            <i class=""></i> <label>Saving Throw</label>
+        </a>
+        <a class="{{#if (eq tabGroups.base "other")}}active{{/if}}" data-action="tab" data-group="base"
+           data-tab="other">
+            <i class=""></i> <label>Other</label>
+        </a>
+    </nav>
+
+    <div class="wrapper">
+        <div class="create-rule">
+            <div>
+                <input class="FilterSearch" type="search" placeholder="Filter" value=""
+                       style="width: 50%; left: 8px;">
+                <multi-select id="filter-label">
+                    {{ selectOptions labels localize=true }}
+                </multi-select>
+            </div>
+            <div class="pd10">
+                <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
+            </div>
+            <div class="center-btn-filter">
+                <a class="check-all-rule"><i class="fas fa-check"></i> Activate All Rule</a>
+                <a class="check-filtered-rule"><i class="fas fa-check"></i> Activate Filtered Rule</a>
+            </div>
+            <div class="center-btn-filter">
+                <a class="minus-all-rule"><i class="fas fa-minus"></i> Deactivate All Rule</a>
+                <a class="minus-filtered-rule"><i class="fas fa-minus"></i> Deactivate Filtered Rule</a>
+            </div>
+            <div>
+                <a class="delete-all-rules"><i class="fas fa-trash"></i> Delete All Rule</a>
+            </div>
+            <div>
+                <a class="apply-suggestions"><i class="fas fa-question"></i> Apply Suggestions</a>
+            </div>
+        </div>
+
+        <section class="tab {{#if (eq tabGroups.base "attack-roll")}}active{{/if}}" data-tab="attack-roll" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.attacks
+            }}
+        </section>
+
+        <section class="tab {{#if (eq tabGroups.base "damage-roll")}}active{{/if}}" data-tab="damage-roll" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.damage
+            }}
+        </section>
+
+        <section class="tab {{#if (eq tabGroups.base "skill-check")}}active{{/if}}" data-tab="skill-check" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.skills
+            }}
+        </section>
+
+        <section class="tab {{#if (eq tabGroups.base "spell-cast")}}active{{/if}}" data-tab="spell-cast" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.spells
+            }}
+        </section>
+
+        <section class="tab {{#if (eq tabGroups.base "saving-throw")}}active{{/if}}" data-tab="saving-throw" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.saving
+            }}
+        </section>
+
+        <section class="tab {{#if (eq tabGroups.base "other")}}active{{/if}}" data-tab="other" data-group="base">
+            {{> "modules/pf2e-automations/templates/partials/list.hbs"
+                    list=rules.other
+            }}
+        </section>
+
+    </div>
+
+    <div class="form-group buttons">
+        <button type="submit" name="submit">
+            <i class="far fa-save"></i> Save
+        </button>
+    </div>
+</div>

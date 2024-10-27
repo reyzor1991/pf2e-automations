@@ -1,0 +1,37 @@
+{
+  "uuid": "PKtq9uRTzmawM0Z9",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.0v7THqjruKWI0wJ4",
+  "isActive": false,
+  "name": "Skunk Bomb (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.3Sij5RwC6Z1ZVuFp",
+    "Compendium.pf2e.equipment-srd.Item.7WwKI53IcXVIHbkh",
+    "Compendium.pf2e.equipment-srd.Item.Dv1bozSbR39McpWd",
+    "Compendium.pf2e.equipment-srd.Item.m091zbWD9EoH6kWC"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable",
+    "olfactory",
+    "poison",
+    "splash"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "alchemical",
+    "bomb",
+    "outcome:criticalFailure",
+    {
+      "or": [
+        "Skunk Bomb (Lesser) DC",
+        "Skunk Bomb (Moderate) DC",
+        "Skunk Bomb (Greater) DC",
+        "Skunk Bomb (Major) DC"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

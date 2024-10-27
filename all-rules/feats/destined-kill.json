@@ -1,0 +1,19 @@
+{
+  "uuid": "ExdWKG3qQBjyNOHl",
+  "triggerType": "postInfo",
+  "value": "Compendium.barbarians.barbarians-effects.Item.XW10hiejiCwDC2yh",
+  "isActive": false,
+  "name": "Destined Kill",
+  "source": [
+    "Compendium.barbarians.barbarians-feats.Item.yLRgM8jZdHMBQSgv"
+  ],
+  "labels": [
+    "barbarian"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:destined-kill"
+  ],
+  "triggers": [],
+  "requirements": []
+}

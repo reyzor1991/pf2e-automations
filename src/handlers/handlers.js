@@ -5,7 +5,7 @@ async function registerMessageCreateHandler(name, callback, description) {
 
     const cur = getSetting("messageCreateHandlers") ?? [];
     if (!cur.find((a) => a.name === name)) {
-        cur.push({ isActive: true, name, description });
+        cur.push({isActive: false, name, description});
     }
     await game.settings.set(moduleName, "messageCreateHandlers", cur);
 }
@@ -21,7 +21,7 @@ async function registerUpdateActorHandler(name, callback, description) {
 
     const cur = getSetting("updateActorHandlers") ?? [];
     if (!cur.find((a) => a.name === name)) {
-        cur.push({ isActive: true, name, description });
+        cur.push({isActive: false, name, description});
     }
     await game.settings.set(moduleName, "updateActorHandlers", cur);
 }
@@ -45,7 +45,7 @@ async function registerDeleteItemHandler(name, callback, description) {
 
     const cur = getSetting("deleteItemHandlers") ?? [];
     if (!cur.find((a) => a.name === name)) {
-        cur.push({ isActive: true, name, description });
+        cur.push({isActive: false, name, description});
     }
     await game.settings.set(moduleName, "deleteItemHandlers", cur);
 }
@@ -74,7 +74,7 @@ async function registerCreateItemHandler(name, callback, description) {
 
     const cur = getSetting("createItemHandlers") ?? [];
     if (!cur.find((a) => a.name === name)) {
-        cur.push({ isActive: true, name, description });
+        cur.push({isActive: false, name, description});
     }
     await game.settings.set(moduleName, "createItemHandlers", cur);
 }
@@ -102,13 +102,13 @@ async function registerUpdateItemHandler(name, callback, description) {
 
     const cur = getSetting("updateItemHandlers") ?? [];
     if (!cur.find((a) => a.name === name)) {
-        cur.push({ isActive: true, name, description });
+        cur.push({isActive: false, name, description});
     }
     await game.settings.set(moduleName, "updateItemHandlers", cur);
 }
 
 
-Hooks.on("preUpdateItem",  (item, data, options, id) => {
+Hooks.on("preUpdateItem", (item, data, options, id) => {
     (getSetting("updateItemHandlers") ?? [])
         .filter((a) => a.isActive)
         .forEach((handler) => {

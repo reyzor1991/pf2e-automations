@@ -1,0 +1,21 @@
+{
+  "uuid": "JLuUqkZqYIYa3lAY",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.l9HRQggofFGIxEse",
+  "isActive": false,
+  "name": "Heroism",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:heroism"
+  ],
+  "triggers": [],
+  "requirements": []
+}

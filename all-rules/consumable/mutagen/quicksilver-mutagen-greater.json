@@ -1,0 +1,24 @@
+{
+  "uuid": "e5Fr2zRVMdzdxxwC",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.equipment-effects.Item.2Bds6d4UGQZqYSZM",
+  "isActive": false,
+  "name": "Quicksilver Mutagen Greater",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.eQDTsetadI8u8Kc0"
+  ],
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "useEquipment",
+    "consumable:quicksilver-mutagen-greater"
+  ],
+  "triggers": [],
+  "requirements": []
+}

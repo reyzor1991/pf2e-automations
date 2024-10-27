@@ -1,0 +1,21 @@
+{
+  "uuid": "talvlwMQWFtwCfQM",
+  "triggerType": "saving-throw",
+  "value": "stunned",
+  "isActive": false,
+  "name": "Firearm Critical Specialization (Failure)",
+  "source": [],
+  "labels": [],
+  "target": "SelfAddCondition",
+  "predicate": [
+    {
+      "or": [
+        "outcome:failure",
+        "outcome:criticalFailure"
+      ]
+    },
+    "Firearm Critical Specialization DC"
+  ],
+  "triggers": [],
+  "requirements": []
+}

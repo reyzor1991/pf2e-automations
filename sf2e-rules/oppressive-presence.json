@@ -1,0 +1,31 @@
+{
+  "type": "complex",
+  "uuid": "5O5y3TMuv9FdO6y9",
+  "triggerType": "postInfo",
+  "values": [
+    {
+      "conditions": [],
+      "effects": [
+        "Compendium.starfinder-field-test-for-pf2e.conditions.Item.enA7BxAjBb7ns1iF"
+      ],
+      "duration": {
+        "expiry": "turn-start",
+        "sustained": false,
+        "unit": "rounds",
+        "value": 1
+      }
+    }
+  ],
+  "isActive": false,
+  "name": "Oppressive Presence",
+  "source": [
+    "Compendium.starfinder-field-test-for-pf2e.actions.Item.MhHbQJyCQHFqBFcb"
+  ],
+  "labels": [],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    "origin:item:oppressive-presence"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "Aou72KKG4F3XsyCb",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.zzC2qZwEKf4Ja3xD",
+  "isActive": false,
+  "name": "Impassable Wall Stance",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.YeyOqNFKaeuOTiJr"
+  ],
+  "labels": [
+    "champion",
+    "fighter",
+    "stance"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:impassable-wall-stance"
+  ],
+  "triggers": [],
+  "requirements": []
+}

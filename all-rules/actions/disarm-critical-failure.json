@@ -1,0 +1,21 @@
+{
+  "uuid": "hUfbsPpbK2dQ8Gx4",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.other-effects.Item.y1GwyXv7iOf8DhBg",
+  "isActive": false,
+  "name": "Disarm (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9"
+  ],
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "action:disarm",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -18,7 +18,10 @@
       "SelfDamage": "Zadaj sobie obrażenia",
       "TargetDamage": "Zadaj obrażenia celowi",
       "RunMacro": "Uruchom makro",
-      "PartyEffect": "Zastosuj efekt do członków drużyny"
+      "PartyEffect": "Zastosuj efekt do członków drużyny",
+      "TurnOnOption": "Włącz opcję",
+      "TargetAllyWithinRange": "Wybierz siebie i sojusznika w zasięgu",
+      "DecreaseDamageBadgeEffect": "Zmniejsz wartość odznaki efektu obrażeń"
     },
     "requirementType": {
       "None": "Brak",

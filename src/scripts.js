@@ -1,11 +1,17 @@
 const moduleName = "pf2e-automations";
 
-function hasPermissions(item) {
-  return 3 === item?.ownership[game.user.id] || isGM();
+function getSrc(message) {
+    return message.token?.texture?.src
+        || message.actor?.getActiveTokens(true, true)[0]?.texture?.src
+        || message.actor?.img;
 }
 
 function isGM() {
-    return game.user.isGM;
+    return game.user === game.users.activeGM
+}
+
+function showName(obj) {
+    return game.settings.get("pf2e", "metagame_tokenSetsNameVisibility") ? (obj.playersCanSeeName || game.user.isGM) : true
 }
 
 function translate(value) {
@@ -13,7 +19,50 @@ function translate(value) {
 }
 
 function hasOption(message, opt) {
-    return message?.flags?.pf2e?.context?.options?.includes(opt);
+    return message?.flags?.pf2e?.context?.options?.includes(opt)
+        || message?.flags?.pf2e?.origin?.rollOptions?.includes(opt);
+}
+
+function triggerType(message) {
+    const type = message?.flags?.pf2e?.context?.type;
+    if (type) {
+        return type;
+    } else if (Object.keys(message.flags.pf2e).length === 1 && message.flags.pf2e.origin) {
+        return "postInfo"
+    } else if (Object.keys(message.flags.pf2e).length === 2) {
+        if (message.flags.pf2e.origin && message.flags.pf2e.casting && message.flags.pf2e.origin.type === 'spell') {
+            return 'spell-cast'
+        }
+    }
+    return undefined;
+}
+
+async function getRollOptions(message) {
+    let data = [
+        ...(message?.flags?.pf2e?.context?.options || []),
+        ...(message?.flags?.pf2e?.origin?.rollOptions || []),
+    ]
+
+    const outcome = message?.flags?.pf2e?.context?.outcome;
+    if (outcome) {
+        data.push(`outcome:${message?.flags?.pf2e?.context?.outcome}`);
+    }
+
+    if (message?.flags?.pf2e?.origin?.sourceId) {
+        data.push('useEquipment')
+        data.push(...((message.item || await fromUuid(message?.flags?.pf2e?.origin?.sourceId))?.getRollOptions() || []))
+    }
+    if (message.flags?.pf2e?.context?.dc?.label) {
+        data.push(message.flags.pf2e.context.dc.label)
+    }
+    if (!message.target?.actor && game.user.targets.first()?.actor) {
+        data.push(...game.user.targets.first()?.actor.getSelfRollOptions('target'))
+    }
+    if (message.actor) {
+        data.push(...message.actor.getRollOptions())
+    }
+
+    return new Set(data)
 }
 
 function hasDomain(message, opt) {
@@ -24,8 +73,16 @@ function hasCondition(actor, con) {
     return actor?.itemTypes?.condition?.find((c) => con === c.slug);
 }
 
+function hasEffect(actor, eff) {
+    return actor?.itemTypes?.effect?.find((c) => eff === c.slug);
+}
+
 function getSetting(name) {
     return game.settings.get(moduleName, name);
+}
+
+async function setSetting(name, value) {
+    return game.settings.set(moduleName, name, value);
 }
 
 function failureMessageOutcome(message) {
@@ -52,12 +109,43 @@ function anySuccessMessageOutcome(message) {
     return successMessageOutcome(message) || criticalSuccessMessageOutcome(message);
 }
 
+const PREDICATE_REGEXP = new RegExp(String.raw`{(actor|target)\|(.*?)}`, "g");
+
+function prepareCorrectPredicate(predicate, replaceData) {
+    if (!replaceData) return predicate;
+
+    if (Array.isArray(predicate)) {
+        for (let i = 0; i < predicate.length; i++) {
+            predicate[i] = prepareCorrectPredicate(predicate[i], replaceData);
+        }
+    } else if (typeof predicate === "string") {
+        return predicate.replace(PREDICATE_REGEXP, (_match, key, prop) => {
+            return foundry.utils.getProperty(replaceData[key] || {}, prop);
+        })
+    } else if (typeof predicate === "object") {
+        for (const [key, value] of Object.entries(predicate)) {
+            predicate[key] = prepareCorrectPredicate(value, replaceData);
+        }
+    }
+
+    return predicate;
+}
+
+function checkPredicate(predicate, options, replaceData) {
+    let correctPredicate = prepareCorrectPredicate(foundry.utils.deepClone(predicate), replaceData);
+    return game.pf2e.Predicate.test(correctPredicate, options)
+}
+
 function hasEffectBySourceId(actor, eff) {
     return actor?.itemTypes?.effect?.find((c) => eff === c.sourceId);
 }
 
+function getEffectBySourceId(actor, eff) {
+    return actor?.itemTypes?.effect?.find((c) => eff === c.sourceId);
+}
+
 function hasFeatBySourceId(actor, eff) {
-    return actor?.itemTypes?.feat?.find((c) => eff === c.sourceId);
+    return actor?.rollOptions?.all[eff];
 }
 
 function messageDCLabelHas(message, l) {
@@ -83,10 +171,10 @@ async function setEffectToActor(
     actor,
     effUuid,
     level = undefined,
-    optionalData = { name: undefined, icon: undefined, origin: undefined, duplication: false }
+    optionalData = {name: undefined, icon: undefined, origin: undefined, duplication: false}
 ) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("setEffectToActorId", [actor.uuid, effUuid, level, optionalData], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("setEffectToActor", {actorId: actor.uuid, effUuid, level, optionalData});
         return;
     }
 
@@ -104,20 +192,20 @@ async function setEffectToActor(
         if (optionalData?.icon) {
             source.img = optionalData.icon;
         }
-        source.flags = foundry.utils.mergeObject(source.flags ?? {}, { core: { sourceId: effUuid } });
+        source.flags = foundry.utils.mergeObject(source.flags ?? {}, {core: {sourceId: effUuid}});
         if (level) {
-            source.system.level = { value: level };
+            source.system.level = {value: level};
         }
         if (optionalData?.origin) {
             source.system.context = foundry.utils.mergeObject(source.system.context ?? {}, {
                 origin: optionalData?.origin,
             });
         }
-        await actor.createEmbeddedDocuments("Item", [source]);
+        actor.createEmbeddedDocuments("Item", [source]);
     }
 }
 
-async function setEffectToTarget(message, effectUUID) {
+async function setEffectToTarget(message, effectUUID, level, optionalData) {
     if (!message.target && game.user.targets.size !== 1) {
         ui.notifications.info(`${message.actor.name} chose incorrect count of targets for effect`);
         return;
@@ -125,7 +213,7 @@ async function setEffectToTarget(message, effectUUID) {
 
     const targetActor = message.target?.actor ?? game.user.targets.first()?.actor;
 
-    await setEffectToActor(targetActor, effectUUID, message?.item?.level);
+    await setEffectToActor(targetActor, effectUUID, level, optionalData);
 }
 
 async function setEffectToTargetActorNextTurn(message, effectUUID) {
@@ -137,30 +225,29 @@ async function setEffectToTargetActorNextTurn(message, effectUUID) {
     const targetActor = message.target?.actor ?? game.user.targets.first()?.actor;
 
     await setEffectToActor(targetActor, effectUUID, message?.item?.level, {
-        origin: { actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid },
+        origin: {actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid},
     });
 }
 
 async function setEffectToSelfActorNextTurn(message, rule) {
     let effectUUID = rule.value;
-    const _obj = await fromUuid(message?.flags?.pf2e?.origin?.uuid);
-    if (_obj) {
+    let originActor = message?.flags?.pf2e?.origin?.actor ?? message?.flags?.pf2e?.context?.origin?.actor;
+    const _obj = message?.flags?.pf2e?.origin?.uuid ?? message?.flags?.pf2e?.context?.origin?.uuid;
+    if (originActor) {
         await setEffectToActor(message.actor, effectUUID, message?.item?.level, {
-            origin: { actor: _obj.actor?.uuid, item: _obj?.uuid },
+            origin: {actor: originActor, item: _obj},
             duplication: !!rule?.allowDuplicate,
         });
-    } else if (!_obj && message?.flags?.pf2e?.origin?.uuid) {
-        let data = message.flags.pf2e.origin.uuid.split(".");
+    } else if (!originActor && _obj) {
+        let data = _obj.split(".");
         if (data.length === 4) {
             await setEffectToActor(message.actor, effectUUID, message?.item?.level, {
-                origin: { actor: (await fromUuid(data[0] + "." + data[1]))?.uuid, item: undefined },
+                origin: {actor: (await fromUuid(data[0] + "." + data[1]))?.uuid, item: _obj},
                 duplication: !!rule?.allowDuplicate,
             });
         }
     }
 }
-
-
 
 async function setEffectToActorOrTarget(message, effectUUID) {
     if (game.user.targets.size === 0 && !message.target) {
@@ -179,11 +266,44 @@ async function addItemToActorId(actorUuid, item) {
 }
 
 async function addItemToActor(actor, item) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("addItemToActorId", [actor.uuid, item], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("addItemToActor", {uuid: actor.uuid, item});
         return;
     }
     await actor.createEmbeddedDocuments("Item", [item]);
+}
+
+async function addItem(actorUuid, item) {
+    await addItemToActor(await fromUuid(actorUuid), item);
+}
+
+async function deleteEffectFromActorId(actorId, slug) {
+    await deleteEffectFromActor(await fromUuid(actorId), slug);
+}
+
+async function deleteEffectFromActor(actor, slug) {
+    const effect = actor.itemTypes.effect.find((c) => slug === c.slug);
+    if (!effect) {
+        return;
+    }
+    if (actor.canUserModify(game.user, "update")) {
+        await actor.deleteEmbeddedDocuments("Item", [effect._id]);
+    } else {
+        executeAsGM("deleteEffectFromActor", {uuid: actor.uuid, slug});
+    }
+}
+
+async function updateItemById(uuid, data) {
+    await updateItem(await fromUuid(uuid), data);
+}
+
+async function updateItem(item, data) {
+    if (!item.canUserModify(game.user, "update")) {
+        executeAsGM("updateItem", {uuid: item.uuid, data});
+        return
+    }
+
+    item.update(data);
 }
 
 async function deleteItemById(itemUuid) {
@@ -191,9 +311,11 @@ async function deleteItemById(itemUuid) {
 }
 
 async function deleteItem(item) {
-    if (!item) { return; }
-    if (!hasPermissions(item)) {
-        socketlibSocket._sendRequest("deleteItemById", [item.uuid], 0);
+    if (!item) {
+        return;
+    }
+    if (!item.canUserModify(game.user, "delete")) {
+        executeAsGM("deleteItem", {uuid: item.uuid});
     } else {
         await item.delete();
     }
@@ -204,12 +326,12 @@ async function removeConditionFromActorId(actorId, condition, forceRemove = fals
 }
 
 async function removeConditionFromActor(actor, condition, forceRemove = false) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("removeConditionFromActorId", [actor.uuid, condition, forceRemove], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("removeConditionFromActor", {uuid: actor.uuid, condition, forceRemove});
         return;
     }
 
-    await actor.decreaseCondition(condition, { forceRemove: forceRemove });
+    await actor.decreaseCondition(condition, {forceRemove: forceRemove});
 }
 
 async function removeEffectFromActorId(actor, effect) {
@@ -217,9 +339,11 @@ async function removeEffectFromActorId(actor, effect) {
 }
 
 async function removeEffectFromActor(actor, effect) {
-    if (!actor) { return }
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("removeEffectFromActorId", [actor.uuid, effect], 0);
+    if (!actor) {
+        return
+    }
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("removeEffectFromActor", {uuid: actor.uuid, effect});
         return;
     }
 
@@ -235,15 +359,15 @@ async function applyDamageById(actorUUID, tokenUUID, formula) {
 }
 
 async function applyDamage(actor, token, formula) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("applyDamageById", [actor.uuid, token.uuid, formula], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("applyDamage", {actorUUID: actor.uuid, tokenUUID: token.uuid, formula});
         return;
     }
 
     const roll = new DamageRoll(parseFormula(actor, formula));
-    await roll.evaluate({ async: true });
-    actor.applyDamage({ damage: roll, token });
-    roll.toMessage({ speaker: { alias: actor.name } });
+    await roll.evaluate();
+    await actor.applyDamage({damage: roll, token});
+    await roll.toMessage({speaker: {alias: actor.name}});
 }
 
 async function increaseConditionForActorId(actorId, condition, value = undefined) {
@@ -251,8 +375,8 @@ async function increaseConditionForActorId(actorId, condition, value = undefined
 }
 
 async function increaseConditionForActor(actor, condition, value = undefined) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("increaseConditionForActorId", [actor.uuid, condition, value], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("increaseConditionForActor", {uuid: actor.uuid, condition, value});
         return;
     }
 
@@ -277,13 +401,12 @@ async function decreaseConditionForActorId(actorId, condition, value = undefined
 }
 
 async function decreaseConditionForActor(actor, condition, value = undefined) {
-    if (!hasPermissions(actor)) {
-        socketlibSocket._sendRequest("decreaseConditionForActorId", [actor.uuid, condition, value], 0);
+    if (!actor.canUserModify(game.user, "update")) {
+        executeAsGM("decreaseConditionForActor", {uuid: actor.uuid, condition, value});
         return;
     }
 
-    let activeCondition = hasCondition(actor, condition);
-    if (!activeCondition) {
+    if (!hasCondition(actor, condition)) {
         return;
     }
 
@@ -292,17 +415,34 @@ async function decreaseConditionForActor(actor, condition, value = undefined) {
     }
 }
 
+async function createDocumentsParentId(data, parentUuid) {
+    let parent = await fromUuid(parentUuid);
+    await createDocumentsParent(data, parent)
+}
+
+async function createDocumentsParent(data, parent) {
+    if (!parent) {
+        return
+    }
+
+    await CONFIG.Item.documentClass.createDocuments(data, {parent})
+}
+
 function preparedOptionalData(message) {
     if (message?.item?.type === "spell") {
-        const { tradition, attribute } = message.item?.spellcasting;
-        const { mod } = message.actor?.abilities?.[attribute];
-        const spellcasting = { tradition, attribute: { type: attribute, mod } };
+        const {tradition, attribute} = message.item?.spellcasting;
+        const {mod} = message.actor?.abilities?.[attribute];
+        const spellcasting = {tradition, attribute: {type: attribute, mod}};
 
         return {
             origin: {actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid, spellcasting},
         };
     }
     return undefined;
+}
+
+function lastMessages(n = 20) {
+    return game.messages.contents.slice(-1 * n).reverse();
 }
 
 function effectUUID(id) {
@@ -317,40 +457,28 @@ function equipmentUUID(id) {
     return `Compendium.${moduleName}.equipment.Item.${id}`
 }
 
-function hasEffect(actor, eff) {
-    return actor?.itemTypes?.effect?.find((c) => eff === c.slug);
+function getEffectsBySlug(actor, eff) {
+    return actor?.itemTypes?.effect?.filter((c) => eff === c.slug);
 }
 
-async function createDocumentsParent(data, parentUuid) {
-     let parent = await fromUuid(parentUuid);
-     if (!parent) {return}
-
-     await CONFIG.Item.documentClass.createDocuments(data, {parent})
+function distanceIsCorrect(firstT, secondT, distance) {
+    return (
+        (firstT instanceof Token ? firstT : firstT.object).distanceTo(
+            secondT instanceof Token ? secondT : secondT.object
+        ) <= distance
+    );
 }
 
-async function deleteEffectFromActorId(actorId, slug) {
-  await deleteEffectFromActor(await fromUuid(actorId), slug);
+async function parseEffect(effect) {
+    return (await fromUuid(effect)) || createCondition(effect);
 }
 
-async function deleteEffectFromActor(actor, slug) {
-    const effect = actor.itemTypes.effect.find((c) => slug === c.slug);
-    if (!effect) { return; }
-    if (hasPermissions(actor)) {
-        await actor.deleteEmbeddedDocuments("Item", [effect._id]);
-    } else {
-        socketlibSocket._sendRequest("deleteEffectFromActorId", [actor.uuid, slug], 0);
-    }
+function createCondition(value) {
+    let data = value.split(" ")
+    return game.pf2e.ConditionManager.getCondition(data[0], {"system.value.value": data[1]})
 }
 
-async function updateItemById(uuid, data) {
-  await updateItem(await fromUuid(uuid), data);
-}
-
-async function updateItem(item, data) {
-    if (!hasPermissions(item)) {
-        socketlibSocket._sendRequest("updateItemById", [item.uuid, data], 0);
-        return
-    }
-
-    item.update(data);
+function decreaseDamageBadgeEffect(actor, source) {
+    actor.itemTypes.effect.find(e => e.sourceId === source)
+        ?.decrease();
 }

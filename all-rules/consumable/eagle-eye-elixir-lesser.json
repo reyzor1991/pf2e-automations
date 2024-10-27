@@ -1,0 +1,22 @@
+{
+  "uuid": "mzWD6N3n6Z0TbzYy",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.equipment-effects.Item.VCypzSu659eC6jNi",
+  "isActive": false,
+  "name": "Eagle Eye Elixir (Lesser)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.7Y2yOr4ltpP2tyuL"
+  ],
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "useEquipment",
+    "consumable:eagle-eye-elixir-lesser"
+  ],
+  "triggers": [],
+  "requirements": []
+}

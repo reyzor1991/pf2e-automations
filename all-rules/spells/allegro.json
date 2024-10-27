@@ -1,0 +1,24 @@
+{
+  "uuid": "KlTjxFdyyKfbroEj",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.kZmteGRpdP6qgIdC",
+  "isActive": false,
+  "name": "Allegro",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.IQchIYUwbsVTa9Mc"
+  ],
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "mental"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:allegro"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "8pxMMDxG9eKCjCP7",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.0v7THqjruKWI0wJ4",
+  "isActive": false,
+  "name": "Divine Wrath (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.hVU9msO9yGkxKZ3J"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sanctified",
+    "spirit"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:slug:divine-wrath"
+  ],
+  "triggers": [],
+  "requirements": []
+}

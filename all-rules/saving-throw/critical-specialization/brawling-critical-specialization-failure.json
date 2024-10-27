@@ -1,0 +1,30 @@
+{
+  "uuid": "lZJDvaqvPg1Mn2Ks",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93",
+  "isActive": false,
+  "name": "Brawling Critical Specialization (Failure)",
+  "source": [],
+  "labels": [],
+  "target": "SelfEffectActorNextTurn",
+  "predicate": [
+    {
+      "or": [
+        "outcome:failure",
+        "outcome:criticalFailure"
+      ]
+    },
+    {
+      "or": [
+        "Brawling Critical Specialization DC",
+        "Claw Critical Specialization DC",
+        "Horn Critical Specialization DC",
+        "Jaws Critical Specialization DC",
+        "Tusk Critical Specialization DC",
+        "Tail Critical Specialization DC",
+        "Fangs Critical Specialization DC"
+      ]
+    }
+  ],
+  "triggers": []
+}

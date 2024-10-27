@@ -1,0 +1,27 @@
+{
+  "uuid": "CkRcDnvzpS26zv8M",
+  "triggerType": "saving-throw",
+  "value": "stupefied 2",
+  "isActive": false,
+  "name": "Aberrant Whispers (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qhJfRnkCRrMI4G1O"
+  ],
+  "labels": [
+    "auditory",
+    "concentrate",
+    "focus",
+    "mental",
+    "sorcerer"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:aberrant-whispers",
+    {
+      "not": "self:effect:aberrant-whispers-immunity"
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

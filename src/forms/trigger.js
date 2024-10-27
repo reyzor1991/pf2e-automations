@@ -1,29 +1,30 @@
 class TriggerForm {
-  template = `modules/${moduleName}/templates/triggerGroup.hbs`;
+    template = `modules/${moduleName}/templates/triggerGroup.hbs`;
 
-  ruleIndex;
-  name;
-  triggers;
+    ruleIndex;
+    name;
+    triggers;
 
-  constructor(ruleIndex, name, triggers) {
-    this.ruleIndex = ruleIndex;
-    this.name = name;
-    this.triggers = triggers;
-  }
+    constructor(ruleIndex, name, triggers) {
+        this.ruleIndex = ruleIndex;
+        this.name = name;
+        this.triggers = triggers;
+    }
 
-  async getData() {
-    return {
-      operatorChoices: Operator,
-      triggerChoices: TriggerType,
-      ruleIndex: this.ruleIndex,
-      name: this.name,
-      triggers: this.triggers,
-    };
-  }
+    async getData() {
+        return {
+            operatorChoices: Operator,
+            triggerChoices: TriggerType,
+            ruleIndex: this.ruleIndex,
+            name: this.name,
+            triggers: this.triggers,
+        };
+    }
 
-  activateListeners(html) {}
+    activateListeners(html) {
+    }
 
-  async render() {
-    return renderTemplate(this.template, await this.getData());
-  }
+    async render() {
+        return renderTemplate(this.template, await this.getData());
+    }
 }

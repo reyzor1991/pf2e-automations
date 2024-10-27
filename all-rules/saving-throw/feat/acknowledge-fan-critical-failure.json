@@ -1,0 +1,23 @@
+{
+  "uuid": "qzY1Q8r7j7UONKYI",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.aLqCfr4Yl6g2eyoO",
+  "isActive": false,
+  "name": "Acknowledge Fan (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.arnSyCl9XfN1qviJ"
+  ],
+  "labels": [
+    "incapacitation",
+    "archetype",
+    "mental",
+    "visual"
+  ],
+  "target": "SelfEffectActorNextTurn",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:slug:acknowledge-fan"
+  ],
+  "triggers": [],
+  "requirements": []
+}

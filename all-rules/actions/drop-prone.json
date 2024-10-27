@@ -1,0 +1,20 @@
+{
+  "uuid": "fdB4D4CmipqvZu6y",
+  "triggerType": "postInfo",
+  "value": "prone",
+  "isActive": false,
+  "name": "Drop Prone",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.HYNhdaPtF1QmQbR3"
+  ],
+  "labels": [
+    "general",
+    "move"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "origin:item:drop-prone"
+  ],
+  "triggers": [],
+  "requirements": []
+}

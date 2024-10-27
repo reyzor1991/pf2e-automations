@@ -1,0 +1,21 @@
+{
+  "uuid": "s2XHDoQ7sNVh3r68",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.72THfaqak0F4XnON",
+  "isActive": false,
+  "name": "Devise A Stratagem - Didactic Strike",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.6fojN9yBJByTZ1Q9"
+  ],
+  "labels": [
+    "concentrate",
+    "fortune",
+    "investigator"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "origin:item:didactic-strike"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "lj531Mvdl8FRRZdf",
+  "triggerType": "saving-throw",
+  "value": "sickened",
+  "isActive": false,
+  "name": "Painful Vibrations Sickened (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qTzvVnAMWL05VitC"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sonic"
+  ],
+  "target": "SelfAddCondition",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:painful-vibrations"
+  ],
+  "triggers": [],
+  "requirements": []
+}

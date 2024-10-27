@@ -1,0 +1,21 @@
+{
+  "uuid": "Xu2Jb9kmkB0CBfYY",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.aEhh2kWTcKJacdHe",
+  "isActive": false,
+  "name": "Jinx (Failure)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.hFRHPBj6wjAayNtW"
+  ],
+  "labels": [
+    "curse",
+    "occult"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "outcome:failure",
+    "action:jinx"
+  ],
+  "triggers": [],
+  "requirements": []
+}

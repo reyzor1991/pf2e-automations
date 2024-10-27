@@ -23,9 +23,12 @@ Hooks.on("ready", () => {
         SelfAddCondition: translate('targetType.SelfAddCondition'),
         TargetAddCondition: translate('targetType.TargetAddCondition'),
         PartyEffect: translate('targetType.PartyEffect'),
+        TurnOnOption: translate('targetType.TurnOnOption'),
         SelfDamage: translate('targetType.SelfDamage'),
         TargetDamage: translate('targetType.TargetDamage'),
         RunMacro: translate('targetType.RunMacro'),
+        TargetAllyWithinRange: translate('targetType.TargetAllyWithinRange'),
+        DecreaseDamageBadgeEffect: translate('targetType.DecreaseDamageBadgeEffect'),
     };
     ComplexTargetType = {
         None: translate('targetType.None'),
@@ -33,6 +36,7 @@ Hooks.on("ready", () => {
         SelfEffectActorNextTurn: translate('targetType.SelfEffectActorNextTurn'),
         TargetEffect: translate('targetType.TargetEffect'),
         TargetEffectActorNextTurn: translate('targetType.TargetEffectActorNextTurn'),
+        SelfOrTargetEffect: translate('targetType.SelfOrTargetEffect'),
     };
 
     RequirementType = {
@@ -75,4 +79,6 @@ Hooks.on("ready", () => {
         OR: translate('operator.OR'),
         NOT: translate('operator.NOT'),
     };
+
+    socketListener()
 });

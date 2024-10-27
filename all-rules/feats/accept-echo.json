@@ -1,0 +1,19 @@
+{
+  "uuid": "yOfqAw3IoxJAKzB9",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.2ca1ZuqQ7VkunAh3",
+  "isActive": false,
+  "name": "Accept Echo",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.VAcxOCFQLb3Bap7K"
+  ],
+  "labels": [
+    "concentrate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:accept-echo"
+  ],
+  "triggers": [],
+  "requirements": []
+}

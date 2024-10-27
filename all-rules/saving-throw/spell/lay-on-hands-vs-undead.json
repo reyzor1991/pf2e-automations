@@ -1,0 +1,25 @@
+{
+  "uuid": "vJtJ7ZGP4HM3cP9g",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e.spell-effects.Item.JhihziXQuoteftdd",
+  "isActive": false,
+  "name": "Lay on Hands (Vs. Undead)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zNN9212H2FGfM7VS"
+  ],
+  "labels": [
+    "champion",
+    "focus",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    "outcome:criticalFailure",
+    "item:slug:lay-on-hands",
+    "self:trait:undead"
+  ],
+  "triggers": [],
+  "requirements": []
+}

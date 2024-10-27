@@ -1,0 +1,24 @@
+{
+  "uuid": "4jIgSrNzocdy8bZ4",
+  "triggerType": "damage-roll",
+  "value": "sickened 2",
+  "isActive": false,
+  "name": "Necrotic Bomb (Moderate)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.moBSgma1rtJqh7Rp"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable",
+    "splash",
+    "void"
+  ],
+  "target": "TargetAddCondition",
+  "predicate": [
+    "outcome:criticalSuccess",
+    "item:necrotic-bomb-moderate"
+  ],
+  "triggers": [],
+  "requirements": []
+}

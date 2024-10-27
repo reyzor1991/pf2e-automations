@@ -1,0 +1,23 @@
+{
+  "uuid": "rXahTQnH6quPrHfH",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.1u4ZAmfeWKyN3uKK",
+  "isActive": false,
+  "name": "Ash Cloud (Failure)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.23cv1p49NFd0Onng"
+  ],
+  "labels": [
+    "air",
+    "concentrate",
+    "fire",
+    "manipulate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "outcome:failure",
+    "item:slug:ash-cloud"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "JU1iS3eWiSIxdb3W",
+  "triggerType": "skill-check",
+  "value": "@actor.level[fire]",
+  "isActive": false,
+  "name": "Tamper (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.SheifYobjKqyK3Fv"
+  ],
+  "labels": [
+    "inventor",
+    "manipulate"
+  ],
+  "target": "SelfDamage",
+  "predicate": [
+    "action:tamper",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

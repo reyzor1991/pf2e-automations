@@ -1,0 +1,21 @@
+{
+  "uuid": "U5NrxkDBC3bEgp2g",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.l3S9i2UWGhSO58YX",
+  "isActive": false,
+  "name": "Cat Nap",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.zvtYsz9jk8tPvlpS"
+  ],
+  "labels": [
+    "catfolk",
+    "concentrate",
+    "exploration"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:cat-nap"
+  ],
+  "triggers": [],
+  "requirements": []
+}

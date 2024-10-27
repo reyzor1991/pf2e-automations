@@ -1,0 +1,21 @@
+{
+  "uuid": "wx4ZsZa2600jKkar",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.14m4s0FeRSqRlHwL",
+  "isActive": false,
+  "name": "Arcane Countermeasure",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.h47yv6j6x1pUtzlr"
+  ],
+  "labels": [
+    "focus",
+    "manipulate",
+    "sorcerer"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "origin:item:arcane-countermeasure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "8yR98E0dVj88y7fb",
+  "triggerType": "damage-roll",
+  "value": "Compendium.pf2e-automations.effects.Item.YsNqG4OocHoErbc9",
+  "isActive": false,
+  "name": "Bottled Lightning",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.97QyNEOAyYLdGaYc",
+    "Compendium.pf2e.equipment-srd.Item.AFR01HVd7DcZvkpP",
+    "Compendium.pf2e.equipment-srd.Item.r2iTRbt1zpkAqHj2",
+    "Compendium.pf2e.equipment-srd.Item.rpbbfkexLhtadBDV"
+  ],
+  "labels": [
+    "alchemical",
+    "bomb",
+    "consumable",
+    "electricity",
+    "splash"
+  ],
+  "target": "TargetEffectActorNextTurn",
+  "predicate": [
+    {
+      "or": [
+        "origin:item:bottled-lightning-lesser",
+        "origin:item:bottled-lightning-moderate",
+        "origin:item:bottled-lightning-greater",
+        "origin:item:bottled-lightning-major"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

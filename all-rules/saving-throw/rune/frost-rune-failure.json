@@ -1,0 +1,26 @@
+{
+  "uuid": "H6qObhpEC4fHZ8eZ",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93",
+  "isActive": false,
+  "name": "Frost Rune (Failure)",
+  "source": [],
+  "labels": [],
+  "target": "SelfEffect",
+  "predicate": [
+    {
+      "or": [
+        "outcome:failure",
+        "outcome:criticalFailure"
+      ]
+    },
+    {
+      "or": [
+        "origin:item:rune:property:frost",
+        "origin:item:rune:property:greater-frost"
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

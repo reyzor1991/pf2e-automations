@@ -1,0 +1,22 @@
+{
+  "uuid": "zumio0LDOHMVguBo",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.cVVZXNbV0nElVOPZ",
+  "isActive": false,
+  "name": "Light",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4"
+  ],
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "light",
+    "manipulate"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "origin:item:light"
+  ],
+  "triggers": [],
+  "requirements": []
+}

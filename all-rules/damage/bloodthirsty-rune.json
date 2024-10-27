@@ -1,0 +1,18 @@
+{
+  "uuid": "n3HMo1ujs5nMd3RZ",
+  "triggerType": "damage-roll",
+  "value": "drained",
+  "isActive": false,
+  "name": "Bloodthirsty Rune",
+  "source": [],
+  "labels": [
+    "magical"
+  ],
+  "target": "TargetAddCondition",
+  "predicate": [
+    "outcome:criticalSuccess",
+    "item:rune:property:bloodthirsty"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "xW6ri515nMy0M7Ab",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.equipment-effects.Item.z3ATL8DcRVrT0Uzt",
+  "isActive": false,
+  "name": "Disarm (Success)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9"
+  ],
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "action:disarm",
+    "outcome:success"
+  ],
+  "triggers": [],
+  "requirements": []
+}

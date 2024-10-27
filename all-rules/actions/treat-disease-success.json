@@ -1,0 +1,22 @@
+{
+  "uuid": "PyIJL51sa0b8T0cv",
+  "triggerType": "skill-check",
+  "value": "Compendium.pf2e.equipment-effects.Item.Ee2xfKX1yyqGIDZj",
+  "isActive": false,
+  "name": "Treat Disease (Success)",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.TC7OcDa7JlWbqMaN"
+  ],
+  "labels": [
+    "downtime",
+    "manipulate",
+    "skill"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "action:treat-disease",
+    "outcome:success"
+  ],
+  "triggers": [],
+  "requirements": []
+}

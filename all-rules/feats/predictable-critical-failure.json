@@ -1,0 +1,21 @@
+{
+  "uuid": "xglAVyb6yvF4tQ5I",
+  "triggerType": "perception-check",
+  "value": "Compendium.pf2e.feat-effects.Item.KgR1myc4OLzVxfxn",
+  "isActive": false,
+  "name": "Predictable (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.cErltcAC7OVnIyO1"
+  ],
+  "labels": [
+    "rogue"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "action:sense-motive",
+    "outcome:criticalFailure",
+    "feat:predictable"
+  ],
+  "triggers": [],
+  "requirements": []
+}

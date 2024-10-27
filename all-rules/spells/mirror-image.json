@@ -1,0 +1,22 @@
+{
+  "uuid": "I2jbbFKN8VnxKleh",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.0PO5mFRhh9HxGAtv",
+  "isActive": false,
+  "name": "Mirror Image",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.j8vIoIEWElvpwkcI"
+  ],
+  "labels": [
+    "concentrate",
+    "illusion",
+    "manipulate",
+    "visual"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:mirror-image"
+  ],
+  "triggers": [],
+  "requirements": []
+}

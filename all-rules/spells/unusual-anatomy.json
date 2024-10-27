@@ -1,0 +1,22 @@
+{
+  "uuid": "z2EPlLjcgv1U93k4",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.LMzFBnOEPzDGzHg4",
+  "isActive": false,
+  "name": "Unusual Anatomy",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.ddKBoCjmSyPSHcws"
+  ],
+  "labels": [
+    "focus",
+    "manipulate",
+    "polymorph",
+    "sorcerer"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:unusual-anatomy"
+  ],
+  "triggers": [],
+  "requirements": []
+}

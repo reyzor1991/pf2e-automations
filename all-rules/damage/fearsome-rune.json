@@ -1,0 +1,21 @@
+{
+  "uuid": "1riiKF8Kpu39itoy",
+  "triggerType": "damage-roll",
+  "value": "frightened",
+  "isActive": false,
+  "name": "Fearsome Rune",
+  "source": [],
+  "labels": [
+    "emotion",
+    "fear",
+    "magical",
+    "mental"
+  ],
+  "target": "TargetAddCondition",
+  "predicate": [
+    "outcome:criticalSuccess",
+    "item:rune:property:fearsome"
+  ],
+  "triggers": [],
+  "requirements": []
+}

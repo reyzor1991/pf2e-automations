@@ -1,0 +1,19 @@
+{
+  "uuid": "NbfdwloV3SuUEOQ0",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.xPg5wzzKNxJy18rU",
+  "isActive": false,
+  "name": "Call Upon the Brightness",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.mk6rzaAzsBBRGJnh"
+  ],
+  "labels": [
+    "concentrate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:call-upon-the-brightness"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "baLE398Lrxi8mZdf",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.feat-effects.Item.UzIamWcEJTOjwfoA",
+  "isActive": false,
+  "name": "Spin Tale",
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.hPZQ5vA9QHEPtjFW"
+  ],
+  "labels": [
+    "auditory",
+    "linguistic"
+  ],
+  "target": "TargetEffect",
+  "predicate": [
+    "origin:item:spin-tale"
+  ],
+  "triggers": [],
+  "requirements": []
+}

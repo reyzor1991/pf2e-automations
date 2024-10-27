@@ -1,0 +1,22 @@
+{
+  "uuid": "BRZZaEH3b60BNF9j",
+  "triggerType": "postInfo",
+  "value": "Compendium.pf2e.equipment-effects.Item.kgotU0sFmtAHYySB",
+  "isActive": false,
+  "name": "Eagle Eye Elixir (Greater)",
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.xWCdsGSwLLTeX6tQ"
+  ],
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "target": "SelfOrTargetEffect",
+  "predicate": [
+    "useEquipment",
+    "consumable:eagle-eye-elixir-greater"
+  ],
+  "triggers": [],
+  "requirements": []
+}

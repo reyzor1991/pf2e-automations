@@ -1,0 +1,27 @@
+{
+  "uuid": "1sRX7hP5exGXAKVz",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.ToBOvG7N8cNxa8uX",
+  "isActive": false,
+  "name": "See the Unseen (Heightened)",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "revelation"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:see-the-unseen",
+    {
+      "gte": [
+        "origin:item:level",
+        5
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "2qQtUXeZbsPYcfLA",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e.spell-effects.Item.IXS15IQXYCZ8vsmX",
+  "isActive": false,
+  "name": "Darkvision",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.pZTqGY1MLRjgKasV"
+  ],
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:darkvision",
+    {
+      "lt": [
+        "origin:item:level",
+        3
+      ]
+    }
+  ],
+  "triggers": [],
+  "requirements": []
+}
