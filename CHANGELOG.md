@@ -1,3 +1,6 @@
+### Version 1.0.1
+- Add Grapple
+
 ### Version 1.0.0
 - Migrate to V2 UI
 
