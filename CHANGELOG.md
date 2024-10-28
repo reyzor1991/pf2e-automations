@@ -1,3 +1,6 @@
+### Version 1.0.2
+- Fix detect effect
+
 ### Version 1.0.1
 - Add Grapple
 

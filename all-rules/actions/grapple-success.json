@@ -1,7 +1,7 @@
 {
   "uuid": "zZ7mwPqYI6ooV6Q2",
   "triggerType": "skill-check",
-  "value": "Compendium.pf2e-automations-patreon.effects.Item.5MNn6cmXxbORB8x8",
+  "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
   "isActive": false,
   "name": "Grapple (Success)",
   "source": [
