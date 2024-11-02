@@ -3,7 +3,7 @@
   "triggerType": "skill-check",
   "value": "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj",
   "isActive": false,
-  "name": "Panache (Bon Mot)",
+  "name": "Panache",
   "source": [
     "Compendium.pf2e.classfeatures.Item.LzYi0OuOoypNb6jd"
   ],
@@ -14,67 +14,12 @@
   "predicate": [
     "item:trait:bravado",
     {
-      "or": [
-        "outcome:success",
-        "outcome:criticalSuccess"
-      ]
+      "not": "panache"
     },
     {
       "or": [
-        {
-          "and": [
-            "action:bon-mot",
-            "feature:wit"
-          ]
-        },
-        {
-          "and": [
-            "action:create-a-diversion",
-            "feature:fencer"
-          ]
-        },
-        {
-          "and": [
-            "action:demoralize",
-            "feature:braggart"
-          ]
-        },
-        {
-          "and": [
-            "action:feint",
-            "feature:fencer"
-          ]
-        },
-        {
-          "and": [
-            "action:grapple",
-            "feature:gymnast"
-          ]
-        },
-        {
-          "and": [
-            "action:perform",
-            "feature:battledancer"
-          ]
-        },
-        {
-          "and": [
-            "action:shove",
-            "feature:gymnast"
-          ]
-        },
-        {
-          "and": [
-            "action:trip",
-            "feature:gymnast"
-          ]
-        },
-        {
-          "and": [
-            "action:tumble-through",
-            "feature:panache"
-          ]
-        }
+        "outcome:success",
+        "outcome:criticalSuccess"
       ]
     }
   ],

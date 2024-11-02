@@ -1,3 +1,6 @@
+### Version 1.0.3
+- Fix Panache rule
+
 ### Version 1.0.2
 - Fix detect effect
 
