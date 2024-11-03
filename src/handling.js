@@ -120,6 +120,12 @@ function socketListener() {
                     await updateItemById(uuid, data)
                 }
                 break;
+            case "changeCarryTypeToWorn":
+                if (game.user === game.users.activeGM) {
+                    let {uuid} = message.data
+                    await changeCarryTypeToWornById(uuid)
+                }
+                break;
             case "deleteEffectFromActor":
                 if (game.user === game.users.activeGM) {
                     let {uuid, slug} = message.data

@@ -680,56 +680,99 @@ async function handleConcussiveDamage(message, user, _options) {
 }
 
 async function disarm(message) {
-    if (message.target?.actor?.type !== 'npc') {
+    if (
+        !hasOption(message, "action:disarm")
+        || !criticalSuccessMessageOutcome(message)
+    ) {
         return
     }
-    if (!hasOption(message, "action:disarm")) {
-        return
-    }
-    if (!criticalSuccessMessageOutcome(message)) {
-        return
-    }
-    if (message.actor.items.find(a => a.name === "Fist") || message.actor.items.find(a => a.name === "Unarmed Attack")) {
-        return
-    }
-
-    let meleeWeapon = message.target.actor.items.find(a => a.type === 'melee')
-    let linkedWeapon = message.target.actor.items.find(a => a.id === meleeWeapon?.getFlag("pf2e", "linkedWeapon"))
-
-    await message.target.actor.createEmbeddedDocuments("Item", [{
-        "img": "systems/pf2e/icons/default-icons/melee.svg",
-        "name": "Fist",
-        "system": {
-            "attack": {
-                "value": ""
-            },
-            "attackEffects": {
-                "value": []
-            },
-            "bonus": {
-                "value": Math.round(1.5 * message.target.actor.level + 7) - 2 - (linkedWeapon?.system?.runes?.potency ?? 0)
-            },
-            "damageRolls": {
-                "i5fbgj11zgotcbbvldhv": {
-                    "damage": `1d4+${message.target.actor.system.abilities.str.mod}`,
-                    "damageType": "bludgeoning"
+    if (message.target?.actor?.isOfType('character')) {
+        let availableWeapons = message.target.actor.system.actions.filter(a => a.ready && !a.item.parentItem && !a.item.traits?.has("unarmed")).map(a => a.item)
+        if (availableWeapons.length === 0) {
+            ui.notifications.info(`Target can not be disarmed`);
+            return
+        } else {
+            let w;
+            if (availableWeapons.length === 1) {
+                w = availableWeapons[0]
+            } else {
+                let weaponOptions = availableWeapons.map(w => `<option value=${w.id}>${w.name}</option>`).join('');
+                const {currentWeapon} = await foundry.applications.api.DialogV2.wait({
+                    window: {title: 'Select target'},
+                    content: `
+                    <select id="fob1" autofocus>
+                        ${weaponOptions}
+                    </select>
+                `,
+                    buttons: [{
+                        action: "ok", label: "Select", icon: "<i class='fa-solid fa-hand-fist'></i>",
+                        callback: (event, button, form) => {
+                            return {
+                                currentWeapon: $(form).find("#fob1").val(),
+                            }
+                        }
+                    }, {
+                        action: "cancel",
+                        label: "Cancel",
+                        icon: "<i class='fa-solid fa-ban'></i>",
+                    }],
+                    default: "ok"
+                });
+                if (!currentWeapon) {
+                    return
                 }
-            },
-            "description": {
-                "value": ""
-            },
-            "rules": [],
-            "slug": null,
-            "traits": {
-                "rarity": "common",
-                "value": ["agile", "finesse", "nonlethal", "unarmed"]
-            },
-            "weaponType": {
-                "value": "melee"
+
+                w = availableWeapons.find(a => a.id === currentWeapon);
             }
-        },
-        "type": "melee"
-    }]);
+
+            await changeCarryTypeToWorn(w)
+        }
+    }
+    if (message.target?.actor?.isOfType('npc')) {
+        let availableWeapons = message.target.actor.system.actions.filter(a => a.item?.getFlag("pf2e", "linkedWeapon"));
+        if (!availableWeapons.length) {
+            ui.notifications.info(`Target can not be disarmed`);
+            return
+        } else if (!message.target.actor.items.find(a => a.name === "Fist")) {
+            let meleeWeapon = message.target.actor.items.find(a => a.type === 'melee')
+            let linkedWeapon = message.target.actor.items.get(meleeWeapon?.getFlag("pf2e", "linkedWeapon"))
+
+            await addItemToActor(message.target.actor, {
+                "img": "systems/pf2e/icons/default-icons/melee.svg",
+                "name": "Fist",
+                "system": {
+                    "attack": {
+                        "value": ""
+                    },
+                    "attackEffects": {
+                        "value": []
+                    },
+                    "bonus": {
+                        "value": Math.round(1.5 * message.target.actor.level + 7) - 2 - (linkedWeapon?.system?.runes?.potency ?? 0)
+                    },
+                    "damageRolls": {
+                        "i5fbgj11zgotcbbvldhv": {
+                            "damage": `1d4+${message.target.actor.system.abilities.str.mod}`,
+                            "damageType": "bludgeoning"
+                        }
+                    },
+                    "description": {
+                        "value": ""
+                    },
+                    "rules": [],
+                    "slug": null,
+                    "traits": {
+                        "rarity": "common",
+                        "value": ["agile", "finesse", "nonlethal", "unarmed"]
+                    },
+                    "weaponType": {
+                        "value": "melee"
+                    }
+                },
+                "type": "melee"
+            })
+        }
+    }
 
     ui.notifications.info(`${message.actor.name} disarmed target`);
 }
@@ -2422,7 +2465,8 @@ async function sorcerousSweets(message) {
     let target = game.user.targets.first().actor;
     let _obj = (await fromUuid(equipmentUUID('mlzLmD33eNyJSrGj'))).toObject();
     _obj.system.level.value = message.actor.level;
-    target.createEmbeddedDocuments("Item", [_obj])
+
+    addItemToActor(target, _obj)
 }
 
 async function inkSpray(message) {
@@ -3450,60 +3494,60 @@ Hooks.on("pf2e.endTurn", combatant => {
 Hooks.on('ready', async function () {
     await registerMessageCreateHandler('Furious Anatomy', furiousAnatomy, "Furious Anatomy from Barbarians+")
     await registerMessageCreateHandler('Sorcerer Bloodlines', bloodlines, "Handle Sorcerer Bloodlines effects")
-    await registerMessageCreateHandler('Concussive Damage', handleConcussiveDamage, "Change damage type for Concussive Damage")
-    await registerMessageCreateHandler('Disarm', disarm)
-    await registerMessageCreateHandler('Hunt Prey', huntPrey)
-    await registerMessageCreateHandler('Frostbite Amped', frostbiteAmped)
-    await registerMessageCreateHandler('Bane Save', saveBane)
+    // await registerMessageCreateHandler('Concussive Damage', handleConcussiveDamage, "Change damage type for Concussive Damage")
+    await registerMessageCreateHandler('Disarm', disarm, "Disarm target weapon on critical success. Create fist action if it's NPC")
+    await registerMessageCreateHandler('Hunt Prey', huntPrey, "Set hunt prey effect to target, delete from other targets")
+    await registerMessageCreateHandler('Frostbite Amped', frostbiteAmped, "Add Temp HP when cast amped spell")
+    await registerMessageCreateHandler('Bane Save', saveBane, "Add Immunity to bane")
     await registerMessageCreateHandler('Master Strike', masterStrike, "Target get effect")
     await registerMessageCreateHandler('Master Strike handle roll result', handleMasterStrikeResult, "Handle rolls fortitude save")
-    await registerMessageCreateHandler('Lingering Composition Spell', lingeringComposition)
-    await registerMessageCreateHandler('Fortissimo Composition Spell', fortissimoComposition)
-    await registerMessageCreateHandler('Extend Boost Spell', extendBoost)
-    await registerMessageCreateHandler('Reactive Shield', reactiveShield)
-    await registerMessageCreateHandler('Trueshape Bomb', trueShapeBomb)
-    await registerMessageCreateHandler('Treat Wounds', treatWoundsAction)
-    await registerMessageCreateHandler('Battle Medicine', battleMedicineAction)
-    await registerMessageCreateHandler('Self Effect Messages', selfEffectMessage)
-    await registerMessageCreateHandler('Toggle Gravity Weapon', toggleGravityWeapon)
-    await registerMessageCreateHandler('Toggle First Attack', toggleFirstAttack)
-    await registerMessageCreateHandler('Effect Hag Blood Magic', effectHagBloodMagic)
-    await registerMessageCreateHandler('Known Weaknesses', knownWeaknesses)
-    await registerMessageCreateHandler('Delete Shield Effect', deleteShieldEffect)
-    await registerMessageCreateHandler('Critical Specialization sword', criticalSpecializationSword)
-    await registerMessageCreateHandler('Critical Specialization axe', criticalSpecializationAxe)
-    await registerMessageCreateHandler('Critical Specialization spear', criticalSpecializationSpear)
-    await registerMessageCreateHandler('Critical Specialization bow', criticalSpecializationBow)
-    await registerMessageCreateHandler('Stunning Fist', stunningFist)
-    await registerMessageCreateHandler('Stunning Blows', stunningBlows)
-    await registerMessageCreateHandler('Critical Specialization Roll Saving Throw', criticalSpecializationRollSavingThrow)
-    await registerMessageCreateHandler('Delete Effects After Damage', deleteEffectsAfterDamage)
-    await registerMessageCreateHandler('Delete Effects After Roll', deleteEffectsAfterRoll)
-    await registerMessageCreateHandler('Delete Feint Effects', deleteFeintEffects)
-    await registerMessageCreateHandler('Demoralize', demoralize)
-    await registerMessageCreateHandler('Feint', feint)
-    await registerMessageCreateHandler('Stumbling Stance', stumblingStance)
-    await registerMessageCreateHandler('Escape', escape)
+    await registerMessageCreateHandler('Lingering Composition Spell', lingeringComposition, "Run macro from Workbench")
+    await registerMessageCreateHandler('Fortissimo Composition Spell', fortissimoComposition, "Run Inspire Heroics / Fortissimo Composition macro")
+    await registerMessageCreateHandler('Extend Boost Spell', extendBoost, "Run Extend Boost macro")
+    await registerMessageCreateHandler('Reactive Shield', reactiveShield, "Run Raise a Shield macro")
+    await registerMessageCreateHandler('Trueshape Bomb', trueShapeBomb, "Notification about deleting morph effects")
+    await registerMessageCreateHandler('Treat Wounds', treatWoundsAction, "Add Treat Wounds Immunity if needed")
+    await registerMessageCreateHandler('Battle Medicine', battleMedicineAction, "Add Immunity if needed")
+    await registerMessageCreateHandler('Self Effect Messages', selfEffectMessage, "Apply effect from Self-Effect messages")
+    await registerMessageCreateHandler('Toggle Gravity Weapon', toggleGravityWeapon, "Toggle Gravity Weapon Roll Option after damage roll or missed attack")
+    await registerMessageCreateHandler('Toggle First Attack', toggleFirstAttack, "Toggle First Attack roll option if needed")
+    await registerMessageCreateHandler('Effect Hag Blood Magic', effectHagBloodMagic, "Notify about Hag Blood Magic effect damage")
+    await registerMessageCreateHandler('Known Weaknesses', knownWeaknesses, "Apply Known Weakness effect to party")
+    await registerMessageCreateHandler('Delete Shield Effect', deleteShieldEffect, "Delete effect after taking damage")
+    await registerMessageCreateHandler('Critical Specialization sword', criticalSpecializationSword, "Handle Sword Critical Specialization")
+    await registerMessageCreateHandler('Critical Specialization axe', criticalSpecializationAxe, "Handle Sword Critical Axe")
+    await registerMessageCreateHandler('Critical Specialization spear', criticalSpecializationSpear, "Handle Sword Critical Spear")
+    await registerMessageCreateHandler('Critical Specialization bow', criticalSpecializationBow, "Handle Sword Critical Bow")
+    await registerMessageCreateHandler('Stunning Fist', stunningFist, "Target roll saving throw after damage")
+    await registerMessageCreateHandler('Stunning Blows', stunningBlows, "Target roll saving throw after damage")
+    await registerMessageCreateHandler('Critical Specialization Roll Saving Throw', criticalSpecializationRollSavingThrow, "Target roll saving throw after roll damage")
+    await registerMessageCreateHandler('Delete Effects After Damage', deleteEffectsAfterDamage, "Delete effects after roll damage. Panache, Off-guard Tumble Behind")
+    await registerMessageCreateHandler('Delete Effects After Roll', deleteEffectsAfterRoll, "Delete effects after roll check. Aid")
+    await registerMessageCreateHandler('Delete Feint Effects', deleteFeintEffects, "Delete feint effects after missed attack or damage")
+    await registerMessageCreateHandler('Demoralize', demoralize, "Handling logic of demoralize action. Add immunity, logic of feats")
+    await registerMessageCreateHandler('Feint', feint, "Add feint effect, off-guard, devrins-dazzling-diversion")
+    await registerMessageCreateHandler('Stumbling Stance', stumblingStance, "Apply effects from stance")
+    await registerMessageCreateHandler('Escape', escape, "Delete effects when escape successfully")
     await registerMessageCreateHandler('Grab', grab, "Handle Additional Attack Effects - Grab")
     await registerMessageCreateHandler('Improved Grab', grabImproved, "Handle Additional Attack Effects - Improved Grab")
     await registerMessageCreateHandler('Grapple trait', grapple, "Handle Grapple weapon trait")
-    await registerMessageCreateHandler('Entropic Wheel', entropicWheel)
-    await registerMessageCreateHandler('Wardens Boon', wardensBoon)
-    await registerMessageCreateHandler('Shared Prey', sharedPrey)
-    await registerMessageCreateHandler('Caustic Belch', causticBelch)
-    await registerMessageCreateHandler('The Oscillating Wave', theOscillatingWave)
-    await registerMessageCreateHandler('Shield Warden', shieldWarden)
-    await registerMessageCreateHandler('Weapon Runes', weaponRunes)
-    await registerMessageCreateHandler('Debilitating Strike', debilitatingStrike)
-    await registerMessageCreateHandler('Familiar of Balanced Luck', familiarBalancedLuck)
-    await registerMessageCreateHandler('Familiar of Flowing Script', familiarFlowingScript)
-    await registerMessageCreateHandler('Familiar of Freezing Rime', familiarFreezingRime)
-    await registerMessageCreateHandler('Familiar of Keen Senses', familiarKeenSenses)
-    await registerMessageCreateHandler('Familiar of Restored Spirit', familiarRestoredSpirit)
-    await registerMessageCreateHandler('Martial Performance', martialPerformance)
-    await registerMessageCreateHandler('Sorcerous Sweets', sorcerousSweets)
-    await registerMessageCreateHandler('Ink Spray', inkSpray)
-    await registerMessageCreateHandler('Turn Of Fate', turnOfFate)
+    await registerMessageCreateHandler('Entropic Wheel', entropicWheel, "Add Entropic Wheel")
+    await registerMessageCreateHandler('Wardens Boon', wardensBoon, "Add Wardens Boon effects flurry/outwit/precision")
+    await registerMessageCreateHandler('Shared Prey', sharedPrey, "Add Shared Prey effects flurry/outwit/precision")
+    await registerMessageCreateHandler('Caustic Belch', causticBelch, "Apply daamge from Caustic Belch")
+    await registerMessageCreateHandler('The Oscillating Wave', theOscillatingWave, "Handling logic of Adding/Removing Energy")
+    await registerMessageCreateHandler('Shield Warden', shieldWarden, "Apply effect Shield Warden, logic of daamge")
+    await registerMessageCreateHandler('Weapon Runes', weaponRunes, "Roll saving for thundering/brilliant/frost runes")
+    await registerMessageCreateHandler('Debilitating Strike', debilitatingStrike, "Handle debilitating strike. Apply effect related to selected types")
+    await registerMessageCreateHandler('Familiar of Balanced Luck', familiarBalancedLuck, "Apply effect related to action")
+    await registerMessageCreateHandler('Familiar of Flowing Script', familiarFlowingScript, "Apply effect related to action")
+    await registerMessageCreateHandler('Familiar of Freezing Rime', familiarFreezingRime, "Apply effect related to action")
+    await registerMessageCreateHandler('Familiar of Keen Senses', familiarKeenSenses, "Apply effect related to action")
+    await registerMessageCreateHandler('Familiar of Restored Spirit', familiarRestoredSpirit, "Apply effect related to action")
+    await registerMessageCreateHandler('Martial Performance', martialPerformance, "Extend duration of effect")
+    await registerMessageCreateHandler('Sorcerous Sweets', sorcerousSweets, "Add Sweets to target")
+    await registerMessageCreateHandler('Ink Spray', inkSpray, "Apply effect related to action")
+    await registerMessageCreateHandler('Turn Of Fate', turnOfFate, "Apply effect related to action")
     await registerMessageCreateHandler('Delete Intimidation Strike', intimidationStrike, "Delete Intimidation Strike Effect after melee Strike")
     await registerMessageCreateHandler('Impose Order Psy', imposeOrderPsy, "Change damage dices")
     await registerMessageCreateHandler('Spike Skin - decrease time', spikeSkin, "Decrease time when actor takes physical damage")

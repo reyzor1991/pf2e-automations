@@ -1,3 +1,6 @@
+### Version 1.0.4
+- Update logic of disarm handler
+
 ### Version 1.0.3
 - Fix Panache rule
 

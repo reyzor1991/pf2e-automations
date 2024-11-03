@@ -293,6 +293,19 @@ async function deleteEffectFromActor(actor, slug) {
     }
 }
 
+async function changeCarryTypeToWornById(uuid) {
+    await changeCarryTypeToWorn(await fromUuid(uuid));
+}
+
+async function changeCarryTypeToWorn(item) {
+    if (!item.actor.canUserModify(game.user, "update")) {
+        executeAsGM("changeCarryTypeToWorn", {uuid: item.uuid});
+        return
+    }
+
+    await item.actor.changeCarryType(item, {carryType: 'worn'})
+}
+
 async function updateItemById(uuid, data) {
     await updateItem(await fromUuid(uuid), data);
 }
