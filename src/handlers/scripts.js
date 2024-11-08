@@ -3491,10 +3491,54 @@ Hooks.on("pf2e.endTurn", combatant => {
     })
 });
 
+async function gameHunter(message) {
+    if (
+        triggerType(message) !== 'attack-roll'
+    ) {
+        return
+    }
+    if (!checkPredicate([
+        {
+            "not": "target:effect:game-hunter-immunity"
+        },
+        {
+            "or": [
+                "outcome:success",
+                "outcome:criticalSuccess",
+            ]
+        },
+        "target:condition:off-guard",
+        "hunted-prey",
+        {
+            "or": [
+                "hunted-prey-game-hunter",
+                "grants-hunt-prey:1"
+            ]
+        },
+        {
+            "or": [
+                "target:trait:animal",
+                "target:trait:beast",
+                "target:trait:dragon"
+            ]
+        }
+    ], await getRollOptions(message))
+    ) {
+        return
+    }
+
+    await actorRollSaveThrow(message.target.actor, 'fortitude', {
+            label: `Game Hunter DC`,
+            value: message.actor.attributes.classDC.value
+        },
+        message.actor.itemTypes.feat.find(f => f.slug === 'game-hunter-dedication'),
+        message.actor
+    )
+}
+
 Hooks.on('ready', async function () {
     await registerMessageCreateHandler('Furious Anatomy', furiousAnatomy, "Furious Anatomy from Barbarians+")
     await registerMessageCreateHandler('Sorcerer Bloodlines', bloodlines, "Handle Sorcerer Bloodlines effects")
-    // await registerMessageCreateHandler('Concussive Damage', handleConcussiveDamage, "Change damage type for Concussive Damage")
     await registerMessageCreateHandler('Disarm', disarm, "Disarm target weapon on critical success. Create fist action if it's NPC")
     await registerMessageCreateHandler('Hunt Prey', huntPrey, "Set hunt prey effect to target, delete from other targets")
     await registerMessageCreateHandler('Frostbite Amped', frostbiteAmped, "Add Temp HP when cast amped spell")
@@ -3564,6 +3608,7 @@ Hooks.on('ready', async function () {
     await registerMessageCreateHandler('Conjure Bullet', conjureBullet, "Add ordinary level-0 bolt or bullet to inventory")
     await registerMessageCreateHandler('Pinpoint Poisoner', pinpointPoisoner, "Apply Pinpoint Poisoner effect")
     await registerMessageCreateHandler('Extend Smite', extendSmite, "Extend smite effect")
+    await registerMessageCreateHandler('Game Hunter', gameHunter, "Roll saving throw")
 
     await registerUpdateActorHandler('Exploration Effects', explorationEffects, "Handle Exploration Effects. Add Effect to party")
     await registerUpdateActorHandler('Exploration Activity notifications', notifyExplorationActivity, "Notify when actor change Exploration Activity")

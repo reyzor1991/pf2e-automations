@@ -1,0 +1,21 @@
+{
+  "uuid": "9CQTVxGM9pifrqK3",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.dp8KKSNp7ltQhrge",
+  "isActive": false,
+  "name": "Game Hunter Dedication (Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.CowQy8gXP9POjuxq"
+  ],
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "item:slug:game-hunter-dedication",
+    "outcome:failure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

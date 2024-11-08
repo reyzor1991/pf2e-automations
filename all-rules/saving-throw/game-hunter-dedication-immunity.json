@@ -1,0 +1,20 @@
+{
+  "uuid": "PKhF1aIU2WzxjeNb",
+  "triggerType": "saving-throw",
+  "value": "Compendium.pf2e-automations.effects.Item.j1rTpcO1B1FJSTyO",
+  "isActive": false,
+  "name": "Game Hunter Dedication (Immunity)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.CowQy8gXP9POjuxq"
+  ],
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "item:slug:game-hunter-dedication"
+  ],
+  "triggers": [],
+  "requirements": []
+}

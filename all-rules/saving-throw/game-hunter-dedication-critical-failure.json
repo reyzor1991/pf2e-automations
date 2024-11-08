@@ -1,0 +1,32 @@
+{
+  "type": "complex",
+  "uuid": "JeuzGVQvrdwtGRaI",
+  "triggerType": "saving-throw",
+  "values": [
+    {
+      "conditions": [],
+      "effects": [
+        "Compendium.pf2e-automations.effects.Item.dp8KKSNp7ltQhrge"
+      ],
+      "duration": {
+        "unit": "minutes"
+      }
+    }
+  ],
+  "isActive": false,
+  "name": "Game Hunter Dedication (Critical Failure)",
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.CowQy8gXP9POjuxq"
+  ],
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "item:slug:game-hunter-dedication",
+    "outcome:criticalFailure"
+  ],
+  "triggers": [],
+  "requirements": []
+}

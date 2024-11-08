@@ -1,3 +1,6 @@
+### Version 1.0.5
+- Game Hunter Dedication (Rule/Hnadler)
+
 ### Version 1.0.4
 - Update logic of disarm handler
 
