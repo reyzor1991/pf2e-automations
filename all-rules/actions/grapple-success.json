@@ -3,6 +3,7 @@
   "triggerType": "skill-check",
   "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
   "isActive": false,
+  "allowDuplicate": true,
   "name": "Grapple (Success)",
   "source": [
     "Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD"

@@ -41,6 +41,7 @@ function mapRule(a) {
     return {
         name: a.name,
         type: a.type,
+        allowDuplicate: a.allowDuplicate,
         triggerType: a.triggerType,
         target: a.target,
         range: a.range,
@@ -625,7 +626,7 @@ async function handleTarget(rule, message, _obj = undefined) {
     } else if (rule.target === "TargetEffect") {
         await setEffectToTarget(message, rule.value, _obj?.level, optionalData);
     } else if (rule.target === "TargetEffectActorNextTurn") {
-        await setEffectToTargetActorNextTurn(message, rule.value);
+        await setEffectToTargetActorNextTurn(message, rule);
     } else if (rule.target === "SelfEffectActorNextTurn") {
         await setEffectToSelfActorNextTurn(message, rule);
     } else if (rule.target === "SelfOrTargetEffect") {

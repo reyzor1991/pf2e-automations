@@ -185,12 +185,14 @@ class RuleListForm extends foundry.applications.api.HandlebarsApplicationMixin(
             for (const key of Object.keys(this.rules)) {
                 this.rules[key].isActive = true;
             }
+            ui.notifications.info(`All rules were activated`);
             this.render();
         });
         html.find(".minus-all-rule").click(async (event) => {
             for (const key of Object.keys(this.rules)) {
                 this.rules[key].isActive = false;
             }
+            ui.notifications.info(`All rules were deactivated`);
             this.render();
         });
         html.find(".delete-all-rules").click(async (event) => {

@@ -216,16 +216,18 @@ async function setEffectToTarget(message, effectUUID, level, optionalData) {
     await setEffectToActor(targetActor, effectUUID, level, optionalData);
 }
 
-async function setEffectToTargetActorNextTurn(message, effectUUID) {
+async function setEffectToTargetActorNextTurn(message, rule) {
     if (!message.target && game.user.targets.size !== 1) {
         ui.notifications.info(`${message.actor.name} chose incorrect count of targets for effect`);
         return;
     }
 
+    let effectUUID = rule.value;
     const targetActor = message.target?.actor ?? game.user.targets.first()?.actor;
 
     await setEffectToActor(targetActor, effectUUID, message?.item?.level, {
         origin: {actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid},
+        duplication: !!rule?.allowDuplicate,
     });
 }
 

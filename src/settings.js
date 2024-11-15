@@ -32,7 +32,9 @@ async function syncRulesFn(settingName, versionSettingName, jsonName, callback =
             }
         })
         .then(async (json) => {
-            const curRules = getSetting(settingName).filter((a) => !json.forceUpdate.includes(a.uuid));
+            let settingsData = foundry.utils.deepClone(getSetting(settingName));
+            const curRules = settingsData.filter((a) => !json.forceUpdate.includes(a.uuid));
+            const forced = settingsData.filter((a) => json.forceUpdate.includes(a.uuid));
             const cur = getSetting(versionSettingName) ?? 0;
             if (cur >= json.version && curRules.length !== 0) {
                 ui.notifications.info(`There are no updates`);
@@ -52,8 +54,15 @@ async function syncRulesFn(settingName, versionSettingName, jsonName, callback =
                     (a) => !curRules.find((b) => b.uuid === a.uuid)
                 );
                 const afterRemove = curRules.filter((a) => !json.removeIds.includes(a.uuid));
+                let dataForSave = [...newData, ...afterRemove];
+                forced.forEach((a) => {
+                    let qq = dataForSave.find(b=>b.uuid === a.uuid)
+                    if (qq) {
+                        qq.isActive = a.isActive;
+                    }
+                })
 
-                await game.settings.set(moduleName, settingName, [...newData, ...afterRemove]);
+                await game.settings.set(moduleName, settingName, dataForSave);
                 await game.settings.set(moduleName, versionSettingName, json.version);
             }
 

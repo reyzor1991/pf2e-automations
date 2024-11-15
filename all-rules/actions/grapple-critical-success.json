@@ -3,6 +3,7 @@
   "triggerType": "skill-check",
   "value": "Compendium.pf2e-automations.effects.Item.zol83j7l2cBSmY3a",
   "isActive": false,
+  "allowDuplicate": true,
   "name": "Grapple (Critical Success)",
   "source": [
     "Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD"

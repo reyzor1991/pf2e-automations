@@ -1,3 +1,6 @@
+### Version 1.0.6
+- Fix duplication effects
+
 ### Version 1.0.5
 - Game Hunter Dedication (Rule/Hnadler)
 

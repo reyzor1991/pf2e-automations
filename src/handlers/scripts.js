@@ -1256,7 +1256,7 @@ async function criticalSpecializationSpear(message) {
     if (!isCriticalSpecialization(message, weapon)) {
         return;
     }
-    await setEffectToTargetActorNextTurn(message, effectUUID('lsICo0LAyrWy2cDm'))
+    await setEffectToTargetActorNextTurn(message, {value: effectUUID('lsICo0LAyrWy2cDm')})
 }
 
 async function criticalSpecializationSword(message) {
@@ -1274,7 +1274,7 @@ async function criticalSpecializationSword(message) {
         return;
     }
 
-    await setEffectToTargetActorNextTurn(message, effectUUID('YsNqG4OocHoErbc9'))
+    await setEffectToTargetActorNextTurn(message, {value: effectUUID('YsNqG4OocHoErbc9')})
 }
 
 async function criticalSpecializationAxe(message) {
@@ -1493,7 +1493,7 @@ async function feint(message) {
                 await setFeintEffect(message, false)
             }
             if (await hasOption(message, "feat:distracting-feint")) {
-                await setEffectToTargetActorNextTurn(message, "Compendium.pf2e.feat-effects.Item.7hRgBo0fRQBxMK7g", 1000)
+                await setEffectToTargetActorNextTurn(message, {value:"Compendium.pf2e.feat-effects.Item.7hRgBo0fRQBxMK7g"})
             }
         } else if (criticalFailureMessageOutcome(message)) {
             await setFeintEffect(message, true, true)
