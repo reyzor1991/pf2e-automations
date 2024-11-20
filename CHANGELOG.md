@@ -1,3 +1,6 @@
+### Version 1.0.7
+- Correct showing rules in Other tab
+
 ### Version 1.0.6
 - Fix duplication effects
 

@@ -221,6 +221,10 @@ class RuleListForm extends foundry.applications.api.HandlebarsApplicationMixin(
                 return obj;
             }, {});
 
+        let baseKeys = ['attack-roll','damage-roll','damage-taken','skill-check','perception-check','spell-cast','saving-throw','postInfo',"undefined"]
+        let withoutGroup = Object.keys(allRules).filter(a=> !baseKeys.includes(a))
+            .map(k=>allRules[k]).flat();
+
         let attacks = (allRules['attack-roll'] || [])
             .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
         let damage = [...(allRules['damage-roll'] || []), ...(allRules['damage-taken'] || [])]
@@ -231,7 +235,7 @@ class RuleListForm extends foundry.applications.api.HandlebarsApplicationMixin(
             .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
         let saving = (allRules['saving-throw'] || [])
             .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
-        let other = [...(allRules['postInfo'] || []), ...(allRules[undefined] || [])]
+        let other = [...(allRules['postInfo'] || []), ...(allRules[undefined] || []), ...withoutGroup]
             .sort((a, b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
 
         return {
