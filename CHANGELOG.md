@@ -1,3 +1,6 @@
+### Version 1.0.8
+- Add effects for handlers
+
 ### Version 1.0.7
 - Correct showing rules in Other tab
 

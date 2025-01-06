@@ -2,7 +2,7 @@
   "id": "pf2e-automations",
   "title": "PF2e Automations",
   "description": "Module for automate action/feats/spells",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "authors": [
     {
       "name": "Reyzor",
@@ -46,6 +46,30 @@
       "label": "Effects",
       "name": "effects",
       "path": "packs/effects",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "label": "Actions",
+      "name": "actions",
+      "path": "packs/actions",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "type": "Item",
+      "flags": {}
+    },
+    {
+      "label": "Equipment",
+      "name": "equipment",
+      "path": "packs/equipment",
       "system": "pf2e",
       "ownership": {
         "PLAYER": "OBSERVER",
