@@ -1,0 +1,22 @@
+{
+  "uuid": "ZC9csIC61xAP0GOn",
+  "triggerType": "spell-cast",
+  "value": "Compendium.pf2e-automations.effects.Item.FcUe8TT7bhqlURIf",
+  "isActive": false,
+  "name": "Bane",
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.7ZinJNzxq0XF0oMx"
+  ],
+  "labels": [
+    "aura",
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "target": "SelfEffect",
+  "predicate": [
+    "origin:item:bane"
+  ],
+  "triggers": [],
+  "requirements": []
+}

@@ -1,3 +1,6 @@
+### Version 1.0.9
+- Add bane spell automation
+
 ### Version 1.0.8
 - Add effects for handlers
 
