@@ -3,6 +3,7 @@
   "triggerType": "postInfo",
   "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
   "isActive": false,
+  "extend": true,
   "name": "Grab",
   "source": [
     "Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr"

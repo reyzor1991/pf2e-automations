@@ -184,6 +184,8 @@ async function setEffectToActor(
         withBa.update({
             "system.badge.value": (withBa.system.badge.value += 1),
         });
+    } else if (withBa && optionalData?.extend) {
+        withBa.update({"system.start.value": game.time.worldTime});
     } else if (!withBa || optionalData?.duplication) {
         source = source.toObject();
         if (optionalData?.name) {
@@ -228,6 +230,7 @@ async function setEffectToTargetActorNextTurn(message, rule) {
     await setEffectToActor(targetActor, effectUUID, message?.item?.level, {
         origin: {actor: message?.actor?.uuid, item: message?.item?.uuid, token: message?.token?.uuid},
         duplication: !!rule?.allowDuplicate,
+        extend: !!rule?.extend,
     });
 }
 

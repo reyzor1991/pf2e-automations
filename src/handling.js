@@ -42,6 +42,7 @@ function mapRule(a) {
         name: a.name,
         type: a.type,
         allowDuplicate: a.allowDuplicate,
+        extend: a.extend,
         triggerType: a.triggerType,
         target: a.target,
         range: a.range,

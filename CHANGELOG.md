@@ -1,3 +1,6 @@
+### Version 1.1.0
+- Extend Grab time
+
 ### Version 1.0.9
 - Add bane spell automation
 
