@@ -1,3 +1,6 @@
+### Version 1.1.1
+- Fix disarm
+
 ### Version 1.1.0
 - Extend Grab time
 

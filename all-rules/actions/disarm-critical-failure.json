@@ -1,12 +1,24 @@
 {
+  "type": "complex",
   "uuid": "hUfbsPpbK2dQ8Gx4",
   "triggerType": "skill-check",
-  "value": "Compendium.pf2e.other-effects.Item.y1GwyXv7iOf8DhBg",
+  "values": [
+    {
+      "conditions": [
+        "off-guard"
+      ],
+      "effects": [],
+      "duration": {
+        "expiry": "turn-start",
+        "sustained": false,
+        "unit": "rounds",
+        "value": 1
+      }
+    }
+  ],
   "isActive": false,
   "name": "Disarm (Critical Failure)",
-  "source": [
-    "Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9"
-  ],
+  "source": [],
   "labels": [
     "attack",
     "skill"
