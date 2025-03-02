@@ -1,3 +1,6 @@
+### Version 1.1.2
+- Fix Avoid Notice - round half speed
+
 ### Version 1.1.1
 - Fix disarm
 
