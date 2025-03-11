@@ -1,3 +1,6 @@
+### Version 1.1.3
+- Add Agitate spell
+
 ### Version 1.1.2
 - Fix Avoid Notice - round half speed
 
