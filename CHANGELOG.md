@@ -1,3 +1,6 @@
+### Version 1.1.4
+- Fix Enlarge spell effect duration
+
 ### Version 1.1.3
 - Add Agitate spell
 
