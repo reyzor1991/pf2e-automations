@@ -1,3 +1,6 @@
+### Version 1.1.5
+- Fix checking sourceId of effect
+
 ### Version 1.1.4
 - Fix Enlarge spell effect duration
 

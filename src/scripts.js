@@ -195,6 +195,9 @@ async function setEffectToActor(
             source.img = optionalData.icon;
         }
         source.flags = foundry.utils.mergeObject(source.flags ?? {}, {core: {sourceId: effUuid}});
+        if (source._stats) {
+            source._stats.compendiumSource = effUuid;
+        }
         if (level) {
             source.system.level = {value: level};
         }
