@@ -225,10 +225,10 @@ Hooks.once("ready", async () => {
     }
 });
 
-Hooks.on('renderChatMessage', (m, h) => {
-    h.find('.sync-rules').on('click', async (event) => {
+Hooks.on('renderChatMessageHTML', (m, h) => {
+    h.querySelector('.sync-rules')?.addEventListener('click', async (event) => {
 
-        let rules = $(event.target).data().names.split(',');
+        let rules = event.target.dataset.names.split(',');
 
         rules = rules.map(name => {
             return {

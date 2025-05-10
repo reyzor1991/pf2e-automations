@@ -1,3 +1,6 @@
+### Version 1.2.0
+- V13 
+
 ### Version 1.1.5
 - Fix checking sourceId of effect
 
