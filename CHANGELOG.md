@@ -1,3 +1,6 @@
+### Version 1.2.1
+- fix amp frostbit
+
 ### Version 1.2.0
 - V13 
 

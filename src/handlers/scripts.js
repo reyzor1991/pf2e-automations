@@ -838,6 +838,12 @@ async function frostbiteAmped(message) {
         return
     }
 
+    let rollOptions = await getRollOptions(message);
+    if (!rollOptions.has("feature:the-oscillating-wave")) {
+        return
+    }
+
+
     const eff = effectUUID('yYvPtdlew2YctMgt');//Temp HP
     let damage = message?.flags?.pf2e?.appliedDamage?.updates?.[0]?.value ?? 0;
     if (!damage) {
