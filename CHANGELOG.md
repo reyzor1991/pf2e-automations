@@ -1,3 +1,7 @@
+### Version 1.2.2
+- clean up code, delete unused feature
+- Add Apparition Sense
+
 ### Version 1.2.1
 - fix amp frostbit
 

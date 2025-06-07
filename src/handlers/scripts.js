@@ -656,29 +656,6 @@ async function updateConcussiveDamageInstance(damageInstance) {
     }
 }
 
-async function handleConcussiveDamage(message, user, _options) {
-    if (!isCorrectMessageType(message, "damage-roll")) {
-        return
-    }
-    if (!message.actor || !message.target?.actor) {
-        return false;
-    }
-    if (!message?.flags?.pf2e?.context?.options?.includes("item:trait:concussive")) {
-        return
-    }
-
-    let pres = message.target?.actor.system.attributes.resistances.find(a => a.type === "piercing")
-    if (message.target?.actor.system.attributes.immunities.find(a => a.type === "piercing")) {
-        await updateConcussiveRoll(message)
-    } else if (pres) {
-        let bres = message.target?.actor.system.attributes.resistances.find(a => a.type === "bludgeoning")
-        if (bres && bres.value >= pres.value) {
-            return
-        }
-        await updateConcussiveRoll(message)
-    }
-}
-
 async function disarm(message) {
     if (
         !hasOption(message, "action:disarm")
@@ -3513,6 +3490,7 @@ async function gameHunter(message) {
                 "outcome:criticalSuccess",
             ]
         },
+        "feat:game-hunter-dedication",
         "target:condition:off-guard",
         "hunted-prey",
         {
@@ -3540,6 +3518,40 @@ async function gameHunter(message) {
         message.actor.itemTypes.feat.find(f => f.slug === 'game-hunter-dedication'),
         message.actor
     )
+}
+
+async function apparitionSense(message) {
+    if (message.item?.slug !== "apparition-sense") {
+        return
+    }
+    if (!message.token) {
+        return
+    }
+
+    let traits = message.token.scene.tokens
+        .filter(token => token !== message.token)
+        .filter(token => token.actor && !token.actor.isAllyOf(message.actor))
+        .filter(token => distanceIsCorrect(token, message.token, 30))
+        .filter(token => (
+            token.actor.traits.has('spirit')
+            || token.actor.traits.has('haunt')
+            || token.actor.traits.has('undead')
+        ))
+        .filter(token => token.actor.itemTypes.condition.find(c => c.slug === 'invisible' || c.slug === 'hidden'))
+        .map(token => token.actor.traits.filter(t => ['spirit', 'undead', 'haunt'].includes(t)))
+        .map(t => t.first())
+    let uniqueTraits = [...(new Set(traits))];
+
+    ChatMessage.create({
+        flags: {
+            [moduleName]: {}
+        },
+        content: uniqueTraits.length
+            ? `You feel the presence of ${uniqueTraits.join(" and ")}`
+            : "You don't feel the presence of spirits, haunts or undead near you.",
+        speaker: ChatMessage.getSpeaker({token: message.token}),
+        style: CONST.CHAT_MESSAGE_STYLES.IC
+    });
 }
 
 Hooks.on('ready', async function () {
@@ -3615,6 +3627,7 @@ Hooks.on('ready', async function () {
     await registerMessageCreateHandler('Pinpoint Poisoner', pinpointPoisoner, "Apply Pinpoint Poisoner effect")
     await registerMessageCreateHandler('Extend Smite', extendSmite, "Extend smite effect")
     await registerMessageCreateHandler('Game Hunter', gameHunter, "Roll saving throw")
+    await registerMessageCreateHandler('Apparition Sense', apparitionSense, "Create message about creatures around token")
 
     await registerUpdateActorHandler('Exploration Effects', explorationEffects, "Handle Exploration Effects. Add Effect to party")
     await registerUpdateActorHandler('Exploration Activity notifications', notifyExplorationActivity, "Notify when actor change Exploration Activity")
