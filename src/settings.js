@@ -77,7 +77,9 @@ async function syncRulesFn(settingName, versionSettingName, jsonName, callback =
         });
 }
 
-Hooks.on("renderSettingsConfig", (app, html) => {
+Hooks.on("renderSettingsConfig", (app, _html) => {
+    let html = $(_html)
+
     const target = html.find(`[data-category="${moduleName}"]`);
 
 
