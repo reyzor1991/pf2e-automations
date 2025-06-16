@@ -1,3 +1,6 @@
+### Version 1.2.4
+- changed logic of treat wounds - check if encounter is started instead of active
+
 ### Version 1.2.3
 - fix rendering Settings
 

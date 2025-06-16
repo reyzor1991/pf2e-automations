@@ -1002,7 +1002,7 @@ function treatWoundsAction(message) {
     if (!isCorrectMessageType(message, "skill-check")) {
         return
     }
-    if (!game.combat && hasOption(message, "action:treat-wounds") && message.isCheckRoll) {
+    if (!game.combat?.started && hasOption(message, "action:treat-wounds") && message.isCheckRoll) {
         if (game.user.targets.size === 1) {
             const [first] = game.user.targets;
             treatWounds(message, first.actor);
@@ -1977,7 +1977,7 @@ async function battleMedicineAction(message) {
     if (!isCorrectMessageType(message, "skill-check")) {
         return
     }
-    if (game.combat && hasOption(message, "action:treat-wounds") && message.isCheckRoll) {
+    if (game.combat?.started && hasOption(message, "action:treat-wounds") && message.isCheckRoll) {
         if (!hasOption(message, "feat:battle-medicine")) {
             ui.notifications.info(`${message.actor.name} hasn't Battle Medicine Feat`);
             return;
