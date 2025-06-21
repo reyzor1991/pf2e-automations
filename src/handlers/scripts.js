@@ -1476,7 +1476,7 @@ async function feint(message) {
                 await setFeintEffect(message, false)
             }
             if (await hasOption(message, "feat:distracting-feint")) {
-                await setEffectToTargetActorNextTurn(message, {value:"Compendium.pf2e.feat-effects.Item.7hRgBo0fRQBxMK7g"})
+                await setEffectToTargetActorNextTurn(message, {value: "Compendium.pf2e.feat-effects.Item.7hRgBo0fRQBxMK7g"})
             }
         } else if (criticalFailureMessageOutcome(message)) {
             await setFeintEffect(message, true, true)
@@ -2419,20 +2419,24 @@ async function martialPerformance(message) {
     let inspireCourage = hasEffectBySourceId(message.actor, effectUUID('RR8MSbHqxJdQxh2e'));
     let inspireDefense = hasEffectBySourceId(message.actor, effectUUID('g2LBvDHPRZBabiU2'));
     let songOfStrength = hasEffectBySourceId(message.actor, effectUUID('7kyjK9Pm7wKSZtdQ'));
+    let xdyInspireCourage = hasEffectBySourceId(message.actor, "Compendium.xdy-pf2e-workbench.xdy-pf2e-workbench-items.Item.KIPV1TiPCzlhuAzo");
+    let xdyInspireDefense = hasEffectBySourceId(message.actor, "Compendium.xdy-pf2e-workbench.xdy-pf2e-workbench-items.Item.tcnjhVxyRchqjt71");
 
-    if (inspireCourage && !inspireCourage.getFlag(moduleName, "extendedMartialPerformance")) {
-        await inspireCourage.update({
-            "system.duration.value": inspireCourage.system.duration.value + 1,
-            [`flags.${moduleName}.extendedMartialPerformance`]: true
-        })
-    } else if (inspireDefense && !inspireDefense.getFlag(moduleName, "extendedMartialPerformance")) {
-        await inspireDefense.update({
-            "system.duration.value": inspireDefense.system.duration.value + 1,
-            [`flags.${moduleName}.extendedMartialPerformance`]: true
-        })
-    } else if (songOfStrength && !songOfStrength.getFlag(moduleName, "extendedMartialPerformance")) {
-        await songOfStrength.update({
-            "system.duration.value": songOfStrength.system.duration.value + 1,
+    let selected = inspireCourage && !inspireCourage.getFlag(moduleName, "extendedMartialPerformance")
+        ? inspireCourage
+        : inspireDefense && !inspireDefense.getFlag(moduleName, "extendedMartialPerformance")
+            ? inspireDefense
+            : songOfStrength && !songOfStrength.getFlag(moduleName, "extendedMartialPerformance")
+                ? songOfStrength
+                : xdyInspireCourage && !xdyInspireCourage.getFlag(moduleName, "extendedMartialPerformance")
+                    ? xdyInspireCourage
+                    : xdyInspireDefense && !xdyInspireDefense.getFlag(moduleName, "extendedMartialPerformance")
+                        ? xdyInspireDefense : null
+
+
+    if (selected) {
+        await selected.update({
+            "system.duration.value": selected.system.duration.value + 1,
             [`flags.${moduleName}.extendedMartialPerformance`]: true
         })
     }
