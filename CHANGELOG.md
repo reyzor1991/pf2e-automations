@@ -1,3 +1,6 @@
+### Version 1.2.6
+- Add support of goading feint
+
 ### Version 1.2.5
 - Fix Martial Performance for Courageous Anthem
 

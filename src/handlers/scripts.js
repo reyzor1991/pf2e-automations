@@ -1456,7 +1456,24 @@ async function feint(message) {
     if (message?.target && hasOption(message, "action:feint")) {
         if (anySuccessMessageOutcome(message)) {
             let scoundrel = hasOption(message, "feature:scoundrel");
-            if (criticalSuccessMessageOutcome(message) && scoundrel) {
+
+            if (hasOption(message, "goading-feint")) {
+                let source = await fromUuid("Compendium.pf2e.feat-effects.Item.rflbFzV44Fd6aBLE");
+                source = source.toObject();
+                let cSet = source.system.rules.filter(r => r.key === "ChoiceSet");
+                if (cSet.length === 1) {
+                    cSet[0].selection = criticalSuccessMessageOutcome(message) ? "critical-success" : "success";
+                }
+                source.system.context = foundry.utils.mergeObject(source.system.context ?? {}, {
+                    origin: {
+                        "actor": message.actor.uuid,
+                        "item": message?.item?.uuid,
+                        "token": message.token.uuid
+                    }
+                });
+
+                message.target.actor.createEmbeddedDocuments("Item", [source]);
+            } else if (criticalSuccessMessageOutcome(message) && scoundrel) {
                 await setEffectToActor(
                     message.target.actor,
                     "Compendium.pf2e-automations.effects.Item.YsNqG4OocHoErbc9",
