@@ -1506,7 +1506,10 @@ async function setFeintEffect(message, isCrit = false, isCritFail = false) {
     const target = isCritFail ? message.actor : message.target.actor;
 
     const effect = (await fromUuid(isCrit ? effectUUID('lwcyhD03jVchmPGm') : effectUUID('P6DGk2h38xE8O0pw'))).toObject();
-    effect.system.slug = effect.system.slug.replace("attacker", actor.id)
+    let actorId = actor.id.toLowerCase();
+    let targetId = target.id.toLowerCase();
+
+    effect.system.slug = effect.system.slug.replace("attacker", actorId)
     effect.name += ` ${actor.name}`
     effect.system.context = foundry.utils.mergeObject(effect.system.context ?? {}, {
         "origin": {
@@ -1520,14 +1523,13 @@ async function setFeintEffect(message, isCrit = false, isCritFail = false) {
     effect.system.start.initiative = null;
 
     const aEffect = (await fromUuid(isCrit ? effectUUID('jfn0eHEAnoxNI7YS') : effectUUID('XcJAldj3qsmLKjSL'))).toObject();
-    aEffect.system.slug = aEffect.system.slug.replace("attacker", actor.id).replace("target", target.id)
+    aEffect.system.slug = aEffect.system.slug.replace("attacker", actorId).replace("target", targetId)
 
-    aEffect.system.rules[0].predicate[0] = aEffect.system.rules[0].predicate[0].replace("attacker", actor.id);
-    aEffect.system.rules[0].predicate[1] = aEffect.system.rules[0].predicate[1].replace("attacker", actor.id).replace("target", target.id)
-    aEffect.system.rules[1].predicate[1] = aEffect.system.rules[1].predicate[1].replace("attacker", actor.id);
-    aEffect.system.rules[1].predicate[2] = aEffect.system.rules[1].predicate[2].replace("attacker", actor.id).replace("target", target.id)
+    aEffect.system.rules[0].predicate[0] = aEffect.system.rules[0].predicate[0].replace("attacker", actorId);
+    aEffect.system.rules[0].predicate[1] = aEffect.system.rules[0].predicate[1].replace("attacker", actorId).replace("target", targetId)
+    aEffect.system.rules[1].predicate[1] = aEffect.system.rules[1].predicate[1].replace("attacker", actorId);
+    aEffect.system.rules[1].predicate[2] = aEffect.system.rules[1].predicate[2].replace("attacker", actorId).replace("target", targetId)
     aEffect.name += ` ${target.name}`
-
 
     await addItem(actor.uuid, aEffect);
     await addItem(target.uuid, effect);

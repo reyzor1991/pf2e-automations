@@ -1,3 +1,6 @@
+### Version 1.2.7
+- Fix feint
+
 ### Version 1.2.6
 - Add support of goading feint
 
