@@ -1,0 +1,88 @@
+{
+    "pf2e-automations": {
+        "targetType": {
+            "SelfEffect": "使用动作时对自身应用效果",
+            "TargetEffectActorNextTurn": "使用时对目标应用效果，直到角色下一回合",
+            "SelfOrTargetEffect": "使用动作时对自身或一个目标应用效果",
+            "SelfOrTargetsEffect": "使用动作时对自身或全体目标应用效果",
+            "TargetRemoveEffect": "移除目标身上的效果",
+            "TargetRemoveCondition": "移除目标身上的状态",
+            "RunMacro": "运行宏",
+            "SelfRemoveCondition": "移除自身状态",
+            "SelfRemoveEffect": "移除自身效果",
+            "TargetAddCondition": "给目标添加状态",
+            "SelfAddCondition": "给自身添加状态",
+            "TargetsEffect": "使用动作时对所有目标应用效果",
+            "TargetDamage": "对目标造成伤害",
+            "None": "无",
+            "TargetEffect": "使用时对目标应用效果",
+            "SelfEffectActorNextTurn": "使用动作时对自身应用效果，直到角色下一回合（用于豁免掷骰）",
+            "TargetAllyWithinRange": "射程范围内的盟友及自身",
+            "SelfDamage": "对自身造成伤害",
+            "TurnOnOption": "开启选项",
+            "PartyEffect": "为队伍成员应用效果",
+            "DecreaseDamageBadgeEffect": "减少伤害效果的标记值"
+        },
+        "requirementType": {
+            "None": "无",
+            "CriticalSuccess": "消息结果为大成功",
+            "AnySuccess": "消息结果为成功及以上",
+            "ActorHasFeat": "角色具有专长",
+            "ActorHasCondition": "角色受状态影响",
+            "Failure": "消息结果为失败",
+            "CriticalFailure": "消息结果为大失败",
+            "AnyFailure": "消息结果为失败及以下",
+            "ActorHasEffectBySlug": "角色所受效果（slug）",
+            "TargetHasCondition": "目标受状态影响",
+            "TargetHasEffect": "目标受效果影响",
+            "ItemHasTrait": "物品具备特征",
+            "ActorName": "角色名为",
+            "LvlLess": "物品等级低于",
+            "TargetsNumber": "目标数量",
+            "SelfOrTargetHasEffect": "角色或目标具备特征",
+            "UseEquipment": "已使用装备",
+            "WieldLoadedOneHandedRanged": "角色持用已装填的单手远程武器",
+            "LvlGte": "物品等级大于或等于",
+            "TargetIsAnother": "目标为另一个角色",
+            "Success": "消息结果为成功",
+            "TargetHasTrait": "目标具备特征",
+            "ActorHasEffect": "角色受效果影响",
+            "MessageDCLabel": "消息的DC标识包含在文本中"
+        },
+        "triggerType": {
+            "None": "无",
+            "EqualsSlug": "消息符等于",
+            "HasOption": "消息具有选项",
+            "HasDomain": "消息具有领域",
+            "HasRune": "物品具有符文",
+            "EqualsSourceId": "消息物品源等于"
+        },
+        "operator": {
+            "AND": "与",
+            "OR": "或",
+            "NOT": "不是"
+        },
+        "SETTINGS": {
+            "updateActorHandlers": {
+                "label": "管理面板",
+                "name": "更新角色面板"
+            },
+            "messageCreateHandlers": {
+                "label": "管理面板",
+                "name": "消息创建面板"
+            },
+            "updateItemHandlers": {
+                "name": "更新物品面板",
+                "label": "管理面板"
+            },
+            "deleteItemHandlers": {
+                "name": "删除物品面板",
+                "label": "管理面板"
+            },
+            "createItemHandlers": {
+                "name": "创建物品面板",
+                "label": "管理面板"
+            }
+        }
+    }
+}
