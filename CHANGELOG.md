@@ -1,5 +1,5 @@
 ### Version 1.2.8
-- Fix slug
+- Add Chinese Localization (Kuroni)
 
 ### Version 1.2.7
 - Fix feint
