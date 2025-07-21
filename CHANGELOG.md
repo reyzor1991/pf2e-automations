@@ -1,3 +1,6 @@
+### Version 1.2.8
+- Fix slug
+
 ### Version 1.2.7
 - Fix feint
 
