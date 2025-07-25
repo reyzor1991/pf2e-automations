@@ -1,3 +1,6 @@
+### Version 1.2.9
+- Fix scrolling rules
+
 ### Version 1.2.8
 - Add Chinese Localization (Kuroni)
 
