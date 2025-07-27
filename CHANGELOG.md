@@ -1,3 +1,6 @@
+### Version 1.2.10
+- Fix goading feint
+
 ### Version 1.2.9
 - Fix scrolling rules
 

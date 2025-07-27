@@ -87,7 +87,7 @@
   "socket": true,
   "compatibility": {
     "minimum": "13.342",
-    "verified": "13.344"
+    "verified": "13.346"
   },
   "url": "https://github.com/reyzor1991",
   "manifest": "https://github.com/reyzor1991/pf2e-automations/releases/latest/download/module.json",
@@ -100,7 +100,7 @@
         "manifest": "https://github.com/foundryvtt/pf2e/releases/latest/download/system.json",
         "compatibility": {
           "minimum": "7.0.5",
-          "verified": "7.0.5"
+          "verified": "7.2.3"
         }
       }
     ],

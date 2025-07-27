@@ -1472,7 +1472,7 @@ async function feint(message) {
                     }
                 });
 
-                message.target.actor.createEmbeddedDocuments("Item", [source]);
+                addItemToActor(message.target.actor, source);
             } else if (criticalSuccessMessageOutcome(message) && scoundrel) {
                 await setEffectToActor(
                     message.target.actor,
