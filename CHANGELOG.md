@@ -1,3 +1,8 @@
+### Version 1.2.11
+- Changing links to specific versions
+- Preparation to update new global version
+- Preparation to rewriting rules
+
 ### Version 1.2.10
 - Fix goading feint
 
