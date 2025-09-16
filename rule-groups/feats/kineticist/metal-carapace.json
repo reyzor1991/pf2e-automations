@@ -1,0 +1,75 @@
+{
+  "uuid": "2NEfQ9kRpHJJVJN7",
+  "group": "feat",
+  "name": "Metal Carapace",
+  "labels": [
+    "impulse",
+    "kineticist",
+    "metal",
+    "primal"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.HbdOZ8YTtu8ykASc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.wITJ6L8mcbbgoCHu",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:metal-carapace"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "metalCarapace",
+      "target": "none",
+      "predicate": [
+        "effect:metal-carapace"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteMetalCarapace",
+      "target": "none",
+      "predicate": [
+        "effect:metal-carapace"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "metalCarapaceShield",
+      "target": "none",
+      "predicate": [
+        "effect:rusty-metal-carapace-shield"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteMetalCarapaceShield",
+      "target": "none",
+      "predicate": [
+        "effect:rusty-metal-carapace-shield"
+      ]
+    }
+  ]
+}

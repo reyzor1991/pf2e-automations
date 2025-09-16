@@ -1,0 +1,29 @@
+{
+  "uuid": "9omwMbuv9NfE6baa",
+  "group": "spell",
+  "name": "Vital Beacon",
+  "labels": [
+    "concentrate",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.ikSb3LRGnrwXJBVX"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.WWtSEJGwKY4bQpUn",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:vital-beacon"
+      ]
+    }
+  ],
+  "complexRules": []
+}

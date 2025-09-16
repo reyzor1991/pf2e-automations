@@ -1,0 +1,38 @@
+{
+  "_id": "mxIt7zfVKgLZ8AeC",
+  "img": "icons/equipment/chest/breastplate-collared-leather-brown.webp",
+  "name": "Effect: Hardwood Armor",
+  "system": {
+    "description": {
+      "value": "<p>Worn armor - @UUID[Compendium.pf2e-automations.equipment.Item.9jbCQQAzUbXNGzZq]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-hardwood-armor"
+  },
+  "type": "effect",
+  "_key": "!items!mxIt7zfVKgLZ8AeC"
+}

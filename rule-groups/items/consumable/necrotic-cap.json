@@ -1,0 +1,38 @@
+{
+  "uuid": "749B3SWyTzqdJ4o8",
+  "group": "equipment",
+  "name": "Necrotic Cap",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Oxai9zyjeocPNUzO",
+    "Compendium.pf2e.equipment-srd.Item.cDyoBhYeAMkCmjiP",
+    "Compendium.pf2e.equipment-srd.Item.sUZxDEiwCKiMpN7T",
+    "Compendium.pf2e.equipment-srd.Item.CM3GrNvvZBdPmxe5"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.wQDfwrrvfRxwG5CY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:necrotic-cap-lesser",
+            "consumable:necrotic-cap-moderate",
+            "consumable:necrotic-cap-greater",
+            "consumable:necrotic-cap-major"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

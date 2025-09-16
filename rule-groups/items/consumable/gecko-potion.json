@@ -1,0 +1,26 @@
+{
+  "uuid": "r5aMJgP2MFJe3Bo2",
+  "group": "equipment",
+  "name": "Gecko Potion",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.hGw7Q1y2IEXRGAfv"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.buJnkFBzL4e22ASp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:gecko-potion"
+      ]
+    }
+  ],
+  "complexRules": []
+}

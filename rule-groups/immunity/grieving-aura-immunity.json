@@ -1,0 +1,38 @@
+{
+  "uuid": "ElgiA2elCSx28Be4",
+  "group": "other",
+  "name": "Grieving Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "grieving-aura"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "item:slug:grieving-aura"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "uuid": "xlqXtTJ2fhXQi6Po",
+  "group": "other",
+  "name": "Stench Immunity",
+  "labels": [
+    "aura",
+    "olfactory"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "stench"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        "item:slug:stench"
+      ]
+    }
+  ]
+}

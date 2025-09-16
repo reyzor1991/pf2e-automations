@@ -1,0 +1,24 @@
+{
+  "uuid": "pG82v8kFdSkplZ9k",
+  "group": "equipment",
+  "name": "Silver Salve",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.8fbsKEEbZ0CfBMIr"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.dfnhwI5pJgLtXh2k",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:silver-salve"
+      ]
+    }
+  ],
+  "complexRules": []
+}

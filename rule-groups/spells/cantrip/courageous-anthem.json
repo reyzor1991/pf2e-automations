@@ -1,0 +1,31 @@
+{
+  "uuid": "9SnlyF2SENb5z8zf",
+  "group": "spell",
+  "name": "Courageous Anthem",
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.RR8MSbHqxJdQxh2e",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:courageous-anthem"
+      ]
+    }
+  ],
+  "complexRules": []
+}

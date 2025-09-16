@@ -1,5 +1,8 @@
 {
   "pf2e-automations": {
+    "FormRules": {
+      "Title": "Zasady"
+    },
     "targetType": {
       "None": "Brak",
       "SelfEffect": "Zastosuj efektu na sobie podczas użycia akcji",
@@ -20,74 +23,81 @@
       "RunMacro": "Uruchom makro",
       "PartyEffect": "Zastosuj efekt do członków drużyny",
       "TurnOnOption": "Włącz opcję",
+      "TurnOffOption": "Włącz opcję",
       "TargetAllyWithinRange": "Wybierz siebie i sojusznika w zasięgu",
-      "DecreaseDamageBadgeEffect": "Zmniejsz wartość odznaki efektu obrażeń"
-    },
-    "requirementType": {
-      "None": "Brak",
-      "Success": "Wynik wiadomości jest sukcesem",
-      "CriticalSuccess": "Wynik wiadomości jest krytycznym sukcesem",
-      "AnySuccess": "Wynik wiadomości jest dowolnym sukcesem",
-      "Failure": "Wynik wiadomości jest porażką",
-      "CriticalFailure": "Wynik wiadomości jest krytyczną porażką",
-      "AnyFailure": "Wynik wiadomości jest dowolną porażką",
-      "ActorHasEffect": "Aktor pod wpływem efektu",
-      "ActorHasEffectBySlug": "Aktor pod wpływem efektu (slug)",
-      "ActorHasFeat": "Aktor posiada atut",
-      "TargetIsAnother": "Cel to kolejny aktor",
-      "ActorHasCondition": "Aktor pod wpływem stanu",
-      "TargetHasEffect": "Cel pod wpływem efektu",
-      "TargetHasCondition": "Cel pod wpływem stanu",
-      "TargetHasTrait": "Cel posiada cechę",
-      "SelfOrTargetHasEffect": "Aktor lub cel posiada cechę",
-      "ItemHasTrait": "Przedmiot posiada cechę",
-      "ActorName": "Aktor nazywa się",
-      "LvlGte": "Poziom przedmiotu większy lub równy",
-      "LvlLess": "Poziom przedmiotu mniejszy niż",
-      "TargetsNumber": "Liczba celów",
-      "UseEquipment": "Ekwupunek jest używany",
-      "MessageDCLabel": "Etykieta wiadomości ST zawiera tekst",
-      "WieldLoadedOneHandedRanged": "Aktor dzierży naładowaną jednoręczną broń dystansową"
-    },
-    "triggerType": {
-      "None": "Brak",
-      "EqualsSlug": "Slug wiadomości jest równy",
-      "HasOption": "Wiadomość posiada opcję",
-      "HasDomain": "Wiadomość posiada domenę",
-      "HasRune": "Przedmiot posiada runę",
-      "EqualsSourceId": "Wiadomość elementu SourceId jest równa"
-    },
-    "operator": {
-      "AND": "I",
-      "OR": "Lub",
-      "NOT": "Nie"
+      "OnlyAllyWithinRange": "Sojusznik w zasięgu",
+      "DecreaseBadgeEffect": "Zmniejsz wartość odznaki efektu obrażeń",
+      "IncreaseBadgeEffect": "Zwiększyć wartość odznaki efektu obrażeń",
+      "TargetDecreaseBadgeEffect": "Zmniejsz wartość odznaki efektu docelowego",
+      "TargetIncreaseBadgeEffect": "Zwiększ wartość odznaki efektu docelowego",
+      "ImmunitySelfEffect": "Dodaj odporność do aktora",
+      "IncreaseConditionByStep": "Zwiększaj stan krok po kroku",
+      "IncreaseTargetConditionByStep": "Zwiększaj stan docelowy krok po kroku",
+      "SelfAddPersistentDamage": "Zastosuj trwałe obrażenia do siebie",
+      "TargetAddPersistentDamage": "Zadaj celowi trwałe obrażenia",
+      "OriginEffect": "Zastosuj efekt do właściciela"
     },
     "SETTINGS": {
-      "messageCreateHandlers": {
-        "name": "Obsługa tworzenia wiadomości",
-        "label": "Zarządzanie kontrolerami",
-        "hint": ""
+      "Menu": {
+        "rollSettingsMenu.Name": "Menu ustawień rolki",
+        "combatSettingsMenu.Name": "Menu ustawień walki",
+        "playerSettingsMenu.Name": "QoL Menu",
+        "hideRollMenu.Name": "Ukryj menu rolkowe",
+        "incapacitationRollMenu.Name": "Menu rzutu niezdolności"
       },
-      "updateActorHandlers": {
-        "name": "Aktualizacja obsługi aktorów",
-        "label": "Zarządzanie kontrolerami",
-        "hint": ""
-      },
-      "updateItemHandlers": {
-        "name": "Aktualizacja obsługi przedmiotów",
-        "label": "Zarządzanie kontrolerami",
-        "hint": ""
-      },
-      "deleteItemHandlers": {
-        "name": "Usuń obsługę przedmiotów",
-        "label": "Zarządzanie kontrolerami",
-        "hint": ""
-      },
-      "createItemHandlers": {
-        "name": "Tworzenie obsługi przedmiotów",
-        "label": "Zarządzanie kontrolerami",
-        "hint": ""
-      }
+      "blindRoll.name": "Wszystkie testy umiejętności są wykonywane w ciemno",
+      "blindRoll.hint": "Następne 2 ustawienia służą do nadpisywania logiki",
+      "onlySkillBlindRoll.name": "Tylko rzuty w ciemno dla określonych umiejętności",
+      "onlySkillBlindRoll.hint": "Dodaj umiejętności używając przecinka. Ma większy priorytet",
+      "skipSkillBlindRoll.name": "Pomiń rzuty w ciemno dla umiejętności",
+      "skipSkillBlindRoll.hint": "Dodaj umiejętności używając przecinka",
+      "hiddenTokenBlindRoll.name": "Ukryte rzuty żetonami są ślepe",
+      "hiddenTokenBlindRoll.hint": "",
+      "hidePrivateGMRolls.name": "Ukryj prywatne role GM",
+      "hidePrivateGMRolls.hint": "",
+      "hidePrivatePlayerRolls.name": "Ukryj prywatne rzuty gracza",
+      "hidePrivatePlayerRolls.hint": "",
+      "avoidNoticeRoll.name": "Rzuć, gdy aktywujesz aktywność eksploracyjną",
+      "avoidNoticeRoll.hint": "Ustaw wartość z rzutu dla aktywności eksploracyjnej, np. unikaj powiadomienia",
+      "stealthRollInitiative.name": "Użyj ostatniego rzutu skradania jako inicjatywy",
+      "stealthRollInitiative.hint": "Użyj ostatniego wyniku z Stealth/Hidden/Sneak jako inicjatywy",
+      "avoidNoticeRollSecret.name": "Aktywność eksploracyjna Rzuć w tajemnicy",
+      "avoidNoticeRollSecret.hint": "Jeśli włączone - Aktywność eksploracyjna Rzuć w tajemnicy, ukryj wynik przed postaciami graczy na Arkuszu drużyny",
+      "flatCheck.name": "Wykonaj podstawowe płaskie testy",
+      "flatCheck.hint": "Płaskie kontrole - Oszołomiony, Zdezorientowany, Ogłuszony, Złapany, Oślepiony, Oślepiony, Ukryty, Ukryty, Niewidzialny, Niewykryty",
+      "basicActionRoll.name": "Podstawowy rzut akcji",
+      "basicActionRoll.hint": "Publikowanie podstawowych działań w czacie wyzwalacza związanego z rzutem",
+      "minMaxDamage.name": "Zaktualizuj uszkodzenia do wartości min/maks",
+      "minMaxDamage.hint": "",
+      "deleteExploration.name": "Usuń działania eksploracyjne po rozpoczęciu walki",
+      "deleteExploration.hint": "",
+      "sustainedSpells.name": "Utrzymane zaklęcia",
+      "sustainedSpells.hint": "Powiadomienie aktora o konieczności podtrzymania dowolnej akcji lub zaklęcia z cechą podtrzymywania",
+      "openNpcSheet.name": "Otwórz kartę NPC podczas spotkania",
+      "openNpcSheet.hint": "",
+      "allSpellsAuditory.name": "Wszystkie zaklęcia mają cechę Słuchową, z wyjątkiem zaklęć z cechą Subtelną",
+      "allSpellsAuditory.hint": "Ta funkcja wymaga sprawdzenia Płaskiego - Ogłuszonego",
+      "pingMessage.name": "Dodaj przycisk ping do wszystkich kart czatu",
+      "pingMessage.hint": "Możliwość powiadomienia użytkownika o każdym aktorze, co jest przydatne do znalezienia stworzenia, któremu zadano obrażenia",
+      "useAutomationThaumaturge.name": "Użyj automatyzacji dla klasy Thaumaturge",
+      "useAutomationThaumaturge.hint": "Wyłącz, jeśli występują konflikty z modułem EV",
+      "fastHealingTime.name": "Zastosuj szybkie leczenie, gdy czas się zmienił",
+      "fastHealingTime.hint": "",
+      "removeExplorationActivity.name": "Usuń wszystkie działania eksploracyjne po odpoczynku",
+      "removeExplorationActivity.hint": "",
+      "conditionDC.name": "Ustaw DC warunku po dodaniu do aktora",
+      "conditionDC.hint": "Teraz tylko dla chorych",
+      "partyVision.name": "Automatyczne przełączanie widoku wspólnej drużyny podczas spotkania",
+      "partyVision.hint": "Wychodzi na walkę, włącza się po zakończeniu starcia",
+      "highlightSpells.name": "Podświetl wzmocnioną wersję zaklęcia",
+      "highlightSpells.hint": "",
+      "showEffectRelationship.name": "Pokaż relację efektów",
+      "showEffectRelationship.hint": "",
+      "showEffectRelationship.choices.no": "NIE",
+      "showEffectRelationship.choices.press": "Po naciśnięciu Alt",
+      "showEffectRelationship.choices.always": "Zawsze pokazuj zależności efektów",
+      "incapacitation.name": "Tryb niepełnosprawności",
+      "incapacitation.hint": ""
     }
   }
 }

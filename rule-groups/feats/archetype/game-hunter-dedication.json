@@ -1,0 +1,62 @@
+{
+  "uuid": "GfUh7H56C7r42MXK",
+  "group": "feat",
+  "name": "Game Hunter Dedication",
+  "labels": [
+    "archetype",
+    "dedication"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.CowQy8gXP9POjuxq"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.j1rTpcO1B1FJSTyO",
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:game-hunter-dedication"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.dp8KKSNp7ltQhrge",
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:game-hunter-dedication",
+        "outcome:failure"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.dp8KKSNp7ltQhrge"
+          ],
+          "duration": {
+            "unit": "minutes"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:game-hunter-dedication",
+        "outcome:criticalFailure"
+      ]
+    }
+  ]
+}

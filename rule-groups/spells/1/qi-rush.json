@@ -1,0 +1,28 @@
+{
+  "uuid": "lqZGljzyxeYSfdWi",
+  "group": "spell",
+  "name": "Qi Rush",
+  "labels": [
+    "concentrate",
+    "focus",
+    "monk"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.ps0nmhclT6aIXgd8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.CwBOiAsgZXA844HV",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:qi-rush"
+      ]
+    }
+  ],
+  "complexRules": []
+}

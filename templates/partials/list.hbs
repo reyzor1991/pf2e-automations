@@ -1,29 +1,13 @@
-<div class="wrapper">
-    <div class="data">
-        <ul class="directory-list package-list rule-list rule-list-tab scrollable">
-            {{#each list as |rule|}}
-                <li class="package flexcol active" data-labels="{{rule.labels}}" data-uuid="{{rule.uuid}}">
-                    <div class="package-overview flexrow">
-                        <div>
-                            <label class="package-title checkbox" style="display: flex;">
-                                <input type="checkbox" class="active" name="{{rule.uuid}}"
-                                       data-dtype="Boolean" {{#if rule.isActive}} checked {{/if}}>
-                            </label>
-                        </div>
-                        <div class="title-group" title="{{rule.description}}">
-                            <div class="title">{{rule.name}}</div>
-                        </div>
-
-                        <div class="rule-controls" style="align-items: center;">
-                            <a class="export-rule" data-idx="{{rule.uuid}}"><i
-                                    class="fas fa-file-export"></i></a>
-                            <a class="edit-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                            <a class="remove-rule" data-idx="{{rule.uuid}}" title="Remove"><i
-                                    class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                </li>
-            {{/each}}
-        </ul>
-    </div>
-</div>
+<ul class="list-area">
+    {{#each data as |item|}}
+        <li data-uuid="{{item.uuid}}">
+            <label class="label-row">
+                <input type="checkbox" {{checked item.isActive}} name="{{item.uuid}}" data-dtype="Boolean" >
+                {{item.name}}
+                <a class="export-rule fa-solid fa-file-export" data-tooltip="Export rule"></a>
+                <a class="edit-row fas fa-edit" data-tooltip="Edit rule"></a>
+                <a class="remove-row fas fa-trash" data-tooltip="Delete rule"></a>
+            </label>
+        </li>
+    {{/each}}
+</ul>

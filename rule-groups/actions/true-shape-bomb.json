@@ -1,0 +1,36 @@
+{
+  "uuid": "fAkAAQd8KZjqRMUc",
+  "group": "action",
+  "name": "True Shape Bomb",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "trueShapeBomb",
+      "target": "none",
+      "predicate": [
+        "alchemical",
+        "bomb",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "Trueshape Bomb DC",
+            "Trueshape Bomb (Greater) DC"
+          ]
+        }
+      ]
+    }
+  ]
+}

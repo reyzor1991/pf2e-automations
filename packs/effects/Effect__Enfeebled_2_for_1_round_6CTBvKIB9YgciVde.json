@@ -1,0 +1,53 @@
+{
+  "_id": "6CTBvKIB9YgciVde",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Enfeebled 2 for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-enfeebled2-start-round"
+  },
+  "type": "effect",
+  "_key": "!items!6CTBvKIB9YgciVde"
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "7D2PxZg6XGuBN7Wm",
+  "group": "equipment",
+  "name": "Ichthyosis Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.uwVTuejjSLl82jiA"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.hAdyMxuWJu7piQSS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ichthyosis-mutagen"
+      ]
+    }
+  ],
+  "complexRules": []
+}

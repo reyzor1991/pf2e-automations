@@ -1,0 +1,63 @@
+{
+  "uuid": "ikV8vHd5VqQ2x8uF",
+  "group": "spell",
+  "name": "See the Unseen",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "revelation"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.jwK43yKsHTkJQvQ9"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.T5bk6UH7yuYog1Fp",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:see-the-unseen",
+        {
+          "lt": [
+            "origin:item:level",
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e.spell-effects.Item.T5bk6UH7yuYog1Fp"
+          ],
+          "duration": {
+            "unit": "hours",
+            "value": 8
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:see-the-unseen",
+        {
+          "gte": [
+            "origin:item:level",
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

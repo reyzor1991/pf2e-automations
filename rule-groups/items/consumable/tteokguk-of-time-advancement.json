@@ -1,0 +1,26 @@
+{
+  "uuid": "aDAdzcvGUv34xJul",
+  "group": "equipment",
+  "name": "Tteokguk of Time Advancement",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.hHsU2sRW47Rge8fU"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.M0hhLRC86sASVOk7",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:tteokguk-of-time-advancement"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "PZJ1VFkctyVTOkwe",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Deafened for 10 minutes",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR] for 10 minutes.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-deafened-hour"
+  },
+  "type": "effect",
+  "_key": "!items!PZJ1VFkctyVTOkwe"
+}

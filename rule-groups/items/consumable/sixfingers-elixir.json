@@ -1,0 +1,52 @@
+{
+  "uuid": "VCR5FwvePWw8WUHT",
+  "group": "equipment",
+  "name": "Sixfingers Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.ieVRS2BjiWqauly6",
+    "Compendium.pf2e.equipment-srd.Item.6odVabL0WL2H89Ic",
+    "Compendium.pf2e.equipment-srd.Item.JAOWw2GhupaYoYg9"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.qzRcSQ0HTTp58hV2",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sixfingers-elixir-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.TkRuKKYyPHTGPfgf",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sixfingers-elixir-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.XrlChFETfe8avLsX",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sixfingers-elixir-lesser"
+      ]
+    }
+  ],
+  "complexRules": []
+}

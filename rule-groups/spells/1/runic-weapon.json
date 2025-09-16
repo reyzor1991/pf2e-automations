@@ -1,0 +1,27 @@
+{
+  "uuid": "SWuJASkF72pr4KX4",
+  "group": "spell",
+  "name": "Runic Weapon",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.TFitdEOpQC4SzKQQ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.GnWkI3T3LYRlm3X8",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:runic-weapon"
+      ]
+    }
+  ],
+  "complexRules": []
+}

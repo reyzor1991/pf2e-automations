@@ -1,0 +1,27 @@
+{
+  "uuid": "yEsZWA9VireXNHEf",
+  "group": "feat",
+  "name": "Prayer-Touched Weapon",
+  "labels": [
+    "cleric",
+    "oracle"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.2qR4QAgJVArv63Z2"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.cA6ps8RKE0gysEWr",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:prayer-touched-weapon"
+      ]
+    }
+  ],
+  "complexRules": []
+}

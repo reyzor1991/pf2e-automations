@@ -1,0 +1,40 @@
+{
+  "uuid": "wFJAN8XPl9Ji89nz",
+  "group": "action",
+  "name": "Subsist",
+  "labels": [
+    "downtime",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.49y9Ec4bDii8pcD3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.other-effects.Item.wHWWHkjDXmJl4Ia6",
+      "target": "SelfEffect",
+      "predicate": [
+        "action:subsist",
+        "outcome:criticalFailure"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.JaZMkZA7LCBLiOf0",
+      "target": "SelfEffect",
+      "predicate": [
+        "action:subsist",
+        "outcome:criticalFailure"
+      ]
+    }
+  ],
+  "complexRules": []
+}

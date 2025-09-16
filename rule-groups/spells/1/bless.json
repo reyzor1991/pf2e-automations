@@ -1,0 +1,44 @@
+{
+  "uuid": "rmVeAgvbXMmjYppY",
+  "group": "spell",
+  "name": "Bless",
+  "labels": [
+    "aura",
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.XSujb7EsSwKl19Uu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.RfCEHpMoEAZvB9IZ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:bless",
+        {
+          "not": "self:effect:aura-bless"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.RfCEHpMoEAZvB9IZ",
+      "target": "IncreaseBadgeEffect",
+      "predicate": [
+        "origin:item:bless",
+        "self:effect:aura-bless"
+      ]
+    }
+  ],
+  "complexRules": []
+}

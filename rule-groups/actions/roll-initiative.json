@@ -1,0 +1,21 @@
+{
+  "uuid": "tVpMQKZYqFRcCBBa",
+  "group": "action",
+  "name": "Initiative actions",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "initiative",
+      "extend": null,
+      "range": null,
+      "value": "rollInitiative",
+      "target": "none",
+      "predicate": []
+    }
+  ]
+}

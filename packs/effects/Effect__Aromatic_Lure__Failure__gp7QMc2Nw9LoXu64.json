@@ -1,0 +1,53 @@
+{
+  "_id": "gp7QMc2Nw9LoXu64",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Aromatic Lure (Failure)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2} and moves toward the selected location via the most direct route possible for 1 round, bypassing any obvious hazards and enemies in the way.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-aromatic-lure-failure"
+  },
+  "type": "effect",
+  "_key": "!items!gp7QMc2Nw9LoXu64"
+}

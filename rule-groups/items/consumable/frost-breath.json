@@ -1,0 +1,26 @@
+{
+  "uuid": "CEjaXwbYgJGD2aVx",
+  "group": "equipment",
+  "name": "Frost Breath",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.PVpViB2Wg3f61dFa"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.r4nq5JzY8U1lXsAY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:frost-breath"
+      ]
+    }
+  ],
+  "complexRules": []
+}

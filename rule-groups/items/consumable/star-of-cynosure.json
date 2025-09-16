@@ -1,0 +1,26 @@
+{
+  "uuid": "f965po33Alm4xK3j",
+  "group": "equipment",
+  "name": "Star of Cynosure",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.LDiF0GRYAiW2mool"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.TM0LFTy30FG2wwI2",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:star-of-cynosure"
+      ]
+    }
+  ],
+  "complexRules": []
+}

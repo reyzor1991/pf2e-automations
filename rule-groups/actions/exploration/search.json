@@ -1,0 +1,27 @@
+{
+  "uuid": "AiEnzr7lHpC7hXTe",
+  "group": "action",
+  "name": "Search",
+  "labels": [
+    "concentrate",
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.XiVLHjg5lQVMX8Fj",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:search"
+      ]
+    }
+  ],
+  "complexRules": []
+}

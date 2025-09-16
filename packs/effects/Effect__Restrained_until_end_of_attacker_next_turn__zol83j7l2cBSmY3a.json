@@ -1,0 +1,46 @@
+{
+  "_id": "zol83j7l2cBSmY3a",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Restrained until end of attacker next turn",
+  "system": {
+    "description": {
+      "value": "<p>Target is @UUID[Compendium.pf2e.conditionitems.VcDeM8A5oI6VqhbM] until the end of your next turn unless you move or your target @UUID[Compendium.pf2e.actionspf2e.SkZAQRkLLkmBQNB9]{Escapes}.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.VcDeM8A5oI6VqhbM"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-restrained-until-end-of-attacker-next-turn"
+  },
+  "type": "effect",
+  "_key": "!items!zol83j7l2cBSmY3a"
+}

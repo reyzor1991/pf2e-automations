@@ -1,0 +1,52 @@
+{
+  "uuid": "DY4QGTuglgFThHPD",
+  "group": "equipment",
+  "name": "Silver Crescent",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.XWO5pMQcYNybqWzf",
+    "Compendium.pf2e.equipment-srd.Item.Pjxotvrj7uXe92Qc",
+    "Compendium.pf2e.equipment-srd.Item.2wV9SHAWbC4rUlcc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.MvvAy8oi9ITEqsG0",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silver-crescent-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.qYa5BDssyIfPQg2r",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silver-crescent-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.qWeEmDft3tRWlIwy",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silver-crescent-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

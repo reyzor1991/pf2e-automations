@@ -1,0 +1,30 @@
+{
+  "uuid": "XT6N2JvnokwywZV3",
+  "group": "spell",
+  "name": "Plant Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "plant",
+    "polymorph",
+    "wood"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zCcfPS4y5SrZzU2x"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.CEkQI3KysIs7C6EX",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:plant-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

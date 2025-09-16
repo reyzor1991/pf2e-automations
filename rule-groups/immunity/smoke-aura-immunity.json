@@ -1,0 +1,38 @@
+{
+  "uuid": "YhTznjUNmT4KF5b4",
+  "group": "other",
+  "name": "Smoke Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "smoke"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "item:slug:smoke"
+      ]
+    }
+  ]
+}

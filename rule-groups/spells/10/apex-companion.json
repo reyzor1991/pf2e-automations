@@ -1,0 +1,26 @@
+{
+  "uuid": "f5eg2hqnWRQoDNYx",
+  "group": "spell",
+  "name": "Apex Companion",
+  "labels": [
+    "druid"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qqQYrXaRJXr7uc4i"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.NXzo2kdgVixIZ2T1",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:apex-companion"
+      ]
+    }
+  ],
+  "complexRules": []
+}

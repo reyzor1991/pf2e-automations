@@ -1,0 +1,23 @@
+{
+  "uuid": "rxJwij8ZSdzz8zbR",
+  "group": "spell",
+  "name": "Ray of Frost",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.gYjPm7YwGtEa1oxh"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "attack-roll",
+      "value": "Compendium.pf2e.spell-effects.Item.I4PsUAaYSUJ8pwKC",
+      "target": "TargetEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:slug:ray-of-frost"
+      ]
+    }
+  ],
+  "complexRules": []
+}

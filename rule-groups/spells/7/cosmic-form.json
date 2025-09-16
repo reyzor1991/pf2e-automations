@@ -1,0 +1,28 @@
+{
+  "uuid": "ttmR4w7x43PqtDE8",
+  "group": "spell",
+  "name": "Cosmic Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.IHUs4qn27RrdFQ5Y"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Z7l3CKUyISzmL4zj",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:cosmic-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

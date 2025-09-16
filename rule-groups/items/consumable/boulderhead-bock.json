@@ -1,0 +1,26 @@
+{
+  "uuid": "ZKD5BqkElXY9FzGi",
+  "group": "equipment",
+  "name": "Boulderhead Bock",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.I0eUrgVGl8a2ZjFc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.2C1HuKDQDGFZuv7l",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:boulderhead-bock"
+      ]
+    }
+  ],
+  "complexRules": []
+}

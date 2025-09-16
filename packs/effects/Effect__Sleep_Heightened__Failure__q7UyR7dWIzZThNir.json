@@ -1,0 +1,46 @@
+{
+  "_id": "q7UyR7dWIzZThNir",
+  "img": "systems/pf2e/icons/spells/sleep.webp",
+  "name": "Effect: Sleep Heightened (Failure)",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-sleep-heightened-failure"
+  },
+  "type": "effect",
+  "_key": "!items!q7UyR7dWIzZThNir"
+}

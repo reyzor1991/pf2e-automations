@@ -1,0 +1,38 @@
+{
+  "_id": "NT4T6gEdEQsoHItQ",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "name": "Effect: Armor in Earth",
+  "system": {
+    "description": {
+      "value": "<p>Worn armor - @UUID[Compendium.pf2e-automations.equipment.Item.TDvicwRah0zBhsYg]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-armor-in-earth"
+  },
+  "type": "effect",
+  "_key": "!items!NT4T6gEdEQsoHItQ"
+}

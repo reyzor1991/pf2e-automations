@@ -1,0 +1,59 @@
+{
+  "_id": "CUMpeosjhqDpj4KK",
+  "img": "icons/magic/death/skeleton-bird-skull-gray.webp",
+  "name": "Effect: Additional damage bloodline",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "spell-damage",
+        "damageType": "positive",
+        "predicate": [
+          "target:mode:undead"
+        ],
+        "value": 0,
+        "label": "Positive"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "spell-damage",
+        "damageType": "negative",
+        "predicate": [
+          {
+            "not": "target:mode:undead"
+          }
+        ],
+        "value": 0,
+        "label": "Negative"
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    }
+  },
+  "type": "effect",
+  "_key": "!items!CUMpeosjhqDpj4KK"
+}

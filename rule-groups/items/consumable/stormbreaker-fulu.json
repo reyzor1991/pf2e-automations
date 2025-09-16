@@ -1,0 +1,29 @@
+{
+  "uuid": "PpbpcUNJlr5xZSSb",
+  "group": "equipment",
+  "name": "Stormbreaker Fulu",
+  "labels": [
+    "consumable",
+    "fulu",
+    "magical",
+    "talisman"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.NQuE19X1YMWjiWHl"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.FnCC5RNvnlWB2bmb",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:stormbreaker-fulu"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "tYGWmWEDaikYehYA",
+  "group": "spell",
+  "name": "Silence",
+  "labels": [
+    "illusion",
+    "manipulate",
+    "subtle"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.gIdDLrbswTV3OBJy"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.mmJNE57hC7G3SPae",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:silence"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "lsICo0LAyrWy2cDm",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Clumsy 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-clumsy-start-round"
+  },
+  "type": "effect",
+  "_key": "!items!lsICo0LAyrWy2cDm"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "hfEZuCxFYpqAaq25",
+  "group": "equipment",
+  "name": "Dragon Breath Scale",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Kmf5F06GucKhY6hK"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.iqbWgT2TTJLGSkTL",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:dragon-breath-scale"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "mGFBHM1lvHNZ9BsH",
+  "img": "icons/tools/navigation/map-marked-red.webp",
+  "name": "Scout",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.kV3XM0YJeS2KCSOb]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-scout"
+  },
+  "type": "effect",
+  "_key": "!items!mGFBHM1lvHNZ9BsH"
+}

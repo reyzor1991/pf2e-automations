@@ -1,0 +1,27 @@
+{
+  "uuid": "qaTclZ5nCpEdTh5q",
+  "group": "spell",
+  "name": "Runic Body",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.EE7Q5BHIrfWNCPtT"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.MqZ6FScbfGtXB8tt",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:runic-body"
+      ]
+    }
+  ],
+  "complexRules": []
+}

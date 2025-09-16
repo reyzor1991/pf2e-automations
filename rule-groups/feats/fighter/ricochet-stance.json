@@ -1,0 +1,34 @@
+{
+  "uuid": "brDKNmd4Ry6k978t",
+  "group": "feat",
+  "name": "Ricochet Stance",
+  "labels": [
+    "rouge",
+    "fighter",
+    "stance"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.RsNvCSrCN7czHC0G",
+    "Compendium.pf2e.feats-srd.Item.tRHjUCl0xqG97nok"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.Unfl4QQURWaX2zfd",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "origin:item:ricochet-stance-fighter",
+            "origin:item:ricochet-stance-rogue"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

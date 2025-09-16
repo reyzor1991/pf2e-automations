@@ -1,0 +1,37 @@
+{
+  "uuid": "xzrzBzEDaQHjYeYc",
+  "group": "feat",
+  "name": "Bloodlines",
+  "labels": [
+    "sorcerer"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "bloodlines",
+      "target": "none",
+      "predicate": [
+        "feature:bloodline-spells",
+        "item:type:spell"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-taken",
+      "extend": null,
+      "range": null,
+      "value": "effectHagBloodMagic",
+      "target": "none",
+      "predicate": [
+        "self:effect:hag-blood-magic"
+      ]
+    }
+  ]
+}

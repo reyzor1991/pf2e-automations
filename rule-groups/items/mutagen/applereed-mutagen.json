@@ -1,0 +1,54 @@
+{
+  "uuid": "hmyY335AmUcYkRsA",
+  "group": "equipment",
+  "name": "Applereed Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.8e37h6HBr4ZyBSGt",
+    "Compendium.pf2e.equipment-srd.Item.0RTsyWutvO42O0zK",
+    "Compendium.pf2e.equipment-srd.Item.vTEWlRBUD4VzVwxK"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.fYjvLx9DHIdCHdDx",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:applereed-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.xVAdPzFaSvJXPMKv",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:applereed-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.tTBJ33UGtzXjWOJp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:applereed-mutagen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

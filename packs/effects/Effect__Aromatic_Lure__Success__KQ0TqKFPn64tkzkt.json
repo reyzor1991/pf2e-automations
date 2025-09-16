@@ -1,0 +1,46 @@
+{
+  "_id": "KQ0TqKFPn64tkzkt",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Aromatic Lure (Success)",
+  "system": {
+    "description": {
+      "value": "<p>You are distracted by the tantalizing scents, becoming @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-aromatic-lure-success"
+  },
+  "type": "effect",
+  "_key": "!items!KQ0TqKFPn64tkzkt"
+}

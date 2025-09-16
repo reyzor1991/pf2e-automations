@@ -1,0 +1,43 @@
+{
+  "uuid": "nHVPwHyKT7mNvDaV",
+  "group": "other",
+  "name": "Great Despair Immunity",
+  "labels": [
+    "archetype",
+    "aura",
+    "divine",
+    "emotion",
+    "fear",
+    "mental"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "great-despair"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 24
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "item:slug:great-despair"
+      ]
+    }
+  ]
+}

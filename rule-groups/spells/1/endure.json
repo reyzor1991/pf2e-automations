@@ -1,0 +1,27 @@
+{
+  "uuid": "Ppxmd6VyAwFBfv9J",
+  "group": "spell",
+  "name": "Endure",
+  "labels": [
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.4c1c6eNzU1PFGkAy"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.AAypmg9Jz6Ysf02a",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:endure"
+      ]
+    }
+  ],
+  "complexRules": []
+}

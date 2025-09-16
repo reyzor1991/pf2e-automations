@@ -1,0 +1,28 @@
+<div class="filter-area">
+    <div class="">
+        <input name="" type="search" autocomplete="off" spellcheck="false" placeholder="Search..." value="{{ this.filter.text }}">
+        <div class="order-area">
+            <label id="sort-order" class="">Order direction:</label>
+            <div class="select-container ">
+                <button type="button" class="order-direction-button">
+                    <i class="fa-solid {{this.filter.icon}}"></i>
+                </button>
+            </div>
+        </div>
+        <button type="button" class="clear-filters">Clear All Filters</button>
+    </div>
+    <div class="pd5 activation-area">
+        <a class="add-rule"><i class="fas fa-plus"></i> Create Rule</a>
+    </div>
+    <div class="activation-area">
+        <a class="activate-all-rule"><i class="fas fa-plus"></i>Activate All Rules</a>
+        <a class="deactivate-all-rule"><i class="fas fa-minus"></i>Deactivate All Rules</a>
+    </div>
+    <div class="activation-area">
+        <a class="suggestion-all-rule"><i class="fas fa-check"></i>Activate suggested Rules</a>
+    </div>
+    <div class="activation-area">
+        <a class="activate-category-rule"><i class="fas fa-plus"></i>Activate Category Rules</a>
+        <a class="deactivate-category-rule"><i class="fas fa-minus"></i>Deactivate Category Rules</a>
+    </div>
+</div>

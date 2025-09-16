@@ -1,0 +1,38 @@
+{
+  "_id": "i2ZIl0p6x4L0pSmi",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Goblin Song Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "hours",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-goblin-song-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!i2ZIl0p6x4L0pSmi"
+}

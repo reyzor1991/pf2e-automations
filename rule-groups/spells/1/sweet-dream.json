@@ -1,0 +1,33 @@
+{
+  "uuid": "p9fkeko3JdxTormg",
+  "group": "spell",
+  "name": "Sweet Dream",
+  "labels": [
+    "auditory",
+    "cleric",
+    "concentrate",
+    "focus",
+    "linguistic",
+    "manipulate",
+    "mental",
+    "sleep"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.BRtKFk0PKfWIlCAB"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.yEQXaB7XyaROVqyb",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:sweet-dream"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "vTFrTVltx4wsEpQw",
+  "img": "icons/magic/air/air-burst-spiral-yellow.webp",
+  "name": "Aura: Desert Wind",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 6
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "all",
+            "events": [
+              "enter"
+            ],
+            "uuid": "Compendium.pf2e-automations.effects.Item.m3c5RcY4PbYClPa2"
+          }
+        ],
+        "key": "Aura",
+        "predicate": [
+          "self:effect:kinetic-aura"
+        ],
+        "radius": "@actor.flags.pf2e.kineticist.auraRadius",
+        "slug": "aura-desert-wind",
+        "traits": [
+          "air",
+          "composite",
+          "earth",
+          "impulse",
+          "kineticist",
+          "primal",
+          "stance"
+        ]
+      }
+    ],
+    "schema": {
+      "version": 0.863,
+      "lastMigration": null
+    },
+    "source": {
+      "value": "Pathfinder Rage of Elements"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-aura-desert-wind"
+  },
+  "type": "effect",
+  "_key": "!items!vTFrTVltx4wsEpQw"
+}

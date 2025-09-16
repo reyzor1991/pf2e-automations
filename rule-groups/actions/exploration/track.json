@@ -1,0 +1,29 @@
+{
+  "uuid": "Vy3N3pXa2P9MjRfQ",
+  "group": "action",
+  "name": "Track",
+  "labels": [
+    "concentrate",
+    "exploration",
+    "move",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.OcCXjJab7rSR3mDf",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:track"
+      ]
+    }
+  ],
+  "complexRules": []
+}

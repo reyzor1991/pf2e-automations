@@ -1,0 +1,28 @@
+{
+  "uuid": "JdACoCpnWQbmKoVR",
+  "group": "spell",
+  "name": "Fey Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Qu4IThrk1wpONwjT"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.K9G9c1CguDaC85XH",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:fey-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,66 @@
+{
+  "uuid": "2RxYGHreVwmydycQ",
+  "group": "equipment",
+  "name": "Drakeheart Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.xY2MogTwH9Fd8UPG",
+    "Compendium.pf2e.equipment-srd.Item.WuzLBK78DgIt8SsN",
+    "Compendium.pf2e.equipment-srd.Item.GS4YvQieBS11JNYR",
+    "Compendium.pf2e.equipment-srd.Item.M4ZOHOlne43ArjOC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.BV8RPntjc9FUzD3g",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:drakeheart-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.qwoLV4awdezlEJ60",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:drakeheart-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.GBBjw61g4ekJymT0",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:drakeheart-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.vFOr2JAJxiVvvn2E",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:drakeheart-mutagen-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

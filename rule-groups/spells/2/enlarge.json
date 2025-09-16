@@ -1,0 +1,28 @@
+{
+  "uuid": "GSQRAx2P2MlQeAbe",
+  "group": "spell",
+  "name": "Enlarge",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.wzctak6BxOW8xvFV"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.sPCWrhUHqlbGhYSD",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:enlarge"
+      ]
+    }
+  ],
+  "complexRules": []
+}

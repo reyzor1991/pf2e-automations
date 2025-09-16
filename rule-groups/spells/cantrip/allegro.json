@@ -1,0 +1,31 @@
+{
+  "uuid": "KDfefT5yPmPqhEbU",
+  "group": "spell",
+  "name": "Allegro",
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.IQchIYUwbsVTa9Mc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.kZmteGRpdP6qgIdC",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:allegro"
+      ]
+    }
+  ],
+  "complexRules": []
+}

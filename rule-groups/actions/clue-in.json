@@ -1,0 +1,27 @@
+{
+  "uuid": "WUDPaicsZ7EuAKBX",
+  "group": "action",
+  "name": "Clue In",
+  "labels": [
+    "concentrate",
+    "investigator"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.25WDi1cVUrW92sUj"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.vhSYlQiAQMLuXqoc",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:clue-in"
+      ]
+    }
+  ],
+  "complexRules": []
+}

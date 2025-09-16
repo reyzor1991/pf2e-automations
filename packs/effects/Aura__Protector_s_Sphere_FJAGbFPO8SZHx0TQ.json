@@ -1,0 +1,53 @@
+{
+  "_id": "FJAGbFPO8SZHx0TQ",
+  "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+  "name": "Aura: Protector's Sphere",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.DH9Y3RQGWO0GzXGU]</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "sustained": true,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 4
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "events": [
+              "enter"
+            ],
+            "uuid": "Compendium.pf2e-automations.effects.Item.IDhtOTQmmc8zSNki"
+          }
+        ],
+        "key": "Aura",
+        "radius": "15",
+        "slug": "aura-protectors-sphere"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-aura-protectors-sphere"
+  },
+  "type": "effect",
+  "_key": "!items!FJAGbFPO8SZHx0TQ"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "fGrV9cEBpKhmGRMr",
+  "group": "equipment",
+  "name": "Delve Scale",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.1PH7kb7ZVSrfQsgD"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.rQV8Azb3FeUJJ3fG",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:delve-scale"
+      ]
+    }
+  ],
+  "complexRules": []
+}

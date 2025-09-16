@@ -1,0 +1,77 @@
+{
+  "uuid": "ePR9wqbKzHAKW9Mo",
+  "group": "npc",
+  "name": "Grab",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.bestiary-ability-glossary-srd.Item.Tkd8sH4pwFIPzqTr"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": true,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:grab"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "grab",
+      "target": "none",
+      "predicate": [
+        "self:type:npc",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "grabImproved",
+      "target": "none",
+      "predicate": [
+        "self:type:npc",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "grapple",
+      "target": "none",
+      "predicate": [
+        "self:type:npc",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

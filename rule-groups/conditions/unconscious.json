@@ -1,0 +1,23 @@
+{
+  "uuid": "LD3fpTbsV2pQkRzx",
+  "group": "other",
+  "name": "Remove effects when Unconscious",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "removeEffectsWhenUnconscious",
+      "target": "none",
+      "predicate": [
+        "condition:origin:condition:unconscious"
+      ]
+    }
+  ]
+}

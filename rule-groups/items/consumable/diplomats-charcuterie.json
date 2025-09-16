@@ -1,0 +1,26 @@
+{
+  "uuid": "UYDF24bWsSuHXo6H",
+  "group": "equipment",
+  "name": "Diplomat's Charcuterie",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.3tCtnomxBkdyG43X"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.inqXnzrqYzbUBuOj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:diplomats-charcuterie"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "y75TirVC2TkHHVX4",
+  "group": "npc",
+  "name": "Alchemical Crossbow",
+  "labels": [
+    "alchemical"
+  ],
+  "source": [
+    "alchemical-crossbow"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.bestiary-effects.Item.ucAwSIZsGrpBLg6G",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:alchemical-crossbow"
+      ]
+    }
+  ],
+  "complexRules": []
+}

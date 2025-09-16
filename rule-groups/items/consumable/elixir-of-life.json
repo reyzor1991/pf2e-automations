@@ -1,0 +1,89 @@
+{
+  "uuid": "XmtN6iW8akvPo9JS",
+  "group": "equipment",
+  "name": "Elixir of Life",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "healing"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.TZUskLT7yvP7N2co",
+    "Compendium.pf2e.equipment-srd.Item.hDLbR56Id2OtU318",
+    "Compendium.pf2e.equipment-srd.Item.mYozcVg9fQY6zO7C",
+    "Compendium.pf2e.equipment-srd.Item.qK964kZz1ALcysOa",
+    "Compendium.pf2e.equipment-srd.Item.c21stU5rhN4F2fZl",
+    "Compendium.pf2e.equipment-srd.Item.AmxSqEoFhRLMYd1W"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.EpB7yJPEuG6ez4z3",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.lPRuIRbu0rHBkoKY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-minor"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Z9oPh462q82IYIZ6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9MeHc072G4L8AJkp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-true"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Yxssrnh9UZJAM0V7",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.PpLxndUSgzgs6dd0",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elixir-of-life-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "n8aXDmRmH9wFRpXP",
+  "group": "spell",
+  "name": "Primal Summons",
+  "labels": [
+    "concentrate",
+    "druid",
+    "focus"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.kwlKUxEuT8T15YW6"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.3IuaMLa4KhBqRQkM",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:primal-summons"
+      ]
+    }
+  ],
+  "complexRules": []
+}

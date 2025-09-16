@@ -1,0 +1,31 @@
+{
+  "name": "pf2e-automations",
+  "type": "module",
+  "scripts": {
+    "build": "npm run clean && npm run build:src && npm run build:packs && npm run build:files && mkdir dist/rules && python3 create-rules.py",
+    "clean": "tsx ./build/clean.ts",
+    "build:src": "esbuild src/index.ts --bundle --keep-names --minify --sourcemap --outdir=dist/src",
+    "build:files": "tsx ./build/copy.ts",
+    "build:packs": "tsx ./build/build-packs.ts",
+    "build:extract": "tsx ./build/extract.ts",
+    "lint": "eslint ./src"
+  },
+  "author": "",
+  "homepage": "",
+  "devDependencies": {
+    "@eslint/js": "^9.19.0",
+    "@foundryvtt/foundryvtt-cli": "^1.0.4",
+    "@types/jquery": "^3.5.32",
+    "eslint": "^9.19.0",
+    "socket.io": "^4.8.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.22.0",
+    "webpack": "^5.97.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.24.2",
+    "jquery": "^3.7.1",
+    "tsx": "^4.19.2"
+  }
+}

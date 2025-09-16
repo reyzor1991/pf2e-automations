@@ -1,0 +1,47 @@
+{
+  "_id": "ThF8UIN5093xtCaq",
+  "img": "icons/magic/perception/third-eye-blue-red.webp",
+  "name": "Refocus",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.OSefkMgojBLqmRDh]{Refocus}</p>"
+    },
+    "rules": [
+      {
+        "key": "TokenEffectIcon",
+        "predicate": [
+          {
+            "not": "encounter"
+          }
+        ]
+      }
+    ],
+    "slug": "refocus",
+    "traits": {
+      "otherTags": [],
+      "value": [],
+      "rarity": "common"
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": 10,
+      "unit": "minutes",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "target": null,
+    "unidentified": false
+  },
+  "_key": "!items!ThF8UIN5093xtCaq"
+}

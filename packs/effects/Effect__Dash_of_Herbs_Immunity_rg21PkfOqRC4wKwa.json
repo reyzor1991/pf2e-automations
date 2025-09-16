@@ -1,0 +1,38 @@
+{
+  "_id": "rg21PkfOqRC4wKwa",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Dash of Herbs Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-dash-of-herbs-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!rg21PkfOqRC4wKwa"
+}

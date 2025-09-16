@@ -1,0 +1,43 @@
+{
+  "_id": "aH805tedt3A5Suuc",
+  "img": "icons/equipment/shield/heater-stone-orange.webp",
+  "name": "Effect: Rusty Metal Carapace Shield",
+  "system": {
+    "description": {
+      "value": "<p>Worn shield - @UUID[Compendium.pf2e-automations.equipment.Item.Yr9yCuJiAlFh3QEB]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-rusty-metal-carapace-shield"
+  },
+  "type": "effect",
+  "_key": "!items!aH805tedt3A5Suuc"
+}

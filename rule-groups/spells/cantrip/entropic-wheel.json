@@ -1,0 +1,23 @@
+{
+  "uuid": "BNEjiR5SqwcMachX",
+  "group": "spell",
+  "name": "Entropic Wheel",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "entropicWheel",
+      "target": "none",
+      "predicate": [
+        "origin:item:entropic-wheel"
+      ]
+    }
+  ]
+}

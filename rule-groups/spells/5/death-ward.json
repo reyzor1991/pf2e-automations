@@ -1,0 +1,27 @@
+{
+  "uuid": "gZpVwBqxdcFWqdRr",
+  "group": "spell",
+  "name": "Death Ward",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.YvXKGlHOt7mdW2jZ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.s6CwkSsMDGfUmotn",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:death-ward"
+      ]
+    }
+  ],
+  "complexRules": []
+}

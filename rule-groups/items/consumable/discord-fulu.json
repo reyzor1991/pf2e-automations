@@ -1,0 +1,26 @@
+{
+  "uuid": "cNUJM44sl7q9qoyj",
+  "group": "equipment",
+  "name": "Discord Fulu",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.aKrslrjq22S9uRgF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.b1y4mJG0CeNIuhc0",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:discord-fulu"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "4wq5MZyX2j75CyKe",
+  "group": "spell",
+  "name": "Triple Time",
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "emotion",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.c8R2fpk88fBwJ1ie"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.8VMC9QwRBGlDcDwQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:triple-time"
+      ]
+    }
+  ],
+  "complexRules": []
+}

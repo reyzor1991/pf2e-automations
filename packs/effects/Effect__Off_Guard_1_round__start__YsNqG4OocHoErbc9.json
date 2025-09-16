@@ -1,0 +1,46 @@
+{
+  "_id": "YsNqG4OocHoErbc9",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Off-Guard 1 round (start)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-off-guard-start-round"
+  },
+  "type": "effect",
+  "_key": "!items!YsNqG4OocHoErbc9"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "a51AN6VfpW9b4ttm",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Actor's hunted prey",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-hunt-prey-actor"
+  },
+  "type": "effect",
+  "_key": "!items!a51AN6VfpW9b4ttm"
+}

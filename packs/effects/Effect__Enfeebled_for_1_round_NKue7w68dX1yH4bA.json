@@ -1,0 +1,46 @@
+{
+  "_id": "NKue7w68dX1yH4bA",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Enfeebled for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-enfeebled-round"
+  },
+  "type": "effect",
+  "_key": "!items!NKue7w68dX1yH4bA"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "nl5FbP3WG9mnP2Bv",
+  "group": "spell",
+  "name": "Ant Haul",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.X9dkmh23lFwMjrYd"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.5yCL7InrJDHpaQjz",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:ant-haul"
+      ]
+    }
+  ],
+  "complexRules": []
+}

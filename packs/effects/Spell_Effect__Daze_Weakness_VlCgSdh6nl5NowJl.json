@@ -1,0 +1,53 @@
+{
+  "_id": "VlCgSdh6nl5NowJl",
+  "img": "icons/svg/daze.svg",
+  "name": "Spell Effect: Daze Weakness",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "Weakness",
+        "type": "mental",
+        "value": 1
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "predicate": [
+          "check:statistic:will"
+        ],
+        "type": "status",
+        "value": -1
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-daze-weakness"
+  },
+  "type": "effect",
+  "_key": "!items!VlCgSdh6nl5NowJl"
+}

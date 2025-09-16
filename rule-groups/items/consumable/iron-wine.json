@@ -1,0 +1,26 @@
+{
+  "uuid": "6sgG7EgvhQpaRBpw",
+  "group": "equipment",
+  "name": "Iron Wine",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.DOJxQLwkDvebbLWJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.cUm05scv7getd79d",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:iron-wine"
+      ]
+    }
+  ],
+  "complexRules": []
+}

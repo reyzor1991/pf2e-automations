@@ -1,0 +1,28 @@
+{
+  "uuid": "txVxuAjMt9CvapmY",
+  "group": "spell",
+  "name": "Tremorsense",
+  "labels": [
+    "concentrate",
+    "earth",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.EAYViUegegttJF1u"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.7cYUiOONB2lZfSaA",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:tremorsense"
+      ]
+    }
+  ],
+  "complexRules": []
+}

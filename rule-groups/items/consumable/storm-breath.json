@@ -1,0 +1,26 @@
+{
+  "uuid": "g3sSHlrzZ3QPuNsv",
+  "group": "equipment",
+  "name": "Storm Breath",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.XPIsejlpyvHvR0Ma"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.CDfixYwjfjoXkOVq",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:storm-breath"
+      ]
+    }
+  ],
+  "complexRules": []
+}

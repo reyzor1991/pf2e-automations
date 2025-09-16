@@ -1,0 +1,37 @@
+{
+  "uuid": "zLLhVOt27CkoHgQV",
+  "group": "feat",
+  "name": "Remorseless Lash",
+  "labels": [
+    "hobgoblin"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.iRztLGEK5OfjZTPg"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.FWuDxhIAIX3pi8Ge",
+      "target": "TargetEffect",
+      "predicate": [
+        "feat:remorseless-lash",
+        "target:condition:frightened",
+        "item:melee",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        {
+          "not": "target:effect:remorseless-lash"
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

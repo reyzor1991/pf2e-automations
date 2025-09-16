@@ -1,0 +1,54 @@
+{
+  "uuid": "ehKfZtnGqyY3cm92",
+  "group": "spell",
+  "name": "Befuddle",
+  "labels": [
+    "concentrate",
+    "emotion",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.pBevG6bSQOiyflev"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.fDTZsKRlw6AmmBKc",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:befuddle"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.gnKxMIPnEcg5QEEi",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:befuddle"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.VeyrKJwjHTyXyXn7",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:befuddle"
+      ]
+    }
+  ],
+  "complexRules": []
+}

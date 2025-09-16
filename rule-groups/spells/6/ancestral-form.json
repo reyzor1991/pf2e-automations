@@ -1,0 +1,29 @@
+{
+  "uuid": "JBuTeAQWwWyJ69AJ",
+  "group": "spell",
+  "name": "Ancestral Form",
+  "labels": [
+    "concentrate",
+    "focus",
+    "manipulate",
+    "oracle"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.xEjGEBvTfDJECSki"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.l8HkOKfiUqd3BUwT",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:ancestral-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

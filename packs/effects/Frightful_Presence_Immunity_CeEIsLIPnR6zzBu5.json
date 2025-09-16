@@ -1,0 +1,38 @@
+{
+  "_id": "CeEIsLIPnR6zzBu5",
+  "img": "icons/svg/circle.svg",
+  "name": "Frightful Presence Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "round-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "frightful-presence-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!CeEIsLIPnR6zzBu5"
+}

@@ -1,0 +1,64 @@
+{
+  "uuid": "bvGuhWP5EqsYJScf",
+  "group": "equipment",
+  "name": "Soothing Tonic",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.zA2UPGE9RYwlLPZJ",
+    "Compendium.pf2e.equipment-srd.Item.HIPkTfJLlLu4bWE3",
+    "Compendium.pf2e.equipment-srd.Item.RM7WoJYfd2edlNZ8",
+    "Compendium.pf2e.equipment-srd.Item.UeUPNFw600HEdDgF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.FqSsAjkaHfVFCw0P",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:soothing-tonic-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Vj2vytSr9jEtesYu",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:soothing-tonic-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.VPDBv6t8nBt3Vfp7",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:soothing-tonic-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.187xZfkgmYqQ0jnV",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:soothing-tonic-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

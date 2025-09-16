@@ -1,0 +1,24 @@
+{
+  "uuid": "Ymawz3umBpEqy63u",
+  "group": "action",
+  "name": "Blizzard Evasion",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.a47Npi5XHXo47y49"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.JF2xCqL6t4UJZtUi",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:blizzard-evasion"
+      ]
+    }
+  ],
+  "complexRules": []
+}

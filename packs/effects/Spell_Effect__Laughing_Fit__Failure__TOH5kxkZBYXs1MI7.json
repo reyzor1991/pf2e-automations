@@ -1,0 +1,47 @@
+{
+  "_id": "TOH5kxkZBYXs1MI7",
+  "name": "Spell Effect: Laughing Fit (Failure)",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>The target is<a class=\"content-link\" draggable=\"true\" data-uuid=\"Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3\" data-id=\"xYTAsEpcJE1Ccni3\" data-type=\"Item\" data-pack=\"pf2e.conditionitems\" data-tooltip=\"Condition Item\">Slowed 1</a> and can't use reactions.</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "allowDuplicate": false,
+        "uuid": "Compendium.pf2e-automations.effects.Item.rtQSjQrKJXZTLN2O"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3",
+        "allowDuplicate": false
+      }
+    ],
+    "slug": "spell-effect-laughing-fit-failure",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 2
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": true
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false
+  },
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "_key": "!items!TOH5kxkZBYXs1MI7"
+}

@@ -1,0 +1,39 @@
+{
+  "uuid": "sBqCUyZSA9Ns8h6c",
+  "group": "other",
+  "name": "Calming Presence Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "calming-presence"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 24
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:slug:calming-presence"
+      ]
+    }
+  ]
+}

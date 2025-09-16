@@ -1,0 +1,35 @@
+{
+  "uuid": "tJS3dfYQGWnfkx6Q",
+  "group": "feat",
+  "name": "Shield Warden",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "shieldWarden",
+      "target": "none",
+      "predicate": [
+        "origin:item:shield-warden",
+        "self:effect:raise-a-shield"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-taken",
+      "extend": null,
+      "range": null,
+      "value": "shieldWardenDamageTaken",
+      "target": "none",
+      "predicate": [
+        "self:effect:shield-warden"
+      ]
+    }
+  ]
+}

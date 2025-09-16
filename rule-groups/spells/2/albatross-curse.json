@@ -1,0 +1,89 @@
+{
+  "uuid": "FTGjyYBZJ4JCpTZw",
+  "group": "spell",
+  "name": "Albatross Curse",
+  "labels": [
+    "misfortune",
+    "manipulate",
+    "concentrate",
+    "arcane"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.93SjFTGJUTTmAt6j"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.b8BZHeuz5jH8E2SG",
+      "target": "TargetEffect",
+      "predicate": [
+        "item:albatross-curse"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.O9UXbhiFWfAv6fEE",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:albatross-curse",
+        "outcome:failure"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "stupefied"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": null,
+            "sustained": null,
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:albatross-curse",
+        "outcome:success"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93"
+          ],
+          "duration": {
+            "unit": "hours"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:albatross-curse",
+        "outcome:criticalFailure"
+      ]
+    }
+  ]
+}

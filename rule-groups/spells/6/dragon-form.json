@@ -1,0 +1,28 @@
+{
+  "uuid": "jw5xXCeKy4ZtzSo3",
+  "group": "spell",
+  "name": "Dragon Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.5c692cCcTDXjSEzk"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.1pC1qjvCuAKzjYo8",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:dragon-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

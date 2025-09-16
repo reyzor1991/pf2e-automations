@@ -1,0 +1,48 @@
+{
+  "uuid": "Ytoznuprmcos3kSy",
+  "group": "spell",
+  "name": "Divine Decree",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sanctified",
+    "spirit"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.sX2o0HH4RjJDAZ8C"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.6CTBvKIB9YgciVde"
+          ],
+          "duration": {
+            "expiry": null,
+            "sustained": null,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "item:divine-decree"
+      ]
+    }
+  ]
+}

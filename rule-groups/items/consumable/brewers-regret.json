@@ -1,0 +1,32 @@
+{
+  "uuid": "JGeUVM6dP56PKTbJ",
+  "group": "equipment",
+  "name": "Brewer's Regret",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.MlzPOG2v9bO4XoLg",
+    "Compendium.pf2e.equipment-srd.Item.RN8TnAhWQ4tNKHgP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9e6iVkPpGqJYwMyb",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:brewers-regret",
+            "consumable:brewers-regret-greater"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

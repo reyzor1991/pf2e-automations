@@ -1,0 +1,41 @@
+{
+  "uuid": "gG4en8hwRtkmg3na",
+  "group": "equipment",
+  "name": "Dragon's Blood Pudding",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.kUvjWSGWpwBvTVax",
+    "Compendium.pf2e.equipment-srd.Item.QrjeT3xBssyjvEHQ",
+    "Compendium.pf2e.equipment-srd.Item.fzAkwYDi8sXWfCNu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.0YbNzbW0HSKtgStQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:dragons-blood-pudding-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.nbMEBxeqZIdOgysR",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:dragons-blood-pudding"
+      ]
+    }
+  ],
+  "complexRules": []
+}

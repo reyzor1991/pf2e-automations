@@ -1,0 +1,27 @@
+{
+  "uuid": "SZLfd5DMfVplQPyZ",
+  "group": "spell",
+  "name": "Guidance",
+  "labels": [
+    "concentrate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.izcxFQFwf3woCnFs"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "guidanceHandler",
+      "target": "none",
+      "predicate": [
+        "origin:item:slug:guidance"
+      ]
+    }
+  ]
+}

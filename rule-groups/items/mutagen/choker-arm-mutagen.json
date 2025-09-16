@@ -1,0 +1,66 @@
+{
+  "uuid": "BlhDi95AY6gvCHlz",
+  "group": "equipment",
+  "name": "Choker Arm Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.9F3d43xMDCJNIkDo",
+    "Compendium.pf2e.equipment-srd.Item.RsAoEbp28Za4hlLH",
+    "Compendium.pf2e.equipment-srd.Item.6VCaHBbUBk4eBlPC",
+    "Compendium.pf2e.equipment-srd.Item.bvIVxDq1wh6IavHP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.FDSl6DFblUjITOgP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:choker-arm-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.HlUL7FmGLyS35Jpp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:choker-arm-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.IBu1RWKW5JX70nse",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:choker-arm-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.pZjJv8r28uASg6zp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:choker-arm-mutagen-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

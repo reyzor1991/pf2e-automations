@@ -1,0 +1,35 @@
+{
+  "_id": "Pdq3C29GY18nbVg9",
+  "img": "icons/commodities/treasure/mask-wood-tan.webp",
+  "name": "Spell Effect: Mask of Terror",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-mask-of-terror"
+  },
+  "type": "effect",
+  "_key": "!items!Pdq3C29GY18nbVg9"
+}

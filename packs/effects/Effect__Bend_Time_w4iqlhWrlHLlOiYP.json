@@ -1,0 +1,43 @@
+{
+  "_id": "w4iqlhWrlHLlOiYP",
+  "img": "icons/svg/paralysis.svg",
+  "name": "Effect: Bend Time",
+  "system": {
+    "description": {
+      "value": "<p> You are @UUID[Compendium.pf2e.conditionitems.nlCjDvLMf2EkV2dl] this turn. You can use your extra action to Stride.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.nlCjDvLMf2EkV2dl"
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Secrets of Magic"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-bend-time"
+  },
+  "type": "effect",
+  "_key": "!items!w4iqlhWrlHLlOiYP"
+}

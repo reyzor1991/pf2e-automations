@@ -1,0 +1,26 @@
+{
+  "uuid": "RWxcqF8zxEZZWzg3",
+  "group": "equipment",
+  "name": "Drowsy Sun Eye Drops",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.aUzX848Ygqicy2qs"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.vX8SE5SXnspdzMYZ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:drowsy-sun-eye-drops"
+      ]
+    }
+  ],
+  "complexRules": []
+}

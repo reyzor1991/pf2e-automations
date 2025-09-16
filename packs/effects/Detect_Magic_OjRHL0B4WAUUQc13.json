@@ -1,0 +1,38 @@
+{
+  "_id": "OjRHL0B4WAUUQc13",
+  "img": "icons/magic/sonic/explosion-shock-sound-wave.webp",
+  "name": "Detect Magic",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.Yb0C1uLzeHrVLl7a]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-detect-magic"
+  },
+  "type": "effect",
+  "_key": "!items!OjRHL0B4WAUUQc13"
+}

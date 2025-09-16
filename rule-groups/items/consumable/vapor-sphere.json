@@ -1,0 +1,26 @@
+{
+  "uuid": "NaKDWGZgHzRgNnMs",
+  "group": "equipment",
+  "name": "Vapor Sphere",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.HBlUlkSlIQ0NQA9N"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9VBrrYXFR3EdGptG",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vapor-sphere"
+      ]
+    }
+  ],
+  "complexRules": []
+}

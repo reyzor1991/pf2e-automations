@@ -1,0 +1,37 @@
+{
+  "uuid": "oAuKfdvgnq2EunTP",
+  "group": "action",
+  "name": "Steal Shadow",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.sBB3VElfaqa9ZYyL",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:steal-shadow",
+        {
+          "not": "target:effect:steal-shadow"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.sBB3VElfaqa9ZYyL",
+      "target": "TargetIncreaseBadgeEffect",
+      "predicate": [
+        "origin:item:steal-shadow",
+        "target:effect:steal-shadow"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,31 @@
+{
+  "uuid": "hyHfi2RlEFc2YnJi",
+  "group": "spell",
+  "name": "Song of Strength",
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.7kyjK9Pm7wKSZtdQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:song-of-strength"
+      ]
+    }
+  ],
+  "complexRules": []
+}

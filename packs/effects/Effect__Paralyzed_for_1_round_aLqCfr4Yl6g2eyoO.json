@@ -1,0 +1,46 @@
+{
+  "_id": "aLqCfr4Yl6g2eyoO",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Paralyzed for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-paralyzed-round"
+  },
+  "type": "effect",
+  "_key": "!items!aLqCfr4Yl6g2eyoO"
+}

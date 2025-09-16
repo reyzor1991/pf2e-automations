@@ -1,0 +1,23 @@
+{
+  "uuid": "jsKTkDdvXDsfmZv4",
+  "group": "spell",
+  "name": "Buzzing Bites",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "buzzingBites",
+      "target": "none",
+      "predicate": [
+        "item:slug:buzzing-bites"
+      ]
+    }
+  ]
+}

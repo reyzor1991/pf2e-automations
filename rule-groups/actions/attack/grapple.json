@@ -1,0 +1,41 @@
+{
+  "uuid": "mNaC4TAAXt4hZ9d3",
+  "group": "action",
+  "name": "Grapple",
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:grapple",
+        "outcome:success"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.zol83j7l2cBSmY3a",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:grapple",
+        "outcome:criticalSuccess"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": []
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "8QzJyVk69uYV8Ztq",
+  "group": "spell",
+  "name": "Monstrosity Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.8AMvNVOUEtxBCDvJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.wI2OJ76fbhM4MU0j",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:monstrosity-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

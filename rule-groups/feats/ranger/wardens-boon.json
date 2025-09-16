@@ -1,0 +1,23 @@
+{
+  "uuid": "bJBXy8gEuPKqJ3MU",
+  "group": "feat",
+  "name": "Warden's Boon",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "wardensBoon",
+      "target": "none",
+      "predicate": [
+        "origin:item:wardens-boon"
+      ]
+    }
+  ]
+}

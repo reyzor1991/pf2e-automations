@@ -1,0 +1,28 @@
+{
+  "uuid": "RHqfM7yFNQtbmUtZ",
+  "group": "spell",
+  "name": "Arcane Countermeasure",
+  "labels": [
+    "focus",
+    "manipulate",
+    "sorcerer"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.h47yv6j6x1pUtzlr"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.14m4s0FeRSqRlHwL",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:arcane-countermeasure"
+      ]
+    }
+  ],
+  "complexRules": []
+}

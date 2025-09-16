@@ -1,0 +1,43 @@
+{
+  "uuid": "dEGmIOS13ZYTUYXE",
+  "group": "feat",
+  "name": "Winter Sleet",
+  "labels": [
+    "kineticist",
+    "water"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.xn6EaAbQlAB5ZGe6"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "winterSleetAttack",
+      "target": "none",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "origin:effect:winter-sleet",
+        "item:trait:impulse",
+        "item:trait:water"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "winterSleetSavingThrow",
+      "target": "none",
+      "predicate": [
+        "origin:effect:winter-sleet",
+        "outcome:criticalFailure"
+      ]
+    }
+  ]
+}

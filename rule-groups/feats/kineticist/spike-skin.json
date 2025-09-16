@@ -1,0 +1,71 @@
+{
+  "uuid": "ClDeaizYAcrFrsZC",
+  "group": "feat",
+  "name": "Spike Skin",
+  "labels": [
+    "earth",
+    "impulse",
+    "kineticist",
+    "primal"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.9p28s0zg4Vv4r5i2"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.J3GGbKP247JWY883",
+            "Compendium.pf2e-automations.effects.Item.oTRhJB6ssdR6XXrm"
+          ]
+        }
+      ],
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:spike-skin",
+        {
+          "not": "target:effect:spike-skin-immunity"
+        }
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "createSpikeSkin",
+      "target": "none",
+      "predicate": [
+        "effect:spike-skin"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "spikeSkin",
+      "target": "none",
+      "predicate": []
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "spikeSkinDamage",
+      "target": "none",
+      "predicate": []
+    }
+  ]
+}

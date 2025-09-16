@@ -1,0 +1,26 @@
+{
+  "uuid": "85XsfxE9bJFQDaWZ",
+  "group": "equipment",
+  "name": "Golden Breath Fulu",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.4642hELMtWF9jywN"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.hwrH1R1ecWI16liX",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:golden-breath-fulu"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "BJGn4j3apRxAanyg",
+  "group": "equipment",
+  "name": "Statue Skin Salve",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.hWXRen2x3kBxeYlh"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.80JoiuYxrzoEPfVw",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:statue-skin-salve"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,3 +1,8 @@
+### Version 1.3.0
+- Update rules
+- Use new ui and json structure to improve performance
+- Own rules should be recreated
+
 ### Version 1.2.11
 - Changing links to specific versions
 - Preparation to update new global version

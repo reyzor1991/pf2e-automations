@@ -1,0 +1,26 @@
+{
+  "uuid": "jo6F6dcjGTmhmEoQ",
+  "group": "equipment",
+  "name": "Grindlegrub Steak",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.ALfqpWLbLPSXxZVG"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Eh4ezYhfUlNc775v",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:grindlegrub-steak"
+      ]
+    }
+  ],
+  "complexRules": []
+}

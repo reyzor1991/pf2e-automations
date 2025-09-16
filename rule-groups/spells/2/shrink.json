@@ -1,0 +1,28 @@
+{
+  "uuid": "QN4e97qBVtd6Kq67",
+  "group": "spell",
+  "name": "Shrink",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.PjhUmyKnq6K5uDby"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.LXf1Cqi1zyo4DaLv",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:shrink"
+      ]
+    }
+  ],
+  "complexRules": []
+}

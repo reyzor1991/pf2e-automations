@@ -1,0 +1,29 @@
+{
+  "uuid": "iBtNvkRCs5AG5fow",
+  "group": "spell",
+  "name": "Regenerate",
+  "labels": [
+    "concentrate",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.2Vkd1IxylPceUAAF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.dXq7z633ve4E0nlX",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:regenerate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "kLpCaiCZjenXCebV",
+  "img": "icons/magic/defensive/shield-barrier-flaming-diamond-magenta.webp",
+  "name": "Immunity to bane",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "encounter",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-bane-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!kLpCaiCZjenXCebV"
+}

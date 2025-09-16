@@ -1,0 +1,28 @@
+{
+  "uuid": "VuBXdXMxGfERk7OL",
+  "group": "spell",
+  "name": "Shielded Arm",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "metal"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.4k99nOJudmeNnBTF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.F4YT1SP3GovpDX48",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:shielded-arm"
+      ]
+    }
+  ],
+  "complexRules": []
+}

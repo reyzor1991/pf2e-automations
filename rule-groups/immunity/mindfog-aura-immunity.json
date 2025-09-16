@@ -1,0 +1,44 @@
+{
+  "uuid": "M692vZxSFDntovJ9",
+  "group": "other",
+  "name": "Mindfog Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "mindfog-aura"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        "item:slug:mindfog-aura"
+      ]
+    }
+  ]
+}

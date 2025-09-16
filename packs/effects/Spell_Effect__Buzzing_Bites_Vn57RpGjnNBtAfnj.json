@@ -1,0 +1,38 @@
+{
+  "_id": "Vn57RpGjnNBtAfnj",
+  "img": "icons/creatures/invertebrates/fly-wasp-mosquito-green.webp",
+  "name": "Spell Effect: Buzzing Bites",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": true,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "rare",
+      "value": []
+    },
+    "slug": "spell-effect-buzzing-bites"
+  },
+  "type": "effect",
+  "_key": "!items!Vn57RpGjnNBtAfnj"
+}

@@ -1,0 +1,43 @@
+{
+  "_id": "AGXI9lBnnuEPYDGX",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: -1 status bonus to AC",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "slug": "effect-debuff-to-ac",
+        "type": "status",
+        "value": -1
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-debuff-to-ac"
+  },
+  "type": "effect",
+  "_key": "!items!AGXI9lBnnuEPYDGX"
+}

@@ -1,0 +1,52 @@
+{
+  "uuid": "FFOM6c9gEVL3dzZw",
+  "group": "spell",
+  "name": "Confusion",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.LiGbewa9pO0yjbsY"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "value": "stunned",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "item:slug:confusion",
+        "outcome:success"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "conditions": [
+            "confused"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:confusion",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

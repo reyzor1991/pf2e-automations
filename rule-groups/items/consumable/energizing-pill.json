@@ -1,0 +1,26 @@
+{
+  "uuid": "gafVmpzj8x4kPrSl",
+  "group": "equipment",
+  "name": "Energizing Pill",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.u4R5KKvgKU0jOkjb"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.YsgABP1Ya0QJoiKt",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energizing-pill"
+      ]
+    }
+  ],
+  "complexRules": []
+}

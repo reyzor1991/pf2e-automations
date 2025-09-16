@@ -1,0 +1,26 @@
+{
+  "uuid": "CeZSkadChSUer5c3",
+  "group": "equipment",
+  "name": "Wine of the Blood",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.YnkfinMN0l06iR1t"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KkFk8PZ2ZZVUrdgj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:wine-of-the-blood"
+      ]
+    }
+  ],
+  "complexRules": []
+}

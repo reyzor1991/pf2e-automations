@@ -1,0 +1,38 @@
+{
+  "_id": "XWte9oUQ4x0sBHMq",
+  "img": "icons/magic/water/water-hand.webp",
+  "name": "Effect: Rousing Splash Immunity 10 minutes",
+  "system": {
+    "description": {
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.spells-srd.Item.zhDIiQlJmrd4UDNC] on you.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-rousing-splash-immunity-minutes"
+  },
+  "type": "effect",
+  "_key": "!items!XWte9oUQ4x0sBHMq"
+}

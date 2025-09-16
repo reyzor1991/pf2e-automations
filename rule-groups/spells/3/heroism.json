@@ -1,0 +1,28 @@
+{
+  "uuid": "keYu5XASPQMG9ySn",
+  "group": "spell",
+  "name": "Heroism",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KqvqNAfGIE5a9wSv"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.l9HRQggofFGIxEse",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:heroism"
+      ]
+    }
+  ],
+  "complexRules": []
+}

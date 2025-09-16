@@ -1,0 +1,38 @@
+{
+  "_id": "1jyADLe4RLz35Kkn",
+  "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+  "name": "Effect: Deactivated Regeneration",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-deactivated-regeneration"
+  },
+  "type": "effect",
+  "_key": "!items!1jyADLe4RLz35Kkn"
+}

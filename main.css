@@ -1,125 +1,76 @@
-.create-rule > div {
-    flex: 1;
-}
+#pf2e-automations-rules-form {
 
-.title-group {
-    flex: 3;
-}
-
-.rule-header {
-    display: flex;
-    justify-content: space-between;
-}
-
-.rule-header h3 {
-    border-bottom: none;
-}
-
-.rule-header .rule-controls {
-    display: flex;
-    margin: 0 0 0 4px;
-    gap: 2px;
-    align-items: center;
-    justify-content: start;
-}
-
-.edit-rule {
-    margin: 5px;
-}
-
-.rule-controls {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-form .rule-flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.rule a.object img {
-    width: 16px;
-    height: 16px;
-}
-
-a.object {
-    display: flex;
-    flex: 0 0 auto;
-    flex-direction: row;
-    align-items: center;
-    gap: 3px;
-}
-
-.rule > div {
-    align-items: center;
-}
-
-.tc {
-    text-align: center;
-}
-
-.remove-rule-trigger,
-.remove-rule-requirement {
-    text-align: right;
-    padding: 3px;
-}
-
-.active-controls {
-    display: flex;
-    align-items: center;
-}
-
-.item-controls {
-    display: flex;
-}
-
-.right-end {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5px;
-}
-
-a.remove-handler {
-    flex: 0.1;
-}
-
-#pf2e-automations-updateActorHandlers .package-list div.title,
-#pf2e-automations-updateItemHandlers .package-list div.title,
-#pf2e-automations-createItemHandlers .package-list div.title,
-#pf2e-automations-deleteItemHandlers .package-list div.title,
-#pf2e-automations-messageCreateHandlers .package-list div.title,
-#pf2e-automations-settings .package-list div.title {
-    color: var(--color-text-dark-primary);
-}
-
-.rules-sync-row {
-    display: flex;
-    justify-content: space-between;
-
-    div {
-        flex: 1;
-    }
-}
-
-#pf2e-automations-rule-form {
-
-    .rule-controls {
-        justify-content: start;
+    .sheet-tabs.tabs {
+        border: 0px;
     }
 
-}
+    section.window-content {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "filter data"
+            "fotter fotter";
+        grid-template-columns: 3fr 4fr;
+        grid-template-rows: 30px auto 30px;
+    }
 
-#pf2e-automations-list-rules-form {
+    section.window-content > nav.tabs {
+        grid-area: header;
+        padding-bottom: 15px;
+    }
 
-    .rule-list {
+    section.window-content > div.filter-area {
+        grid-area: filter;
+    }
+
+    section.window-content > section.active {
+        grid-area: data;
+    }
+
+    section.window-content > div.buttons {
+        grid-area: fotter;
+    }
+
+    .activation-area, .order-area {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+        flex-wrap: wrap;
+    }
+
+    section.active {
+        display: flex;
+        flex-direction: column;
         height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 
-        section.tab {
-            height: calc(100% - 65px);
-            flex: 1;
+    .list-area {
+        .label-row {
+            display: flex;
+            align-items: center;
+        }
+
+        .export-rule {
+            margin-left: auto;
+        }
+
+        .remove-row, .edit-row {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+}
+
+#pf2e-automations-ruleGroup-form, #pf2e-automations-baseRule-form, #pf2e-automations-complexRule-form {
+    .active-controls {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+
+        > label {
+            width: 200px;
         }
     }
 
@@ -130,39 +81,6 @@ a.remove-handler {
         width: 98%;
         margin: 6px;
     }
-
-    .wrapper {
-        display: flex;
-        height: 100%;
-    }
-
-    .data {
-        display: flex;
-        height: 100%;
-        flex: 2;
-
-        ul {
-            width: 100%;
-        }
-    }
-
-    .center-btn-filter {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .create-rule {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        justify-content: space-around;
-        height: calc(100% - 65px);
-        padding-top: 10px;
-    }
-}
-
-.pd10 {
-    padding-top: 10px;
 }
 
 .dialog-scroll {
@@ -172,4 +90,87 @@ a.remove-handler {
     height: 250px;
     overflow: auto;
     text-align: justify;
+}
+
+
+.spell-message {
+    font-weight: 700;
+
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-border-light-2);
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff inset;
+    word-break: break-all;
+}
+
+.spell-message li img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+.spell-message ul {
+    list-style-type: none;
+    padding: 0 0 0 0.2em;
+}
+
+.dismiss-spell-item, sustain-spell-item {
+    display: flex;
+}
+
+.spell-message-item {
+    padding: 0 0 1em 0;
+}
+
+.spell-message-item-sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.message-metadata {
+    a.message-ping {
+        margin-right: 2px;
+    }
+}
+
+#effects-panel .effect-item > .icon .value-dc {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    max-width: calc(100% + 2px);
+    padding: 0px 2px;
+    color: var(--text-light);
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: var(--font-size-11);
+    letter-spacing: -0.05em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.failed-flat-check, .failed-flat-check [data-visibility="gm"],
+.failed-flat-check button,
+.failed-flat-check .content-link,
+.partial-flat-check, .failed-flat-check [data-visibility="gm"],
+.partial-flat-check button,
+.partial-flat-check .content-link {
+    background: linear-gradient(rgb(218 216 204 / 50%) 0 0);
+}
+
+.failed-flat-check .flat-check-hint {
+    color: #790707;
+}
+
+.partial-flat-check .partial-check-hint {
+    color: #955353;
+}
+
+.pd5 {
+    padding-top: 5px;
+}
+
+.roll-min-damage, .roll-max-damage {
+    font-family: "Font Awesome 6 Pro";
+    flex: 1;
 }

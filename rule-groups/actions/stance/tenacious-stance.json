@@ -1,0 +1,26 @@
+{
+  "uuid": "jn76iCdCoGccn28c",
+  "group": "action",
+  "name": "Tenacious Stance",
+  "labels": [
+    "stance"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.5HZ4cYDowUw2oUbZ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.Ms6WPXRWfXb2KpG2",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:tenacious-stance"
+      ]
+    }
+  ],
+  "complexRules": []
+}

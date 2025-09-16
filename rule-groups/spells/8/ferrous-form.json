@@ -1,0 +1,29 @@
+{
+  "uuid": "jQ8QVw2eXnoMKN2E",
+  "group": "spell",
+  "name": "Ferrous Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "metal",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.89Hj5QuqvcwVXcqj"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.qD1OA6dx8h33nKFC",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:ferrous-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

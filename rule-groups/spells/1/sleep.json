@@ -1,0 +1,124 @@
+{
+  "uuid": "wFawH2W4BhWZ0EIF",
+  "group": "spell",
+  "name": "Sleep",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "plant"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.o4lRVTwSxnOOn5vl"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.8rsKAZL0kVNrjbsb",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:sleep"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.q7UyR7dWIzZThNir",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:sleep",
+        {
+          "gte": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.5r6sjGnr6Vwr6XaY",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:sleep",
+        {
+          "lt": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.RzNmTMRgtSm0WF7t",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:sleep",
+        {
+          "gte": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.tOWxWONNFvvYWMQY",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:sleep",
+        {
+          "lt": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.V0AiVBtUeFQk9dQe",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "item:slug:sleep",
+        {
+          "gte": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

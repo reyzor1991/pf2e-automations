@@ -1,0 +1,26 @@
+{
+  "uuid": "kfZl3APZulCEipCu",
+  "group": "feat",
+  "name": "Chaotic Spell",
+  "labels": [
+    "concentrate"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.5uny1fH9ybbO6ytR"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.L7Uud00ev5Hz6f8c",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:chaotic-spell"
+      ]
+    }
+  ],
+  "complexRules": []
+}

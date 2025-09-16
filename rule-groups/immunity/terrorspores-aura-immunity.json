@@ -1,0 +1,38 @@
+{
+  "uuid": "vhgJPkR94grGw3d9",
+  "group": "other",
+  "name": "Terrorspores Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "terrorspores"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "item:slug:terrorspores"
+      ]
+    }
+  ]
+}

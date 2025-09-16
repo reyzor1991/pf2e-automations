@@ -1,0 +1,38 @@
+{
+  "_id": "XiVLHjg5lQVMX8Fj",
+  "img": "icons/magic/perception/eye-ringed-green.webp",
+  "name": "Search",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.TiNDYUGlMmxzxBYU]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-search"
+  },
+  "type": "effect",
+  "_key": "!items!XiVLHjg5lQVMX8Fj"
+}

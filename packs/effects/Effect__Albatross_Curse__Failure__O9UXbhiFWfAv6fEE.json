@@ -1,0 +1,51 @@
+{
+  "_id": "O9UXbhiFWfAv6fEE",
+  "img": "icons/creatures/birds/dove-pigeon-flying-white.webp",
+  "name": "Effect: Albatross Curse (Failure)",
+  "system": {
+    "description": {
+      "value": "Failure The albatross hangs around a cord from the target's neck (or closest equivalent) for 1 minute, cursing them for their transgression. During this time, the target must roll twice and take the worse result on their next Will save, after which the albatross disappears."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 2
+    },
+    "publication": {
+      "license": "",
+      "remaster": false,
+      "title": ""
+    },
+    "rules": [
+      {
+        "keep": "lower",
+        "key": "RollTwice",
+        "removeAfterRoll": true,
+        "predicate": [
+          "check:statistic:will"
+        ],
+        "selector": [
+          "saving-throw"
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-albatross-curse-failure"
+  },
+  "type": "effect",
+  "_key": "!items!O9UXbhiFWfAv6fEE"
+}

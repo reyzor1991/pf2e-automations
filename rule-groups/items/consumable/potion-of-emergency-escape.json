@@ -1,0 +1,28 @@
+{
+  "uuid": "lm79RC285T8G2vJ6",
+  "group": "equipment",
+  "name": "Potion of Emergency Escape",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.jTfacZ4SRuQd7Avh"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.EZsHuGGSLER67CiM",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-emergency-escape"
+      ]
+    }
+  ],
+  "complexRules": []
+}

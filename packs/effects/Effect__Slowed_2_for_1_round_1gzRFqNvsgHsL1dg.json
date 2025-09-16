@@ -1,0 +1,53 @@
+{
+  "_id": "1gzRFqNvsgHsL1dg",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Slowed 2 for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-slowed-round"
+  },
+  "type": "effect",
+  "_key": "!items!1gzRFqNvsgHsL1dg"
+}

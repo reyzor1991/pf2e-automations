@@ -1,0 +1,53 @@
+{
+  "_id": "RR8MSbHqxJdQxh2e",
+  "img": "icons/magic/control/buff-strength-muscle-damage.webp",
+  "name": "Aura: Courageous Anthem",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY].</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "sustained": false,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "uuid": "Compendium.pf2e.spell-effects.Item.beReeFroAx24hj83"
+          }
+        ],
+        "key": "Aura",
+        "traits": [
+          "auditory"
+        ],
+        "radius": 60,
+        "slug": "aura-inspire-courage"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "aura-inspire-courage"
+  },
+  "type": "effect",
+  "_key": "!items!RR8MSbHqxJdQxh2e"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "2qDfcyv3cMHThi3Z",
+  "group": "equipment",
+  "name": "Elysian Dew",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.8vN6vm2fKB4rE86U"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KQnDfdYxyg5FhyCX",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:elysian-dew"
+      ]
+    }
+  ],
+  "complexRules": []
+}

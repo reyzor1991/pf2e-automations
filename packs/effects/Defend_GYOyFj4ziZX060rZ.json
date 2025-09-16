@@ -1,0 +1,38 @@
+{
+  "_id": "GYOyFj4ziZX060rZ",
+  "img": "icons/equipment/shield/heater-steel-boss-red.webp",
+  "name": "Defend",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-defend"
+  },
+  "type": "effect",
+  "_key": "!items!GYOyFj4ziZX060rZ"
+}

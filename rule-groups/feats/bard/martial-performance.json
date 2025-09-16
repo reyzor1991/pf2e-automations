@@ -1,0 +1,21 @@
+{
+  "uuid": "YuicehtV72Tw9VSr",
+  "group": "feat",
+  "name": "Martial Performance",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "martialPerformance",
+      "target": "none",
+      "predicate": ["action:strike"]
+    }
+  ]
+}

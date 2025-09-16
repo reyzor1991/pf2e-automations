@@ -1,102 +1,50 @@
-{{#if subEdit}}
-    <form class="editable" autocomplete="off" onsubmit="event.preventDefault();">
-        {{{editTemplate}}}
-        <div class="item-controls">
-            <button type="button" data-action="close-sub">{{localize "PF2E.Item.Rules.Close"}}</button>
-            <button type="button" data-action="apply-sub">{{localize "PF2E.Item.Rules.Apply"}}</button>
+<div>
+    <div class="active-controls">
+        <label>Group</label>
+        <input type="text" name="group" value="{{group}}"/>
+    </div>
+    <div class="active-controls">
+        <label>Name</label>
+        <input type="text" name="name" value="{{name}}"/>
+    </div>
+    <div class="active-controls">
+        <label>Labels</label>
+        <multi-select id="traits" name="labels">
+            {{ selectOptions allLabels selected=labels localize=true }}
+        </multi-select>
+    </div>
+    <div class="">
+        <div class="tags input-element-tags source-list">
+            {{#each source as |c cIndex|}}
+                <div class="tag">
+                    <span>{{c}}</span>
+                    <a class="remove-source remove fa-solid fa-times" data-key={{cIndex}} data-tooltip="Remove condition"
+                       aria-label="Remove condition"></a>
+                </div>
+            {{/each}}
         </div>
-    </form>
-{{else}}
-    <form class="editable" autocomplete="off" onsubmit="event.preventDefault();">
+
+        <div class="input">
+            <i class="fa fa-tags"></i>
+            <div>
+                <input type="text" class="rule-source-ip" placeholder="Enter source" data-key="source">
+            </div>
+        </div>
+    </div>
+    <div class="" style="margin-top: 15px; display: flex; justify-content: space-between;">
         <div>
-            <fieldset class="row">
-                <div class="rule-header">
-                    <div class="active-controls" style="flex: 0.7;">
-                        <label style="width: 120px;">Name of rule</label>
-                        <input type="text" name="{{rule.uuid}}.name" value="{{rule.name}}"/>
-                    </div>
-                    <div class="active-controls">
-                        <label class="tc">Is Active</label>
-                        <input type="checkbox" name="{{rule.uuid}}.isActive" {{#if rule.isActive}} checked {{/if}}/>
-                    </div>
-                </div>
-                <div class="rule form-group" style="flex: 0.7;">
-                    <label style="width: 120px;">Trigger type</label>
-                    <input type="text" name="{{rule.uuid}}.triggerType" value="{{rule.triggerType}}"/>
-                </div>
-                {{#unless rule.type}}
-                    <div class="rule form-group">
-                        <label class="short">Effect UUID / Condition</label>
-                        <div class="rule-flex-row">
-                            <input type="text" name="{{rule.uuid}}.value" value="{{rule.value}}"/>
-                            {{#if rule.effObj}}
-                                <a class="object content-link" data-uuid="{{r.effObj.uuid}}">
-                                    <img src="{{rule.effObj.img}}"/>
-                                    {{rule.effObj.name}}
-                                </a>
-                            {{/if}}
-                        </div>
-                    </div>
-                    <div class="rule form-group">
-                        <label>Target of rule</label>
-                        <select name="{{rule.uuid}}.target" class="trigger">
-                            {{#each targetChoices as |v k|}}
-                                <option value="{{k}}" {{#if (eq k ../rule.target)}} selected {{/if}}>{{v}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-                {{/unless}}
-                {{#if rule.type}}
-                    <div class="rule form-group">
-                        <label>Target of rule</label>
-                        <select name="{{rule.uuid}}.target" class="trigger">
-                            {{#each complexTargetChoices as |v k|}}
-                                <option value="{{k}}" {{#if (eq k ../rule.target)}} selected {{/if}}>{{v}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-                {{/if}}
-                <div class="rule form-group">
-                    <label>Labels</label>
-                    <multi-select id="traits" name="{{rule.uuid}}.labels">
-                        {{ selectOptions labels selected=selectedLabels localize=true }}
-                    </multi-select>
-                </div>
-                <div class="rule form-group">
-                    <label>Range</label>
-                    <input type="number" name="{{rule.uuid}}.range" value="{{rule.range}}"/>
-                </div>
-                <div class="rule form-group">
-                    <label>Predicate (Json array) (Has bigger priority then trigger&requirement)</label>
-                    <textarea name="{{rule.uuid}}.predicate" spellcheck="false">{{json rule.predicate}}</textarea>
-                </div>
-                <div class="rule form-group">
-                    <label>Triggers - {{rule.triggerCount}}</label>
-                    <div class="rule-controls">
-                        <a class="edit-rule-trigger" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                        <a class="add-rule-trigger" data-idx="{{rule.uuid}}" title="Add Trigger Group"><i
-                                class="fas fa-add"></i></a>
-                    </div>
-                    <label>Requirements - {{rule.requirementCount}}</label>
-                    <div class="rule-controls">
-                        <a class="edit-rule-requirement" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                        <a class="add-rule-requirement" data-idx="{{rule.uuid}}" title="Add Requirement Group"><i
-                                class="fas fa-add" style="color:red"></i></a>
-                    </div>
-                    {{#if rule.type}}
-                        <label>Generated rules - {{rule.generatedRuleCount}}</label>
-                        <div class="rule-controls">
-                            <a class="edit-generated-rule" data-idx="{{rule.uuid}}"><i class="fas fa-edit"></i></a>
-                            <a class="add-generated-rule" data-idx="{{rule.uuid}}" title="Add Generated Rule"><i
-                                    class="fas fa-add" style="color:red"></i></a>
-                        </div>
-                    {{/if}}
-                </div>
-            </fieldset>
+            <label>Base rules - {{baseRuleCount}}</label>
+            <i class="edit-base-rules fas fa-edit"></i>
+            <i class="add-base-rules fas fa-plus"></i>
         </div>
-        <div class="item-controls">
-            <button type="button" data-action="close">{{localize "PF2E.Item.Rules.Close"}}</button>
-            <button type="button" data-action="apply">{{localize "PF2E.Item.Rules.Apply"}}</button>
+        <div>
+            <label>Complex rules - {{complexRuleCount}}</label>
+            <i class="edit-complex-rules fas fa-edit"></i>
+            <i class="add-complex-rules fas fa-plus"></i>
         </div>
-    </form>
-{{/if}}
+        <div>
+            <label>Handler rules - {{handlerRuleCount}}</label>
+<!--            <i class="edit-handler-rules fas fa-edit"></i>-->
+        </div>
+    </div>
+</div>

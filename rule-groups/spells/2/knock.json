@@ -1,0 +1,22 @@
+{
+  "uuid": "WqiFnsEWclkegwoj",
+  "group": "spell",
+  "name": "Knock",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.6Ot4N22t5tPD51BO"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e.spell-effects.Item.OSapCU8heNHst21y",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:knock"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "AidsREScwRz4btZu",
+  "group": "equipment",
+  "name": "Featherlight Fletching",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.FkZxKNSw75YWoA32"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.WXVOuzbFCs7rGpF9",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:featherlight-fletching"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,66 @@
+{
+  "uuid": "nDHQPcaffisrmF3J",
+  "group": "equipment",
+  "name": "Cognitive Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.wbr6rkyaVYnDhdgV",
+    "Compendium.pf2e.equipment-srd.Item.VBK9i74dry8yf8f0",
+    "Compendium.pf2e.equipment-srd.Item.qpzL9UnTi4cDhy6J",
+    "Compendium.pf2e.equipment-srd.Item.ZGojRKG1yYiVWemR"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.jaBMZKdoywOTrQvP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cognitive-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.RT1BxXrbbGgk40Ti",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cognitive-mutagen-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.ztxW3lBPRcesF7wK",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cognitive-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.qit1mLbJUyRTYcPU",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cognitive-mutagen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "9N369V2B8qYhGtyw",
+  "group": "equipment",
+  "name": "Potion of Minute Echoes",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.PTSdJqjiybZDxi4r"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.HaZ5LB1wh1LY5wUy",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-minute-echoes"
+      ]
+    }
+  ],
+  "complexRules": []
+}

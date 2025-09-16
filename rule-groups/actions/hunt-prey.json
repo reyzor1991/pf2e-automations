@@ -1,0 +1,21 @@
+{
+  "uuid": "cb4a9xC8VCzVtZ9Y",
+  "group": "action",
+  "name": "Hunt Prey",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "huntPrey",
+      "target": "none",
+      "predicate": ["origin:item:hunt-prey"]
+    }
+  ]
+}

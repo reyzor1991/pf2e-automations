@@ -1,0 +1,74 @@
+{
+  "_id": "VeyrKJwjHTyXyXn7",
+  "img": "icons/magic/control/fear-fright-white.webp",
+  "name": "Effect: Befuddle (Critical Failure)",
+  "system": {
+    "description": {
+      "value": "<p>You sow seeds of confusion in your target's mind, causing their actions and thoughts to become clumsy.</p>\n<strong>Critical Failure</strong>  The target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 3}, @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 3}, and @UUID[Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ]{Confused}."
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 3
+          }
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm"
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 3
+          }
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg"
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.yblD8fOR1J8rDwEQ"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-befuddle-critical-failure"
+  },
+  "type": "effect",
+  "_key": "!items!VeyrKJwjHTyXyXn7"
+}

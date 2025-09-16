@@ -1,0 +1,64 @@
+{
+  "uuid": "iggtZJCW4whP2uxR",
+  "group": "equipment",
+  "name": "Vermin Repellent Agent",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.C6v5p0ZtIUroYlU2",
+    "Compendium.pf2e.equipment-srd.Item.WGbE7qAGw8O5yH07",
+    "Compendium.pf2e.equipment-srd.Item.lgqyRmQ3GZbbxQsD",
+    "Compendium.pf2e.equipment-srd.Item.CReWZjAd3szYQ6Mx"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.e6dXfbKzv5sNr1zh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vermin-repellent-agent-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Hnt3Trd7TiFICB06",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vermin-repellent-agent-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.OAN5Fj21PJPhIqRU",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vermin-repellent-agent-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.VrYfR2WuyA15zFhq",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vermin-repellent-agent-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

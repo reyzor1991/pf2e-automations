@@ -1,0 +1,21 @@
+{
+  "uuid": "VqdgXCDP3AsEvFD9",
+  "group": "equipment",
+  "name": "Mighty Counterweight",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.j0YMP7LLSzhBDsEB"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.P7cVUjF59y0XHmLw",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:mighty-counterweight"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "m3c5RcY4PbYClPa2",
+  "img": "icons/magic/air/fog-gas-smoke-dense-brown.webp",
+  "name": "Effect: Desert Wind",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "affects": "origin",
+        "predicate": [
+          "self:effect:desert-wind"
+        ],
+        "slug": "to",
+        "selectors": [
+          "attack-roll"
+        ],
+        "uuid": "Compendium.pf2e-automations.effects.Item.FHMA8vr46g3Podn0"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          {
+            "not": "target:effect:desert-wind"
+          }
+        ],
+        "slug": "from",
+        "selectors": [
+          "attack-roll"
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-desert-wind"
+  },
+  "type": "effect",
+  "_key": "!items!m3c5RcY4PbYClPa2"
+}

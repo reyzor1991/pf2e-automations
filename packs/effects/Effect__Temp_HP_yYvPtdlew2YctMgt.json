@@ -1,0 +1,43 @@
+{
+  "_id": "yYvPtdlew2YctMgt",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Temp HP",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "TempHP",
+        "value": 0
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "value": []
+    },
+    "slug": "effect-phoenix-temp-hp"
+  },
+  "type": "effect",
+  "_key": "!items!yYvPtdlew2YctMgt"
+}

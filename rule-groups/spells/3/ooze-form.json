@@ -1,0 +1,28 @@
+{
+  "uuid": "RS3cWusGnjoZGizB",
+  "group": "spell",
+  "name": "Ooze Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.0gdZrT9lwO17EIxc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.bJSxQHZANzsho6b3",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:ooze-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

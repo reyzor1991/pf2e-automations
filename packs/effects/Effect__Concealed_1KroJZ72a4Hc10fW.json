@@ -1,0 +1,46 @@
+{
+  "_id": "1KroJZ72a4Hc10fW",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Concealed",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W] until the start of your next turn.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-concealed-until-start-of-your-next-turn"
+  },
+  "type": "effect",
+  "_key": "!items!1KroJZ72a4Hc10fW"
+}

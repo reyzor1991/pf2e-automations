@@ -1,0 +1,63 @@
+{
+  "_id": "wI2OJ76fbhM4MU0j",
+  "img": "icons/magic/control/fear-fright-monster-red.webp",
+  "name": "Spell Effect: Monstrosity Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.b8bfWIICHOsGVzjp"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.rEsgDhunQ5Yx8KZx"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.Eik8Fj8nGo2GLcbn"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectMonstrosityForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectMonstrosityForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-monstrosity-form"
+  },
+  "type": "effect",
+  "_key": "!items!wI2OJ76fbhM4MU0j"
+}

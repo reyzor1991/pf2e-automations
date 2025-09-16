@@ -1,0 +1,60 @@
+{
+  "_id": "39ZPxVV3WYb54951",
+  "img": "icons/creatures/magical/spirit-undead-ghost-purple.webp",
+  "name": "Spell Effect: Adapt Self",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 5
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.0gv9D5RlrF5cKA3I"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.2SWUzp4JuNK5EX0J"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectAdaptSelf"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectAdaptSelf}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Secrets of Magic"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-adapt-self"
+  },
+  "type": "effect",
+  "_key": "!items!39ZPxVV3WYb54951"
+}

@@ -1,0 +1,42 @@
+{
+  "uuid": "ihouhpVyonEguJC3",
+  "group": "feat",
+  "name": "Desert Wind",
+  "labels": [
+    "air",
+    "composite",
+    "earth",
+    "impulse",
+    "kineticist",
+    "primal",
+    "stance"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.ti6rPcSBsCuyEHqy"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.vTFrTVltx4wsEpQw",
+            "Compendium.pf2e-automations.effects.Item.b51giwYKB4A4Lxl1"
+          ],
+          "duration": {}
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:effect:kinetic-aura",
+        "origin:item:desert-wind"
+      ]
+    }
+  ]
+}

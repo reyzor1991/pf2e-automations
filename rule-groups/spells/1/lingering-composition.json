@@ -1,0 +1,27 @@
+{
+  "uuid": "ycIEAfoTC5zZAyUN",
+  "group": "spell",
+  "name": "Lingering Composition",
+  "labels": [
+    "bard"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.irTdhxTixU9u9YUm"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "lingeringComposition",
+      "target": "none",
+      "predicate": [
+        "origin:item:lingering-composition"
+      ]
+    }
+  ]
+}

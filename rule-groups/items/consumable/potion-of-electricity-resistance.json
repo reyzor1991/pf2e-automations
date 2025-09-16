@@ -1,0 +1,52 @@
+{
+  "uuid": "mQH783AZ4jrxdmG5",
+  "group": "equipment",
+  "name": "Potion of Electricity Resistance",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.MHoghQhxbvZRyyaB",
+    "Compendium.pf2e.equipment-srd.Item.cAyxcRSSnfscGyMa",
+    "Compendium.pf2e.equipment-srd.Item.F8vrGctUqYIEkKOz"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.uf3KI1n1MkP7htbJ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-electricity-resistance-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.h9ukqhz7qgNuOlxh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-electricity-resistance-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.OrZfOsrh2qYMPBNo",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-electricity-resistance-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

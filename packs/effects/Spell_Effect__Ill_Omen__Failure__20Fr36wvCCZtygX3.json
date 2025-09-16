@@ -1,0 +1,48 @@
+{
+  "_id": "20Fr36wvCCZtygX3",
+  "img": "icons/sundries/lights/candles-lit-red-evil.webp",
+  "name": "Spell Effect: Ill Omen (Failure)",
+  "system": {
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.pf2e.spells-srd.Item.6ZIKB0151LUR19Rw]</p>\n<p><strong>Failure</strong> The first time during the duration that the target attempts an attack roll or skill check, it must roll twice and use the worse result.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "keep": "lower",
+        "key": "RollTwice",
+        "removeAfterRoll": true,
+        "selector": "attack-roll"
+      },
+      {
+        "keep": "lower",
+        "removeAfterRoll": true,
+        "key": "RollTwice",
+        "selector": "skill-check"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-ill-omen-failure"
+  },
+  "type": "effect",
+  "_key": "!items!20Fr36wvCCZtygX3"
+}

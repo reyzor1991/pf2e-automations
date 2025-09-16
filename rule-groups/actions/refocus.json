@@ -1,0 +1,23 @@
+{
+  "uuid": "HACLuygKR9ZvZor4",
+  "group": "action",
+  "name": "Refocus",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "refocus",
+      "target": "none",
+      "predicate": [
+        "effect:refocus"
+      ]
+    }
+  ]
+}

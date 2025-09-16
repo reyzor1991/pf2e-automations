@@ -1,0 +1,67 @@
+{
+  "_id": "gnKxMIPnEcg5QEEi",
+  "img": "icons/magic/control/fear-fright-white.webp",
+  "name": "Effect: Befuddle (Failure)",
+  "system": {
+    "description": {
+      "value": "<p>You sow seeds of confusion in your target's mind, causing their actions and thoughts to become clumsy.</p>\n<strong>Failure</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2} and @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}."
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm"
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-befuddle-failure"
+  },
+  "type": "effect",
+  "_key": "!items!gnKxMIPnEcg5QEEi"
+}

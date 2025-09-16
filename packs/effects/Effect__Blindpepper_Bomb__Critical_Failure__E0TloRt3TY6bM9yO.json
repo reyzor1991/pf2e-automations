@@ -1,0 +1,53 @@
+{
+  "_id": "E0TloRt3TY6bM9yO",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Blindpepper Bomb (Critical Failure)",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18"
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-blindpepper-bomb-critical-failure"
+  },
+  "type": "effect",
+  "_key": "!items!E0TloRt3TY6bM9yO"
+}

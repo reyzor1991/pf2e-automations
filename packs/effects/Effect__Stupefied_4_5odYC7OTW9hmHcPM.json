@@ -1,0 +1,53 @@
+{
+  "_id": "5odYC7OTW9hmHcPM",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Stupefied 4",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.e1XGnhKNSQIm5IXg] 4</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 4
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.e1XGnhKNSQIm5IXg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-stupefied-4"
+  },
+  "type": "effect",
+  "_key": "!items!5odYC7OTW9hmHcPM"
+}

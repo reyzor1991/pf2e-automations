@@ -1,0 +1,28 @@
+{
+  "uuid": "zGtae7t7qljWGnXe",
+  "group": "spell",
+  "name": "Dinosaur Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KhM8MhoUgoUjBMIz"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.QQ7HIDXvuZIK0192",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:dinosaur-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "eMGGHi8bIib0mMeF",
+  "img": "icons/magic/control/debuff-energy-hold-green.webp",
+  "name": "Effect: Life Link",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-life-link"
+  },
+  "type": "effect",
+  "_key": "!items!eMGGHi8bIib0mMeF"
+}

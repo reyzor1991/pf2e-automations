@@ -1,0 +1,55 @@
+{
+  "_id": "7kyjK9Pm7wKSZtdQ",
+  "img": "icons/magic/control/buff-strength-muscle-damage-orange.webp",
+  "name": "Aura: Song of Strength",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.Xxdwkt0EEDgP1LGc].</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "sustained": false,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "events": [
+              "enter"
+            ],
+            "uuid": "Compendium.pf2e.spell-effects.Item.8adLKKzJy49USYJt",
+            "level": "ceil(@actor.level/2)"
+          }
+        ],
+        "key": "Aura",
+        "traits": [],
+        "radius": 60,
+        "slug": "aura-song-of-strength"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "value": []
+    },
+    "slug": "spell-effect-aura-song-of-strength"
+  },
+  "type": "effect",
+  "_key": "!items!7kyjK9Pm7wKSZtdQ"
+}

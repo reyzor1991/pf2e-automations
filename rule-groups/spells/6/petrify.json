@@ -1,0 +1,61 @@
+{
+  "uuid": "lACJF4RGpA8Exwnn",
+  "group": "spell",
+  "name": "Petrify",
+  "labels": [
+    "concentrate",
+    "earth",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.znv4ECL7ZtuiagtA"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93"
+          ],
+          "duration": {
+            "expiry": "turn-start"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:petrify"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "petrifyEffect",
+      "target": "none",
+      "predicate": [
+        "item:petrify",
+        {
+          "not": "self:effect:petrify-failure"
+        },
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "fABaj7usc5j9h7Ka",
+  "group": "equipment",
+  "name": "Hand of Mercy",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.ida2fLjVX5gbZHBE"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.hyyVAOi1My9PKKqo",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:hand-of-mercy"
+      ]
+    }
+  ],
+  "complexRules": []
+}

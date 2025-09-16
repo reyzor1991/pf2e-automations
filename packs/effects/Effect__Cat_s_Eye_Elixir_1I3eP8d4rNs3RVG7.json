@@ -1,0 +1,38 @@
+{
+  "_id": "1I3eP8d4rNs3RVG7",
+  "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
+  "name": "Effect: Cat's Eye Elixir",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-cats-eye-elixir"
+  },
+  "type": "effect",
+  "_key": "!items!1I3eP8d4rNs3RVG7"
+}

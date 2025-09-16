@@ -1,0 +1,66 @@
+{
+  "_id": "U6YTpJb4PQTh4mDL",
+  "img": "icons/creatures/unholy/demon-horned-winged-laughing.webp",
+  "name": "Spell Effect: Daemon Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.uStjY2mD6seP1K7I"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.ScF0ECWnfXMHYLDL"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.zIRnnuj4lARq43DA"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.dy4neJZ1g1XQnUZL"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectDaemonForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectDaemonForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-daemon-form"
+  },
+  "type": "effect",
+  "_key": "!items!U6YTpJb4PQTh4mDL"
+}

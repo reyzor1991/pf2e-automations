@@ -1,0 +1,53 @@
+{
+  "uuid": "ZTXXkdeAieWBnnie",
+  "group": "action",
+  "name": "Treat Disease",
+  "labels": [
+    "downtime",
+    "manipulate",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.TC7OcDa7JlWbqMaN"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5oYKYXAexr0vhx84",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:treat-disease",
+        "outcome:criticalFailure"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Ee2xfKX1yyqGIDZj",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:treat-disease",
+        "outcome:success"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.id20P4pj7zDKeLmy",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:treat-disease",
+        "outcome:criticalSuccess"
+      ]
+    }
+  ],
+  "complexRules": []
+}

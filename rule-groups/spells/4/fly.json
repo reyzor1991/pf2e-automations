@@ -1,0 +1,27 @@
+{
+  "uuid": "FPHyRYUab28dC4oS",
+  "group": "spell",
+  "name": "Fly",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.A2JfEKe6BZcTG1S8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.MuRBCiZn5IKeaoxi",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:fly"
+      ]
+    }
+  ],
+  "complexRules": []
+}

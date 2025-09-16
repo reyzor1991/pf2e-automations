@@ -1,0 +1,54 @@
+{
+  "_id": "MkWyAtPU3CAFpgdQ",
+  "img": "icons/svg/clockwork.svg",
+  "name": "Effect: Jinx Critical Failure",
+  "system": {
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.pf2e.actionspf2e.hFRHPBj6wjAayNtW].</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "allowDuplicate": false,
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.i3OJZU2nk64Df3xm"
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Advanced Player's Guide"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-jinx-clumsy2"
+  },
+  "type": "effect",
+  "_key": "!items!MkWyAtPU3CAFpgdQ"
+}

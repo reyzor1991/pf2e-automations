@@ -1,0 +1,74 @@
+{
+  "uuid": "hmb6vFXiNl28nlZ4",
+  "group": "equipment",
+  "name": "Alloy Orb",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.tTrJnXJYt15arH6G",
+    "Compendium.pf2e.equipment-srd.Item.ECjche2BfpWHZ3vU",
+    "Compendium.pf2e.equipment-srd.Item.OOli8iQmLZoMOoG0",
+    "Compendium.pf2e.equipment-srd.Item.s0DffbZbYlav3mu1",
+    "Compendium.pf2e.equipment-srd.Item.X345VfEx9DZwO47G"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.BjF0eOao5UuOOKMP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:alloy-orb-exquisite-standard-grade"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.o6GSF420m6cdTkZo",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:alloy-orb-exquisite-high-grade"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.GXEkmsf4Wre6zqG1",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:alloy-orb-standard-grade"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.15qCI8sWaEwPkWiQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:alloy-orb-high-grade"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9MU9d8tmJg3thkSc",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:alloy-orb-low-grade"
+      ]
+    }
+  ],
+  "complexRules": []
+}

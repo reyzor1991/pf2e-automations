@@ -1,0 +1,45 @@
+{
+  "_id": "gkqzWcFgbib1BFne",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-yellow-blue.webp",
+  "name": "Wooden Shield",
+  "system": {
+    "acBonus": 2,
+    "baseItem": "steel-shield",
+    "bulk": {
+      "value": 1
+    },
+    "containerId": null,
+    "description": {
+      "value": ""
+    },
+    "hardness": 3,
+    "hp": {
+      "max": 12,
+      "value": 12
+    },
+    "level": {
+      "value": 0
+    },
+    "material": {
+      "grade": null,
+      "type": null
+    },
+    "price": {},
+    "publication": {},
+    "quantity": 1,
+    "rules": [],
+    "runes": {
+      "reinforcing": 0
+    },
+    "size": "med",
+    "speedPenalty": 0,
+    "traits": {
+      "integrated": null,
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "wooden-shield"
+  },
+  "type": "shield",
+  "_key": "!items!gkqzWcFgbib1BFne"
+}

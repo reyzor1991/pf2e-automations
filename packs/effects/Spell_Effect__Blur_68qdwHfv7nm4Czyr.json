@@ -1,0 +1,43 @@
+{
+  "_id": "68qdwHfv7nm4Czyr",
+  "img": "icons/magic/control/silhouette-hold-change-blue.webp",
+  "name": "Spell Effect: Blur",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-blur"
+  },
+  "type": "effect",
+  "_key": "!items!68qdwHfv7nm4Czyr"
+}

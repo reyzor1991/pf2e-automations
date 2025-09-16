@@ -1,0 +1,53 @@
+{
+  "_id": "KLd1H370WVyj1uih",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Master Strike (Success)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.MIRkyAjyBeXivMa7"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-master-strike-success"
+  },
+  "type": "effect",
+  "_key": "!items!KLd1H370WVyj1uih"
+}

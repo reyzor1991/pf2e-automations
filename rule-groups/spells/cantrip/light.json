@@ -1,0 +1,29 @@
+{
+  "uuid": "HgJHjuVrUYPG3lq7",
+  "group": "spell",
+  "name": "Light",
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "light",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.WBmvzNDfpwka3qT4"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.cVVZXNbV0nElVOPZ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:light"
+      ]
+    }
+  ],
+  "complexRules": []
+}

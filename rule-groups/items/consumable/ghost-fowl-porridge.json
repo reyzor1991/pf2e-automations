@@ -1,0 +1,26 @@
+{
+  "uuid": "dnKosbxsBc8bqPeD",
+  "group": "equipment",
+  "name": "Ghost Fowl Porridge",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Vemy5QGbLRdPedcP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.mq5J4p6vLenAuqsC",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ghost-fowl-porridge"
+      ]
+    }
+  ],
+  "complexRules": []
+}

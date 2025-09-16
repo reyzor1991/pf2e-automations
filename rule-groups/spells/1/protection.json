@@ -1,0 +1,27 @@
+{
+  "uuid": "5iWBXiAZWRJbnpoB",
+  "group": "spell",
+  "name": "Protection",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.gMODOGamz88rgHuf"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.RawLEPwyT5CtCZ4D",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:protection"
+      ]
+    }
+  ],
+  "complexRules": []
+}

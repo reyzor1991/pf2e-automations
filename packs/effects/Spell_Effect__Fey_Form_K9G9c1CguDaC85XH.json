@@ -1,0 +1,69 @@
+{
+  "_id": "K9G9c1CguDaC85XH",
+  "img": "icons/creatures/magical/fae-fairy-winged-glowing-green.webp",
+  "name": "Spell Effect: Fey Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.c4cIfS2974nUJDPt"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.S75DOLjKaSJGMc0D"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.KcBqo33ekJHxZLHo"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.heAj9paC8ZRh7QEj"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.DwM5qcFp4JgKhXrY"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectFeyForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectFeyForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-fey-form"
+  },
+  "type": "effect",
+  "_key": "!items!K9G9c1CguDaC85XH"
+}

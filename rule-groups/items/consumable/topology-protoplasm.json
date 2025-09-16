@@ -1,0 +1,26 @@
+{
+  "uuid": "yvrJBFKc9BR5tjv2",
+  "group": "equipment",
+  "name": "Topology Protoplasm",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.PblDdXHm98XWs9ba"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.vZPyQAt5T2L0Dfmq",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:topology-protoplasm"
+      ]
+    }
+  ],
+  "complexRules": []
+}

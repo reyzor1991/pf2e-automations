@@ -1,0 +1,26 @@
+{
+  "uuid": "GwpCkD9FeYB9bWXK",
+  "group": "equipment",
+  "name": "Aromatic Ammunition",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.iYsDDvFduPhtaIOr"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.0qJEtpXWPb7JJBbY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:aromatic-ammunition"
+      ]
+    }
+  ],
+  "complexRules": []
+}

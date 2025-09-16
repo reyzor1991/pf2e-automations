@@ -1,0 +1,27 @@
+{
+  "uuid": "KKvMiFcJdP29gZmF",
+  "group": "feat",
+  "name": "Six Pillars Stance",
+  "labels": [
+    "archetype",
+    "stance"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.hT0pVPqFuiEsmRb8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.P80mwvCAEncR2snK",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:six-pillars-stance"
+      ]
+    }
+  ],
+  "complexRules": []
+}

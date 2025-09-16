@@ -1,0 +1,26 @@
+{
+  "uuid": "Stnhof9GzoyoyrM2",
+  "group": "equipment",
+  "name": "Dragon Throat Scale",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.C35j9PXcyDdrTsat"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Ou8TRYpigcZZEjC2",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:dragon-throat-scale"
+      ]
+    }
+  ],
+  "complexRules": []
+}

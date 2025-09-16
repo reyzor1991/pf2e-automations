@@ -1,0 +1,28 @@
+{
+  "uuid": "ZzBHToWldiVUsEmE",
+  "group": "spell",
+  "name": "Flicker",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "teleportation"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zR67Rt3UMHKC5evy"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.ZlsuhS9J0S3PuvCO",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:flicker"
+      ]
+    }
+  ],
+  "complexRules": []
+}

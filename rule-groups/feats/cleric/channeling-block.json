@@ -1,0 +1,45 @@
+{
+  "uuid": "f2Yscd2rTZetX77z",
+  "group": "feat",
+  "name": "Channeling Block",
+  "labels": [
+    "cleric"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.75Y1Lk9JE3q1vDA2"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.Rzg3c7hfkvTlxPDp",
+      "target": "SelfEffect",
+      "predicate": [
+        "channeling-block",
+        {
+          "or": [
+            "item:slug:heal",
+            "item:slug:harm"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "channelingBlock",
+      "target": "none",
+      "predicate": [
+        "origin:item:channeling-block"
+      ]
+    }
+  ]
+}

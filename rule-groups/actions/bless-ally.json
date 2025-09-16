@@ -1,0 +1,21 @@
+{
+  "uuid": "G2FW6SXTtcT2MobQ",
+  "group": "action",
+  "name": "Bless Ally",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.scCEnY6IhU59uekX"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.feat-effects.Item.niYOLA6l44U2NMM3",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:slug:bless-ally"
+      ]
+    }
+  ],
+  "complexRules": []
+}

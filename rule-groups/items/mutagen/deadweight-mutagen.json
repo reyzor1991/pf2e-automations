@@ -1,0 +1,66 @@
+{
+  "uuid": "HrzWuGn2zKolcb7W",
+  "group": "equipment",
+  "name": "Deadweight Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.JPALWW3w4z8STAYV",
+    "Compendium.pf2e.equipment-srd.Item.qLwwxk1j04rgXSF9",
+    "Compendium.pf2e.equipment-srd.Item.xanr7nay2UQeR4Ec",
+    "Compendium.pf2e.equipment-srd.Item.Wx5WhSNOmeICgHSC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.T7C0HaGu1Cn6Pt5j",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:deadweight-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.xV8fmSn12652usGC",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:deadweight-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.IFHqrbQUOT2LzNDB",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:deadweight-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.7eCUXYunzGVEsaKh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:deadweight-mutagen-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

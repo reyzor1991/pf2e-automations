@@ -1,0 +1,26 @@
+{
+  "uuid": "K6skjG3CMT3ZjKub",
+  "group": "equipment",
+  "name": "Dragonfly Potion",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.82f7CTK0HxvitMLP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9j1uTGBGAc7GIhjm",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:dragonfly-potion"
+      ]
+    }
+  ],
+  "complexRules": []
+}

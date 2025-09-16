@@ -1,0 +1,38 @@
+{
+  "_id": "YdWsNobIKIMBSSBP",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Red-Gold Mortality",
+  "system": {
+    "description": {
+      "value": "When the target would regain Hit Points, such as from a healing effect or an ability like fast healing or regeneration, it must attempt a Will save against your class DC to determine the effects, and then the marking fades. The marking otherwise fades after 1 minute."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-red-gold-mortality"
+  },
+  "type": "effect",
+  "_key": "!items!YdWsNobIKIMBSSBP"
+}

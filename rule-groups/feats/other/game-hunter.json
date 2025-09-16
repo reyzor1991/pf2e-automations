@@ -1,0 +1,44 @@
+{
+  "uuid": "Ugw5NOGsf1poYnfS",
+  "group": "feat",
+  "name": "Game Hunter",
+  "labels": [
+    "dedication"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.CowQy8gXP9POjuxq"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "gameHunter",
+      "target": "none",
+      "predicate": [
+        "feat:game-hunter-dedication",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        "target:condition:off-guard",
+        "hunted-prey",
+        {
+          "not": "target:effect:game-hunter-immunity"
+        },
+        {
+          "or": ["hunted-prey-game-hunter", "grants-hunt-prey:1"]
+        },
+        {
+          "or": ["target:trait:animal", "target:trait:beast", "target:trait:dragon"]
+        }
+      ]
+    }
+  ]
+}

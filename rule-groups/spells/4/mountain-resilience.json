@@ -1,0 +1,28 @@
+{
+  "uuid": "BqyKuVHo2xxsPFCW",
+  "group": "spell",
+  "name": "Mountain Resilience",
+  "labels": [
+    "concentrate",
+    "earth",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.2BV2yYPfVJ5zirZt"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.JHpYudY14g0H4VWU",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:mountain-resilience"
+      ]
+    }
+  ],
+  "complexRules": []
+}

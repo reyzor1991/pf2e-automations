@@ -1,0 +1,50 @@
+{
+  "_id": "ESDysTknpmThdvQs",
+  "img": "icons/consumables/drinks/alcohol-beer-stein-wooden-brown.webp",
+  "name": "Effect: Stumbling Stance (Off-guard)",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "item:slug:stumbling-swing"
+        ],
+        "selectors": [
+          "stumbling-swing-attack",
+          "stumbling-swing-damage"
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-stumbling-stance-target"
+  },
+  "type": "effect",
+  "_key": "!items!ESDysTknpmThdvQs"
+}

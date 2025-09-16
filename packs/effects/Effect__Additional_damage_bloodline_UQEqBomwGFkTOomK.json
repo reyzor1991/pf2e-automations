@@ -1,0 +1,43 @@
+{
+  "_id": "UQEqBomwGFkTOomK",
+  "img": "icons/magic/death/skeleton-worn-skull-tan.webp",
+  "name": "Effect: Additional damage bloodline",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "spell-damage",
+        "damageType": "negative",
+        "value": 0
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    }
+  },
+  "type": "effect",
+  "_key": "!items!UQEqBomwGFkTOomK"
+}

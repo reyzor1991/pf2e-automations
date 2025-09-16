@@ -1,0 +1,59 @@
+{
+  "uuid": "9whKA92wWsBCCzdb",
+  "group": "spell",
+  "name": "Laughing Fit",
+  "labels": [
+    "concentrate",
+    "emotion",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.tlSE7Ly8vi1Dgddv"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Fl0w5CpVo51hgYeO",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:laughing-fit"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.TOH5kxkZBYXs1MI7",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "item:slug:laughing-fit"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.52FgvfpgAdKnO4d0",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:laughing-fit"
+      ]
+    }
+  ],
+  "complexRules": []
+}

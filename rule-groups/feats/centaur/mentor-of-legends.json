@@ -1,0 +1,23 @@
+{
+  "uuid": "Hs5qlUCZj8WQTc63",
+  "group": "feat",
+  "name": "Mentor of Legends",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.JBjRGWVtVaxLckfH"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e.feat-effects.Item.jw5uOE1sJ9o9bUEb",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:heroism",
+        "spellcasting:innate",
+        "feat:mentor-of-legends"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "A0AP7oLqdRwOCje7",
+  "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+  "name": "Metal Carapace",
+  "system": {
+    "acBonus": 3,
+    "baseItem": "half-plate",
+    "bulk": {
+      "value": 2
+    },
+    "category": "medium",
+    "checkPenalty": -2,
+    "containerId": null,
+    "description": {
+      "value": "<p>Armor created with @UUID[Compendium.pf2e.feats-srd.Item.HbdOZ8YTtu8ykASc]</p>"
+    },
+    "dexCap": 2,
+    "group": "plate",
+    "hardness": 0,
+    "hp": {
+      "max": 0,
+      "value": 0
+    },
+    "level": {
+      "value": 0
+    },
+    "material": {
+      "grade": null,
+      "type": null
+    },
+    "price": {},
+    "publication": {},
+    "quantity": 1,
+    "rules": [],
+    "runes": {
+      "potency": 0,
+      "property": [],
+      "resilient": 0
+    },
+    "size": "med",
+    "speedPenalty": -5,
+    "strength": 2,
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "noisy"
+      ]
+    },
+    "slug": "metal-carapace"
+  },
+  "type": "armor",
+  "_key": "!items!A0AP7oLqdRwOCje7"
+}

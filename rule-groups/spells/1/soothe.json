@@ -1,0 +1,30 @@
+{
+  "uuid": "XPW5yzMPTKTFQwyg",
+  "group": "spell",
+  "name": "Soothe",
+  "labels": [
+    "concentrate",
+    "emotion",
+    "healing",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.szIyEsvihc5e1w8n"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.nkk4O5fyzrC0057i",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:soothe"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,56 @@
+{
+  "uuid": "ysr5TMVyTaEpESfs",
+  "group": "spell",
+  "name": "Blazing Armory",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.ywHwnXihTnXbm9Xq"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e-automations.effects.Item.Rl0ztZNeVjXQDDGB",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:blazing-armory",
+        {
+          "lt": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e-automations.effects.Item.Rl0ztZNeVjXQDDGB",
+      "target": "TargetsEffect",
+      "predicate": [
+        "origin:item:blazing-armory",
+        {
+          "gte": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "pre-delete-item",
+      "extend": null,
+      "range": null,
+      "value": "blazingArmoryDelete",
+      "target": "none",
+      "predicate": [
+        "effect:blazing-armory"
+      ]
+    }
+  ]
+}

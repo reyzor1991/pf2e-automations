@@ -1,0 +1,60 @@
+{
+  "uuid": "FkbjYUxWR3GgVyM8",
+  "group": "equipment",
+  "name": "Prey Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.JiMljGYKx60DHs8O",
+    "Compendium.pf2e.equipment-srd.Item.60DuFyGQoZhPj4To",
+    "Compendium.pf2e.equipment-srd.Item.fiBThkOOXEdcTSMf",
+    "Compendium.pf2e.equipment-srd.Item.qoyelABKtk9DRSEk"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KUNJk4bsCRDzArdK",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:prey-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.HLn9nQY4SAvyhaom",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:prey-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.JBWZkGkNikSlQfNr",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:prey-mutagen-major",
+            "consumable:prey-mutagen-greater"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

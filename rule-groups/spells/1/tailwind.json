@@ -1,0 +1,51 @@
+{
+  "uuid": "Z9xjgl6d3fwhCQH3",
+  "group": "spell",
+  "name": "Tailwind",
+  "labels": [
+    "air",
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.KcLVELhCUcKXxiKE"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.PQHP7Oph3BQX1GhF",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:tailwind",
+        {
+          "lt": [
+            "origin:item:level",
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.7vIUF5zbvHzVcJA0",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:tailwind",
+        {
+          "lge": [
+            "origin:item:level",
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

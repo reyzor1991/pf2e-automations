@@ -1,0 +1,60 @@
+{
+  "uuid": "UuQ5CABvAlT6zs2K",
+  "group": "spell",
+  "name": "Aberrant Whispers",
+  "labels": [
+    "auditory",
+    "concentrate",
+    "focus",
+    "mental",
+    "sorcerer"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qhJfRnkCRrMI4G1O"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "stupefied 2",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:aberrant-whispers",
+        {
+          "not": "self:effect:aberrant-whispers-immunity"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "confused",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:aberrant-whispers"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.zt5GIv9435SF0fYn",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "not": "self:effect:aberrant-whispers-immunity"
+        },
+        "item:aberrant-whispers"
+      ]
+    }
+  ],
+  "complexRules": []
+}

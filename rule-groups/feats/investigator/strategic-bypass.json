@@ -1,0 +1,35 @@
+{
+  "uuid": "bnUYi1BXjNggYdH7",
+  "group": "feat",
+  "name": "Strategic Bypass",
+  "labels": [
+    "investigator"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.NgUB5toKxBd8RJmm"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": false,
+      "range": false,
+      "value": "strategicBypass",
+      "target": "none",
+      "predicate": [
+        "feat:strategic-bypass",
+        "domain:strike-attack-roll",
+        "target:mark:devise-a-stratagem",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

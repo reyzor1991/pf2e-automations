@@ -1,0 +1,46 @@
+{
+  "_id": "1zCit360MHdn1YmY",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Blinded for 1 minute",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2] for 1 minute.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-blinded-minute"
+  },
+  "type": "effect",
+  "_key": "!items!1zCit360MHdn1YmY"
+}

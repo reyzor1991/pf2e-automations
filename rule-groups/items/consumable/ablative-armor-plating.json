@@ -1,0 +1,76 @@
+{
+  "uuid": "wdPJrc2D6Npg6RfX",
+  "group": "equipment",
+  "name": "Ablative Armor Plating",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.U9XNSFQzCOo6KMD1",
+    "Compendium.pf2e.equipment-srd.Item.P7Evi8Wv8zIwLYtU",
+    "Compendium.pf2e.equipment-srd.Item.RdsQliP7Gi1xe8xH",
+    "Compendium.pf2e.equipment-srd.Item.Qm0ZiyXail7Lv0dq",
+    "Compendium.pf2e.equipment-srd.Item.xXvuQABxlRH2HXsO"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.jlVYoiPVRRVGBj5G",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ablative-armor-plating-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.mn39aML7EWKbttKT",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ablative-armor-plating-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.yt8meGTS7wLa6Fg2",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ablative-armor-plating-true"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.DlqcczhwjfaEf7G1",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ablative-armor-plating-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.OMW71UJzYCUr4ubh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ablative-armor-plating-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

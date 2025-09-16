@@ -1,0 +1,40 @@
+{
+  "uuid": "GXXomlFs8UovDNwa",
+  "group": "spell",
+  "name": "Rousing Splash",
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "manipulate",
+    "water"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zhDIiQlJmrd4UDNC"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.XWte9oUQ4x0sBHMq",
+            "Compendium.pf2e.spell-effects.Item.IYvzqymG4xOhqFir"
+          ]
+        }
+      ],
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:rousing-splash",
+        {
+          "not": "target:effect:rousing-splash-immunity-minutes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "Yr9yCuJiAlFh3QEB",
+  "img": "icons/equipment/shield/heater-stone-orange.webp",
+  "name": "Rusty Steel Shield",
+  "system": {
+    "acBonus": 2,
+    "baseItem": "steel-shield",
+    "bulk": {
+      "value": 1
+    },
+    "containerId": null,
+    "description": {
+      "value": ""
+    },
+    "hardness": 5,
+    "hp": {
+      "max": 20,
+      "value": 20
+    },
+    "level": {
+      "value": 0
+    },
+    "material": {
+      "grade": null,
+      "type": null
+    },
+    "price": {},
+    "publication": {},
+    "quantity": 1,
+    "rules": [],
+    "runes": {
+      "reinforcing": 0
+    },
+    "size": "med",
+    "speedPenalty": 0,
+    "traits": {
+      "integrated": null,
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "rusty-steel-shield"
+  },
+  "type": "shield",
+  "_key": "!items!Yr9yCuJiAlFh3QEB"
+}

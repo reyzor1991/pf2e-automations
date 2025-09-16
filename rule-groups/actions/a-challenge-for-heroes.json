@@ -1,0 +1,22 @@
+{
+  "uuid": "iSMD3gUC4Yn2EmtR",
+  "group": "feat",
+  "name": "A Challenge for Heroes",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.c40APnn4a7bWhtcZ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.feat-effects.Item.pUXV4sks4p9Jc8Wb",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:a-challenge-for-heroes"
+      ]
+    }
+  ],
+  "complexRules": []
+}

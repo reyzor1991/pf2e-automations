@@ -1,0 +1,53 @@
+{
+  "_id": "9jbCQQAzUbXNGzZq",
+  "img": "icons/equipment/chest/breastplate-collared-leather-brown.webp",
+  "name": "Hardwood Armor",
+  "system": {
+    "acBonus": 3,
+    "baseItem": "half-plate",
+    "bulk": {
+      "value": 1
+    },
+    "category": "medium",
+    "checkPenalty": -2,
+    "containerId": null,
+    "description": {
+      "value": "<p>Armor created with @UUID[Compendium.pf2e.feats-srd.Item.cZa6br5C3Iyzqqi9]</p>"
+    },
+    "dexCap": 2,
+    "group": "wood",
+    "hardness": 0,
+    "hp": {
+      "max": 0,
+      "value": 0
+    },
+    "level": {
+      "value": 0
+    },
+    "material": {
+      "grade": null,
+      "type": null
+    },
+    "price": {},
+    "publication": {},
+    "quantity": 1,
+    "rules": [],
+    "runes": {
+      "potency": 0,
+      "property": [],
+      "resilient": 0
+    },
+    "size": "med",
+    "speedPenalty": -5,
+    "strength": 2,
+    "traits": {
+      "rarity": "common",
+      "value": [
+        ""
+      ]
+    },
+    "slug": "hardwood-armor"
+  },
+  "type": "armor",
+  "_key": "!items!9jbCQQAzUbXNGzZq"
+}

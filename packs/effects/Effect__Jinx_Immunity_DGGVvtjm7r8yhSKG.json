@@ -1,0 +1,38 @@
+{
+  "_id": "DGGVvtjm7r8yhSKG",
+  "img": "icons/svg/clockwork.svg",
+  "name": "Effect: Jinx Immunity",
+  "system": {
+    "description": {
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.actionspf2e.hFRHPBj6wjAayNtW] on you.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "days",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Advanced Player's Guide"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-jinx-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!DGGVvtjm7r8yhSKG"
+}

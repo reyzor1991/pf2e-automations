@@ -1,0 +1,26 @@
+{
+  "uuid": "Hx6vvQLirb8fi7Ld",
+  "group": "spell",
+  "name": "Humanoid Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.2qGqa33E4GPUCbMV"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e.spell-effects.Item.B9Hzt4ki8eqlXxyh",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:humanoid-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

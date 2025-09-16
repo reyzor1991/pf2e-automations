@@ -1,0 +1,29 @@
+{
+  "uuid": "CRPyKS9y4hzRpupT",
+  "group": "feat",
+  "name": "Devoted Guardian",
+  "labels": [
+    "fighter",
+    "champion"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.YwVdaszwpDJd6kf9"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "devotedGuardian",
+      "target": "none",
+      "predicate": [
+        "origin:shield:raised",
+        "origin:item:slug:devoted-guardian"
+      ]
+    }
+  ]
+}

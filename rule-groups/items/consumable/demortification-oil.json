@@ -1,0 +1,26 @@
+{
+  "uuid": "ftqb2iRNveJWGBWs",
+  "group": "equipment",
+  "name": "Demortification Oil",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Cu2zf4wi8UGzsyVC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.U2RNTMsZJqtVryK7",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:demortification-oil"
+      ]
+    }
+  ],
+  "complexRules": []
+}

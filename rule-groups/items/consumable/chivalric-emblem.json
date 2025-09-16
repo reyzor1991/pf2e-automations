@@ -1,0 +1,22 @@
+{
+  "uuid": "5FjNT8sSMtxfDtfh",
+  "group": "equipment",
+  "name": "Chivalric Emblem",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.V8QY1LaaV8azWg7r"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.iIC9uGfg0rnYSRZ2",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:chivalric-emblem"
+      ]
+    }
+  ],
+  "complexRules": []
+}

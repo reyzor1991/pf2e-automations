@@ -1,0 +1,30 @@
+{
+  "uuid": "EGgg9TmnS7zWo79J",
+  "group": "equipment",
+  "name": "Ommatophoric Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.I1GapZnTPSlbvX2Z"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.ZxT8Shp8NZaQRjlQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ommatophoric-mutagen"
+      ]
+    }
+  ],
+  "complexRules": []
+}

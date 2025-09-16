@@ -1,0 +1,397 @@
+{
+  "uuid": "wDRsMeAAJbhPJocS",
+  "group": "other",
+  "name": "Weapon Runes",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "drained",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "target:condition:persistent-damage:bleed",
+        "outcome:criticalSuccess",
+        "item:rune:property:bloodthirsty"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "drained",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "target:condition:persistent-damage:bleed",
+        "crit-item-1:rune:property:bloodthirsty"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "drained",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "target:condition:persistent-damage:bleed",
+        "crit-item-2:rune:property:bloodthirsty"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.KmUCaFZSk9efn9AR",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "item:rune:property:brilliant",
+            "item:rune:property:greater-brilliant"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.zNHvhwHsC8ckhKVp",
+      "target": "TargetEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:rune:property:crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.czdEHtLsrUcZxSDx",
+      "target": "TargetEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:rune:property:greater-crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.zNHvhwHsC8ckhKVp",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-1:rune:property:crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.czdEHtLsrUcZxSDx",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-1:rune:property:greater-crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.zNHvhwHsC8ckhKVp",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-2:rune:property:crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.czdEHtLsrUcZxSDx",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-2:rune:property:greater-crushing"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.NKue7w68dX1yH4bA",
+      "target": "TargetEffect",
+      "predicate": [
+        "item:rune:property:disrupting",
+        "outcome:criticalSuccess",
+        "target:trait:undead"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.NKue7w68dX1yH4bA",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-1:rune:property:disrupting",
+        "target:trait:undead"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.NKue7w68dX1yH4bA",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-2:rune:property:disrupting",
+        "target:trait:undead"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "frightened",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:rune:property:fearsome"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "frightened",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "crit-item-1:rune:property:fearsome"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "frightened",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "crit-item-2:rune:property:fearsome"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "origin:item:rune:property:frost",
+            "origin:item:rune:property:greater-frost"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.8rmU1xImKF1Yj65d",
+      "target": "TargetEffect",
+      "predicate": [
+        "item:rune:property:rooting",
+        "outcome:criticalSuccess"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.8rmU1xImKF1Yj65d",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-1:rune:property:rooting"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.8rmU1xImKF1Yj65d",
+      "target": "TargetEffect",
+      "predicate": [
+        "crit-item-2:rune:property:rooting"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "value": "deafened",
+      "target": "SelfAddCondition",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "item:rune:property:greater-thundering"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "conditions": [
+            "deafened"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:rune:property:thundering"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "name": "Thundering Rune",
+          "conditions": [
+            "deafened"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "hours",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:rune:property:thundering"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "weaponRunes",
+      "target": "none",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "target",
+        {
+          "or": [
+            "item:rune:property:thundering",
+            "item:rune:property:brilliant",
+            "item:rune:property:frost",
+            "item:rune:property:greater-thundering",
+            "item:rune:property:greater-brilliant",
+            "item:rune:property:greater-frost"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "weaponRunes",
+      "target": "none",
+      "predicate": [
+        "target",
+        {
+          "or": [
+            "crit-item-1:rune:property:thundering",
+            "crit-item-1:rune:property:brilliant",
+            "crit-item-1:rune:property:frost",
+            "crit-item-1:rune:property:greater-thundering",
+            "crit-item-1:rune:property:greater-brilliant",
+            "crit-item-1:rune:property:greater-frost",
+            "crit-item-2:rune:property:thundering",
+            "crit-item-2:rune:property:brilliant",
+            "crit-item-2:rune:property:frost",
+            "crit-item-2:rune:property:greater-thundering",
+            "crit-item-2:rune:property:greater-brilliant",
+            "crit-item-2:rune:property:greater-frost"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "weaponShockRune",
+      "target": "none",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "target",
+        {
+          "or": [
+            "item:rune:property:shock",
+            "item:rune:property:greater-shock"
+          ]
+        }
+      ]
+    }
+  ]
+}

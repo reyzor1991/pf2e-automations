@@ -1,0 +1,28 @@
+{
+  "uuid": "QsDC4MuH2Nn94fXT",
+  "group": "spell",
+  "name": "Shillelagh",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "plant"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.s3abwDbTV43pGFFW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.deG1dtfuQph03Kkg",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:shillelagh"
+      ]
+    }
+  ],
+  "complexRules": []
+}

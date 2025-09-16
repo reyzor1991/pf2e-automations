@@ -1,0 +1,67 @@
+{
+  "_id": "DOq3IEgQzoWvDdmB",
+  "img": "icons/magic/unholy/strike-beam-blood-small-red-purple.webp",
+  "name": "Effect: Phantom Pain (Critical Failure)",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.lDVqvLKA6eF3Df60",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "persistent-damage",
+            "value": {
+              "damageType": "mental",
+              "formula": "{item|level}d4"
+            }
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-phantom-pain-critical-failure"
+  },
+  "type": "effect",
+  "_key": "!items!DOq3IEgQzoWvDdmB"
+}

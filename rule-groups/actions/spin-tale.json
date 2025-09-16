@@ -1,0 +1,27 @@
+{
+  "uuid": "sYqPVrZXCKbRP8wN",
+  "group": "action",
+  "name": "Spin Tale",
+  "labels": [
+    "auditory",
+    "linguistic"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.hPZQ5vA9QHEPtjFW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.UzIamWcEJTOjwfoA",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:spin-tale"
+      ]
+    }
+  ],
+  "complexRules": []
+}

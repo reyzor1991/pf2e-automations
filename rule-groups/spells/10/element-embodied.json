@@ -1,0 +1,28 @@
+{
+  "uuid": "xKKZDZeCPjpY4fFN",
+  "group": "spell",
+  "name": "Element Embodied",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.vQMAdnIwnV9prPiG"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.R6wqd5rQTBNi7WaO",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:element-embodied"
+      ]
+    }
+  ],
+  "complexRules": []
+}

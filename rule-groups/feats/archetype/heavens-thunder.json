@@ -1,0 +1,28 @@
+{
+  "uuid": "5YeuBwdDmT3A7Jyr",
+  "group": "feat",
+  "name": "Heaven's Thunder",
+  "labels": [
+    "archetype",
+    "electricity",
+    "sonic"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.qJdbK8vgIqeHU7bu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.L9g3EMCT3imX650b",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:heavens-thunder"
+      ]
+    }
+  ],
+  "complexRules": []
+}

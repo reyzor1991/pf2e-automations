@@ -1,0 +1,26 @@
+{
+  "uuid": "m3CX5qRKCkJdNsrb",
+  "group": "equipment",
+  "name": "Bronze Bull Pendant",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.nXStoLxPrrP2b6WB"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Cxa7MdgMCUoMqbKm",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:bronze-bull-pendant"
+      ]
+    }
+  ],
+  "complexRules": []
+}

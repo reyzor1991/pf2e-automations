@@ -1,0 +1,27 @@
+{
+  "uuid": "rD3uqpYsFCHJGkfk",
+  "group": "action",
+  "name": "Investigate",
+  "labels": [
+    "concentrate",
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.EwgTZBWsc8qKaViP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.tDsgl8YmhZbx2May",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:investigate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

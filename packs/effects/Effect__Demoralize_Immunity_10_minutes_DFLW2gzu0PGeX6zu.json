@@ -1,0 +1,38 @@
+{
+  "_id": "DFLW2gzu0PGeX6zu",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "name": "Effect: Demoralize Immunity 10 minutes",
+  "system": {
+    "description": {
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.actionspf2e.2u915NdUyQan6uKF] on you, rendering you temporarily immune to Demoralize for the duration.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-demoralize-immunity-minutes"
+  },
+  "type": "effect",
+  "_key": "!items!DFLW2gzu0PGeX6zu"
+}

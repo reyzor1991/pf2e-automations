@@ -1,0 +1,52 @@
+{
+  "_id": "An3CuEIthnfIYnid",
+  "img": "icons/magic/defensive/shield-barrier-glowing-triangle-green.webp",
+  "name": "Effect: Channeling Block",
+  "system": {
+    "badge": {
+      "evaluate": true,
+      "reevaluate": null,
+      "type": "formula",
+      "value": "(@item.level)d8"
+    },
+    "description": {
+      "value": "<p>Granted by @UUID[Compendium.pf2e.feats-srd.Item.75Y1Lk9JE3q1vDA2]</p>\n<p>Roll 1d8 for each rank of the @UUID[Compendium.pf2e.spells-srd.Item.wdA52JJnsuQWeyqz] or @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs] spell, and increase the shield's Hardness by the total for this block.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "itemType": "shield",
+        "key": "ItemAlteration",
+        "mode": "add",
+        "property": "hardness",
+        "value": "@item.badge.value"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-channeling-block"
+  },
+  "type": "effect",
+  "_key": "!items!An3CuEIthnfIYnid"
+}

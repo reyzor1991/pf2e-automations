@@ -1,0 +1,75 @@
+{
+  "uuid": "luFvRZddP2jK6Sns",
+  "group": "feat",
+  "name": "Hardwood Armor",
+  "labels": [
+    "impulse",
+    "kineticist",
+    "primal",
+    "wood"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.cZa6br5C3Iyzqqi9"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.mxIt7zfVKgLZ8AeC",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:hardwood-armor"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "hardwoodArmor",
+      "target": "none",
+      "predicate": [
+        "effect:hardwood-armor"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteHardwoodArmor",
+      "target": "none",
+      "predicate": [
+        "effect:hardwood-armor"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "hardwoodArmorShield",
+      "target": "none",
+      "predicate": [
+        "effect:wooden-shield"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteHardwoodArmorShield",
+      "target": "none",
+      "predicate": [
+        "effect:wooden-shield"
+      ]
+    }
+  ]
+}

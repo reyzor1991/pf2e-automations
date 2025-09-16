@@ -1,0 +1,38 @@
+{
+  "uuid": "kNG7pZGWfK4V6GWT",
+  "group": "other",
+  "name": "Heavy Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "heavy-aura"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 10
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "item:slug:heavy-aura"
+      ]
+    }
+  ]
+}

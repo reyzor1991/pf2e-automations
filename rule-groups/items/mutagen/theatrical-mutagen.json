@@ -1,0 +1,66 @@
+{
+  "uuid": "ntxoyF9KRE9SMTXd",
+  "group": "equipment",
+  "name": "Theatrical Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Wv0ck7AMP0s0jIue",
+    "Compendium.pf2e.equipment-srd.Item.kScHu3XS3XPvN9Db",
+    "Compendium.pf2e.equipment-srd.Item.8rQ7HkUtSa8so0Et",
+    "Compendium.pf2e.equipment-srd.Item.BB9ErvPViT4TtiYp"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.bZPjDwwyPT0iKBE9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:theatrical-mutagen-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.euBiKyqrcefeuv4H",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:theatrical-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.G1IwG9HRH9CRtHqj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:theatrical-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.o2yteYPGqEjpPAZ5",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:theatrical-mutagen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

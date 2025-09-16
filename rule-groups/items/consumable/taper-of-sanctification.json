@@ -1,0 +1,26 @@
+{
+  "uuid": "jUqAYJqUp7qRfiVh",
+  "group": "equipment",
+  "name": "Taper of Sanctification",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.vp3Yr59O9dO9MDlb"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.j8dPwfhUuIeDgHYT",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:taper-of-sanctification"
+      ]
+    }
+  ],
+  "complexRules": []
+}

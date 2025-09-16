@@ -1,0 +1,26 @@
+{
+  "uuid": "idHNdVHuoYW3tkmW",
+  "group": "equipment",
+  "name": "Galvanic Chew",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.zg4aR2ndtTzO1osa"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.XGnaMNt1iBkOwENY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:galvanic-chew"
+      ]
+    }
+  ],
+  "complexRules": []
+}

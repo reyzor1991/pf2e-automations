@@ -1,0 +1,28 @@
+{
+  "uuid": "7dKcXhy4ziSB8r6I",
+  "group": "feat",
+  "name": "Apparition Sense",
+  "labels": [
+    "animist",
+    "divine"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.0CjMvMLW6kL1TO6e"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "apparitionSense",
+      "target": "none",
+      "predicate": [
+        "origin:item:apparition-sense"
+      ]
+    }
+  ]
+}

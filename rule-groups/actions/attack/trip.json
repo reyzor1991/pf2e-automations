@@ -1,0 +1,45 @@
+{
+  "uuid": "T6q5MRSso9mN4QW3",
+  "group": "action",
+  "name": "Trip",
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.ge56Lu1xXVFYUnLP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "1d6[bludgeoning]",
+      "target": "TargetDamage",
+      "predicate": [
+        "action:trip",
+        "outcome:criticalSuccess"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "prone",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "action:trip",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "1u4ZAmfeWKyN3uKK",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Dazzled for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-dazzled-round"
+  },
+  "type": "effect",
+  "_key": "!items!1u4ZAmfeWKyN3uKK"
+}

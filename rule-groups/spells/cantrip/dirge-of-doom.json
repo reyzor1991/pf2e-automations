@@ -1,0 +1,32 @@
+{
+  "uuid": "tAk65syQKowNPFao",
+  "group": "spell",
+  "name": "Dirge of Doom",
+  "labels": [
+    "bard",
+    "cantrip",
+    "composition",
+    "concentrate",
+    "emotion",
+    "fear",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.1xLVcA8Y1onw7toT"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.xdy-pf2e-workbench.xdy-pf2e-workbench-items.Item.wOcAf3pf04cTM4Uk",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:dirge-of-doom"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,55 @@
+{
+  "uuid": "cJHmhKh9ntPhwjlR",
+  "group": "spell",
+  "name": "Aromatic Lure",
+  "labels": [
+    "concentrate",
+    "emotion",
+    "incapacitation",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.LX4pCagYLpc9hEji"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.KQ0TqKFPn64tkzkt",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:aromatic-lure"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.ubBrL0lNSrpAHO6G",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:aromatic-lure"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.gp7QMc2Nw9LoXu64",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:aromatic-lure"
+      ]
+    }
+  ],
+  "complexRules": []
+}

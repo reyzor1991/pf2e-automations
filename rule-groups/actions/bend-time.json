@@ -1,0 +1,26 @@
+{
+  "uuid": "96dqtP2x9URtWAQV",
+  "group": "action",
+  "name": "Bend Time",
+  "labels": [
+    "occult"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.3cuTA58ObXhuFX2r"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.w4iqlhWrlHLlOiYP",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:bend-time"
+      ]
+    }
+  ],
+  "complexRules": []
+}

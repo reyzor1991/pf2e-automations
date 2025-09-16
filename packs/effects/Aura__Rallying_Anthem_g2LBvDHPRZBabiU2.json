@@ -1,0 +1,57 @@
+{
+  "_id": "g2LBvDHPRZBabiU2",
+  "img": "icons/magic/defensive/shield-barrier-blue.webp",
+  "name": "Aura: Rallying Anthem",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.IAjvwqgiDr3qGYxY].</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "sustained": false,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "events": [
+              "enter"
+            ],
+            "uuid": "Compendium.pf2e.spell-effects.Item.DLwTvjjnqs2sNGuG",
+            "level": "ceil(@actor.level/2)"
+          }
+        ],
+        "key": "Aura",
+        "traits": [
+          "auditory"
+        ],
+        "radius": 60,
+        "slug": "aura-inspire-defense"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-aura-inspire-defense"
+  },
+  "type": "effect",
+  "_key": "!items!g2LBvDHPRZBabiU2"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "rCdEPJakwigU4Fr7",
+  "group": "action",
+  "name": "Drop Prone",
+  "labels": [
+    "general",
+    "move"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.HYNhdaPtF1QmQbR3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "prone",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "origin:item:drop-prone"
+      ]
+    }
+  ],
+  "complexRules": []
+}

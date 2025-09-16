@@ -1,0 +1,30 @@
+{
+  "uuid": "2zEacqHrgfZMC9uG",
+  "group": "action",
+  "name": "Escape",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "escape",
+      "target": "none",
+      "predicate": [
+        "target",
+        "action:escape",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

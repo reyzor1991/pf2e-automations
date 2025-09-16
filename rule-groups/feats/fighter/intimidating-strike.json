@@ -1,0 +1,86 @@
+{
+  "uuid": "6YAEoK4PGEGCKuEG",
+  "group": "feat",
+  "name": "Intimidating Strike",
+  "labels": [
+    "barbarian",
+    "emotion",
+    "fear",
+    "fighter",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.lkcM4V3VDAtjlR9P"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.w9i0aY2IQ3jvCX9K",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:intimidating-strike"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "frightened 2",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "self:effect:intimidating-strike"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "frightened",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "outcome:success",
+        "self:effect:intimidating-strike"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteIntimidatingStrikeEffect",
+      "target": "none",
+      "predicate": [
+        "item:melee",
+        "self:effect:intimidating-strike",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteIntimidatingStrikeEffect",
+      "target": "none",
+      "predicate": [
+        "self:effect:intimidating-strike",
+        "item:melee"
+      ]
+    }
+  ]
+}

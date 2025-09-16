@@ -1,0 +1,26 @@
+{
+  "uuid": "tb4ZQHu73Q54Wvee",
+  "group": "equipment",
+  "name": "Escape Fulu",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.53mPIEbUw5RzQ6pc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.eWDmS4QTwmwPbBTb",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:escape-fulu"
+      ]
+    }
+  ],
+  "complexRules": []
+}

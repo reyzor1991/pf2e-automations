@@ -1,0 +1,29 @@
+<form autocomplete="off" onsubmit="event.preventDefault();">
+    {{#each settings as |setting|}}
+        <div class="form-group">
+            <label for="{{setting.key}}">{{localize setting.name}}</label>
+            <div class="form-fields">
+                {{#if setting.isSelect}}
+                    <select name="{{setting.key}}">
+                        {{selectOptions setting.choices selected=setting.value localize=true}}
+                    </select>
+                {{else if setting.isCheckbox}}
+                    <input type="checkbox" name="{{setting.key}}" {{checked setting.value}} />
+                {{else if setting.isNumber}}
+                    <input type="number" name="{{setting.key}}" value="{{setting.value}}" data-dtype="{{setting.type}}"/>
+                {{else if setting.isString}}
+                    <input type="text" name="{{setting.key}}" value="{{setting.value}}" data-dtype="{{setting.type}}"/>
+                {{/if}}
+            </div>
+            {{#if setting.hint}}
+                <p class="notes">{{localize setting.hint}}</p>
+            {{/if}}
+        </div>
+    {{/each}}
+
+    <footer>
+        <button type="submit">
+            <i class="fa-regular fa-save"></i> {{localize "SETTINGS.Save"}}
+        </button>
+    </footer>
+</form>

@@ -1,0 +1,22 @@
+{
+  "uuid": "6cldEitPSTkllbav",
+  "group": "equipment",
+  "name": "Phasing Trine",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.xBf7GSdt555t7IAm"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.R5zy2SnV5GSgKeiL",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:slug:phasing-trine"
+      ]
+    }
+  ],
+  "complexRules": []
+}

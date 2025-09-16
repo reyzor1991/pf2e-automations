@@ -1,0 +1,29 @@
+{
+  "uuid": "otJHlGoMMzXMtgsj",
+  "group": "spell",
+  "name": "Forbidding Ward",
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.RA7VKcen3p56rVyZ"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "forbiddingWard",
+      "target": "none",
+      "predicate": [
+        "origin:item:forbidding-ward"
+      ]
+    }
+  ]
+}

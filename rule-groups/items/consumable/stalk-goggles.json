@@ -1,0 +1,52 @@
+{
+  "uuid": "JPdKrfNu6v435voY",
+  "group": "equipment",
+  "name": "Stalk Goggles",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.U7UVGM93EaNc6lzY",
+    "Compendium.pf2e.equipment-srd.Item.cbbPoYOil7DZO4mk",
+    "Compendium.pf2e.equipment-srd.Item.iKKZdkn8KQJSuRjY"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.kyLLXUQ9zSEvC4py",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:stalk-goggles-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5WLda1tGUiKoSj1K",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:stalk-goggles-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.g8JS6wsw5sRWOJLg",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:stalk-goggles"
+      ]
+    }
+  ],
+  "complexRules": []
+}

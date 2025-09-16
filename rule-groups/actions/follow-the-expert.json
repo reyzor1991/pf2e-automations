@@ -1,0 +1,35 @@
+{
+  "uuid": "iBa6A4YQNlnW7KNu",
+  "group": "action",
+  "name": "Follow the Expert",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.tfa4Sh7wcxCEqL29"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.other-effects.Item.VCSpuc3Tf3XWMkd3",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:follow-the-expert"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.V347nnVBGDrVWh7k",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:follow-the-expert"
+      ]
+    }
+  ],
+  "complexRules": []
+}

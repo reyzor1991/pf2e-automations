@@ -1,0 +1,99 @@
+{
+  "uuid": "SMiGlSltG3e4Tnr1",
+  "group": "spell",
+  "name": "Agitate",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.r8g7oSumKOHDqJsd"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.NXzdAozn7oODIdai"
+          ],
+          "duration": {
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:agitate",
+        "outcome:success"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.NXzdAozn7oODIdai"
+          ],
+          "duration": {
+            "unit": "rounds",
+            "value": 2
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:agitate",
+        "outcome:failure"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.NXzdAozn7oODIdai"
+          ],
+          "duration": {
+            "unit": "rounds",
+            "value": 4
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "item:slug:agitate",
+        "outcome:criticalFailure"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "end-turn",
+      "extend": null,
+      "range": null,
+      "value": "agitateInformation",
+      "target": "none",
+      "predicate": [
+        "self:effect:agitate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "5bK7AERDR3RtFa2k",
+  "group": "action",
+  "name": "Repeat a Spell",
+  "labels": [
+    "concentrate",
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.OQaFzDtVEOMWizJJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.kh1QdKkvbNZ0qBsQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:repeat-a-spell"
+      ]
+    }
+  ],
+  "complexRules": []
+}

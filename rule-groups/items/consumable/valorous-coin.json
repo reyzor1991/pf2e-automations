@@ -1,0 +1,21 @@
+{
+  "uuid": "QCSGtrrx9qBfSJqA",
+  "group": "equipment",
+  "name": "Valorous Coin",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.KIkLIYOKBiwd7mNd"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.8wGzXqCOUvPw8oMy",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:valorous-coin"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "4TF2K5h3A54CodqH",
+  "group": "action",
+  "name": "Battle Medicine",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "battleMedicineAction",
+      "target": "none",
+      "predicate": [
+        "action:treat-wounds"
+      ]
+    }
+  ]
+}

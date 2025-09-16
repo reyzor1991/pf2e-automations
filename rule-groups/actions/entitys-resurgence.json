@@ -1,0 +1,24 @@
+{
+  "uuid": "y9eABdg5ZGrwJtDa",
+  "group": "action",
+  "name": "Entity's Resurgence",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.5bCZGpp9yFHXDz1j"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.yr5ey5qC8dXH749T",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:entitys-resurgence"
+      ]
+    }
+  ],
+  "complexRules": []
+}

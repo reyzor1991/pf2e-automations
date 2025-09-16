@@ -1,0 +1,28 @@
+{
+  "uuid": "3hhTD4b5oFFsvmTf",
+  "group": "action",
+  "name": "Fade Into Daydreams",
+  "labels": [
+    "illusion",
+    "psyche",
+    "psychic"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.AJeLwbQBt1YH3S6v"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.1KroJZ72a4Hc10fW",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:fade-into-daydreams"
+      ]
+    }
+  ],
+  "complexRules": []
+}

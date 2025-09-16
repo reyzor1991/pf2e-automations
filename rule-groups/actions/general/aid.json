@@ -1,0 +1,26 @@
+{
+  "uuid": "5tMRJEGX3HmeZu3s",
+  "group": "action",
+  "name": "Aid",
+  "labels": [
+    "general"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.other-effects.Item.AHMUpMbaVkZ5A1KX",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:aid"
+      ]
+    }
+  ],
+  "complexRules": []
+}

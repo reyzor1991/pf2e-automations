@@ -1,0 +1,28 @@
+{
+  "uuid": "8Z473z5oMF4audrB",
+  "group": "action",
+  "name": "Arcane Cascade",
+  "labels": [
+    "concentrate",
+    "magus",
+    "stance"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.HbejhIywqIufrmVM"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.fsjO5oTKttsbpaKl",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:arcane-cascade"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,44 @@
+{
+  "uuid": "AuN56q5vokmABxex",
+  "group": "other",
+  "name": "Blinding Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "blinding-aura"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 24
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        "item:slug:blinding-aura"
+      ]
+    }
+  ]
+}

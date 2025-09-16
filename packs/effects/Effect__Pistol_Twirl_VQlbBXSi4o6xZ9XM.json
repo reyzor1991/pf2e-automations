@@ -1,0 +1,38 @@
+{
+  "_id": "VQlbBXSi4o6xZ9XM",
+  "img": "icons/weapons/guns/gun-pistol-brown.webp",
+  "name": "Effect: Pistol Twirl",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 2
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Guns & Gears"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-pistol-twirl"
+  },
+  "type": "effect",
+  "_key": "!items!VQlbBXSi4o6xZ9XM"
+}

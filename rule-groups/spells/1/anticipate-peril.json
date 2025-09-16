@@ -1,0 +1,27 @@
+{
+  "uuid": "9iHZAPlSeDwK6rCN",
+  "group": "spell",
+  "name": "Anticipate Peril",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.EUMjrJJwSgsqNidi"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.4ag0OHKfjROmR4Pm",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:anticipate-peril"
+      ]
+    }
+  ],
+  "complexRules": []
+}

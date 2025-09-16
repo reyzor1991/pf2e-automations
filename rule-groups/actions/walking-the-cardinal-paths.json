@@ -1,0 +1,28 @@
+{
+  "uuid": "FpmXDev3B3A4C9wB",
+  "group": "action",
+  "name": "Walking the Cardinal Paths",
+  "labels": [
+    "concentrate",
+    "emotion",
+    "magical"
+  ],
+  "source": [
+    "Compendium.pf2e.adventure-specific-actions.Item.GpT5RXUwhINODqkJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.kui8yKIVsxfJnrYe",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:affinity-ablaze-arms-of-balance-walking-the-cardinal-paths"
+      ]
+    }
+  ],
+  "complexRules": []
+}

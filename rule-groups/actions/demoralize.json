@@ -1,0 +1,24 @@
+{
+  "uuid": "U9Q2FaTPFzYadYRh",
+  "group": "action",
+  "name": "Demoralize",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "demoralize",
+      "target": "none",
+      "predicate": [
+        "action:demoralize",
+        "target"
+      ]
+    }
+  ]
+}

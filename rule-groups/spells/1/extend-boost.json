@@ -1,0 +1,27 @@
+{
+  "uuid": "wDiqtnWqOJT0R1l7",
+  "group": "spell",
+  "name": "Extend Boost",
+  "labels": [
+    "bard"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.CR8OKDbeFJoZbOCu"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "extendBoost",
+      "target": "none",
+      "predicate": [
+        "origin:item:extend-boost"
+      ]
+    }
+  ]
+}

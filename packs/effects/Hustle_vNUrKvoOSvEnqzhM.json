@@ -1,0 +1,38 @@
+{
+  "_id": "vNUrKvoOSvEnqzhM",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+  "name": "Hustle",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.JuqmIAnkL9hVGai8]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-hustle"
+  },
+  "type": "effect",
+  "_key": "!items!vNUrKvoOSvEnqzhM"
+}

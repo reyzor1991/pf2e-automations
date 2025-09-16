@@ -1,0 +1,30 @@
+{
+  "uuid": "krHhiH5kz2cqFQon",
+  "group": "spell",
+  "name": "Swarm Form",
+  "labels": [
+    "cleric",
+    "concentrate",
+    "focus",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Pd2M1XY8EXrSfWgJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.tC0Qk4AjYRd3csL7",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:swarm-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

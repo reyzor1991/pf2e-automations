@@ -1,0 +1,64 @@
+{
+  "_id": "XcJAldj3qsmLKjSL",
+  "img": "icons/svg/paralysis.svg",
+  "name": "Effect: Successful Feint on ",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "target:effect:feint-success-attacker",
+          "self:effect:feint-success-attacker-target"
+        ],
+        "selectors": [
+          "melee-attack-roll",
+          "strike-damage"
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg"
+      },
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "self:effect:pistol-twirl",
+          "target:effect:feint-success-attacker",
+          "self:effect:feint-success-attacker-target"
+        ],
+        "selectors": [
+          "ranged-attack-roll",
+          "strike-damage"
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.AJh5ex99aV6VTggg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-feint-success-attacker-target"
+  },
+  "type": "effect",
+  "_key": "!items!XcJAldj3qsmLKjSL"
+}

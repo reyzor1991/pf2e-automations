@@ -1,0 +1,54 @@
+{
+  "uuid": "5UbuqTDTp4z5uMZC",
+  "group": "spell",
+  "name": "Ill Omen",
+  "labels": [
+    "concentrate",
+    "curse",
+    "manipulate",
+    "misfortune"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.6ZIKB0151LUR19Rw"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.20Fr36wvCCZtygX3",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:ill-omen"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.6vrf3APd1A3TdfT8",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:ill-omen"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.ZvveXgPyipw73EFk",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:ill-omen"
+      ]
+    }
+  ],
+  "complexRules": []
+}

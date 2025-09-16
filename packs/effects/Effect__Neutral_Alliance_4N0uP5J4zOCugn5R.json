@@ -1,0 +1,45 @@
+{
+  "_id": "4N0uP5J4zOCugn5R",
+  "img": "icons/svg/circle.svg",
+  "name": "Effect: Neutral Alliance",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.details.alliance",
+        "value": null
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-possessed"
+  },
+  "type": "effect",
+  "_key": "!items!4N0uP5J4zOCugn5R"
+}

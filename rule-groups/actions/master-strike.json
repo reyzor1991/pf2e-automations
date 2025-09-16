@@ -1,0 +1,37 @@
+{
+  "uuid": "bY8MryWxj7QRWC7s",
+  "group": "action",
+  "name": "Master Strike",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "masterStrike",
+      "target": "none",
+      "predicate": [
+        "origin:item:master-strike",
+        {
+          "not": "self:effect:master-strike-immunity"
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "handleMasterStrikeResult",
+      "target": "none",
+      "predicate": [
+        "item:master-strike"
+      ]
+    }
+  ]
+}

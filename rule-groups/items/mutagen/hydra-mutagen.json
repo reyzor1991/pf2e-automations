@@ -1,0 +1,30 @@
+{
+  "uuid": "msfr7Pi9mnmDxUyl",
+  "group": "equipment",
+  "name": "Hydra Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.iN4giDBCWlc19Jsc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.jJ038JXfHdvDindo",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:hydra-mutagen"
+      ]
+    }
+  ],
+  "complexRules": []
+}

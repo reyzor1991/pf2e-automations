@@ -1,0 +1,38 @@
+{
+  "_id": "kh1QdKkvbNZ0qBsQ",
+  "img": "icons/magic/symbols/circle-ouroboros.webp",
+  "name": "Repeat A Spell",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.OQaFzDtVEOMWizJJ]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-repeat-a-spell"
+  },
+  "type": "effect",
+  "_key": "!items!kh1QdKkvbNZ0qBsQ"
+}

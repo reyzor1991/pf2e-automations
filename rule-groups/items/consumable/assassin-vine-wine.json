@@ -1,0 +1,33 @@
+{
+  "uuid": "QWAmcpilyq2Fl8DB",
+  "group": "equipment",
+  "name": "Assassin Vine Wine",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.tZiCnERZB6ww4eBu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.QCqYiSIR9DVPAHgR",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:aged-assassin-vine-wine",
+            "consumable:assassin-vine-wine"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,39 @@
+{
+  "uuid": "lCDfeE6mZ7TR5pol",
+  "group": "other",
+  "name": "Masked Intentions Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "masked-intentions"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:slug:masked-intentions"
+      ]
+    }
+  ]
+}

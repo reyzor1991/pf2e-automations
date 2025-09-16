@@ -1,0 +1,26 @@
+{
+  "uuid": "opvp3Wl85RwDjjJW",
+  "group": "equipment",
+  "name": "Dragon Pearl",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.g6agII64qc6wuSiP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.APYXxkfZ9xf7HNf9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:dragon-pearl"
+      ]
+    }
+  ],
+  "complexRules": []
+}

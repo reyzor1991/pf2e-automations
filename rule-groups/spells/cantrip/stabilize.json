@@ -1,0 +1,31 @@
+{
+  "uuid": "hjFde92YPDkFe8wE",
+  "group": "spell",
+  "name": "Stabilize",
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.SnjhtQYexDtNDdEg"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "dying",
+      "target": "TargetRemoveCondition",
+      "predicate": [
+        "origin:item:stabilize",
+        "target:condition:dying"
+      ]
+    }
+  ],
+  "complexRules": []
+}

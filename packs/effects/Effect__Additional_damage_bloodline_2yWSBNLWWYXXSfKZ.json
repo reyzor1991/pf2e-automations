@@ -1,0 +1,43 @@
+{
+  "_id": "2yWSBNLWWYXXSfKZ",
+  "img": "icons/magic/fire/flame-burning-eye.webp",
+  "name": "Effect: Additional damage bloodline",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "spell-damage",
+        "damageType": "fire",
+        "value": 0
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    }
+  },
+  "type": "effect",
+  "_key": "!items!2yWSBNLWWYXXSfKZ"
+}

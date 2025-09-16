@@ -1,0 +1,46 @@
+{
+  "_id": "JaZMkZA7LCBLiOf0",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Subsist (Failure)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw] until you attain sufficient food and shelter.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-subsist-failure"
+  },
+  "type": "effect",
+  "_key": "!items!JaZMkZA7LCBLiOf0"
+}

@@ -1,0 +1,52 @@
+{
+  "uuid": "KBTPVaoPpATYcB8r",
+  "group": "equipment",
+  "name": "Spiderfoot Brew",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.HuyWiPnkDZoAVhW9",
+    "Compendium.pf2e.equipment-srd.Item.L4Db3CncPcZFPzGN",
+    "Compendium.pf2e.equipment-srd.Item.ETLSXa4Po518z9Qx"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.wNCxSxruzLVGtLE4",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:spiderfoot-brew-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.YI7QQqXO6nosaAKr",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:spiderfoot-brew-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.4JULykNCgQoypsu8",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:spiderfoot-brew-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

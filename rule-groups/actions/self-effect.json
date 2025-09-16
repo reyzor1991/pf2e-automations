@@ -1,0 +1,21 @@
+{
+  "uuid": "PyqEyRJewo3W4z0w",
+  "group": "action",
+  "name": "Self effect",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "self-effect",
+      "extend": null,
+      "range": null,
+      "value": "applySelfEffect",
+      "target": "none",
+      "predicate": []
+    }
+  ]
+}

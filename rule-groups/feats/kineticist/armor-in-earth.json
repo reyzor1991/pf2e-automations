@@ -1,0 +1,53 @@
+{
+  "uuid": "XErecooxqYVQ4497",
+  "group": "feat",
+  "name": "Armor in Earth",
+  "labels": [
+    "earth",
+    "impulse",
+    "kineticist",
+    "primal"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.plEZoAyPwjAOdY4e"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.NT4T6gEdEQsoHItQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:armor-in-earth"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "armorInEarth",
+      "target": "none",
+      "predicate": [
+        "effect:armor-in-earth"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteArmorInEarth",
+      "target": "none",
+      "predicate": [
+        "effect:armor-in-earth"
+      ]
+    }
+  ]
+}

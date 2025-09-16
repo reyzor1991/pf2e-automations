@@ -1,0 +1,66 @@
+{
+  "uuid": "FY9Bi3R86P2jjCGm",
+  "group": "equipment",
+  "name": "Energy Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.mbrwudO35tItsldq",
+    "Compendium.pf2e.equipment-srd.Item.SLJTJwyIRjuWjfuK",
+    "Compendium.pf2e.equipment-srd.Item.xVtyaEnYZ1aJT4ki",
+    "Compendium.pf2e.equipment-srd.Item.34MbgwW1SGlowyk2"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.C9Tnl6Q7Z5Sbw5EY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energy-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.na2gf5mSkilFoHXk",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energy-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.JbJykktAYMR4BRav",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energy-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.RIozNOntRJok5ZJt",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energy-mutagen-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

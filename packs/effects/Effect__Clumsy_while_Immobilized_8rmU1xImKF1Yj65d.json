@@ -1,0 +1,53 @@
+{
+  "_id": "8rmU1xImKF1Yj65d",
+  "img": "icons/magic/nature/root-vine-entangle-foot-green.webp",
+  "name": "Effect: Clumsy while Immobilized",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-clumsy-while-immobilized"
+  },
+  "type": "effect",
+  "_key": "!items!8rmU1xImKF1Yj65d"
+}

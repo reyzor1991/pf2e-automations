@@ -1,0 +1,38 @@
+{
+  "_id": "OcCXjJab7rSR3mDf",
+  "img": "icons/creatures/abilities/paw-print-yellow.webp",
+  "name": "Track",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.EA5vuSgJfiHH7plD]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-track"
+  },
+  "type": "effect",
+  "_key": "!items!OcCXjJab7rSR3mDf"
+}

@@ -1,0 +1,36 @@
+{
+  "uuid": "rplCblpoDlnABhWo",
+  "group": "equipment",
+  "name": "Bravo's Brew",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.oCuwJ9IUDAuzsUwa",
+    "Compendium.pf2e.equipment-srd.Item.sWPkbSlWAEAStBqD",
+    "Compendium.pf2e.equipment-srd.Item.zM9VX3QwM81DzDUA"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.eh7EqmDBDW30ShCu",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:bravos-brew-lesser",
+            "consumable:bravos-brew-moderate",
+            "consumable:bravos-brew-greater"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

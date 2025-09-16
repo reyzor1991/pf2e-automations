@@ -1,0 +1,27 @@
+{
+  "uuid": "SGhVuiL9LKnqUkdC",
+  "group": "spell",
+  "name": "Fortissimo Composition",
+  "labels": [
+    "bard"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.kF0rs9mCPvJGfAZE"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "fortissimoComposition",
+      "target": "none",
+      "predicate": [
+        "origin:item:fortissimo-composition"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "iVYEyAAMNDsuBmHP",
+  "group": "equipment",
+  "name": "Tricky Liniment",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.MobYbxEL4KgxVi63"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.MCny5ohCGf09a7Wl",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:tricky-liniment"
+      ]
+    }
+  ],
+  "complexRules": []
+}

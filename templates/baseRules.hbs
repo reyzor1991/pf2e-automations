@@ -1,0 +1,34 @@
+<div style="overflow-y: auto; height: calc(100% - 30px);">
+    {{#each rules as |r rIndex|}}
+        <fieldset class="row">
+            <div class="active-controls">
+                <label class="tc">Extend</label>
+                <input type="checkbox" name="{{rIndex}}.extend" {{#if r.extend}} checked {{/if}}/>
+                <i class="remove-base-rule fas fa-trash" data-idx="{{rIndex}}" style="margin-left: auto;"></i></a>
+            </div>
+            <div class="active-controls">
+                <label>Range</label>
+                <input type="number" name="{{rIndex}}.range" value="{{r.range}}"/>
+            </div>
+            <div class="active-controls">
+                <label>Target</label>
+                <select name="{{rIndex}}.target">
+                    {{selectOptions ../targets valueAttr="value" labelAttr="label" selected=r.target}}
+                </select>
+
+            </div>
+            <div class="active-controls">
+                <label>Trigger Type</label>
+                <input type="text" name="{{rIndex}}.triggerType" value="{{r.triggerType}}"/>
+            </div>
+            <div class="active-controls">
+                <label>Value</label>
+                <input type="text" name="{{rIndex}}.value" value="{{r.value}}"/>
+            </div>
+            <div class="active-controls">
+                <label>Predicate (Json array)</label>
+                <textarea name="{{rIndex}}.predicate" spellcheck="false" style="width: 100%">{{json r.predicate}}</textarea>
+            </div>
+        </fieldset>
+    {{/each}}
+</div>

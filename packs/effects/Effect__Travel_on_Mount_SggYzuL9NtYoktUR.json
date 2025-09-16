@@ -1,0 +1,64 @@
+{
+  "_id": "SggYzuL9NtYoktUR",
+  "img": "icons/environment/creatures/horse-tan.webp",
+  "name": "Effect: Travel on Mount",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "choices": [
+          {
+            "label": "Mount 35 ft.",
+            "value": "35"
+          },
+          {
+            "label": "Mount 40 ft.",
+            "value": "40"
+          }
+        ],
+        "flag": "mountSpeed",
+        "key": "ChoiceSet",
+        "prompt": "Select a Mount"
+      },
+      {
+        "key": "BaseSpeed",
+        "selector": "land-speed",
+        "value": "{item|flags.pf2e.rulesSelections.mountSpeed}"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "reflex",
+        "type": "circumstance",
+        "value": -2
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-travel-mount"
+  },
+  "type": "effect",
+  "_key": "!items!SggYzuL9NtYoktUR"
+}

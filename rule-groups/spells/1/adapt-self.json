@@ -1,0 +1,30 @@
+{
+  "uuid": "abh4M6tv4kBs4fZr",
+  "group": "spell",
+  "name": "Adapt Self",
+  "labels": [
+    "cleric",
+    "concentrate",
+    "focus",
+    "manipulate",
+    "morph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.GUnw9YXaW3YyaCAU"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.39ZPxVV3WYb54951",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:adapt-self"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "ahCgQZHFgprrpPso",
+  "group": "equipment",
+  "name": "Tracker's Stew",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.GNM1LvqENq8WqT9C"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.sAs4lPQ2wXEh2dPN",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:trackers-stew"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,40 @@
+{
+  "uuid": "ZCyRnhnHTRAitsn8",
+  "group": "equipment",
+  "name": "Potion of Swimming",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.OMJgFmy3jut79Iaj",
+    "Compendium.pf2e.equipment-srd.Item.Eb4dEuV22QVlMumS"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.ModBoFdCi7YQU4gP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-swimming-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.W3xQBLj5hLOtb6Tj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-swimming"
+      ]
+    }
+  ],
+  "complexRules": []
+}

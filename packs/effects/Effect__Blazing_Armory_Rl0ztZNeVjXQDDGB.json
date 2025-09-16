@@ -1,0 +1,89 @@
+{
+  "_id": "Rl0ztZNeVjXQDDGB",
+  "img": "icons/skills/melee/strike-sword-dagger-runes-red.webp",
+  "name": "Effect: Blazing Armory",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "value": 5,
+      "unit": "minutes",
+      "expiry": "turn-end",
+      "sustained": false
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": false,
+        "choices": {
+          "filter": [
+            "item:rarity:common",
+            "item:level:0",
+            "item:melee",
+            {
+              "or": [
+                "item:category:simple",
+                "item:category:martial"
+              ]
+            }
+          ],
+          "itemType": "weapon"
+        },
+        "flag": "addBlazingArmory",
+        "key": "ChoiceSet"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.addBlazingArmory}",
+        "flag": "elvenBranchedSpear"
+      },
+      {
+        "key": "WeaponPotency",
+        "predicate": [
+          "item:granter:slug:effect-blazing-armory"
+        ],
+        "selector": "attack",
+        "value": "ternary(gte(@item.level,10),3,ternary(gte(@item.level,6),2,1))"
+      },
+      {
+        "key": "Striking",
+        "predicate": [
+          "item:granter:slug:effect-blazing-armory"
+        ],
+        "selector": "damage",
+        "value": "ternary(gte(@item.level,10),3,ternary(gte(@item.level,6),2,1))"
+      },
+      {
+        "key": "DamageAlteration",
+        "mode": "override",
+        "predicate": [
+          "item:granter:slug:effect-blazing-armory"
+        ],
+        "property": "damage-type",
+        "selectors": ["damage"],
+        "value": "fire"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-blazing-armory"
+  },
+  "type": "effect",
+  "_key": "!items!Rl0ztZNeVjXQDDGB"
+}

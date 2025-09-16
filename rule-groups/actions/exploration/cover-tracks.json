@@ -1,0 +1,29 @@
+{
+  "uuid": "niBWYRpGXNUUh5X6",
+  "group": "action",
+  "name": "Cover Tracks",
+  "labels": [
+    "concentrate",
+    "exploration",
+    "move",
+    "skill"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.SB7cMECVtE06kByk"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.F6vJYLZTWDpnrnCZ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:cover-tracks"
+      ]
+    }
+  ],
+  "complexRules": []
+}

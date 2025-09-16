@@ -1,0 +1,54 @@
+{
+  "_id": "8VMC9QwRBGlDcDwQ",
+  "img": "icons/magic/time/clock-spinning-gold-pink.webp",
+  "name": "Aura: Triple Time",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.c8R2fpk88fBwJ1ie].</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "sustained": false,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "allies",
+            "events": [
+              "enter"
+            ],
+            "uuid": "Compendium.pf2e.spell-effects.Item.HtaDbgTIzdiTiKLX"
+          }
+        ],
+        "key": "Aura",
+        "traits": [],
+        "radius": 60,
+        "slug": "aura-triple-time"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-aura-triple-time"
+  },
+  "type": "effect",
+  "_key": "!items!8VMC9QwRBGlDcDwQ"
+}

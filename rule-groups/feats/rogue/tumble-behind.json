@@ -1,0 +1,68 @@
+{
+  "uuid": "QGDwAgRWiGy3UyEu",
+  "group": "feat",
+  "name": "Tumble Behind",
+  "labels": [
+    "rogue"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.YKqMuuC8j35NFh92"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Vh5E1Qgp34sTKfVs",
+      "target": "SelfEffect",
+      "predicate": [
+        "action:tumble-through",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        {
+          "or": [
+            "feat:tumble-behind-rogue",
+            "feat:tumble-behind-swashbuckler"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteTumbleBehindOffGuard",
+      "target": "none",
+      "predicate": [
+        "self:effect:off-guard-tumble-behind"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteTumbleBehindOffGuard",
+      "target": "none",
+      "predicate": [
+        "self:effect:off-guard-tumble-behind",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

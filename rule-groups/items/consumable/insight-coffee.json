@@ -1,0 +1,52 @@
+{
+  "uuid": "PZWibYZo2abTeGDn",
+  "group": "equipment",
+  "name": "Insight Coffee",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.CorMilTH3XKGW49D",
+    "Compendium.pf2e.equipment-srd.Item.sPceDzKeOA8PpK2v",
+    "Compendium.pf2e.equipment-srd.Item.vzP0pLxes9bn0zV8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.q6Qq3Ie3M22XI5bw",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:insight-coffee-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.XGHrqFn9QXdTM42R",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:insight-coffee-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.kkXy5JWC7OTBqTKg",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:insight-coffee-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

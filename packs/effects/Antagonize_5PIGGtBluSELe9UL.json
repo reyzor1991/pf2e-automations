@@ -1,0 +1,38 @@
+{
+  "_id": "5PIGGtBluSELe9UL",
+  "img": "icons/creatures/magical/spirit-fear-energy-pink.webp",
+  "name": "Antagonize",
+  "system": {
+    "description": {
+      "value": " Its Frightened condition can't decrease to less than 1 at the end of its turn until it either uses a hostile action against you or can no longer observe or sense you for at least 1 round."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-antagonize"
+  },
+  "type": "effect",
+  "_key": "!items!5PIGGtBluSELe9UL"
+}

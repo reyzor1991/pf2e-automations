@@ -1,0 +1,28 @@
+{
+  "uuid": "AYG2yk3nZDoBurwX",
+  "group": "spell",
+  "name": "Elemental Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.1K6AYGisvo9gqdhs"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.Qp0dlhJaCzXIx73r",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:elemental-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

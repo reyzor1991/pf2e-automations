@@ -1,0 +1,38 @@
+{
+  "_id": "V0AiVBtUeFQk9dQe",
+  "img": "systems/pf2e/icons/spells/sleep.webp",
+  "name": "Effect: Sleeping",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-slepping"
+  },
+  "type": "effect",
+  "_key": "!items!V0AiVBtUeFQk9dQe"
+}

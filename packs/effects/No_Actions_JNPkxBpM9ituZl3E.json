@@ -1,0 +1,43 @@
+{
+  "_id": "JNPkxBpM9ituZl3E",
+  "img": "icons/magic/control/debuff-chains-shackles-movement-purple.webp",
+  "name": "No Actions",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.noActions",
+        "value": true
+      }
+    ],
+    "slug": "effect-no-actions",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false
+  },
+  "_key": "!items!JNPkxBpM9ituZl3E"
+}

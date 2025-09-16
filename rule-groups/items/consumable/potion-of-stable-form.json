@@ -1,0 +1,40 @@
+{
+  "uuid": "uzpd77Ewtr55NinY",
+  "group": "equipment",
+  "name": "Potion of Stable Form",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.cEfqMV1lFaT7s0QC",
+    "Compendium.pf2e.equipment-srd.Item.KOWn72lufGfszQXr"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.uVxs1qFMQsGWXNs6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-stable-form"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.W9tKQlA7tVIcAuzw",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-stable-form-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

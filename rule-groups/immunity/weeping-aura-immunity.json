@@ -1,0 +1,39 @@
+{
+  "uuid": "cttX4TYRzGwCyXab",
+  "group": "other",
+  "name": "Weeping Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "weeping-aura"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "hours",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:slug:weeping-aura"
+      ]
+    }
+  ]
+}

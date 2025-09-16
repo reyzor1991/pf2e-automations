@@ -1,0 +1,46 @@
+{
+  "_id": "SbYoI8G8Ze6oE4we",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Concealed for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W] for 1 round, but can't use the concealment to @UUID[Compendium.pf2e.actionspf2e.Item.XMcnh4cSI32tljXa].</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.DmAIPqOBomZ7H95W"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-concealed-round"
+  },
+  "type": "effect",
+  "_key": "!items!SbYoI8G8Ze6oE4we"
+}

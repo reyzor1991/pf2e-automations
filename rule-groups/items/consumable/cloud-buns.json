@@ -1,0 +1,40 @@
+{
+  "uuid": "iGNNia7fgZHpl63v",
+  "group": "equipment",
+  "name": "Cloud Buns",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.NZDZzVgW2Pu8blar",
+    "Compendium.pf2e.equipment-srd.Item.TioBntQv3VAnS7Wb"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.YcHGSplvY5Vbqfc8",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cloud-buns"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.bDcRrcC6VlkenVK4",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cloud-buns-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

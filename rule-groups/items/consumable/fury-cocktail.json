@@ -1,0 +1,52 @@
+{
+  "uuid": "vkNiG3AqDgbynkHu",
+  "group": "equipment",
+  "name": "Fury Cocktail",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.MUL0ABe8h7Ugc1Jt",
+    "Compendium.pf2e.equipment-srd.Item.JmxKmYQPQmUlauO4",
+    "Compendium.pf2e.equipment-srd.Item.BeX3ForBrKTQD4T5"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.6lzmzeWRo6mv6g2C",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:fury-cocktail-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.QaiSmpjSUhORG800",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:fury-cocktail-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.6Ao5NDu2J7qGwZxW",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:fury-cocktail-lesser"
+      ]
+    }
+  ],
+  "complexRules": []
+}

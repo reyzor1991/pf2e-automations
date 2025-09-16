@@ -1,0 +1,19 @@
+{
+  "uuid": "ZSyPolgGrB3RQY6k",
+  "group": "npc",
+  "name": "Predator's Advantage",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.bestiary-effects.Item.c5zOwEre2Uy9MCFo",
+      "target": "TargetsEffect",
+      "predicate": [
+        "origin:item:slug:predators-advantage"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "FWuDxhIAIX3pi8Ge",
+  "img": "icons/creatures/magical/spirit-fear-energy-pink.webp",
+  "name": "Effect: Remorseless Lash",
+  "system": {
+    "description": {
+      "value": "Its Frightened condition can't decrease to less than 1"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-remorseless-lash"
+  },
+  "type": "effect",
+  "_key": "!items!FWuDxhIAIX3pi8Ge"
+}

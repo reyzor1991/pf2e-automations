@@ -1,0 +1,46 @@
+{
+  "_id": "5MNn6cmXxbORB8x8",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Grabbed until end of attacker next turn",
+  "system": {
+    "description": {
+      "value": "<p>Target is @UUID[Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei] until the end of your next turn unless you move or your target @UUID[Compendium.pf2e.actionspf2e.SkZAQRkLLkmBQNB9]{Escapes}.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.kWc1fhmv9LBiTuei"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-grabbed-until-end-of-attacker-next-turn"
+  },
+  "type": "effect",
+  "_key": "!items!5MNn6cmXxbORB8x8"
+}

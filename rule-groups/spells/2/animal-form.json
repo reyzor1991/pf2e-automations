@@ -1,0 +1,28 @@
+{
+  "uuid": "mlrQSbRFVnjWkDqj",
+  "group": "spell",
+  "name": "Animal Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.wp09USMB3GIW1qbp"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.h68Fr3fht1319txv",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:animal-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

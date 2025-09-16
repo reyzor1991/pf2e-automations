@@ -1,0 +1,72 @@
+{
+  "_id": "CTZMnSK0YS818tXV",
+  "img": "icons/creatures/invertebrates/spider-mandibles-brown.webp",
+  "name": "Spell Effect: Insect Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.6IvTWcispcDaw88N"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.amTa9jSml9ioKduN"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.DENMzySYANjUBs4O"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.llrOM8rPP9nxIuEN"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.bOjuEX3qj7XAOoDF"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.782NyomkDHyfsUn6"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectInsectForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectInsectForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-insect-form"
+  },
+  "type": "effect",
+  "_key": "!items!CTZMnSK0YS818tXV"
+}

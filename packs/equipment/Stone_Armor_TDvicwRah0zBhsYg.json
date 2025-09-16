@@ -1,0 +1,53 @@
+{
+  "_id": "TDvicwRah0zBhsYg",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "name": "Stone Armor",
+  "system": {
+    "acBonus": 4,
+    "baseItem": "half-plate",
+    "bulk": {
+      "value": 1
+    },
+    "category": "medium",
+    "checkPenalty": -2,
+    "containerId": null,
+    "description": {
+      "value": "<p>Armor created with @UUID[Compendium.pf2e.feats-srd.Item.plEZoAyPwjAOdY4e]</p>"
+    },
+    "dexCap": 1,
+    "group": "plate",
+    "hardness": 0,
+    "hp": {
+      "max": 0,
+      "value": 0
+    },
+    "level": {
+      "value": 0
+    },
+    "material": {
+      "grade": null,
+      "type": null
+    },
+    "price": {},
+    "publication": {},
+    "quantity": 1,
+    "rules": [],
+    "runes": {
+      "potency": 0,
+      "property": [],
+      "resilient": 0
+    },
+    "size": "med",
+    "speedPenalty": -10,
+    "strength": 3,
+    "traits": {
+      "rarity": "common",
+      "value": [
+        ""
+      ]
+    },
+    "slug": "hardwood-armor"
+  },
+  "type": "armor",
+  "_key": "!items!TDvicwRah0zBhsYg"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "h5c9cpFfQNxWXgnO",
+  "group": "feat",
+  "name": "Forcible Energy",
+  "labels": [
+    "wizard"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.UJafwv306v75Syy7"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "forcibleEnergy",
+      "target": "none",
+      "predicate": [
+        "origin:item:forcible-energy"
+      ]
+    }
+  ]
+}

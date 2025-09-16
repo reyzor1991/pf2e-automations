@@ -1,0 +1,28 @@
+{
+  "uuid": "B72AE5xFbEeySVwB",
+  "group": "spell",
+  "name": "Devil Form",
+  "labels": [
+    "concentrate",
+    "evil",
+    "lawful",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.dR53f0p15EW7D0xC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "value": "Compendium.pf2e.spell-effects.Item.83md7JyfA5WnWaOZ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:devil-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

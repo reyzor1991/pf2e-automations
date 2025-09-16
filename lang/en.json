@@ -1,5 +1,8 @@
 {
   "pf2e-automations": {
+    "FormRules": {
+      "Title": "Rules"
+    },
     "targetType": {
       "None": "None",
       "SelfEffect": "Apply effect to self when action is used",
@@ -19,75 +22,82 @@
       "TargetDamage": "Damage target",
       "RunMacro": "Run Macro",
       "TargetAllyWithinRange": "Target Self And Ally within range",
-      "DecreaseDamageBadgeEffect": "Decrease Badge Value of Damage Effect",
+      "OnlyAllyWithinRange": "Ally within range",
+      "DecreaseBadgeEffect": "Decrease Badge Value of Effect",
+      "IncreaseBadgeEffect": "Increase Badge Value of Effect",
+      "TargetDecreaseBadgeEffect": "Decrease Badge Value of Target Effect",
+      "TargetIncreaseBadgeEffect": "Increase Badge Value of Target Effect",
       "PartyEffect": "Apply effect to members of Party",
-      "TurnOnOption": "Turn On Option"
-    },
-    "requirementType": {
-      "None": "None",
-      "Success": "Message outcome is success",
-      "CriticalSuccess": "Message outcome is critical success",
-      "AnySuccess": "Message outcome is any success",
-      "Failure": "Message outcome is failure",
-      "CriticalFailure": "Message outcome is critical failure",
-      "AnyFailure": "Message outcome is any failure",
-      "ActorHasEffect": "Actor under Effect",
-      "ActorHasEffectBySlug": "Actor under Effect (slug)",
-      "ActorHasFeat": "Actor has Feat",
-      "TargetIsAnother": "Target is another actor",
-      "ActorHasCondition": "Actor under Condition",
-      "TargetHasEffect": "Target under Effect",
-      "TargetHasCondition": "Target under Condition",
-      "TargetHasTrait": "Target has Trait",
-      "SelfOrTargetHasEffect": "Actor or Target has Trait",
-      "ItemHasTrait": "Item has Trait",
-      "ActorName": "Actor name is",
-      "LvlGte": "Item level great or equals",
-      "LvlLess": "Item level less than",
-      "TargetsNumber": "Number of Targets",
-      "UseEquipment": "Equipment is used",
-      "MessageDCLabel": "Message DC Label includes text",
-      "WieldLoadedOneHandedRanged": "Actor wield a loaded one-handed ranged weapon"
-    },
-    "triggerType": {
-      "None": "None",
-      "EqualsSlug": "Message slug Equals to",
-      "HasOption": "Message Has Option",
-      "HasDomain": "Message Has Domain",
-      "HasRune": "Item Has Rune",
-      "EqualsSourceId": "Message Item SourceId Equals to"
-    },
-    "operator": {
-      "AND": "And",
-      "OR": "Or",
-      "NOT": "Not"
+      "TurnOnOption": "Turn On Option",
+      "TurnOffOption": "Turn Off Option",
+      "ImmunitySelfEffect": "Add Immunity to Actor",
+      "IncreaseConditionByStep": "Increase condition by step",
+      "IncreaseTargetConditionByStep": "Increase target condition by step",
+      "SelfAddPersistentDamage": "Apply Persistent Damage to self",
+      "TargetAddPersistentDamage": "Apply Persistent Damage to target",
+      "OriginEffect": "Apply Effect to owner"
     },
     "SETTINGS": {
-      "messageCreateHandlers": {
-        "name": "Message create handlers",
-        "label": "Manage Handlers",
-        "hint": ""
+      "Menu": {
+        "rollSettingsMenu.Name": "Roll Settings Menu",
+        "combatSettingsMenu.Name": "Combat Settings Menu",
+        "playerSettingsMenu.Name": "QoL Menu",
+        "hideRollMenu.Name": "Hide Roll Menu",
+        "incapacitationRollMenu.Name": "Incapacitation Roll Menu"
       },
-      "updateActorHandlers": {
-        "name": "Update Actor Handlers",
-        "label": "Manage Handlers",
-        "hint": ""
-      },
-      "updateItemHandlers": {
-        "name": "Update Item Handlers",
-        "label": "Manage Handlers",
-        "hint": ""
-      },
-      "deleteItemHandlers": {
-        "name": "Delete Item Handlers",
-        "label": "Manage Handlers",
-        "hint": ""
-      },
-      "createItemHandlers": {
-        "name": "Create Item Handlers",
-        "label": "Manage Handlers",
-        "hint": ""
-      }
+      "blindRoll.name": "All skill checks as blind roll",
+      "blindRoll.hint": "Next 2 settings using for overriding logic",
+      "onlySkillBlindRoll.name": "Only blind rolls for specific skills",
+      "onlySkillBlindRoll.hint": "Add skills using comma. Has bigger priority",
+      "skipSkillBlindRoll.name": "Skip blind rolls for skills",
+      "skipSkillBlindRoll.hint": "Add skills using comma",
+      "hiddenTokenBlindRoll.name": "Hidden token rolls are blind",
+      "hiddenTokenBlindRoll.hint": "",
+      "hidePrivateGMRolls.name": "Hide Private GM Rolls",
+      "hidePrivateGMRolls.hint": "",
+      "hidePrivatePlayerRolls.name": "Hide Private Player Rolls",
+      "hidePrivatePlayerRolls.hint": "",
+      "avoidNoticeRoll.name": "Roll when activate Exploration Activity",
+      "avoidNoticeRoll.hint": "Set value from roll for Exploration Activity like Avoid Notice",
+      "stealthRollInitiative.name": "Use last Stealth Roll as initiative",
+      "stealthRollInitiative.hint": "Use last result from Stealth/Hidden/Sneak as initiative",
+      "avoidNoticeRollSecret.name": "Exploration Activity Roll in secret",
+      "avoidNoticeRollSecret.hint": "If enabled - Exploration Activity Roll in secret, hide result from PCs at Party Sheet",
+      "flatCheck.name": "Roll basic flat checks",
+      "flatCheck.hint": "Flat checks - Stupefied, Confused, Deafened, Grabbed, Blinded, Dazzled, Hidden, Concealed, Invisible, Undetected",
+      "basicActionRoll.name": "Basic Action Roll",
+      "basicActionRoll.hint": "Posting basic action in chat trigger related roll",
+      "minMaxDamage.name": "Update damage to min/max value",
+      "minMaxDamage.hint": "",
+      "deleteExploration.name": "Delete exploration activities when combat start",
+      "deleteExploration.hint": "",
+      "sustainedSpells.name": "Sustained Spells",
+      "sustainedSpells.hint": "Notification of actor to sustain any action or spell with the sustain trait",
+      "openNpcSheet.name": "Open NPC Sheet during encounter",
+      "openNpcSheet.hint": "",
+      "allSpellsAuditory.name": "All spells have Auditory trait excluding spells with Subtle traits",
+      "allSpellsAuditory.hint": "This feature need for Flat check - Deafened",
+      "pingMessage.name": "Add ping button to all chat cards",
+      "pingMessage.hint": "Have a way to alert user of each actor useful for finding which creature the damage belongs to",
+      "useAutomationThaumaturge.name": "Use automation for Thaumaturge class",
+      "useAutomationThaumaturge.hint": "Turn off if there are conflicts with EV module",
+      "fastHealingTime.name": "Apply fast healing when time changed",
+      "fastHealingTime.hint": "",
+      "removeExplorationActivity.name": "Remove all Exploration Activities after a rest",
+      "removeExplorationActivity.hint": "",
+      "conditionDC.name": "Set DC of condition when added to Actor",
+      "conditionDC.hint": "Right now only for sickened",
+      "partyVision.name": "Auto Toggle Shared Party Vision during encounter",
+      "partyVision.hint": "Off for combat, on when encounter ended",
+      "highlightSpells.name": "Highlight Heightened version of Spell",
+      "highlightSpells.hint": "",
+      "showEffectRelationship.name": "Show Effect Relationship",
+      "showEffectRelationship.hint": "",
+      "showEffectRelationship.choices.no": "No",
+      "showEffectRelationship.choices.press": "When press Alt",
+      "showEffectRelationship.choices.always": "Always show effects relationships",
+      "incapacitation.name": "Incapacitation mode",
+      "incapacitation.hint": ""
     }
   }
 }

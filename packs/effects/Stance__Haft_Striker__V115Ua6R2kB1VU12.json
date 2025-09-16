@@ -1,0 +1,58 @@
+{
+  "_id": "V115Ua6R2kB1VU12",
+  "img": "icons/svg/circle.svg",
+  "name": "Stance: Haft Striker",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "category": "simple",
+        "damage": {
+          "base": {
+            "damageType": "bludgeoning",
+            "dice": 1,
+            "die": "d4"
+          }
+        },
+        "group": "club",
+        "img": "icons/weapons/staves/staff-simple.webp",
+        "key": "Strike",
+        "label": "Haft",
+        "range": null,
+        "traits": [
+          "finesse",
+          "agile"
+        ]
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "stance-haft-striker"
+  },
+  "type": "effect",
+  "_key": "!items!V115Ua6R2kB1VU12"
+}

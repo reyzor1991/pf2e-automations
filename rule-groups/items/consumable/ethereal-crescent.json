@@ -1,0 +1,27 @@
+{
+  "uuid": "aTMjUdmuiay9DZDa",
+  "group": "equipment",
+  "name": "Ethereal Crescent",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.wYDTn07x34o2slUD",
+    "Compendium.pf2e.equipment-srd.Item.4BoDAxtqWYIgXayF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.Vk9Fwo0Xl1EF9fEF",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:ethereal-crescent",
+            "consumable:ethereal-crescent-greater"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

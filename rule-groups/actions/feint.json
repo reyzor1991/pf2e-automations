@@ -1,0 +1,71 @@
+{
+  "uuid": "exAxS6uZWbUuQbKK",
+  "group": "action",
+  "name": "Feint",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "feint",
+      "target": "none",
+      "predicate": [
+        "target",
+        "action:feint",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "feintCriticalFailure",
+      "target": "none",
+      "predicate": [
+        "target",
+        "action:feint",
+        "outcome:criticalFailure"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteFeintEffects",
+      "target": "none",
+      "predicate": [
+        "item:melee"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "deleteFeintEffects",
+      "target": "none",
+      "predicate": [
+        "item:melee",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

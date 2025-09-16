@@ -1,0 +1,26 @@
+{
+  "uuid": "ZGqsXsgZHNN88U6p",
+  "group": "feat",
+  "name": "Raise a Tome",
+  "labels": [
+    "magus"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.JoxEspM0kbCop7og"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.MSf73VBpSKCA4RNc",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:raise-a-tome"
+      ]
+    }
+  ],
+  "complexRules": []
+}

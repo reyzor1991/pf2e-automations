@@ -1,0 +1,72 @@
+{
+  "_id": "R6wqd5rQTBNi7WaO",
+  "img": "icons/magic/control/silhouette-aura-energy.webp",
+  "name": "Spell Effect: Element Embodied",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.J60rN48XzBGHmR6m"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.jp88SCE3VCRAyE6x"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.lmAwCy7isFvLYdGd"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.w1HwO7huxJoK0gHY"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.lRfiYmsoQMJZ81NQ"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.xPNKt1aQc3dquKlt"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectElementEmbodied"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectElementEmbodied}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-element-embodied"
+  },
+  "type": "effect",
+  "_key": "!items!R6wqd5rQTBNi7WaO"
+}

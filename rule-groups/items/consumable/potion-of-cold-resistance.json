@@ -1,0 +1,52 @@
+{
+  "uuid": "w2Kb8uihTxKxAXJt",
+  "group": "equipment",
+  "name": "Potion of Cold Resistance",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.VZmUrseCZs9xMaxt",
+    "Compendium.pf2e.equipment-srd.Item.mRs24OwmGPjoIDvO",
+    "Compendium.pf2e.equipment-srd.Item.evdDpgFpiFZt9UyA"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.giTLR7zUHTs9ysBQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-cold-resistance-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.BUTZM5XEhAtAu7OB",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-cold-resistance-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KYzuzY8TNZmwqgBx",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-cold-resistance-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

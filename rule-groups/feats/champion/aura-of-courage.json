@@ -1,0 +1,28 @@
+{
+  "uuid": "MRqI1XauFriOOyQO",
+  "group": "feat",
+  "name": "Aura of Courage",
+  "labels": [
+    "champion"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.TIwk07T0OxSbcOpJ"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "end-turn",
+      "extend": null,
+      "range": null,
+      "value": "auraOfCourage",
+      "target": "none",
+      "predicate": [
+        "feat:aura-of-courage",
+        "champions-aura"
+      ]
+    }
+  ]
+}

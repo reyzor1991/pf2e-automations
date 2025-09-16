@@ -1,0 +1,75 @@
+{
+  "uuid": "phqrHFYz6XT4EAiV",
+  "group": "spell",
+  "name": "Bane",
+  "labels": [
+    "aura",
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.7ZinJNzxq0XF0oMx"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.FcUe8TT7bhqlURIf",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:bane",
+        {
+          "not": "self:effect:aura-bane"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.FcUe8TT7bhqlURIf",
+      "target": "IncreaseBadgeEffect",
+      "predicate": [
+        "origin:item:bane",
+        "self:effect:aura-bane"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "applyBaneImmunity",
+      "target": "none",
+      "predicate": [
+        "item:slug:bane",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "create-item",
+      "extend": null,
+      "range": null,
+      "value": "rollSavingThrowVsBane",
+      "target": "none",
+      "predicate": [
+        "effect:origin",
+        "effect:slug:spell-effect-bane"
+      ]
+    }
+  ]
+}

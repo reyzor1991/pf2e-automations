@@ -1,0 +1,26 @@
+{
+  "uuid": "GJCACSHkEClvZNGi",
+  "group": "feat",
+  "name": "Consult The Stars",
+  "labels": [
+    "lizardfolk"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.NySPRgD0FjZY2QGs"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.3NGsVS7Bc50QB38x",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:consult-the-stars"
+      ]
+    }
+  ],
+  "complexRules": []
+}

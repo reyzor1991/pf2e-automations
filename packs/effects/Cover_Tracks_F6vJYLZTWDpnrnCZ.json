@@ -1,0 +1,38 @@
+{
+  "_id": "F6vJYLZTWDpnrnCZ",
+  "img": "icons/tools/smithing/horseshoe-steel-blue.webp",
+  "name": "Cover Tracks",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.SB7cMECVtE06kByk]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-cover-tracks"
+  },
+  "type": "effect",
+  "_key": "!items!F6vJYLZTWDpnrnCZ"
+}

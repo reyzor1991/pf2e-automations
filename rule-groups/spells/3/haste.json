@@ -1,0 +1,50 @@
+{
+  "uuid": "c7XDxPzsctmYuzSE",
+  "group": "spell",
+  "name": "Haste",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.o6YCGx4lycsYpww4"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.U6JZ3NYNtxjXeVdE",
+      "target": "SelfOrTargetsEffect",
+      "predicate": [
+        "origin:item:haste",
+        {
+          "gte": [
+            "origin:item:level",
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.U6JZ3NYNtxjXeVdE",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:haste",
+        {
+          "lt": [
+            "origin:item:level",
+            7
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

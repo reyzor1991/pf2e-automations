@@ -1,0 +1,26 @@
+{
+  "uuid": "MQKTbvNofs4cVU4K",
+  "group": "equipment",
+  "name": "Ascendant Dragon Spirit",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.7fN8xgFBxqrOkCJW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.vJfRASrNBBYW6MEC",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ascendant-dragon-spirit"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,73 @@
+{
+  "uuid": "kFzMG5mR7cJz8Buh",
+  "group": "spell",
+  "name": "Darkvision",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.pZTqGY1MLRjgKasV"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.IXS15IQXYCZ8vsmX",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:darkvision",
+        {
+          "lt": [
+            "origin:item:level",
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.inNfTmtWpsxeGBI9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:darkvision",
+        {
+          "gte": [
+            "origin:item:level",
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.IXS15IQXYCZ8vsmX",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:darkvision",
+        {
+          "gte": [
+            "origin:item:level",
+            3
+          ]
+        },
+        {
+          "lt": [
+            "origin:item:level",
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

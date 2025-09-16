@@ -1,0 +1,43 @@
+{
+  "_id": "IDhtOTQmmc8zSNki",
+  "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+  "name": "Effect: Protector's Sphere",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 4
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "all-damage",
+        "value": "((@item.level)-1)"
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-protectors-sphere"
+  },
+  "type": "effect",
+  "_key": "!items!IDhtOTQmmc8zSNki"
+}

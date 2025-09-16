@@ -1,0 +1,26 @@
+{
+  "uuid": "Y47NbrhPnvABH7ei",
+  "group": "equipment",
+  "name": "Energizing Tea",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.RK03uy9os4H0dUfS"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.AJLURqXGLalmV9wN",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:energizing-tea"
+      ]
+    }
+  ],
+  "complexRules": []
+}

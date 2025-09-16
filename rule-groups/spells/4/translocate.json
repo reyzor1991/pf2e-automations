@@ -1,0 +1,34 @@
+{
+  "uuid": "kPwrWF4jjebN6pyP",
+  "group": "spell",
+  "name": "Translocate",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "teleportation"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.VlNcjmYyu95vOUe8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Ru9goDwRnRAzcQU3",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:translocate",
+        {
+          "gte": [
+            "origin:item:level",
+            5
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

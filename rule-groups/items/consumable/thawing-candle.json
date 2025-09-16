@@ -1,0 +1,24 @@
+{
+  "uuid": "Vv5dsqZ6w3inCVDt",
+  "group": "equipment",
+  "name": "Thawing Candle",
+  "labels": [
+    "consumable"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.wvzrq1Lh9Y8PpxBs",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:thawing-candle"
+      ]
+    }
+  ],
+  "complexRules": []
+}

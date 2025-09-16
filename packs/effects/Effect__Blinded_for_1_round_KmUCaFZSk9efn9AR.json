@@ -1,0 +1,46 @@
+{
+  "_id": "KmUCaFZSk9efn9AR",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Blinded for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-blinded-round"
+  },
+  "type": "effect",
+  "_key": "!items!KmUCaFZSk9efn9AR"
+}

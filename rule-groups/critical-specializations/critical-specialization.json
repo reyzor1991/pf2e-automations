@@ -1,0 +1,197 @@
+{
+  "uuid": "uYv7S8tdeXXpmd8a",
+  "group": "action",
+  "name": "Critical Specialization",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "critical-specialization-brawling"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "stunned",
+      "target": "SelfAddCondition",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "critical-specialization-sling",
+            "critical-specialization-firearm"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "prone",
+      "target": "SelfAddCondition",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "critical-specialization-flail",
+            "critical-specialization-hammer"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationAxe",
+      "target": "none",
+      "predicate": [
+        "check:outcome:critical-success",
+        "critical-specialization",
+        {
+          "or": [
+            "item:group:axe",
+            "crit-item-1:group:axe",
+            "crit-item-2:group:axe"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationBow",
+      "target": "none",
+      "predicate": [
+        "check:outcome:critical-success",
+        "critical-specialization",
+        {
+          "or": [
+            "item:group:bow",
+            "crit-item-1:group:bow",
+            "crit-item-2:group:bow"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationSpear",
+      "target": "none",
+      "predicate": [
+        "check:outcome:critical-success",
+        "critical-specialization",
+        {
+          "or": [
+            "item:group:spear",
+            "crit-item-1:group:spear",
+            "crit-item-2:group:spear"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationSword",
+      "target": "none",
+      "predicate": [
+        "check:outcome:critical-success",
+        "critical-specialization",
+        {
+          "or": [
+            "item:group:sword",
+            "crit-item-1:group:sword",
+            "crit-item-2:group:sword"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationFortitudeRollSavingThrow",
+      "target": "none",
+      "predicate": [
+        "critical-specialization",
+        "check:outcome:critical-success",
+        {
+          "or": [
+            "item:group:brawling",
+            "item:group:firearm",
+            "item:group:hammer",
+            "crit-item-1:group:brawling",
+            "crit-item-1:group:firearm",
+            "crit-item-1:group:hammer",
+            "crit-item-2:group:brawling",
+            "crit-item-2:group:firearm",
+            "crit-item-2:group:hammer"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "criticalSpecializationReflexRollSavingThrow",
+      "target": "none",
+      "predicate": [
+        "critical-specialization",
+        "check:outcome:critical-success",
+        {
+          "or": [
+            "item:group:sling",
+            "crit-item-1:group:sling",
+            "crit-item-2:group:sling",
+            "item:group:flail",
+            "crit-item-1:group:flail",
+            "crit-item-2:group:flail"
+          ]
+        }
+      ]
+    }
+  ]
+}

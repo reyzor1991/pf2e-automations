@@ -1,0 +1,143 @@
+{
+  "_id": "F4YT1SP3GovpDX48",
+  "img": "icons/equipment/hand/glove-spiked-leather-grey.webp",
+  "name": "Spell Effect: Shielded Arm",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.attributes.shield",
+        "predicate": [
+          {
+            "or": [
+              "self:type:character",
+              "self:type:npc"
+            ]
+          }
+        ],
+        "value": {
+          "brackets": [
+            {
+              "end": 2,
+              "value": {
+                "ac": 2,
+                "broken": false,
+                "brokenThreshold": 0,
+                "destroyed": false,
+                "hardness": 4,
+                "hp": {
+                  "max": 15,
+                  "value": 15
+                }
+              }
+            },
+            {
+              "end": 4,
+              "start": 3,
+              "value": {
+                "ac": 2,
+                "broken": false,
+                "brokenThreshold": 0,
+                "destroyed": false,
+                "hardness": 8,
+                "hp": {
+                  "max": 30,
+                  "value": 30
+                }
+              }
+            },
+            {
+              "end": 6,
+              "start": 5,
+              "value": {
+                "ac": 2,
+                "broken": false,
+                "brokenThreshold": 0,
+                "destroyed": false,
+                "hardness": 12,
+                "hp": {
+                  "max": 45,
+                  "value": 45
+                }
+              }
+            },
+            {
+              "end": 8,
+              "start": 7,
+              "value": {
+                "ac": 2,
+                "broken": false,
+                "brokenThreshold": 0,
+                "destroyed": false,
+                "hardness": 16,
+                "hp": {
+                  "max": 60,
+                  "value": 60
+                }
+              }
+            },
+            {
+              "start": 9,
+              "value": {
+                "ac": 2,
+                "broken": false,
+                "brokenThreshold": 0,
+                "destroyed": false,
+                "hardness": 20,
+                "hp": {
+                  "max": 75,
+                  "value": 75
+                }
+              }
+            }
+          ],
+          "field": "item|system.level.value"
+        }
+      },
+      {
+        "domain": "all",
+        "key": "RollOption",
+        "option": "self:shield:equipped",
+        "predicate": [
+          {
+            "or": [
+              "self:type:character",
+              "self:type:npc"
+            ]
+          }
+        ]
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-shielded-arm"
+  },
+  "type": "effect",
+  "_key": "!items!F4YT1SP3GovpDX48"
+}

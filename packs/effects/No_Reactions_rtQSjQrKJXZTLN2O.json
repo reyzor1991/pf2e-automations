@@ -1,0 +1,43 @@
+{
+  "_id": "rtQSjQrKJXZTLN2O",
+  "img": "icons/sundries/misc/lock-open-yellow.webp",
+  "name": "No Reactions",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.noUseReactions",
+        "value": true
+      }
+    ],
+    "slug": "effect-no-reactions",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 1
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": "turn-start",
+      "sustained": false
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false
+  },
+  "_key": "!items!rtQSjQrKJXZTLN2O"
+}

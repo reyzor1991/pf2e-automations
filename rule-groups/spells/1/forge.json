@@ -1,0 +1,28 @@
+{
+  "uuid": "2xsIgGQZEc7NFVFa",
+  "group": "spell",
+  "name": "Forge",
+  "labels": [
+    "fire"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.FTR8m4qrhYzTRyrD"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.zbTpf11NtbmizuzR",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:forge",
+        "self:trait:metal"
+      ]
+    }
+  ],
+  "complexRules": []
+}

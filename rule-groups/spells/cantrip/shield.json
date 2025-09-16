@@ -1,0 +1,47 @@
+{
+  "uuid": "t3waaEAjWbjD7TrQ",
+  "group": "spell",
+  "name": "Shield",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "addShieldEffect",
+      "target": "none",
+      "predicate": [
+        "origin:item:shield"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-taken",
+      "extend": null,
+      "range": null,
+      "value": "deleteShieldEffect",
+      "target": "none",
+      "predicate": [
+        "self:effect:shield",
+        "shield:block"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-taken",
+      "extend": null,
+      "range": null,
+      "value": "deleteShieldEffectAmp",
+      "target": "none",
+      "predicate": [
+        "self:effect:shield-amp",
+        "shield:block"
+      ]
+    }
+  ]
+}

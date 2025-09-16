@@ -1,0 +1,36 @@
+{
+  "uuid": "i2htBnH5iw54kz3q",
+  "group": "feat",
+  "name": "Red-Gold Mortality",
+  "labels": [
+    "examplar"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.zpeIbe0nQG52YU7a"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "redGoldMortalityEffect",
+      "target": "none",
+      "predicate": [
+        "feat:red-gold-mortality"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "pre-update-actor",
+      "extend": null,
+      "range": null,
+      "value": "redGoldMortalityHealing",
+      "target": "none",
+      "predicate": []
+    }
+  ]
+}

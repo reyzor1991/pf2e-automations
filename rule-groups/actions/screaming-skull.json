@@ -1,0 +1,35 @@
+{
+  "uuid": "86bGcVvjkZRlCbnX",
+  "group": "action",
+  "name": "Screaming Skull",
+  "labels": [
+    "auditory",
+    "emotion",
+    "fear",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.XH133DE3daobeav1",
+    "Compendium.pf2e.bestiary-family-ability-glossary.Item.MAC97gjFcdiqLyhp"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.iykn477haVn2qI6y",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "origin:item:screaming-skull",
+            "origin:item:skeleton-screaming-skull"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

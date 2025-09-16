@@ -1,0 +1,43 @@
+{
+  "_id": "iqvdFq5V1b2HSAW4",
+  "img": "icons/equipment/shield/round-wooden-boss-steel-yellow-blue.webp",
+  "name": "Effect: Wooden Shield",
+  "system": {
+    "description": {
+      "value": "<p>Worn shield - @UUID[Compendium.pf2e-automations.equipment.Item.gkqzWcFgbib1BFne]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.feats-srd.Item.jM72TjJ965jocBV8"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-wooden-shield"
+  },
+  "type": "effect",
+  "_key": "!items!iqvdFq5V1b2HSAW4"
+}

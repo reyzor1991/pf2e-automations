@@ -1,0 +1,26 @@
+{
+  "uuid": "3sFti5KlBmcJzcPm",
+  "group": "equipment",
+  "name": "Amphisbaena Spittle",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Hoe17WNDQ2PQd9JZ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.s0Qfrd9asEgT9wUL",
+      "target": "TargetsEffect",
+      "predicate": [
+        "consumable:amphisbaena-spittle"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "eZX5UxxbbbTyFaiE",
+  "group": "action",
+  "name": "Treat Wounds",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "treatWoundsAction",
+      "target": "none",
+      "predicate": ["action:treat-wounds"]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "uuid": "JnWWuUzsTusW9GnN",
+  "group": "feat",
+  "name": "The Oscillating Wave",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "theOscillatingWaveRefocus",
+      "target": "none",
+      "predicate": [
+        "feature:the-oscillating-wave",
+        "origin:item:refocus"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "theOscillatingWave",
+      "target": "none",
+      "predicate": [
+        "feature:the-oscillating-wave",
+        "conservation-of-energy",
+        {
+          "or": [
+            "item:slug:breathe-fire",
+            "item:slug:heat-metal",
+            "item:slug:fireball",
+            "item:slug:fire-shield",
+            "item:slug:cone-of-cold",
+            "item:slug:flame-vortex",
+            "item:slug:fiery-body",
+            "item:slug:polar-ray",
+            "item:slug:falling-stars",
+            "item:slug:produce-flame",
+            "item:slug:ray-of-frost",
+            "item:slug:ignition",
+            "item:slug:frostbite"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "theOscillatingWave",
+      "target": "none",
+      "predicate": [
+        "origin:item:trait:mindshift",
+        "origin:item:type:feat"
+      ]
+    }
+  ]
+}

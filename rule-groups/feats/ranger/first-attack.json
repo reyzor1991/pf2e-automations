@@ -1,0 +1,40 @@
+{
+  "uuid": "iCDEjy8FZblMZ8SS",
+  "group": "feat",
+  "name": "First Attack",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "toggleFirstAttack",
+      "target": "none",
+      "predicate": [
+        "first-attack"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "toggleFirstAttack",
+      "target": "none",
+      "predicate": [
+        "first-attack",
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

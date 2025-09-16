@@ -1,0 +1,66 @@
+{
+  "uuid": "FvMP8kKMVX6S2Jb5",
+  "group": "equipment",
+  "name": "Sanguine Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.vmwrU3lz1HFfadAS",
+    "Compendium.pf2e.equipment-srd.Item.pP7RqEkNYg5ayWqx",
+    "Compendium.pf2e.equipment-srd.Item.VIHsu1q3078gdQut",
+    "Compendium.pf2e.equipment-srd.Item.se2g3LNsmQSsRv9w"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.yY8vPNmDdQQ5d7n6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sanguine-mutagen-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.sZPXKQACna6YDsVX",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sanguine-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5VI5NCEhuorERXTi",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sanguine-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.FtBfE4yrbg9fxtxr",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:sanguine-mutagen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

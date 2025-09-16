@@ -1,0 +1,27 @@
+{
+  "uuid": "KH5EjjGlDbei4632",
+  "group": "action",
+  "name": "Hustle",
+  "labels": [
+    "exploration",
+    "move"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.JuqmIAnkL9hVGai8"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.vNUrKvoOSvEnqzhM",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:hustle"
+      ]
+    }
+  ],
+  "complexRules": []
+}

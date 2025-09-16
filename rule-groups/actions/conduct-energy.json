@@ -1,0 +1,24 @@
+{
+  "uuid": "hDSNMa3KMyWHoqsj",
+  "group": "action",
+  "name": "Conduct Energy",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.BKnN9la3WNrRgZ6n"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.lU8IO9FIGK1DXVMy",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:conduct-energy"
+      ]
+    }
+  ],
+  "complexRules": []
+}

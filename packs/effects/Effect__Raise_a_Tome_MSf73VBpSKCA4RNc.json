@@ -1,0 +1,119 @@
+{
+  "_id": "MSf73VBpSKCA4RNc",
+  "img": "icons/sundries/books/book-symbol-triangle-silver-purple.webp",
+  "name": "Effect: Raise a Tome",
+  "system": {
+    "description": {
+      "value": "You raise up the book you're holding and flip it open to defend yourself and expedite your studies. The book remains raised until the start of your next turn. While you have a book raised, you gain a +2 circumstance bonus to AC and a +1 circumstance bonus to Recall Knowledge to identify creatures using a skill related to the subject of the book (Arcana if you're using your spellbook). This bonus is in addition to any item bonus the book normally gives to the check."
+    },
+    "duration": {
+      "expiry": "round-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": 2
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [
+          "action:recall-knowledge"
+        ],
+        "selector": [
+          "{item|flags.pf2e.rulesSelections.featEffectRaiseTome}-check"
+        ],
+        "type": "circumstance",
+        "value": 1
+      },
+      {
+        "choices": [
+          {
+            "label": "PF2E.SkillArcana",
+            "value": "arcana"
+          },
+          {
+            "label": "PF2E.SkillCrafting",
+            "value": "crafting"
+          },
+          {
+            "label": "PF2E.SkillMedicine",
+            "value": "medicine"
+          },
+          {
+            "label": "PF2E.SkillNature",
+            "value": "nature"
+          },
+          {
+            "label": "PF2E.SkillOccultism",
+            "value": "occultism"
+          },
+          {
+            "label": "PF2E.SkillReligion",
+            "value": "religion"
+          },
+          {
+            "label": "PF2E.SkillSociety",
+            "value": "society"
+          }
+        ],
+        "flag": "featEffectRaiseTome",
+        "key": "ChoiceSet",
+        "prompt": "Select a subject of Tome"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.attributes.shield",
+        "predicate": [
+          {
+            "or": [
+              "self:type:character",
+              "self:type:npc"
+            ]
+          }
+        ],
+        "value": {
+          "hardness": 3,
+          "ac": 0,
+          "broken": false,
+          "brokenThreshold": 6,
+          "destroyed": false,
+          "hp": {
+            "max": 12,
+            "value": 12
+          },
+          "icon": "icons/sundries/books/book-symbol-triangle-silver-purple.webp",
+          "itemId": "{item|_id}",
+          "name": "Tome",
+          "raised": true
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-raise-a-tome"
+  },
+  "type": "effect",
+  "_key": "!items!MSf73VBpSKCA4RNc"
+}

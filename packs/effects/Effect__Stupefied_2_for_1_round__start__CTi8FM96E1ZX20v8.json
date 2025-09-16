@@ -1,0 +1,53 @@
+{
+  "_id": "CTi8FM96E1ZX20v8",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Stupefied 2 for 1 round (start)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.e1XGnhKNSQIm5IXg] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.e1XGnhKNSQIm5IXg"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-stupefied-2-start-round"
+  },
+  "type": "effect",
+  "_key": "!items!CTi8FM96E1ZX20v8"
+}

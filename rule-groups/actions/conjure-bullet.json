@@ -1,0 +1,23 @@
+{
+  "uuid": "LlqmWfdKBeFeCLA2",
+  "group": "action",
+  "name": "Conjure Bullet",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "conjureBullet",
+      "target": "none",
+      "predicate": [
+        "origin:item:slug:conjure-bullet"
+      ]
+    }
+  ]
+}

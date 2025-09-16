@@ -1,0 +1,28 @@
+{
+  "uuid": "aSJ5Wrt5e6dGjt3R",
+  "group": "spell",
+  "name": "Boost Eidolon",
+  "labels": [
+    "cantrip",
+    "concentrate",
+    "summoner"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.HStu2Yhw3iQER9tY"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.h0CKGrgjGNSg21BW",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:boost-eidolon"
+      ]
+    }
+  ],
+  "complexRules": []
+}

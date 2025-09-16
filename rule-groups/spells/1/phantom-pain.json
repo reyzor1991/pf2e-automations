@@ -1,0 +1,43 @@
+{
+  "uuid": "4Zsb9z9wvG4wEapM",
+  "group": "spell",
+  "name": "Phantom Pain",
+  "labels": [
+    "concentrate",
+    "illusion",
+    "manipulate",
+    "mental",
+    "nonlethal"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.R8bqnYiThB6MYTxD"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.rUuXwGQuL9poZsij",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:phantom-pain"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.DOq3IEgQzoWvDdmB",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:phantom-pain"
+      ]
+    }
+  ],
+  "complexRules": []
+}

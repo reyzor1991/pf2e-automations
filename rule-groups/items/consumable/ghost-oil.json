@@ -1,0 +1,26 @@
+{
+  "uuid": "YQ8vabesybkKlPmN",
+  "group": "equipment",
+  "name": "Ghost Oil",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.MIP28AmODXgyF2D2"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.sk5LgfXestDKxCnK",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:ghost-oil"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,36 @@
+{
+  "_id": "ZvveXgPyipw73EFk",
+  "img": "icons/svg/circle.svg",
+  "name": "Ill Omen Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "round-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "ill-omen-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!ZvveXgPyipw73EFk"
+}

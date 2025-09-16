@@ -1,0 +1,50 @@
+{
+  "uuid": "WX6tHFgSWHTyGPrS",
+  "group": "equipment",
+  "name": "Lastwall Soup",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.VcEd9Bh4q5vQfpLv",
+    "Compendium.pf2e.equipment-srd.Item.VeCNWhvEr82ZNoSV",
+    "Compendium.pf2e.equipment-srd.Item.ed8gAxli6Of58kAM"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5o33sch67Z8j5Vom",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:lastwall-soup-improved"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.6A8jsLR7upLGuRiv",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:lastwall-soup"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.neZPoQF4hW3A31dd",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:lastwall-soup-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

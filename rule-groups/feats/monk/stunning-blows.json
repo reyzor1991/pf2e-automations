@@ -1,0 +1,52 @@
+{
+  "uuid": "dVgcStzvtPqhozbA",
+  "group": "feat",
+  "name": "Stunning Blows",
+  "labels": [
+    "monk"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.8bMmGBO6gsMfWZk3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "stunned",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:failure",
+        "origin:item:stunning-blows"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "stunned 3",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "origin:item:stunning-blows"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "stunningBlows",
+      "target": "none",
+      "predicate": [
+        "stunning-blows"
+      ]
+    }
+  ]
+}

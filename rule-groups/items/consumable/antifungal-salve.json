@@ -1,0 +1,36 @@
+{
+  "uuid": "YQggQB82mfH239N5",
+  "group": "equipment",
+  "name": "Antifungal Salve",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.TEd1rxn3CfPeh0jZ",
+    "Compendium.pf2e.equipment-srd.Item.QPaArkVoNOBv5YRU",
+    "Compendium.pf2e.equipment-srd.Item.8v5fKBgw7jsCBu8U",
+    "Compendium.pf2e.equipment-srd.Item.rS3DCw5B0fEVICVW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.MN7OSIN1oeRfV0h6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:antifungal-salve-moderate",
+            "consumable:antifungal-salve-major",
+            "consumable:antifungal-salve-greater",
+            "consumable:antifungal-salve-lesser"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

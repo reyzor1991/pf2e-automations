@@ -1,0 +1,20 @@
+{
+  "uuid": "J8mFYjDjumnCQu74",
+  "group": "npc",
+  "name": "Living Shields",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.bestiary-effects.Item.NXnngvaJXHtskVjU",
+      "range": 5,
+      "target": "OnlyAllyWithinRange",
+      "predicate": [
+        "origin:item:slug:living-shields"
+      ]
+    }
+  ],
+  "complexRules": []
+}

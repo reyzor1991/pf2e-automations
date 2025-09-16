@@ -1,0 +1,40 @@
+{
+  "uuid": "pyH8hSSqV3N7UZDN",
+  "group": "equipment",
+  "name": "Eye of the Unseen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.S4w9D1naKennNO5T",
+    "Compendium.pf2e.equipment-srd.Item.7CCGLWYzsRuodCMM"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.aXDtl9vMp1vIznya",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eye-of-the-unseen"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.1ihy7Jvw5PY4WYbP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eye-of-the-unseen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

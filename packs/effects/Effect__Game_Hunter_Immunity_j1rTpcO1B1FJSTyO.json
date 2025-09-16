@@ -1,0 +1,38 @@
+{
+  "_id": "j1rTpcO1B1FJSTyO",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Game Hunter Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-game-hunter-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!j1rTpcO1B1FJSTyO"
+}

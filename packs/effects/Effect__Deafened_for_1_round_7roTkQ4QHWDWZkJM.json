@@ -1,0 +1,46 @@
+{
+  "_id": "7roTkQ4QHWDWZkJM",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Deafened for 1 round",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR] for 1 round.</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.9PR9y0bi4JPKnHPR"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-deafened-round"
+  },
+  "type": "effect",
+  "_key": "!items!7roTkQ4QHWDWZkJM"
+}

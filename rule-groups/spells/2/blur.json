@@ -1,0 +1,29 @@
+{
+  "uuid": "rs2VgGg5F9i4dFao",
+  "group": "spell",
+  "name": "Blur",
+  "labels": [
+    "concentrate",
+    "illusion",
+    "manipulate",
+    "visual"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.3JG1t3T4mWn6vTke"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.68qdwHfv7nm4Czyr",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:blur"
+      ]
+    }
+  ],
+  "complexRules": []
+}

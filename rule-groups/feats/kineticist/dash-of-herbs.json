@@ -1,0 +1,29 @@
+{
+  "uuid": "SiwbqaBcUv7veWQU",
+  "group": "feat",
+  "name": "Dash of Herbs",
+  "labels": [
+    "kineticist",
+    "wood",
+    "plant"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.azyp4nQgAPDI6nKv"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "dashOfHerbs",
+      "target": "none",
+      "predicate": [
+        "origin:item:dash-of-herbs"
+      ]
+    }
+  ]
+}

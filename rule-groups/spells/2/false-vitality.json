@@ -1,0 +1,27 @@
+{
+  "uuid": "3j7f648PCMA5Peix",
+  "group": "spell",
+  "name": "False Vitality",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.8ViwItUgwT4lOvvb"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.PANUWN5xXC20WBg2",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:false-vitality"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "bgOEVDIMCyWZHTfE",
+  "group": "feat",
+  "name": "Agonizing Rebuke",
+  "labels": [
+    "hobgoblin"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.7hwTeZNq6Jmzmtz4"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "agonizingRebuke",
+      "target": "none",
+      "predicate": [
+        "feat:agonizing-rebuke",
+        "action:demoralize",
+        "target",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "uuid": "NX9cQcicdXN7TQrF",
+  "group": "spell",
+  "name": "Stupefy",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.CQb8HtQ1BPeZmu9h"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.ahWt5JLMFdCC1E3x",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:stupefy"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Cb6PwNjKN4nsEEq2",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:stupefy"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.cO2uqFHFoSxJdNNc",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:stupefy"
+      ]
+    }
+  ],
+  "complexRules": []
+}

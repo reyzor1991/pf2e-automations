@@ -1,0 +1,61 @@
+{
+  "uuid": "ZKvhJHXnmcdko899",
+  "group": "spell",
+  "name": "Fear",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.Rhk5ot7huDlZzLif",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:fear"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "frightened",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:success",
+        "item:slug:fear"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "frightened 2",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:fear"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "frightened 3",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:fear"
+      ]
+    }
+  ],
+  "complexRules": []
+}

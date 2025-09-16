@@ -1,0 +1,66 @@
+{
+  "uuid": "3notE3iNtbgseDHk",
+  "group": "equipment",
+  "name": "Serene Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Yej7lnnDYDZybGqo",
+    "Compendium.pf2e.equipment-srd.Item.ccrdVliTNBh2mNZf",
+    "Compendium.pf2e.equipment-srd.Item.bOPQDM54W8ZDoULY",
+    "Compendium.pf2e.equipment-srd.Item.XEYveTvLH1lJ4jeI"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.jw6Tr9FbErjLAFLQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:serene-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.t7VUJHSUT6bkVUjg",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:serene-mutagen-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5xgapIXn5DwbXHKh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:serene-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.yrbz0rZzp8aZEqbv",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:serene-mutagen-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

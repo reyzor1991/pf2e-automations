@@ -1,0 +1,89 @@
+{
+  "uuid": "KXNkidSjo3s7QjyZ",
+  "group": "spell",
+  "name": "Dehydrate",
+  "labels": [
+    "manipulate",
+    "concentrate",
+    "fire"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.f9m9DayyGy3meqUX"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "enfeebled"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": null,
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:dehydrate",
+        "outcome:failure"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "enfeebled 2"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": null,
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:dehydrate",
+        "outcome:criticalFailure"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "dehydrateEffect",
+      "target": "none",
+      "predicate": [
+        "item:dehydrate",
+        {
+          "not": "self:effect:dehydrate"
+        },
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        }
+      ]
+    }
+  ]
+}

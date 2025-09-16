@@ -1,0 +1,60 @@
+{
+  "_id": "0v7THqjruKWI0wJ4",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Skunk Bomb (Critical Failure)",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3] while @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18].</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18",
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 2
+          }
+        ],
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      },
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-skunk-bomb-critical-failure"
+  },
+  "type": "effect",
+  "_key": "!items!0v7THqjruKWI0wJ4"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "zt5GIv9435SF0fYn",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Aberrant Whispers Immunity",
+  "system": {
+    "description": {
+      "value": "<p>Granted when someone uses @UUID[Compendium.pf2e.spells-srd.qhJfRnkCRrMI4G1O].</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-aberrant-whispers-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!zt5GIv9435SF0fYn"
+}

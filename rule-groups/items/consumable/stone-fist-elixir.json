@@ -1,0 +1,28 @@
+{
+  "uuid": "lUjad3jVH6uEj9Vl",
+  "group": "equipment",
+  "name": "Stone Fist Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-effects.Item.AMhUb42NAJ1aisZp"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.AMhUb42NAJ1aisZp",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:stone-fist-elixir"
+      ]
+    }
+  ],
+  "complexRules": []
+}

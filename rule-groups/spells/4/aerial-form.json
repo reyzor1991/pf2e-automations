@@ -1,0 +1,28 @@
+{
+  "uuid": "sYKd2SgtQ6ofEBrf",
+  "group": "spell",
+  "name": "Aerial Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.NzXpEzcZAjuDTZjK"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.bgOAblEI21XV8Pg3",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:aerial-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

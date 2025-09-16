@@ -1,0 +1,52 @@
+{
+  "uuid": "r4ZDTf8b7H3HPMmJ",
+  "group": "equipment",
+  "name": "Potion of Fire Resistance",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.bDnk4TSzvD5BQmE5",
+    "Compendium.pf2e.equipment-srd.Item.m99u0zXVbyPdK8Mf",
+    "Compendium.pf2e.equipment-srd.Item.1OJxRnPs0viJVrZq"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.OwHOtzI31nrfYKQ9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-fire-resistance-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.8zKGaGrkTd8ALqJO",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-fire-resistance-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.U3wQTWZ3FiLJPA0O",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-fire-resistance-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

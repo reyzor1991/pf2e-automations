@@ -1,0 +1,64 @@
+{
+  "uuid": "FPRHgtYQMvcwgMKh",
+  "group": "equipment",
+  "name": "Life-Boosting Oil",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.9zyrMZF76hMxwizY",
+    "Compendium.pf2e.equipment-srd.Item.AFFaFaAW3IbbYqkL",
+    "Compendium.pf2e.equipment-srd.Item.UOH0A4xNSMnpV6i4",
+    "Compendium.pf2e.equipment-srd.Item.3kELQauVoYunyFcd"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.jrBkGqJyjPTtuuZV",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:life-boosting-oil-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.TD9divhkTjGIegop",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:life-boosting-oil-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KtQXsv7mCvMMGXdK",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:life-boosting-oil-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.SpUT3mCa2NVKruJ9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:life-boosting-oil-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

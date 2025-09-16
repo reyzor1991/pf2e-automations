@@ -1,0 +1,23 @@
+{
+  "uuid": "EHoJ8pEGC6UZGQpY",
+  "group": "action",
+  "name": "Rage",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "rageImmunity",
+      "target": "none",
+      "predicate": [
+        "effect:rage"
+      ]
+    }
+  ]
+}

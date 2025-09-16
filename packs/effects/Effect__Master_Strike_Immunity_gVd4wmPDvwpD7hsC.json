@@ -1,0 +1,38 @@
+{
+  "_id": "gVd4wmPDvwpD7hsC",
+  "img": "icons/skills/melee/weapons-crossed-swords-purple.webp",
+  "name": "Effect: Master Strike Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "days",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-master-strike-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!gVd4wmPDvwpD7hsC"
+}

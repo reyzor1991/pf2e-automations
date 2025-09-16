@@ -1,0 +1,52 @@
+{
+  "uuid": "T3UsVmzjtUxs7Bta",
+  "group": "equipment",
+  "name": "Potion of Acid Resistance",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.u1gZaIZHnEfZDc1o",
+    "Compendium.pf2e.equipment-srd.Item.yG6Za8FaG3hpXUGh",
+    "Compendium.pf2e.equipment-srd.Item.vDgDrbSoGuiUIz2R"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.QTmnUgiJnPli1dS0",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-acid-resistance-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.LhNZNHvmSs54c3Lj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-acid-resistance-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.sEa4TGXGBxku1V7o",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-acid-resistance-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

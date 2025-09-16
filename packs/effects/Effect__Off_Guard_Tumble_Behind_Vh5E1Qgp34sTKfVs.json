@@ -1,0 +1,54 @@
+{
+  "_id": "Vh5E1Qgp34sTKfVs",
+  "img": "icons/svg/paralysis.svg",
+  "name": "Effect: Off-Guard Tumble Behind",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "EphemeralEffect",
+        "predicate": [
+          "target:mark:enemy-tumble-behind"
+        ],
+        "selectors": [
+          "attack-roll",
+          "damage"
+        ],
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg"
+      },
+      {
+        "key": "TokenMark",
+        "slug": "enemy-tumble-behind"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-off-guard-tumble-behind"
+  },
+  "type": "effect",
+  "_key": "!items!Vh5E1Qgp34sTKfVs"
+}

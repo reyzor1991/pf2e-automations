@@ -1,0 +1,66 @@
+{
+  "_id": "iOBUgipEjgu7jA5k",
+  "img": "icons/magic/unholy/hand-claw-glow-orange.webp",
+  "name": "Spell Effect: Aberrant Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 5
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.xsy1yaCj0SVsn502"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.gKGErrsS1WoAyWub"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.sfJyQKmoxSRo6FyP"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.SjfDoeymtnYKoGUD"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectAberrantForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectAberrantForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Secrets of Magic"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-aberrant-form"
+  },
+  "type": "effect",
+  "_key": "!items!iOBUgipEjgu7jA5k"
+}

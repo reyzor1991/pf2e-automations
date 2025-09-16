@@ -1,0 +1,52 @@
+{
+  "uuid": "ZiXgWMjdKhzdXGg7",
+  "group": "equipment",
+  "name": "Feyfoul",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.JbkAk2j7h31izKyR",
+    "Compendium.pf2e.equipment-srd.Item.LbRuAXvoACxPqHqn",
+    "Compendium.pf2e.equipment-srd.Item.9wwCHxuCfBA9w6Ik"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Fngb79C1VDGLJ1EQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:feyfoul-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.IlTS2LTwYTyGXY49",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:feyfoul-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.KFnOWk5e7nwXT8IE",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:feyfoul-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

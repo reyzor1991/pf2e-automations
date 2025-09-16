@@ -1,0 +1,27 @@
+{
+  "uuid": "oCEvB7ZdnKKZir6G",
+  "group": "spell",
+  "name": "Share Life",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.d7Lwx6KAs47MtF0q"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.uWkVsnSFdvIdGEwI",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:share-life"
+      ]
+    }
+  ],
+  "complexRules": []
+}

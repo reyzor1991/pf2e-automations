@@ -1,0 +1,26 @@
+{
+  "uuid": "r8ffTncUrbEtKur5",
+  "group": "equipment",
+  "name": "Thousand-Year Dragonroot",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.xVK6dbAIUJqNFYoI"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.p1pxUzwgWZ9l9jmD",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:thousand-year-dragonroot"
+      ]
+    }
+  ],
+  "complexRules": []
+}

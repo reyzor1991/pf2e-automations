@@ -1,0 +1,27 @@
+{
+  "uuid": "JTTMocdYyr2S4Fjb",
+  "group": "spell",
+  "name": "Detect Magic",
+  "labels": [
+    "concentrate",
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.gpzpAAAJ1Lza2JVl"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.OjRHL0B4WAUUQc13",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:detect-magic"
+      ]
+    }
+  ],
+  "complexRules": []
+}

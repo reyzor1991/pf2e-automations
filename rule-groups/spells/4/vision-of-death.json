@@ -1,0 +1,69 @@
+{
+  "uuid": "qqtfN6GdJ8mlq2gN",
+  "group": "spell",
+  "name": "Vision of Death",
+  "labels": [
+    "concentrate",
+    "death",
+    "fear",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.Jmxru8zMdYMRuO5n"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.hCV9tQx3IXKWsOLW",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:vision-of-death"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "frightened"
+          ],
+          "effects": []
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:vision-of-death"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "frightened 2"
+          ],
+          "effects": []
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:vision-of-death"
+      ]
+    }
+  ]
+}

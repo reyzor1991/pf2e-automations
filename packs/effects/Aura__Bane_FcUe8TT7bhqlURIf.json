@@ -1,0 +1,63 @@
+{
+  "_id": "FcUe8TT7bhqlURIf",
+  "img": "icons/magic/symbols/runes-star-pentagon-magenta.webp",
+  "name": "Aura: Bane",
+  "system": {
+    "description": {
+      "value": "<p>Aura for @UUID[Compendium.pf2e.spells-srd.Item.7ZinJNzxq0XF0oMx]{Bane}.</p>"
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minutes",
+      "sustained": false,
+      "expiry": "turn-start"
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "effects": [
+          {
+            "affects": "enemies",
+            "events": [
+              "enter"
+            ],
+            "predicate": [
+              {
+                "not": "target:effect:bane-immunity"
+              }
+            ],
+            "uuid": "Compendium.pf2e.spell-effects.Item.UTLp7omqsiC36bso",
+            "level": "ceil(@actor.level/2)"
+          }
+        ],
+        "key": "Aura",
+        "radius": "@item.badge.value*10",
+        "slug": "aura-bane"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "badge": {
+      "type": "counter",
+      "value": 1
+    },
+    "slug": "spell-effect-aura-bane"
+  },
+  "type": "effect",
+  "_key": "!items!FcUe8TT7bhqlURIf"
+}

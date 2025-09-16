@@ -1,0 +1,53 @@
+{
+  "uuid": "QVFKhadHguNfmqbo",
+  "group": "spell",
+  "name": "Animal Feature",
+  "labels": [
+    "concentrate",
+    "focus",
+    "manipulate",
+    "morph",
+    "ranger"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.vGEgI8e7AW6FQ3tP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.Dcva6SCHr9vWE7nJ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:animal-feature",
+        {
+          "lt": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.Dcva6SCHr9vWE7nJ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:animal-feature",
+        {
+          "gte": [
+            "origin:item:level",
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

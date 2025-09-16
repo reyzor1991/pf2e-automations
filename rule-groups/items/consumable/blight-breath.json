@@ -1,0 +1,26 @@
+{
+  "uuid": "SngfKv5z3BAJRdQ4",
+  "group": "equipment",
+  "name": "Blight Breath",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.4XpPgF5smMjCCHRF"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.N2XR9v6Vo13SJZXV",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:blight-breath"
+      ]
+    }
+  ],
+  "complexRules": []
+}

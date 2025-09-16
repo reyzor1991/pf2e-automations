@@ -1,0 +1,66 @@
+{
+  "_id": "3IuaMLa4KhBqRQkM",
+  "img": "icons/creatures/mammals/humanoid-wolf-dog-blue.webp",
+  "name": "Spell Effect: Primal Summons",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 5
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.TAAWbJgfESltn2we"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.Xl48OsJ47oDVZAVQ"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.blBXnWb1Y8q8YYMh"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.fwaAe71qfnK7SiOB"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectPrimalSummons"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectPrimalSummons}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Secrets of Magic"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-primal-summons"
+  },
+  "type": "effect",
+  "_key": "!items!3IuaMLa4KhBqRQkM"
+}

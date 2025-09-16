@@ -1,0 +1,26 @@
+{
+  "uuid": "T3xRAmrYnhrDkdaE",
+  "group": "action",
+  "name": "Anadi Venom",
+  "labels": [
+    "anadi"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.8aIe57gXJ94mPpW4"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.gN1LbKYQgi8Fx98V",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:anadi-venom"
+      ]
+    }
+  ],
+  "complexRules": []
+}

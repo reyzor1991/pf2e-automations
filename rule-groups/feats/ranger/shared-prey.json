@@ -1,0 +1,21 @@
+{
+  "uuid": "f5CA6SNNBFZ2gswK",
+  "group": "feat",
+  "name": "Shared Prey",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "sharedPrey",
+      "target": "none",
+      "predicate": ["origin:item:shared-prey"]
+    }
+  ]
+}

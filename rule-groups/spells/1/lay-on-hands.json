@@ -1,0 +1,54 @@
+{
+  "uuid": "fzUfZcstmQZGGwcJ",
+  "group": "spell",
+  "name": "Lay on Hands",
+  "labels": [
+    "champion",
+    "focus",
+    "healing",
+    "manipulate",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zNN9212H2FGfM7VS"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.JhihziXQuoteftdd",
+      "target": "TargetEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:lay-on-hands",
+        "self:trait:undead"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.lyLMiauxIVUM3oF1",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:lay-on-hands",
+        {
+          "not": "target:trait:undead"
+        },
+        {
+          "not": {
+            "eq": [
+              "{actor|signature}",
+              "{target|signature}"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

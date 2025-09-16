@@ -1,0 +1,51 @@
+{
+  "_id": "J3GGbKP247JWY883",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Spike Skin",
+  "system": {
+    "description": {
+      "value": "You touch a willing creature, causing its skin to harden and form spiky protrusions. The target gains resistance 4 to all physical damage (except adamantine). Whenever a creature damages the target with an unarmed attack or non-reach melee weapon, the attacking creature takes @Damage[(floor((@item.level -8)/2)*2+2)[piercing]] damage.\n\nThis impulse lasts for 10 minutes, but each time the target takes physical damage, the duration decreases by 1 minute. The target is temporarily immune to this impulse for 1 hour. If you use Spike Skin again, any previous one ends.\n\nLevel (+2) The resistance and damage each increase by 2."
+    },
+    "duration": {
+      "expiry": "round-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 8
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "all-damage",
+        "value": "4",
+        "exceptions": [
+          "adamantine"
+        ]
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "earth",
+        "impulse",
+        "primal"
+      ]
+    },
+    "slug": "effect-spike-skin"
+  },
+  "type": "effect",
+  "_key": "!items!J3GGbKP247JWY883"
+}

@@ -1,0 +1,39 @@
+{
+  "uuid": "xDSaoArF3RRriyJg",
+  "group": "equipment",
+  "name": "Antidote",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "healing"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.ktjFOp3U0wQD9t0Z",
+    "Compendium.pf2e.equipment-srd.Item.XWkeL34yJK6t5qUE",
+    "Compendium.pf2e.equipment-srd.Item.AJ1dC7EtTIfBey0M",
+    "Compendium.pf2e.equipment-srd.Item.ANzB9WzlGQXDn76G"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.TjBxxlTvb6tJP1jS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "or": [
+            "consumable:antidote-moderate",
+            "consumable:antidote-major",
+            "consumable:antidote-greater",
+            "consumable:antidote-lesser"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

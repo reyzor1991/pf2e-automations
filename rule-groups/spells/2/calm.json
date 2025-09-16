@@ -1,0 +1,37 @@
+{
+  "uuid": "StSrc9om5YYfRacn",
+  "group": "spell",
+  "name": "Calm",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "emotion",
+    "mental",
+    "incapacitation"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.b515AZlB0sridKSq"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.Qr5rgoZvI4KmFY0N",
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:success",
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        "item:slug:calm"
+      ]
+    }
+  ],
+  "complexRules": []
+}

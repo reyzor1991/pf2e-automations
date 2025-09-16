@@ -1,0 +1,38 @@
+{
+  "_id": "tDsgl8YmhZbx2May",
+  "img": "icons/tools/scribal/magnifying-glass.webp",
+  "name": "Investigate",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.EwgTZBWsc8qKaViP]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-investigate"
+  },
+  "type": "effect",
+  "_key": "!items!tDsgl8YmhZbx2May"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "Ru9goDwRnRAzcQU3",
+  "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+  "name": "Spell Effect: Translocate Immunity",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "hours",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-translocate-immunity"
+  },
+  "type": "effect",
+  "_key": "!items!Ru9goDwRnRAzcQU3"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "A8FwTia8B4nbHuKW",
+  "group": "equipment",
+  "name": "Tiger Menuki",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.zrZ1FaaqW6VIajj7"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.ci2oacfcvNyjR1Kn",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:tiger-menuki"
+      ]
+    }
+  ],
+  "complexRules": []
+}

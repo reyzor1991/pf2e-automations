@@ -1,0 +1,30 @@
+{
+  "uuid": "wy7VJQszChc6AJp5",
+  "group": "feat",
+  "name": "Accelerating Touch",
+  "labels": [
+    "champion"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.aiHbS8FGNYAQBF62"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.alyNtkHLNnt98Ewz",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        {
+          "not": "target:trait:undead"
+        },
+        "origin:item:lay-on-hands",
+        "feat:accelerating-touch"
+      ]
+    }
+  ],
+  "complexRules": []
+}

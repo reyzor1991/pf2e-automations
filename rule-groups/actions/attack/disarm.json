@@ -1,0 +1,66 @@
+{
+  "uuid": "lsJtAJeJbckpzaXK",
+  "group": "action",
+  "name": "Disarm",
+  "labels": [
+    "attack",
+    "skill"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.other-effects.Item.PuDS0DEq0CnaSIFV",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:disarm",
+        "outcome:success"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "off-guard"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-start",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "action:disarm",
+        "outcome:criticalFailure"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "disarm",
+      "target": "none",
+      "predicate": [
+        "action:disarm",
+        "outcome:criticalSuccess"
+      ]
+    }
+  ]
+}

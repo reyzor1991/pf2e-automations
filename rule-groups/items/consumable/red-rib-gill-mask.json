@@ -1,0 +1,52 @@
+{
+  "uuid": "Pd3XHFNPSgN5Y4Sk",
+  "group": "equipment",
+  "name": "Red-Rib Gill Mask",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.x4QLLKEShYqUjCCn",
+    "Compendium.pf2e.equipment-srd.Item.Wyh13xRaOL57fve7",
+    "Compendium.pf2e.equipment-srd.Item.J7ZoRlhqiP6988t2"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.UDfVCATxdLdSzJYJ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:red-rib-gill-mask-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.QrsPKOFuo3qzgxw5",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:red-rib-gill-mask-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.2iR5uP6vgPzgKKNO",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:red-rib-gill-mask-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

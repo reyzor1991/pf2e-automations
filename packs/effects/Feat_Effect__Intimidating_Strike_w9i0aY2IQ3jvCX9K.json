@@ -1,0 +1,38 @@
+{
+  "_id": "w9i0aY2IQ3jvCX9K",
+  "img": "icons/svg/paralysis.svg",
+  "name": "Feat Effect: Intimidating Strike",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 0
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-intimidating-strike"
+  },
+  "type": "effect",
+  "_key": "!items!w9i0aY2IQ3jvCX9K"
+}

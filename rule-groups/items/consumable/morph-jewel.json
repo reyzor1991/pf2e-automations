@@ -1,0 +1,22 @@
+{
+  "uuid": "QdcniX66u9moesFE",
+  "group": "equipment",
+  "name": "Morph Jewel",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.58RUkhvWrdgqiC3c"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "value": "Compendium.pf2e.equipment-effects.Item.ihZsJpB9v90EFQSG",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:morph-jewel"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "U7tuKcRePhSu2C2P",
+  "img": "icons/tools/navigation/spyglass-telescope-brass-blue.webp",
+  "name": "Effect: Scouting (Scout Dedication)",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "initiative",
+        "type": "circumstance",
+        "value": 2
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-scout-dedication"
+  },
+  "type": "effect",
+  "_key": "!items!U7tuKcRePhSu2C2P"
+}

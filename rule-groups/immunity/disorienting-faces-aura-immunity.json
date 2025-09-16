@@ -1,0 +1,39 @@
+{
+  "uuid": "Xf9Rzghdqq6Ekpat",
+  "group": "other",
+  "name": "Disorienting Faces Aura Immunity",
+  "labels": [
+    "aura"
+  ],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [],
+          "immunities": [
+            "disorienting-faces"
+          ],
+          "duration": {
+            "expiry": "round-start",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "ImmunitySelfEffect",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "item:slug:disorienting-faces"
+      ]
+    }
+  ]
+}

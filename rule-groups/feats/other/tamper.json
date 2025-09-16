@@ -1,0 +1,48 @@
+{
+  "uuid": "wlJl6oTPzAAKJKhX",
+  "group": "feat",
+  "name": "Tamper",
+  "labels": [
+    "inventor",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.SheifYobjKqyK3Fv"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "@actor.level[fire]",
+      "target": "SelfDamage",
+      "predicate": [
+        "action:tamper",
+        "outcome:criticalFailure"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "tamper",
+      "target": "none",
+      "predicate": [
+        "target",
+        "action:tamper",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

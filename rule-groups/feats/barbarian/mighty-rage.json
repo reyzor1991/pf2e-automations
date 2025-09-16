@@ -1,0 +1,27 @@
+{
+  "uuid": "RMYPJyqDUWRwgqTh",
+  "group": "feat",
+  "name": "Mighty Rage",
+  "labels": [
+    "barbarian"
+  ],
+  "source": [
+    "Compendium.pf2e.classfeatures.Item.88Q33X2a0iYPkbzd"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "mighty-rage-attack",
+      "target": "TurnOnOption",
+      "predicate": [
+        "origin:item:quick-tempered",
+        "feature:mighty-rage"
+      ]
+    }
+  ],
+  "complexRules": []
+}

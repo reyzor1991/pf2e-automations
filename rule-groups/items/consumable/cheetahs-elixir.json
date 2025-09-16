@@ -1,0 +1,52 @@
+{
+  "uuid": "Jbvtbo5Qu7V8yqQi",
+  "group": "equipment",
+  "name": "Cheetah's Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.tyt6rFtv32MZ4DT9",
+    "Compendium.pf2e.equipment-srd.Item.t4X6GDybqLmt7UkN",
+    "Compendium.pf2e.equipment-srd.Item.AqLxu3ir4UGzdOaz"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.lNWACCNe9RYgaFxb",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cheetahs-elixir-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.PeuUz7JaabCgl6Yh",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cheetahs-elixir-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.j9zVZwRBVAcnpEkE",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cheetahs-elixir-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

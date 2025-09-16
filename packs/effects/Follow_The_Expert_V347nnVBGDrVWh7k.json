@@ -1,0 +1,38 @@
+{
+  "_id": "V347nnVBGDrVWh7k",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "name": "Follow The Expert",
+  "system": {
+    "description": {
+      "value": "<p>@UUID[Compendium.pf2e.actionspf2e.Item.tfa4Sh7wcxCEqL29]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "action-effect-follow-the-expert"
+  },
+  "type": "effect",
+  "_key": "!items!V347nnVBGDrVWh7k"
+}

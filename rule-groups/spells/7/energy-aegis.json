@@ -1,0 +1,27 @@
+{
+  "uuid": "as2BH8vCBjbH569b",
+  "group": "spell",
+  "name": "Energy Aegis",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.m2xFMNyQiUKQDRaj"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.4Lo2qb5PmavSsLNk",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:energy-aegis"
+      ]
+    }
+  ],
+  "complexRules": []
+}

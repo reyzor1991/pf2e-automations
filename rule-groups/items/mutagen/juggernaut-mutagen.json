@@ -1,0 +1,66 @@
+{
+  "uuid": "hUaSKuKGX3s9xfWc",
+  "group": "equipment",
+  "name": "Juggernaut Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.mj9i9GeQTADByNPZ",
+    "Compendium.pf2e.equipment-srd.Item.xE0EdDrf734l2fQH",
+    "Compendium.pf2e.equipment-srd.Item.TMtQnY6yvIRCpK9v",
+    "Compendium.pf2e.equipment-srd.Item.1kNp6yOS0aZPBPzZ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.fUrZ4xcMJz0CfTyG",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:juggernaut-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.1l139A2Qik4lBHKO",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:juggernaut-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.xLilBqqf34ZJYO9i",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:juggernaut-mutagen-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.2PNo8u4wxSbz5WEs",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:juggernaut-mutagen-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

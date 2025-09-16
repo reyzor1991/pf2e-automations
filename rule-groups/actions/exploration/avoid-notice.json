@@ -1,0 +1,26 @@
+{
+  "uuid": "eHuf3Yc8QKC9CkGd",
+  "group": "action",
+  "name": "Avoid Notice",
+  "labels": [
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.IE2nThCmoyhQA0Jn"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.N8vpuGy4TzU10y8E",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:avoid-notice"
+      ]
+    }
+  ],
+  "complexRules": []
+}

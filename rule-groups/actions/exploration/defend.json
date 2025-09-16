@@ -1,0 +1,26 @@
+{
+  "uuid": "kYcyyW7YlSA4dmsj",
+  "group": "action",
+  "name": "Defend",
+  "labels": [
+    "exploration"
+  ],
+  "source": [
+    "Compendium.pf2e.actionspf2e.Item.cYtYKa1gDEl7y2N0"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.GYOyFj4ziZX060rZ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:defend"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "kZmteGRpdP6qgIdC",
+  "img": "icons/skills/movement/feet-winged-boots-blue.webp",
+  "name": "Effect: Allegro",
+  "system": {
+    "description": {
+      "value": "Granted when someone uses @UUID[Compendium.pf2e.spells-srd.Item.IQchIYUwbsVTa9Mc] on you, It gains the Quickened condition and can use the additional action to Strike, Stride, or Step."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 3
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        },
+        "uuid": "Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl"
+      }
+    ],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-allegro"
+  },
+  "type": "effect",
+  "_key": "!items!kZmteGRpdP6qgIdC"
+}

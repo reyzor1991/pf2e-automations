@@ -1,0 +1,27 @@
+{
+  "uuid": "3VcPCMdibUPRylc2",
+  "group": "spell",
+  "name": "Mystic Armor",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.qkwb5DD3zmKwvbk0",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:mystic-armor"
+      ]
+    }
+  ],
+  "complexRules": []
+}

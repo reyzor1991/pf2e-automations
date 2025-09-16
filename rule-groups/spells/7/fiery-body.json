@@ -1,0 +1,52 @@
+{
+  "uuid": "MDvMYhViwnxpyKbW",
+  "group": "spell",
+  "name": "Fiery Body",
+  "labels": [
+    "concentrate",
+    "fire",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.XS7Wyh5YC0NWeWyB"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.uIMaMzd6pcKmMNPJ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:fiery-body",
+        {
+          "lt": [
+            "origin:item:level",
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.U2eD42cGwdvQMdN0",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:fiery-body",
+        {
+          "gte": [
+            "origin:item:level",
+            9
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "xaJYqiHpNiR6TqTP",
+  "group": "equipment",
+  "name": "Auric Noodles",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.qQ9Rros3GdPDRLBg"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.uijpoXaiKXcCYrSD",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:auric-noodles"
+      ]
+    }
+  ],
+  "complexRules": []
+}

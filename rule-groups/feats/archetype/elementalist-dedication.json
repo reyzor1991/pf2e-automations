@@ -1,0 +1,28 @@
+{
+  "uuid": "4TiY2qtN6ee3JZRc",
+  "group": "feat",
+  "name": "Elementalist Dedication",
+  "labels": [
+    "archetype",
+    "class",
+    "dedication"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.tx9pkrpmtqe4FnvS"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.feat-effects.Item.O8qithYQCv3e7DUQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:elementalist-dedication"
+      ]
+    }
+  ],
+  "complexRules": []
+}

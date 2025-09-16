@@ -1,0 +1,40 @@
+{
+  "uuid": "GraiK6GTHUyENnCM",
+  "group": "equipment",
+  "name": "Potion of Flying",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.E999hL7XlAlfZhjK",
+    "Compendium.pf2e.equipment-srd.Item.KlJSw919hpN6V9oK"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Zdh2uO1vVYJmaqld",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-flying-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Mf9EBLhYmZerf0nS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-flying-standard"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,50 @@
+{
+  "_id": "FHMA8vr46g3Podn0",
+  "img": "icons/magic/air/fog-gas-smoke-dense-brown.webp",
+  "name": "Effect: Target Desert Wind",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "predicate": [
+          "target:effect:desert-wind",
+          {
+            "not": "self:effect:desert-wind"
+          }
+        ],
+        "domain": "all",
+        "option": "target:condition:concealed"
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-target-desert-wind"
+  },
+  "type": "effect",
+  "_key": "!items!FHMA8vr46g3Podn0"
+}

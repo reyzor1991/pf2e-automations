@@ -1,0 +1,64 @@
+{
+  "uuid": "iPMCVGvVv5yaXDps",
+  "group": "equipment",
+  "name": "Eagle Eye Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.7Y2yOr4ltpP2tyuL",
+    "Compendium.pf2e.equipment-srd.Item.xWCdsGSwLLTeX6tQ",
+    "Compendium.pf2e.equipment-srd.Item.lPcnDlBGz5QwCMYw",
+    "Compendium.pf2e.equipment-srd.Item.kicNrnZz1KjJYRVI"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.VCypzSu659eC6jNi",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eagle-eye-elixir-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.kgotU0sFmtAHYySB",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eagle-eye-elixir-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Wa4317cqU4lJ8vAQ",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eagle-eye-elixir-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.wyLEew86nhNUXASu",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:eagle-eye-elixir-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

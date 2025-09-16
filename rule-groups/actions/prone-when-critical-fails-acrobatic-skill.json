@@ -1,0 +1,31 @@
+{
+  "uuid": "3bcWCbZXPkf8jU5D",
+  "group": "action",
+  "name": "Prone When Critical Fails Acrobatic Skill",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "prone",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        {
+          "or": [
+            "action:high-jump",
+            "action:long-jump",
+            "action:shove",
+            "action:climb",
+            "action:trip"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

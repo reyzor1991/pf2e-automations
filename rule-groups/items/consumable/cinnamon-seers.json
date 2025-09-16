@@ -1,0 +1,26 @@
+{
+  "uuid": "Vh72Uiq2GYmsksPX",
+  "group": "equipment",
+  "name": "Cinnamon Seers",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Hm0dZYfXHMNcTCo3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Thd0XXhunYNk6jD7",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:cinnamon-seers"
+      ]
+    }
+  ],
+  "complexRules": []
+}

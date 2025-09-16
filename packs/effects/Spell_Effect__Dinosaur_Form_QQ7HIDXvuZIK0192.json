@@ -1,0 +1,72 @@
+{
+  "_id": "QQ7HIDXvuZIK0192",
+  "img": "icons/creatures/reptiles/lizard-mouth-glowing-red.webp",
+  "name": "Spell Effect: Dinosaur Form",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "adjustName": true,
+        "choices": [
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.0Cyf07wboRp4CmcQ"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.KkDRRDuycXwKPa6n"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.oJbcmpBSHwmx6FD4"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.T6XnxvsgvvOrpien"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.iOKhr2El8R6cz6YI"
+          },
+          {
+            "value": "Compendium.pf2e.spell-effects.Item.542Keo6txtq7uvqe"
+          }
+        ],
+        "key": "ChoiceSet",
+        "prompt": "Select a Effect.",
+        "flag": "spellEffectDinosaurForm"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.pf2e.rulesSelections.spellEffectDinosaurForm}",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "spell-effect-dinosaur-form"
+  },
+  "type": "effect",
+  "_key": "!items!QQ7HIDXvuZIK0192"
+}

@@ -1,0 +1,38 @@
+{
+  "_id": "LJolgzDnieEB85zm",
+  "img": "icons/magic/perception/eye-winged-pink.webp",
+  "name": "Effect: Vigilant Eye (Armor)",
+  "system": {
+    "description": {
+      "value": "You aren't Off-Guard to Hidden or Undetected creatures of the eye's level or lower, or creatures of the eye's level or lower using surprise attack, though you can still be flanked."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-vigilant-eye-armor"
+  },
+  "type": "effect",
+  "_key": "!items!LJolgzDnieEB85zm"
+}

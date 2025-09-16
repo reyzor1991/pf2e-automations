@@ -1,0 +1,60 @@
+{
+  "_id": "hCV9tQx3IXKWsOLW",
+  "img": "icons/magic/death/gallows-hanged-humanoid.webp",
+  "name": "Effect: Vision of Death",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": false
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL",
+        "onDeleteActions": {
+          "grantee": "cascade"
+        },
+        "alterations": [
+          {
+            "mode": "override",
+            "property": "badge-value",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        }
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "slug": "effect-vision-of-deathx"
+  },
+  "type": "effect",
+  "_key": "!items!hCV9tQx3IXKWsOLW"
+}

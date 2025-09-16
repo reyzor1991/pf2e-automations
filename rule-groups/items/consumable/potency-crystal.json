@@ -1,0 +1,52 @@
+{
+  "uuid": "9U9gVi8NfwSMPqil",
+  "group": "equipment",
+  "name": "Potency Crystal",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.aSRUX4WGfalK4A5J",
+    "Compendium.pf2e.equipment-effects.Item.R5ugeFK3MPwkbv0s",
+    "Compendium.pf2e.equipment-srd.Item.9a7nJAErs4dfetFJ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.Acox3S5hpJAqq1jc",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potency-crystal-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.R5ugeFK3MPwkbv0s",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potency-crystal"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.VMVrJA4SkyOfklmj",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potency-crystal-major"
+      ]
+    }
+  ],
+  "complexRules": []
+}

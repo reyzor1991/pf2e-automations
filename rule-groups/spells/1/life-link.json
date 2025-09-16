@@ -1,0 +1,53 @@
+{
+  "uuid": "3svAfJQlwqVwheCG",
+  "group": "spell",
+  "name": "Life Link",
+  "labels": [
+    "focus",
+    "healing",
+    "manipulate",
+    "oracle",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.2gQYrCPwBmwau26O"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.eMGGHi8bIib0mMeF",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:life-link",
+        {
+          "lt": [
+            "origin:item:level",
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.eMGGHi8bIib0mMeF",
+      "target": "TargetsEffect",
+      "predicate": [
+        "origin:item:life-link",
+        {
+          "gte": [
+            "origin:item:level",
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": []
+}

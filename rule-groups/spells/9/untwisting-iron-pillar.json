@@ -1,0 +1,28 @@
+{
+  "uuid": "DHhzcBmvJmNRHunv",
+  "group": "spell",
+  "name": "Untwisting Iron Pillar",
+  "labels": [
+    "concentrate",
+    "earth",
+    "focus"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.9DtuMEyHhtHFRp5a"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.p8F3MVUkGmpsUDOn",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:untwisting-iron-pillar"
+      ]
+    }
+  ],
+  "complexRules": []
+}

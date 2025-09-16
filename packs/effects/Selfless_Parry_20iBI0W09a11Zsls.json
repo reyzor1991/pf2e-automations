@@ -1,0 +1,45 @@
+{
+  "_id": "20iBI0W09a11Zsls",
+  "img": "icons/weapons/swords/swords-short.webp",
+  "name": "Effect: Selfless Parry",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": 1
+      }
+    ],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-selfless-parry"
+  },
+  "type": "effect",
+  "_key": "!items!20iBI0W09a11Zsls"
+}

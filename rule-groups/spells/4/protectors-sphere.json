@@ -1,0 +1,30 @@
+{
+  "uuid": "8sEn7kBPKmbkmJST",
+  "group": "spell",
+  "name": "Protector's Sphere",
+  "labels": [
+    "aura",
+    "cleric",
+    "concentrate",
+    "focus",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.DH9Y3RQGWO0GzXGU"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.FJAGbFPO8SZHx0TQ",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:protectors-sphere"
+      ]
+    }
+  ],
+  "complexRules": []
+}

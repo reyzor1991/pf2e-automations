@@ -1,0 +1,37 @@
+{
+  "_id": "lwcyhD03jVchmPGm",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "name": "Effect: Feint (Critical Success) from ",
+  "system": {
+    "description": {
+      "value": "<p>Actor is fooled, but only momentarily. The actor is off-guard against the next melee attack against it until the end of your next turn..</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": "Pathfinder Core Rulebook"
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-feint-critical-success-attacker"
+  },
+  "type": "effect",
+  "_key": "!items!lwcyhD03jVchmPGm"
+}

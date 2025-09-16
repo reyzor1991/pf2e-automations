@@ -1,0 +1,30 @@
+{
+  "uuid": "iYSQ8ZGScFPkXDda",
+  "group": "spell",
+  "name": "Tempest Form",
+  "labels": [
+    "concentrate",
+    "focus",
+    "manipulate",
+    "oracle",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zhqnMOVPzVvWSUbC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.mKw9WvqnhaUsPvvy",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:tempest-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

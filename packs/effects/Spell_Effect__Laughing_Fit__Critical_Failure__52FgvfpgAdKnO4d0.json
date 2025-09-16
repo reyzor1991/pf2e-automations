@@ -1,0 +1,52 @@
+{
+  "_id": "52FgvfpgAdKnO4d0",
+  "name": "Spell Effect: Laughing Fit (Critical Failure)",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>The target falls<a class=\"content-link\" draggable=\"true\" data-uuid=\"Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60\" data-id=\"j91X7x0XSomq8d60\" data-type=\"Item\" data-pack=\"pf2e.conditionitems\" data-tooltip=\"Condition Item\">Prone</a> and can't use actions or reactions for 1 round. It then takes the effects of a failure.</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "allowDuplicate": false,
+        "uuid": "Compendium.pf2e-automations.effects.Item.rtQSjQrKJXZTLN2O"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60",
+        "allowDuplicate": false
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-automations.effects.Item.JNPkxBpM9ituZl3E",
+        "allowDuplicate": false
+      }
+    ],
+    "slug": "spell-effect-laughing-fit-critical-failure",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 2
+    },
+    "duration": {
+      "value": 1,
+      "unit": "rounds",
+      "expiry": "turn-start",
+      "sustained": true
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false
+  },
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "_key": "!items!52FgvfpgAdKnO4d0"
+}

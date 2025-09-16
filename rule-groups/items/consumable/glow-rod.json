@@ -1,0 +1,26 @@
+{
+  "uuid": "f43W3tAwolpv38H9",
+  "group": "equipment",
+  "name": "Glow Rod",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.y4WJY8rCbY6d1MET"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.BaosUEePGMqw0nWn",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:glow-rod"
+      ]
+    }
+  ],
+  "complexRules": []
+}

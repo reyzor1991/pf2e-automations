@@ -1,0 +1,52 @@
+{
+  "uuid": "EBAjbAES6d4ZT5qv",
+  "group": "equipment",
+  "name": "Viperous Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.LmNp6og59w1KhlIX",
+    "Compendium.pf2e.equipment-srd.Item.avCckBXMRbzAudZG",
+    "Compendium.pf2e.equipment-srd.Item.HwDlOobl1bsTG5mA"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.zao2sENSQlMLYhyr",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:viperous-elixir-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.zW8adCNIRo46mfEH",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:viperous-elixir-greater"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.FgwkowiWGfZpnIAc",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:viperous-elixir-moderate"
+      ]
+    }
+  ],
+  "complexRules": []
+}

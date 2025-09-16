@@ -1,0 +1,28 @@
+{
+  "uuid": "3zB9HPsHzgBoYuZu",
+  "group": "spell",
+  "name": "Demon Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.dKbv80rlAWVpz83C"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.Ptnncwp118gIvmvG",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:demon-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

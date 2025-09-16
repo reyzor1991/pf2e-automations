@@ -1,0 +1,73 @@
+{
+  "uuid": "ouyEGKoi9UN6T6UM",
+  "group": "spell",
+  "name": "Slow",
+  "labels": [
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.WsUwpfmhKrKwoIe3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:slow"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.xTHKw0VHuqu6SI93"
+          ],
+          "duration": {
+            "unit": "minutes"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:slow"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [],
+          "effects": [
+            "Compendium.pf2e-automations.effects.Item.1gzRFqNvsgHsL1dg"
+          ],
+          "duration": {
+            "unit": "minutes"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:slow"
+      ]
+    }
+  ]
+}

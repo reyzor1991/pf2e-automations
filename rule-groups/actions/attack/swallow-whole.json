@@ -1,0 +1,57 @@
+{
+  "uuid": "P31VkZXO7dq113SZ",
+  "group": "action",
+  "name": "Swallow Whole",
+  "labels": [
+    "attack"
+  ],
+  "source": [
+    "Compendium.pf2e.bestiary-ability-glossary-srd.Item.uJSseLa57HZYSMUu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "skill-check",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.bestiary-effects.Item.1cbIe569UD6paXad",
+      "target": "TargetEffect",
+      "predicate": [
+        "action:swallow-whole",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "delete-item",
+      "extend": null,
+      "range": null,
+      "value": "deleteHoldingBreath",
+      "target": "none",
+      "predicate": [
+        "effect:slug:effect-remaining-air",
+        "effect:origin:effect:swallow-whole"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "end-turn",
+      "extend": null,
+      "range": null,
+      "value": "suffocatingEndTurn",
+      "target": "none",
+      "predicate": [
+        "self:effect:suffocating"
+      ]
+    }
+  ]
+}

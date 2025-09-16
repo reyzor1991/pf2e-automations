@@ -1,0 +1,76 @@
+{
+  "uuid": "d3xiotZp5iqi4x3n",
+  "group": "spell",
+  "name": "Schadenfreude",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.O6VQC1Bs4aSYDa6R"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "value": "Compendium.pf2e.spell-effects.Item.TjGHxli0edXI6rAg",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:schadenfreude"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "value": "stunned",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:schadenfreude"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "conditions": [
+            "stupefied"
+          ],
+          "effects": [],
+          "duration": {
+            "value": 1,
+            "unit": "rounds"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:schadenfreude"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "conditions": [
+            "stupefied 2"
+          ],
+          "effects": [],
+          "duration": {
+            "value": 1,
+            "unit": "rounds"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:schadenfreude"
+      ]
+    }
+  ]
+}

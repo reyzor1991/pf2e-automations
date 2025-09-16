@@ -1,0 +1,28 @@
+{
+  "uuid": "9TwFee5AaEUUCFgB",
+  "group": "spell",
+  "name": "Elephant Form",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.zjYQyuBNT5VjV4mz"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.IWD5RehCxZVfgrX9",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:elephant-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

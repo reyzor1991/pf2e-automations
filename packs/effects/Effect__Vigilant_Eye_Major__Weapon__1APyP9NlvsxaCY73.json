@@ -1,0 +1,38 @@
+{
+  "_id": "1APyP9NlvsxaCY73",
+  "img": "icons/magic/perception/eye-winged-pink.webp",
+  "name": "Effect: Vigilant Eye Major (Weapon)",
+  "system": {
+    "description": {
+      "value": "When you make a Strike with the weapon against a target that's Concealed, hidden, or undetected, the DC of your flat check to target it is 2 if the target is concealed or 8 if it's hidden or undetected."
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-vigilant-eye-major-weapon"
+  },
+  "type": "effect",
+  "_key": "!items!1APyP9NlvsxaCY73"
+}

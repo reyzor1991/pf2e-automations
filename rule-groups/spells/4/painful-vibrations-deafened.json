@@ -1,0 +1,92 @@
+{
+  "uuid": "kalzkQPrWPSQoiP7",
+  "group": "spell",
+  "name": "Painful Vibrations",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "sonic"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qTzvVnAMWL05VitC"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "sickened 2",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:painful-vibrations"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "sickened",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:painful-vibrations"
+      ]
+    }
+  ],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "deafened"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "rounds",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:painful-vibrations"
+      ]
+    },
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "values": [
+        {
+          "conditions": [
+            "deafened"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "minutes",
+            "value": 1
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:painful-vibrations"
+      ]
+    }
+  ]
+}

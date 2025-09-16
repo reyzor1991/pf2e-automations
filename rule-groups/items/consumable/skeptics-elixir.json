@@ -1,0 +1,52 @@
+{
+  "uuid": "ytun3WBzxETphNBe",
+  "group": "equipment",
+  "name": "Skeptic's Elixir",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.xGmX6Vuuhivyal8v",
+    "Compendium.pf2e.equipment-srd.Item.eHVZBmtzEcnsHSk8",
+    "Compendium.pf2e.equipment-srd.Item.SjbenbdzV4rgGxZP"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.mG6S6zm6hxaF7Tla",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:skeptics-elixir-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5Gof60StUppR2Xn9",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:skeptics-elixir-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.TsWUTODTVi487SEz",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:skeptics-elixir-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

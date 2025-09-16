@@ -1,0 +1,26 @@
+{
+  "uuid": "Qvt7jG6doAmDMnVJ",
+  "group": "equipment",
+  "name": "Potion of Quickness",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.kORpovlPYicysr2g"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.ElkXovNrHB0Doi6O",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:potion-of-quickness"
+      ]
+    }
+  ],
+  "complexRules": []
+}

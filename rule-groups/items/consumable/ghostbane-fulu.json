@@ -1,0 +1,29 @@
+{
+  "uuid": "YjSl6bw9pHSnNA39",
+  "group": "equipment",
+  "name": "Ghostbane Fulu",
+  "labels": [
+    "consumable",
+    "fulu",
+    "magical",
+    "talisman"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Uzf9hqwec8fY2j4G"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.02LNcIl70TTy9XS1",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:ghostbane-fulu"
+      ]
+    }
+  ],
+  "complexRules": []
+}

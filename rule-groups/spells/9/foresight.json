@@ -1,0 +1,29 @@
+{
+  "uuid": "FZaV3ZDsCAuhpte6",
+  "group": "spell",
+  "name": "Foresight",
+  "labels": [
+    "concentrate",
+    "manipulate",
+    "mental",
+    "prediction"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.qsNeG9KZpODSACMq"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.X9Na6IK8FSPcTuoc",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "origin:item:foresight"
+      ]
+    }
+  ],
+  "complexRules": []
+}

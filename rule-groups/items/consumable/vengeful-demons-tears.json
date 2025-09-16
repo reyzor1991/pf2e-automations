@@ -1,0 +1,26 @@
+{
+  "uuid": "wERQM2XuwN7YtT9g",
+  "group": "equipment",
+  "name": "Vengeful Demon's Tears",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.Ut6fuRkMsydWVlSb"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.5S2jlx6WZMAF4sxg",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:vengeful-demons-tears"
+      ]
+    }
+  ],
+  "complexRules": []
+}

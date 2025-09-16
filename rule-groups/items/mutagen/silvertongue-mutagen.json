@@ -1,0 +1,66 @@
+{
+  "uuid": "4mXaFjVJDzbsY4t3",
+  "group": "equipment",
+  "name": "Silvertongue Mutagen",
+  "labels": [
+    "alchemical",
+    "consumable",
+    "elixir",
+    "mutagen",
+    "polymorph"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.lIExlUFBKvBue8hb",
+    "Compendium.pf2e.equipment-srd.Item.uD5vRYVOXNJ53sEE",
+    "Compendium.pf2e.equipment-srd.Item.YwRAHWW8yUI07sy9",
+    "Compendium.pf2e.equipment-srd.Item.uggpIk6vguWFXVli"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.v5Ht1V4MZvRKRBjL",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silvertongue-mutagen-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.9FfFhu2kl2wMTsiI",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silvertongue-mutagen-major"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.dpIrjd1UPY7EnWUD",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silvertongue-mutagen-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.oAewXfq9c0ecaSfw",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:silvertongue-mutagen-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

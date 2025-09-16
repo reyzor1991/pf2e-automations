@@ -1,0 +1,45 @@
+{
+  "uuid": "wGrXAQ5qPqHnmryk",
+  "group": "spell",
+  "name": "Frostbite",
+  "labels": [
+    "cantrip",
+    "cold",
+    "concentrate",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.IxhGEKl63R4QBvkj"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.DdqWMj7cuf4S1bgr",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:frostbite"
+      ]
+    }
+  ],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-taken",
+      "extend": null,
+      "range": null,
+      "value": "frostbiteAmped",
+      "target": "none",
+      "predicate": [
+        "item:slug:frostbite",
+        "item:tag:amped",
+        "feature:the-oscillating-wave"
+      ]
+    }
+  ]
+}

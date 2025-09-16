@@ -1,0 +1,54 @@
+{
+  "uuid": "yUYUs6Y326WyWGEx",
+  "group": "spell",
+  "name": "Paralyze",
+  "labels": [
+    "concentrate",
+    "incapacitation",
+    "manipulate",
+    "mental"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.DCQHaLrYXMI37dvW"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.aLqCfr4Yl6g2eyoO",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:paralyze"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "stunned",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:success",
+        "item:slug:paralyze"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.5Mk3CmmLDTLVf8l5",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:paralyze"
+      ]
+    }
+  ],
+  "complexRules": []
+}

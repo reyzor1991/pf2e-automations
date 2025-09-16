@@ -1,0 +1,38 @@
+{
+  "_id": "wITJ6L8mcbbgoCHu",
+  "img": "icons/equipment/chest/breastplate-collared-steel.webp",
+  "name": "Effect: Metal Carapace",
+  "system": {
+    "description": {
+      "value": "<p>Worn armor - @UUID[Compendium.pf2e-automations.equipment.Item.A0AP7oLqdRwOCje7]</p>"
+    },
+    "duration": {
+      "expiry": "turn-end",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "rules": [],
+    "source": {
+      "value": ""
+    },
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "target": null,
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "slug": "effect-metal-carapace"
+  },
+  "type": "effect",
+  "_key": "!items!wITJ6L8mcbbgoCHu"
+}

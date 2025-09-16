@@ -1,0 +1,26 @@
+{
+  "uuid": "dKS5gcN7hG4WqPHC",
+  "group": "equipment",
+  "name": "Witch's Finger",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.C1mX0irc7zvLqDEs"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.sHOx852VoPinsQGY",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:witchs-finger"
+      ]
+    }
+  ],
+  "complexRules": []
+}

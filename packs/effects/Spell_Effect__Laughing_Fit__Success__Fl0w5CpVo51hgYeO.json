@@ -1,0 +1,42 @@
+{
+  "_id": "Fl0w5CpVo51hgYeO",
+  "name": "Spell Effect: Laughing Fit (Success)",
+  "type": "effect",
+  "effects": [],
+  "system": {
+    "description": {
+      "value": "<p>The target is plagued with uncontrollable laughter. It can't use reactions.</p>"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "allowDuplicate": false,
+        "uuid": "Compendium.pf2e-automations.effects.Item.rtQSjQrKJXZTLN2O"
+      }
+    ],
+    "slug": "spell-effect-laughing-fit-success",
+    "traits": {
+      "otherTags": [],
+      "value": []
+    },
+    "level": {
+      "value": 2
+    },
+    "duration": {
+      "value": -1,
+      "unit": "unlimited",
+      "expiry": null,
+      "sustained": true
+    },
+    "start": {
+      "value": 0,
+      "initiative": null
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "unidentified": false
+  },
+  "img": "icons/magic/control/mouth-smile-deception-purple.webp",
+  "_key": "!items!Fl0w5CpVo51hgYeO"
+}

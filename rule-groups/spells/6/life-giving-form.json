@@ -1,0 +1,32 @@
+{
+  "uuid": "FG4s3aBRVv323mAT",
+  "group": "spell",
+  "name": "Life-Giving Form",
+  "labels": [
+    "concentrate",
+    "focus",
+    "healing",
+    "light",
+    "manipulate",
+    "oracle",
+    "vitality"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.9kOI14Jep97TzGO7"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "spell-cast",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.spell-effects.Item.lIl0yYdS9zojOZhe",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:life-giving-form"
+      ]
+    }
+  ],
+  "complexRules": []
+}

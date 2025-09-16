@@ -1,0 +1,41 @@
+{
+  "uuid": "DaQcS2bQlAE3Co5p",
+  "group": "action",
+  "name": "Debilitating Strike",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "debilitatingStrike",
+      "target": "none",
+      "predicate": [
+        "target",
+        "target:condition:off-guard"
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "damage-roll",
+      "extend": null,
+      "range": null,
+      "value": "debilitatingStrikeAttack",
+      "target": "none",
+      "predicate": [
+        "target:condition:off-guard",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
+    }
+  ]
+}

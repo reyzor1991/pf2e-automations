@@ -1,0 +1,21 @@
+{
+  "uuid": "fz84MkVFxKCDGtcQ",
+  "group": "equipment",
+  "name": "Cat's Eye Elixir",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.bQPRKEpnLakJBAAh"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "use",
+      "value": "Compendium.pf2e-automations.effects.Item.1I3eP8d4rNs3RVG7",
+      "target": "SelfEffect",
+      "predicate": [
+        "consumable:cats-eye-elixir"
+      ]
+    }
+  ],
+  "complexRules": []
+}

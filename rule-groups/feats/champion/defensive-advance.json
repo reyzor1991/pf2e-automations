@@ -1,0 +1,27 @@
+{
+  "uuid": "YmDi9KpCSdq3ATRP",
+  "group": "feat",
+  "name": "Defensive Advance",
+  "labels": [
+    "champion",
+    "flourish"
+  ],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.117d4Me9nAn1GMry"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.2YgXoHvJfrDHucMr",
+      "target": "SelfEffect",
+      "predicate": [
+        "origin:item:defensive-advance"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,53 @@
+{
+  "uuid": "3cM5ZxZpyE86CsAs",
+  "group": "spell",
+  "name": "Blindness",
+  "labels": [
+    "concentrate",
+    "incapacitation",
+    "manipulate"
+  ],
+  "source": [
+    "Compendium.pf2e.spells-srd.Item.VosLNn2M8S7JH67D"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "blinded",
+      "target": "SelfAddCondition",
+      "predicate": [
+        "outcome:criticalFailure",
+        "item:slug:blindness"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.1zCit360MHdn1YmY",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:failure",
+        "item:slug:blindness"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "saving-throw",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.iykn477haVn2qI6y",
+      "target": "SelfEffect",
+      "predicate": [
+        "outcome:success",
+        "item:slug:blindness"
+      ]
+    }
+  ],
+  "complexRules": []
+}
