@@ -1,3 +1,7 @@
+## 1.3.1
+- Update logic of bloodlines
+- Add Monster Hunter
+
 ### Version 1.3.0
 - Update rules
 - Use new ui and json structure to improve performance

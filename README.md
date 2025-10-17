@@ -145,7 +145,7 @@
 * Metal Carapace
 * Mighty Rage
 * Mobile Shot Stance
-* Monster Warden
+* Monster Hunter
 * Overdrive
 * Panache
 * Pistol Twirl
@@ -252,7 +252,6 @@
 * Fiery Body
 * Figment
 * Flicker
-* Flurry of Claws
 * Fly
 * Forbidding Ward
 * Foresight

@@ -1,0 +1,35 @@
+{
+  "uuid": "cx4Nn8YvA3MxVeur",
+  "group": "feat",
+  "name": "Monster Hunter",
+  "labels": [],
+  "source": [
+    "Compendium.pf2e.feats-srd.Item.YTTJqRKH8QZl6al2"
+  ],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "skill-check",
+      "value": "monsterHunter",
+      "target": "none",
+      "predicate": [
+        "action:recall-knowledge",
+        "feat:monster-hunter",
+        {
+          "or": [
+            "outcome:criticalSuccess",
+            {
+              "and": [
+                "feat:master-monster-hunter",
+                "outcome:success"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

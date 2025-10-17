@@ -18,8 +18,7 @@
       "value": "bloodlines",
       "target": "none",
       "predicate": [
-        "feature:bloodline-spells",
-        "item:type:spell"
+        "feature:bloodline-spells"
       ]
     },
     {

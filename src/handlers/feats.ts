@@ -844,6 +844,76 @@ async function spasmOfTheBerserker(rule: HandlerRule, mm: MessageForHandling) {
     addItemsToActor(mm.mainActor, items);
 }
 
+async function monsterHunter(rule: HandlerRule, mm: MessageForHandling) {
+    let targetToken = mm.targetToken;
+    if (!targetToken || !mm.mainToken || !mm.mainActor) {
+        return
+    }
+
+    let items = []
+
+    let targetUuid = targetToken.uuid;
+    const itemData = await createItemObjectUuid("Compendium.pf2e.feat-effects.Item.W2tWq0gdAcnoz2MO", mm)
+    let markRule = itemData.system.rules.find(r => r.key === 'TokenMark');
+    if (markRule) {
+        markRule['uuid'] = targetUuid;
+    }
+    items.push(itemData);
+
+    if (mm.rollOptions.has("feat:monster-warden")) {
+        const itemDataDef = await createItemObjectUuid("Compendium.pf2e.feat-effects.Item.nlaxROgSSLVHZ1hx", mm)
+        let markRuleDef = itemDataDef.system.rules.find(r => r.key === 'TokenMark');
+        if (markRuleDef) {
+            markRuleDef['uuid'] = targetUuid;
+        }
+        items.push(itemDataDef);
+    }
+
+    let allies = mm.mainToken.scene.tokens
+        .filter(token => token !== mm.mainToken)
+        .filter(token => token.actor && token.actor.isAllyOf(mm.mainActor))
+        .reduce(function (obj, t) {
+            obj[t.uuid] = t as Token;
+            return obj;
+        }, {} as { [key: string]: Token })
+
+
+    const options = Object.values(allies)
+        .map(t => `<option value="${t.uuid}">${t.name}</option>`)
+        .join("")
+
+    const {data} = await foundry.applications.api.DialogV2.wait({
+        window: {title: 'Select ally for help'},
+        content: `
+                    <select id="fob1" autofocus>
+                        ${options}
+                    </select>
+                `,
+        buttons: [{
+            action: "ok", label: "Select", icon: "<i class='fa-solid fa-hand-fist'></i>",
+            callback: (event, button, form) => {
+                return {
+                    data: form.element.querySelector("#fob1").value,
+                }
+            }
+        }, {
+            action: "cancel",
+            label: "Cancel",
+            icon: "<i class='fa-solid fa-ban'></i>",
+        }],
+        default: "ok"
+    });
+
+    let actorsForAddEffects = [mm.mainActor];
+    if (data && allies[data]) {
+        actorsForAddEffects.push(allies[data]?.actor);
+    }
+
+    for (const actor of actorsForAddEffects) {
+        addItemsToActor(actor, items)
+    }
+}
+
 export const FEAT_FUNCTIONS = {
     'forcibleEnergy': forcibleEnergy,
     'gameHunter': gameHunter,
@@ -882,4 +952,5 @@ export const FEAT_FUNCTIONS = {
     'agonizingRebuke': agonizingRebuke,
     'inventedVulnerability': inventedVulnerability,
     'spasmOfTheBerserker': spasmOfTheBerserker,
+    'monsterHunter': monsterHunter,
 }
