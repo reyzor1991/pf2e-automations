@@ -19,7 +19,7 @@
       {
         "key": "EphemeralEffect",
         "predicate": [
-          "target:mark:enemy-tumble-behind"
+          "self:mark:enemy-tumble-behind"
         ],
         "selectors": [
           "attack-roll",

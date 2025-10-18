@@ -1,5 +1,7 @@
 ## Version 1.3.2
 - Add PL Localization (Lioheart)
+- Add Metal Carapace Shield scaling 
+- Fix Tumble Behind effect
 
 ## Version 1.3.1
 - Update logic of bloodlines

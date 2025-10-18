@@ -116,14 +116,15 @@ async function handleDeleteArmorEffect(item: Item, effectUuid: string, equipment
     }
 }
 
-
 export async function metalCarapaceShield(rule: BaseRule, mm: MessageForHandling) {
     const sourceId = equipmentUUID('Yr9yCuJiAlFh3QEB')
     const _obj = (await fromUuid(sourceId)).toObject();
-    if (mm.item.actor.level >= 3) {
-        _obj.system.hardness += 1;
-        _obj.system.hp.value += 4;
-        _obj.system.hp.max += 4;
+
+    let multiplier = Math.floor((mm.item.actor.level-1)/3);
+    if (multiplier > 0) {
+        _obj.system.hardness += multiplier;
+        _obj.system.hp.value += 4 * multiplier;
+        _obj.system.hp.max += 4 * multiplier;
     }
 
     const addedArmor = (await mm.item.actor.createEmbeddedDocuments("Item", [_obj]))[0]
@@ -135,10 +136,12 @@ export async function metalCarapaceShield(rule: BaseRule, mm: MessageForHandling
 export async function hardwoodArmorShield(rule: BaseRule, mm: MessageForHandling) {
     const sourceId = equipmentUUID('gkqzWcFgbib1BFne')
     const _obj = (await fromUuid(sourceId)).toObject();
-    if (mm.item.actor.level >= 3) {
-        _obj.system.hardness += 1;
-        _obj.system.hp.value += 4;
-        _obj.system.hp.max += 4;
+
+    let multiplier = Math.floor((mm.item.actor.level-1)/3);
+    if (multiplier > 0) {
+        _obj.system.hardness += multiplier;
+        _obj.system.hp.value += 4 * multiplier;
+        _obj.system.hp.max += 4 * multiplier;
     }
 
     const addedArmor = (await mm.item.actor.createEmbeddedDocuments("Item", [_obj]))[0]
