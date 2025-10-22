@@ -1,3 +1,6 @@
+## Version 1.3.4
+- Update lang files
+
 ## Version 1.3.3
 - Fix handling Scout exploration
 
