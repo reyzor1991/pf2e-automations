@@ -1,3 +1,6 @@
+## Version 1.3.3
+- Fix handling Scout exploration
+
 ## Version 1.3.2
 - Add PL Localization (Lioheart)
 - Add Metal Carapace Shield scaling 
