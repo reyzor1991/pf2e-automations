@@ -1,3 +1,6 @@
+## Version 1.3.5
+- Update CN lang file (AlphaStarguide)
+
 ## Version 1.3.4
 - Update lang files
 
