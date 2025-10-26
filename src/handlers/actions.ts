@@ -364,7 +364,7 @@ export async function disarm(rule: BaseRule, mm: MessageForHandling) {
                         label: "Select",
                         icon: "<i class='fa-solid fa-hand-fist'></i>",
                         callback: (event, button, form) => {
-                            return {currentWeapon: $(form).find("#fob1").val(),}
+                            return {currentWeapon: form.element.querySelector("#fob1").value,}
                         }
                     }, {action: "cancel", label: "Cancel", icon: "<i class='fa-solid fa-ban'></i>",}],
                     default: "ok"
@@ -563,7 +563,7 @@ export async function feint(rule: BaseRule, mm: MessageForHandling) {
         }
         addItemToActor(mm.targetActor, eff, mm?.messageId)
     } else  if (mm.rollOptions.has("outcome:criticalSuccess") && scoundrel) {
-        addItemToActor(mm.targetActor, await createItemObjectUuid("Compendium.pf2e-automations-patreon.effects.Item.YsNqG4OocHoErbc9", mm), mm?.messageId)
+        addItemToActor(mm.targetActor, await createItemObjectUuid(effectUUID("YsNqG4OocHoErbc9"), mm), mm?.messageId)
     } else if (mm.rollOptions.has("outcome:criticalSuccess") || scoundrel) {
         await setFeintEffect(mm, true)
     } else {
@@ -1092,7 +1092,7 @@ async function weaponShockRune(rule: HandlerRule, mm: MessageForHandling) {
             action: "ok", label: "Select", icon: "<i class='fa-solid fa-hand-fist'></i>",
             callback: (event, button, form) => {
                 return {
-                    data: $(form).find("#fob1").val(),
+                    data: form.element.querySelector("#fob1").value,
                 }
             }
         }, {

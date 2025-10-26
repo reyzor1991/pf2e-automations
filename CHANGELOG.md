@@ -1,3 +1,6 @@
+## Version 1.3.6
+- Fix feint effect
+
 ## Version 1.3.5
 - Update CN lang file (AlphaStarguide)
 

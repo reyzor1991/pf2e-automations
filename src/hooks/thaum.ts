@@ -1,5 +1,5 @@
 import {PreCreateMessageHook} from "./index";
-import {getRollOptions, getSetting} from "../helpers";
+import {effectUUID, getRollOptions, getSetting} from "../helpers";
 import {addItemsToActor, addItemToActor} from "../global-f";
 import {GlobalNamespace, moduleName} from "../const";
 
@@ -70,17 +70,17 @@ async function intensifyVulnerability(message: ChatMessage, implementation: stri
             objs.push(obj);
         }
     } else if (implementation === 'bell') {
-        let obj = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.XBve00uwPI0FK4QP");
+        let obj = await fromUuid(effectUUID("XBve00uwPI0FK4QP"));
         obj = obj?.toObject();
         if (obj) {
-            obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: "Compendium.pf2e-automations-patreon.effects.Item.XBve00uwPI0FK4QP"}});
+            obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: effectUUID("XBve00uwPI0FK4QP")}});
             objs.push(obj);
         }
     } else if (implementation === 'chalice') {
-        let obj = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.TgG0ksbrYUiBNfyf");
+        let obj = await fromUuid(effectUUID("TgG0ksbrYUiBNfyf"));
         obj = obj?.toObject();
         if (obj) {
-            obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: "Compendium.pf2e-automations-patreon.effects.Item.TgG0ksbrYUiBNfyf"}});
+            obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: effectUUID("TgG0ksbrYUiBNfyf")}});
             objs.push(obj);
         }
     } else if (implementation === 'lantern') {
@@ -91,15 +91,15 @@ async function intensifyVulnerability(message: ChatMessage, implementation: stri
             objs.push(obj)
         }
 
-        let aura = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.hA2y0arJg3ztQnF6");
+        let aura = await fromUuid(effectUUID("hA2y0arJg3ztQnF6"));
         aura = aura?.toObject();
         if (aura) {
-            aura.flags = foundry.utils.mergeObject(aura.flags ?? {}, {core: {sourceId: "Compendium.pf2e-automations-patreon.effects.Item.hA2y0arJg3ztQnF6"}});
+            aura.flags = foundry.utils.mergeObject(aura.flags ?? {}, {core: {sourceId: effectUUID("hA2y0arJg3ztQnF6")}});
             aura.system.rules[0].effects[0].predicate.push("target:effect:primary-ev-target-" + game.pf2e.system.sluggify(message.actor.name))
             objs.push(aura)
         }
     } else if (implementation === 'mirror') {
-        let tEff = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.YdwwACq7ODGs6DdA");
+        let tEff = await fromUuid(effectUUID("YdwwACq7ODGs6DdA"));
         tEff = tEff?.toObject();
         if (tEff) {
             tEff.system.rules[0].predicate.push(`target:signature:${message.actor.signature}`);
@@ -148,12 +148,12 @@ async function messageBellIntensify(message: ChatMessage) {
         return;
     }
 
-    let obj = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.vB7dCJfH7H1abldb");
+    let obj = await fromUuid(effectUUID("vB7dCJfH7H1abldb"));
     obj = obj?.toObject();
     if (!obj) {
         return;
     }
-    obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: "Compendium.pf2e-automations-patreon.effects.Item.vB7dCJfH7H1abldb"}});
+    obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: effectUUID("vB7dCJfH7H1abldb")}});
     if (message.flags.pf2e?.context?.outcome === 'criticalSuccess') {
         obj.system.rules[0].value = -3;
     }
@@ -231,12 +231,12 @@ async function messageChaliceIntensify(message: ChatMessage) {
         return;
     }
 
-    let obj = await fromUuid("Compendium.pf2e-automations-patreon.effects.Item.IxQH4PQwhbylr5VW");
+    let obj = await fromUuid(effectUUID("IxQH4PQwhbylr5VW"));
     obj = obj?.toObject();
     if (!obj) {
         return;
     }
-    obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: "Compendium.pf2e-automations-patreon.effects.Item.IxQH4PQwhbylr5VW"}});
+    obj.flags = foundry.utils.mergeObject(obj.flags ?? {}, {core: {sourceId: effectUUID("IxQH4PQwhbylr5VW")}});
     addItemToActor(message.actor, obj)
 }
 
@@ -248,7 +248,8 @@ async function messageRegaliaIntensify(message: ChatMessage) {
     if (rollOptions.has("outcome:failure") || rollOptions.has("outcome:criticalFailure")) {
         return;
     }
-    if (!rollOptions.has("self:effect:regalia-intensify-vulnerability")) {
+    if (!rollOptions.has("self:effect:regalia-intensify-vulnerability")
+        && !rollOptions.has("self:effect:intensify-vulnerability-regalia")) {
         return;
     }
 
@@ -256,6 +257,7 @@ async function messageRegaliaIntensify(message: ChatMessage) {
         rollOptions.has("target:mark:personal-antithesis")
         || rollOptions.has("target:mark:mortal-weakness")
         || rollOptions.has("target:mark:breached-defenses")
+        || rollOptions.has("target:mark:exploit-vulnerability")
     ) {
         const allies = message.token.scene.tokens
             .filter(t => t.actor && t.actor.isAllyOf(message.actor))
@@ -266,19 +268,24 @@ async function messageRegaliaIntensify(message: ChatMessage) {
             .map(t => t.actor);
 
         const options = allies.map(a => `<option value="${a.id}">${a.name}</option>`).join('');
-        const {actorId} = await Dialog.wait({
+        const {actorId} = await foundry.applications.api.DialogV2.wait({
             title: "Choose ally",
             content: `<select id="map">${options}</select><hr>`,
-            buttons: {
-                ok: {
+            buttons: [
+                {
+                    default: true,
+                    action: "ok",
                     label: "Select", icon: "<i class='fa-solid fa-hand-fist'></i>",
-                    callback: (html) => {
-                        return {actorId: html.find("#map").val()}
+                    callback: (event, button, form) => {
+                        return {actorId: form.element.querySelector("#map").value}
                     }
                 },
-                cancel: {label: "Cancel", icon: "<i class='fa-solid fa-ban'></i>",}
-            },
-            default: "ok"
+                {
+                    action: "cancel",
+                    label: "Cancel",
+                    icon: "<i class='fa-solid fa-ban'></i>",
+                }
+            ]
         });
         if (actorId === undefined || actorId === null) {
             return
