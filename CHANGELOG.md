@@ -1,3 +1,6 @@
+## Version 1.3.7
+- Update PL Localization (Lioheart)
+
 ## Version 1.3.6
 - Fix feint effect
 
