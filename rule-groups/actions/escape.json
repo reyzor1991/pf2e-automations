@@ -25,6 +25,24 @@
           ]
         }
       ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "extend": null,
+      "range": null,
+      "value": "escape",
+      "target": "none",
+      "predicate": [
+        "target",
+        "action:escape",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -97,6 +97,7 @@ export async function getRollOptions(message: ChatMessage, item: Item) {
     }
     const target = message.target?.actor || game.user.targets.first()?.actor
     if (target) {
+        data.push('target')
         data.push(...target.getSelfRollOptions('target'))
     }
     if (message.actor) {

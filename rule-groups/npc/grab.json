@@ -16,7 +16,22 @@
       "value": "Compendium.pf2e-automations.effects.Item.5MNn6cmXxbORB8x8",
       "target": "TargetEffect",
       "predicate": [
-        "origin:item:grab"
+        "origin:item:grab",
+        {
+          "not": "target:effect:restrained-until-end-of-attacker-next-turn"
+        }
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "postInfo",
+      "extend": true,
+      "range": null,
+      "value": "Compendium.pf2e-automations.effects.Item.zol83j7l2cBSmY3a",
+      "target": "TargetEffect",
+      "predicate": [
+        "origin:item:grab",
+        "target:effect:restrained-until-end-of-attacker-next-turn"
       ]
     }
   ],

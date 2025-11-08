@@ -1,3 +1,6 @@
+## Version 1.3.8
+- Fix escape rule
+
 ## Version 1.3.7
 - Update PL Localization (Lioheart)
 
