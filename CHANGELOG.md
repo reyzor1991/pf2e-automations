@@ -1,5 +1,5 @@
 ## Version 1.3.9
-- Add small compatibility with toolbelt
+- Add small compatibility with toolbelt (setting)
 
 ## Version 1.3.8
 - Fix escape rule
