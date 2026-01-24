@@ -40,6 +40,13 @@ async function processMessage(message: ChatMessage) {
 Hooks.on("createChatMessage", processMessage);
 Hooks.on(`${moduleName}.processMessage`, processMessage);
 
+Hooks.on("pf2e-toolbelt.rollSave", (data: any) => {
+    if (!getSetting("addCompatibilityWithToolbelt")) {
+        return;
+    }
+    processMessage(data?.rollMessage);
+});
+
 Hooks.on("renderChatMessageHTML", async (message: ChatMessage, html: HTMLElement) => {
     moduleHooks.renderChatMessage.forEach(h => {
         h.listen(message, html)

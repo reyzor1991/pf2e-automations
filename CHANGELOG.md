@@ -1,3 +1,6 @@
+## Version 1.3.9
+- Add small compatibility with toolbelt
+
 ## Version 1.3.8
 - Fix escape rule
 

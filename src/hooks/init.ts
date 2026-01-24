@@ -19,6 +19,15 @@ class InitSettings implements VoidModuleHook {
             type: Boolean,
         });
 
+        game.settings.register(moduleName, "addCompatibilityWithToolbelt", {
+            config: true,
+            scope: "world",
+            name: `Add compatibility with toolbelt`,
+            hint: `Only for saving throws, without rerolls`,
+            default: false,
+            type: Boolean,
+        });
+
         AdditionalSettings.init();
 
         foundry.applications.handlebars.loadTemplates([
