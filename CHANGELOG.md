@@ -1,3 +1,6 @@
+## Version 1.3.10
+- Add Celestial Armaments
+
 ## Version 1.3.9
 - Add small compatibility with toolbelt (setting)
 

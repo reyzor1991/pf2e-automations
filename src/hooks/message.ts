@@ -147,10 +147,9 @@ async function handleComplexRuleValue(rule: ComplexRule, mm: MessageForHandling,
             const newEffect = foundry.utils.deepClone(EMPTY_EFFECT);
             newEffect._id = foundry.utils.randomID()
             newEffect.name = value?.name || rule.name || newEffect.name
-            newEffect.system.duration.expiry = value.duration.expiry || "turn-start";
-            newEffect.system.duration.sustained = value.duration.sustained || false;
-            newEffect.system.duration.unit = value.duration.unit || "unlimited";
-            newEffect.system.duration.value = value.duration.value ?? -1;
+
+            await setDurationEffect(newEffect, value);
+
             if (value?.slug) {
                 newEffect.system.slug = value.slug;
             }
@@ -187,9 +186,9 @@ async function handleComplexRuleValue(rule: ComplexRule, mm: MessageForHandling,
             r.value = effect;
             let newEffect = await createItemObject(r, mm);
             if (newEffect) {
-                newEffect = setDurationEffect(newEffect, value)
+                await setDurationEffect(newEffect, value)
             }
-            addItemToActor(targetActor, newEffect);
+            await addItemToActor(targetActor, newEffect);
         }
 
         for (const i of value.immunities) {
@@ -199,13 +198,13 @@ async function handleComplexRuleValue(rule: ComplexRule, mm: MessageForHandling,
                 newEffect.name = rule.name;
             }
             newEffect.system.slug = `${i}-immunity`;
-            newEffect = setDurationEffect(newEffect, value)
-            addItemToActor(targetActor, newEffect);
+            await setDurationEffect(newEffect, value)
+            await addItemToActor(targetActor, newEffect);
         }
     }
 }
 
-function setDurationEffect(newEffect, value) {
+async function setDurationEffect(newEffect, value) {
     if (value.duration.expiry != null) {
         newEffect.system.duration.expiry = value.duration.expiry;
     }
@@ -216,9 +215,13 @@ function setDurationEffect(newEffect, value) {
         newEffect.system.duration.unit = value.duration.unit;
     }
     if (value.duration.value != null) {
-        newEffect.system.duration.value = value.duration.value;
+        if (typeof value.duration.value === "string") {
+            newEffect.system.duration.value = (await new Roll(value.duration.value).evaluate()).total;
+        } else {
+            newEffect.system.duration.value = value.duration.value;
+        }
+
     }
-    return newEffect;
 }
 
 function durationIsValid(duration: { expiry?: any, sustained?: boolean, unit?: string, value?: any }): boolean {

@@ -1,0 +1,57 @@
+{
+  "uuid": "TYTz6PclPrtT5l23",
+  "group": "feat",
+  "name": "Celestial Armaments",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [],
+  "complexRules": [
+    {
+      "type": "complex",
+      "triggerType": "saving-throw",
+      "values": [
+        {
+          "conditions": [
+            "blinded"
+          ],
+          "effects": [],
+          "duration": {
+            "expiry": "turn-end",
+            "sustained": false,
+            "unit": "rounds",
+            "value": "1d4"
+          }
+        }
+      ],
+      "target": "SelfEffect",
+      "predicate": [
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
+          ]
+        },
+        {
+          "or": [
+            "Celestial Armaments",
+            "celestial-armaments-st"
+          ]
+        }
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "value": "celestialArmaments",
+      "target": "none",
+      "predicate": [
+        "target",
+        "outcome:criticalSuccess",
+        "self:effect:celestial-armaments"
+      ]
+    }
+  ]
+}

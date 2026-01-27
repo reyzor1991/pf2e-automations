@@ -107,6 +107,7 @@
 * Buckler Dance
 * Cat Nap
 * Catfolk Dance
+* Celestial Armaments
 * Channeling Block
 * Chaotic Spell
 * Combat Grab

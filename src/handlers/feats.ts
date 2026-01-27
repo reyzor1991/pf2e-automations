@@ -914,6 +914,35 @@ async function monsterHunter(rule: HandlerRule, mm: MessageForHandling) {
     }
 }
 
+async function celestialArmaments(rule: HandlerRule, mm: MessageForHandling) {
+    let targetActor = mm.targetActor;
+    let mainActor = mm.mainActor;
+    let item = mm.item;
+    if (!mainActor || !targetActor || !item) {
+        return
+    }
+    let effect = mainActor.itemTypes.effect.find(e=>e.sourceId === "Compendium.pf2e.feat-effects.Item.h8BLaHUFnzCDJf5I");
+    if (!effect) {
+        return
+    }
+
+    if (item.id !== effect?.flags?.pf2e?.rulesSelections?.weapon) {
+        console.log('incorrect item')
+        return
+    }
+
+    actorRollSaveThrow(targetActor, 'fortitude', {
+            dc: {
+                label: "Celestial Armaments",
+                value: mainActor.attributes.classOrSpellDC.value
+            },
+            item: mm.item,
+            origin: mm.mainActor,
+            extraRollOptions: ["celestial-armaments-st"]
+        },
+    )
+}
+
 export const FEAT_FUNCTIONS = {
     'forcibleEnergy': forcibleEnergy,
     'gameHunter': gameHunter,
@@ -953,4 +982,5 @@ export const FEAT_FUNCTIONS = {
     'inventedVulnerability': inventedVulnerability,
     'spasmOfTheBerserker': spasmOfTheBerserker,
     'monsterHunter': monsterHunter,
+    'celestialArmaments': celestialArmaments
 }
