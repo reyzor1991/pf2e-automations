@@ -1,3 +1,6 @@
+## Version 1.3.11
+- Add Nightmare rune
+
 ## Version 1.3.10
 - Add Celestial Armaments
 

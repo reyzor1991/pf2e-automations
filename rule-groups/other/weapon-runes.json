@@ -205,6 +205,37 @@
       ]
     },
     {
+      "triggerType": "attack-roll",
+      "value": "stupefied",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "outcome:criticalSuccess",
+        {
+          "or": [
+            "item:rune:property:nightmare",
+            "crit-item-1:rune:property:nightmare",
+            "crit-item-2:rune:property:nightmare"
+          ]
+        }
+      ]
+    },
+    {
+      "triggerType": "attack-roll",
+      "value": "frightened 2",
+      "target": "TargetAddCondition",
+      "predicate": [
+        "outcome:criticalSuccess",
+        "target:condition:stupefied",
+        {
+          "or": [
+            "item:rune:property:nightmare",
+            "crit-item-1:rune:property:nightmare",
+            "crit-item-2:rune:property:nightmare"
+          ]
+        }
+      ]
+    },
+    {
       "type": "base",
       "triggerType": "saving-throw",
       "extend": null,
