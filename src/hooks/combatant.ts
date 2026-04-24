@@ -47,6 +47,9 @@ export class StartTurnHook implements TurnHook {
 
 export class EndTurnHook implements TurnHook {
     listen(combatant: Combatant, encounter: Combat): void {
+        if (!combatant?.actor) {
+            return;
+        }
         const mm = new MessageForHandling(undefined, undefined, new Set(combatant.actor.getRollOptions()))
         mm.mainActor = combatant.actor
         mm.mainToken = combatant.token

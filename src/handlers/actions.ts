@@ -981,7 +981,7 @@ export async function suffocatingEndTurn(rule: BaseRule, mm: MessageForHandling)
             flags: {
                 [moduleName]: {}
             },
-            user: game.user._id,
+            user: game.user.id,
             speaker: ChatMessage.getSpeaker(),
             content: `${ef.actor.name} is dead`
         });

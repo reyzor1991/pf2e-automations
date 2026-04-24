@@ -1,15 +1,22 @@
 import {moduleName} from "../const";
 
-export abstract class SubSettings extends FormApplication {
+type SettingsDefinition = Record<string, {
+    choices?: Record<string, string>;
+    type?: BooleanConstructor | NumberConstructor | StringConstructor;
+    [key: string]: unknown;
+}>;
 
-    static _namespace;
+export abstract class SubSettings extends foundry.applications.api.HandlebarsApplicationMixin(
+    foundry.applications.api.ApplicationV2,
+) {
+    static _namespace: string;
 
     static get namespace() {
-        return this.constructor._namespace
-    };
+        return this._namespace;
+    }
 
-    static get settings() {
-        return {}
+    static get settings(): SettingsDefinition {
+        return {};
     }
 
     static init() {
@@ -23,25 +30,58 @@ export abstract class SubSettings extends FormApplication {
         }
     }
 
-    static get defaultOptions() {
-        const options = super.defaultOptions;
-        options.classes.push("settings-menu", "sheet");
-
-        return {
-            ...options,
-            title: `${moduleName}.SETTINGS.Menu.${this._namespace}.Name`,
-            id: `${this.namespace}-settings`,
-            template: `modules/${moduleName}/templates/settings.hbs`,
+    static DEFAULT_OPTIONS = {
+        tag: "form",
+        window: {
+            resizable: true,
+        },
+        classes: ["settings-menu", "sheet", "pf2e-automations-settings-menu"],
+        position: {
             width: 550,
             height: "auto",
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: "form"}],
+        },
+        form: {
+            handler: this.formHandler,
             closeOnSubmit: true,
             submitOnChange: false,
-        };
+        },
+    };
+
+    static PARTS = {
+        settings: {
+            template: `modules/${moduleName}/templates/settings.hbs`,
+        },
+        footer: {
+            template: `modules/${moduleName}/templates/partials/save.hbs`,
+            scrollable: [''],
+        },
+    };
+
+    static async formHandler(
+        _event: SubmitEvent | Event,
+        _form: HTMLFormElement,
+        formData: FormData & { object: Record<string, unknown> },
+    ) {
+        for (const [key, value] of Object.entries(formData.object)) {
+            await game.settings.set(moduleName, key, value);
+        }
     }
 
-    async getData() {
-        const data = Object.entries(this.constructor.settings).reduce(function (obj, [key, setting]) {
+    _initializeApplicationOptions(options: object) {
+        const applicationOptions = super._initializeApplicationOptions(options);
+        const cls = this.constructor as typeof SubSettings;
+
+        applicationOptions.id = `${moduleName}-${cls.namespace}-settings`;
+        applicationOptions.window = foundry.utils.mergeObject(applicationOptions.window ?? {}, {
+            title: `${moduleName}.SETTINGS.Menu.${cls.namespace}.Name`,
+        });
+
+        return applicationOptions;
+    }
+
+    async _prepareContext(_options: { parts: string[] }) {
+        const settings = (this.constructor as typeof SubSettings).settings;
+        const data = Object.entries(settings).reduce((obj, [key, setting]) => {
             obj[key] = {
                 ...setting,
                 key,
@@ -52,17 +92,10 @@ export abstract class SubSettings extends FormApplication {
                 isCheckbox: setting.type === Boolean,
             };
             return obj;
-        }, {});
+        }, {} as Record<string, unknown>);
 
         return {
             settings: data,
         };
-    }
-
-    async _updateObject(event, formData) {
-        for (const k in formData) {
-            await game.settings.set(moduleName, k, formData[k]);
-        }
-
     }
 }

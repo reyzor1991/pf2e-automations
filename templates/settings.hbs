@@ -1,8 +1,8 @@
-<form autocomplete="off" onsubmit="event.preventDefault();">
+<div>
     {{#each settings as |setting|}}
         <div class="form-group">
-            <label for="{{setting.key}}">{{localize setting.name}}</label>
             <div class="form-fields">
+                <label for="{{setting.key}}">{{localize setting.name}}</label>
                 {{#if setting.isSelect}}
                     <select name="{{setting.key}}">
                         {{selectOptions setting.choices selected=setting.value localize=true}}
@@ -20,10 +20,4 @@
             {{/if}}
         </div>
     {{/each}}
-
-    <footer>
-        <button type="submit">
-            <i class="fa-regular fa-save"></i> {{localize "SETTINGS.Save"}}
-        </button>
-    </footer>
-</form>
+</div>

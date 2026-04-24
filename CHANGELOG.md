@@ -1,3 +1,6 @@
+## Version 1.4.0
+- v14
+
 ## Version 1.3.11
 - Add Nightmare rune
 

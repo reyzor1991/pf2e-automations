@@ -319,7 +319,7 @@ async function setPartyVision(value: boolean) {
         flags: {
             [moduleName]: {}
         },
-        user: game.user._id,
+        user: game.user.id,
         whisper: ChatMessage.getWhisperRecipients("GM").map((u) => u.id),
         speaker: ChatMessage.getSpeaker(),
         content: `<h2>Party Vision is ${partyVision ? 'On' : 'Off'}`
