@@ -144,7 +144,7 @@ export async function notifyExplorationActivity(rule: BaseRule, mm: MessageForHa
                 [moduleName]: {}
             },
             whisper: ChatMessage.getWhisperRecipients("GM").map((u) => u.id),
-            type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+            style: CONST.CHAT_MESSAGE_STYLES.OTHER,
             content: messages.join(' ')
         });
     }
@@ -283,7 +283,7 @@ export async function criticalSpecializationAxe(rule: BaseRule, mm: MessageForHa
             },
             user: game.user.id,
             content: `No targets for Critical Specialization Axe`,
-            type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+            style: CONST.CHAT_MESSAGE_STYLES.OTHER,
         });
     }
 }
@@ -298,7 +298,7 @@ async function handleAddDamage(mm: MessageForHandling, target, lastAttack, total
             },
             user: game.user.id,
             content: `Target of Critical Specialization has bigger DC than attack roll`,
-            type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+            style: CONST.CHAT_MESSAGE_STYLES.OTHER,
         });
     } else {
         const roll = new GlobalNamespace.DamageRoll(`${totalDamage}[${damageType}]`);
@@ -712,7 +712,7 @@ export async function handleMasterStrikeResult(rule: BaseRule, mm: MessageForHan
             flags: {
                 [moduleName]: {}
             },
-            type: CONST.CHAT_MESSAGE_TYPES.OOC,
+            style: CONST.CHAT_MESSAGE_STYLES.OOC,
             content: `The ${mm.mainToken?.name} is paralyzed for 4 rounds, knocked @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious} for 2 hours, or killed (your choice).`
         });
     } else if (mm.rollOptions.has("outcome:failure")) {
