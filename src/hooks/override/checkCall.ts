@@ -9,7 +9,7 @@ export function checkCall(wrapped: Function, ...args: any[]) {
     const options = context?.options instanceof Set ? context.options : new Set();
 
 
-    if (context.rollMode !== "gmroll" && context.rollMode !== "blindroll") {
+    if (context.messageMode !== "gmroll" && context.messageMode !== "blindroll") {
         if (getSetting("blindRoll")) {
             if (["skill-check", "perception-check"].includes(context.type)) {
                 const onlySkills = getSetting("onlySkillBlindRoll")
@@ -19,7 +19,7 @@ export function checkCall(wrapped: Function, ...args: any[]) {
 
                 if (onlySkills.length > 0) {
                     if (context?.domains?.some(a => onlySkills.includes(a))) {
-                        context.rollMode = getRollMode();
+                        context.messageMode = getRollMode();
                     }
                 } else {
                     const skills = getSetting("skipSkillBlindRoll")
@@ -28,14 +28,14 @@ export function checkCall(wrapped: Function, ...args: any[]) {
                         .filter(s => !!s);
 
                     if (skills.length === 0 || !context?.domains?.some(a => skills.includes(a))) {
-                        context.rollMode = getRollMode();
+                        context.messageMode = getRollMode();
                     }
                 }
             }
         }
 
         if (getSetting("hiddenTokenBlindRoll") && context?.token?.hidden) {
-            context.rollMode = getRollMode();
+            context.messageMode = getRollMode();
         }
     }
 

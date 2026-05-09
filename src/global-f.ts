@@ -387,7 +387,7 @@ export function lastMessages(n = 20): ChatMessage[] {
 }
 
 export function getRollMode() {
-    return game.user.isGM ? "gmroll" : "blindroll";
+    return game.user.isGM ? "gm" : "blind";
 }
 
 export function eventToRollParams(event: KeyboardEvent, rollType: { type: string }): { skipDialog: boolean, params?: string } {
@@ -397,7 +397,7 @@ export function eventToRollParams(event: KeyboardEvent, rollType: { type: string
 
     const params = {skipDialog: event.shiftKey ? !skipDefault : skipDefault};
     if (event.ctrlKey || event.metaKey) {
-        params.rollMode = getRollMode();
+        params.messageMode = getRollMode();
     }
 
     return params;

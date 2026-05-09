@@ -1,3 +1,6 @@
+## Version 1.4.2
+- fix roll settings
+
 ## Version 1.4.1
 - fix v14 messages
 

@@ -302,7 +302,7 @@ function checkActorTargetConditions(message: ChatMessage, target: Actor, opts:st
         message.updateSource({
             whisper: ChatMessage.getWhisperRecipients("GM").map((u) => u.id),
             blind: true,
-            "flags.pf2e.context.rollMode": getRollMode(),
+            "flags.pf2e.context.messageMode": getRollMode(),
             "flags.pf2e.context.options": opts,
             "flags.pf2e.context.secret": true,
         });
