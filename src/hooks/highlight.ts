@@ -1,8 +1,7 @@
 import {PreCreateMessageHook} from "./index";
 import {getSetting} from "../helpers";
 import {EMPTY_EFFECT, moduleName} from "../const";
-import {addItemToActor} from "../global-f";
-import * as module from "node:module";
+import {addItemToActor, updateItem} from "../global-f";
 
 
 function ordinalString(value: number) {
@@ -42,7 +41,13 @@ export class DelayConsequencesHook implements PreCreateMessageHook {
             if (message.target?.actor) {
                 let effect = message.target.actor.itemTypes.effect.find(e=>e.slug === 'effect-delay-consequences');
                 if (effect && !effect.getFlag(moduleName, 'delayDamage')) {
-                    effect.setFlag(moduleName, 'delayDamage', message.toObject())
+                    updateItem(effect, {
+                        flags: {
+                            [moduleName]: {
+                                delayDamage: message.toObject()
+                            }
+                        }
+                    });
                     ui.notifications.info("Damage was delayed")
                     return false;
                 }
