@@ -1,3 +1,6 @@
+## Version 1.4.4
+- Fix shock rune
+
 ## Version 1.4.3
 - fix
 

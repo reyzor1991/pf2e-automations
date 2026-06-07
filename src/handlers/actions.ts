@@ -1066,7 +1066,8 @@ async function weaponShockRune(rule: HandlerRule, mm: MessageForHandling) {
 
     let tokens = mm.targetToken.scene.tokens.contents
         .filter(a => distanceIsCorrect(a, mm.targetToken, 10))
-        .filter(t => t !== mm.targetToken);
+        .filter(t => t !== mm.targetToken)
+        .filter(t => t !== mm.mainToken);
     if (!tokens.length) {
         return
     }
@@ -1091,8 +1092,9 @@ async function weaponShockRune(rule: HandlerRule, mm: MessageForHandling) {
         buttons: [{
             action: "ok", label: "Select", icon: "<i class='fa-solid fa-hand-fist'></i>",
             callback: (event, button, form) => {
+                const select = form.element.querySelector("#fob1") as HTMLSelectElement | null;
                 return {
-                    data: form.element.querySelector("#fob1").value,
+                    data: select ? getSelectedOptionValues(select, 2) : [],
                 }
             }
         }, {
@@ -1132,6 +1134,17 @@ async function targetDamageRoll(speakerData, token: Token, formula: string) {
         }
     );
 }
+
+export function getSelectedOptionValues(select: HTMLSelectElement, maxSelections?: number): string[] {
+    const values = Array.from(select.selectedOptions, option => option.value);
+
+    if (typeof maxSelections === "number") {
+        return values.slice(0, maxSelections);
+    }
+
+    return values;
+}
+
 
 export const ACTION_FUNCTIONS = {
     'weaponRunes': weaponRunes,
