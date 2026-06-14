@@ -1,3 +1,6 @@
+## Version 1.4.5
+- Fix epithet critical specialization
+
 ## Version 1.4.4
 - Fix shock rune
 

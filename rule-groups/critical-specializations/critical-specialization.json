@@ -168,6 +168,11 @@
             "crit-item-2:group:firearm",
             "crit-item-2:group:hammer"
           ]
+        },
+        {
+          "not": [
+            "epithet-critical-specialization"
+          ]
         }
       ]
     },
