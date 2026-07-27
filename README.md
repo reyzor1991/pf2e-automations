@@ -339,6 +339,7 @@
 * Ascendant Dragon Spirit
 * Assassin Vine Wine
 * Auric Noodles
+* Aurochs Jerky
 * Bestial Mutagen
 * Blight Breath
 * Blood Booster
@@ -405,10 +406,12 @@
 * Insight Coffee
 * Iron Medallion
 * Iron Wine
+* Journeybread (Power)
 * Juggernaut Mutagen
 * Lastwall Soup
 * Life-Boosting Oil
 * Malleable Mixture
+* Matsuki's Medicinal Wine
 * Mighty Counterweight
 * Morph Jewel
 * Mortalis Coin
@@ -418,7 +421,9 @@
 * Pallesthetic Mutagen
 * Phasing Trine
 * Phoenix Flask
+* Poison Fizz
 * Potency Crystal
+* Preserved Moonflower
 * Potion of Acid Resistance
 * Potion of Cold Resistance
 * Potion of Electricity Resistance
@@ -431,7 +436,10 @@
 * Potion of Stable Form
 * Potion of Swimming
 * Prey Mutagen
+* Pucker Pickle
+* Purple Pepper Powder
 * Quicksilver Mutagen
+* Rainbow Vinegar
 * Red-Rib Gill Mask
 * Sanguine Mutagen
 * Sea Touch Elixir

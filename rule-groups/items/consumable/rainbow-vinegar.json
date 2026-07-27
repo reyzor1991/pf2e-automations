@@ -1,0 +1,38 @@
+{
+  "uuid": "I9iLVIuWljsM5gQm",
+  "group": "equipment",
+  "name": "Rainbow Vinegar",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.NVssWHKyKlaRmHog",
+    "Compendium.pf2e.equipment-srd.Item.iq7hL6HDsPCPU4pt"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.bHCpqwKH9JM8FZa6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:rainbow-vinegar-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.bHCpqwKH9JM8FZa6",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:rainbow-vinegar-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}
