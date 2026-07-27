@@ -1,0 +1,26 @@
+{
+  "uuid": "ObqgBndapxDVMG20",
+  "group": "equipment",
+  "name": "Purple Pepper Powder",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.IouqNbVVqt2oJDri"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.G2QC7QCEsPth2pUd",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:purple-pepper-powder"
+      ]
+    }
+  ],
+  "complexRules": []
+}

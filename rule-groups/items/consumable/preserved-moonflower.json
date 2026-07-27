@@ -1,0 +1,26 @@
+{
+  "uuid": "zP0mk9vmwpZ1WKRR",
+  "group": "equipment",
+  "name": "Preserved Moonflower",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.ebpO5kKJBEvbZQrQ"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.32VbgOcmqIqRpWIU",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:preserved-moonflower"
+      ]
+    }
+  ],
+  "complexRules": []
+}

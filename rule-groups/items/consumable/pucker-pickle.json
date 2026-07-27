@@ -1,0 +1,26 @@
+{
+  "uuid": "foE2Pc5slBBRzTVm",
+  "group": "equipment",
+  "name": "Pucker Pickle",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.VnUXcWG4xWGcb7sc"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.lcB7s9zxqoB42eG1",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:pucker-pickle"
+      ]
+    }
+  ],
+  "complexRules": []
+}
