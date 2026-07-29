@@ -1,0 +1,50 @@
+{
+  "uuid": "NB8J2hQY7kpm3b1S",
+  "group": "equipment",
+  "name": "Poison Fizz",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.XdHMroAomWalt7I9",
+    "Compendium.pf2e.equipment-srd.Item.GDbDpe7W7vOEwnEr",
+    "Compendium.pf2e.equipment-srd.Item.D8i3OBVMkxmCCREV"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.AJNUrLJgTC0AdBhS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:poison-fizz-lesser"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.AJNUrLJgTC0AdBhS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:poison-fizz-moderate"
+      ]
+    },
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.AJNUrLJgTC0AdBhS",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:poison-fizz-greater"
+      ]
+    }
+  ],
+  "complexRules": []
+}

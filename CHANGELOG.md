@@ -1,3 +1,6 @@
+## Version 1.4.6
+- Add alchemical food consumable automations (Journeybread Power, Matsuki's Medicinal Wine, Rainbow Vinegar, Pucker Pickle, Preserved Moonflower, Purple Pepper Powder, Poison Fizz, Aurochs Jerky)
+
 ## Version 1.4.5
 - Fix epithet critical specialization
 

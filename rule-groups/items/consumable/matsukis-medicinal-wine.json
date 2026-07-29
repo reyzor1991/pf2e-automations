@@ -1,0 +1,26 @@
+{
+  "uuid": "Ggsa1bbsBMFli6s8",
+  "group": "equipment",
+  "name": "Matsuki's Medicinal Wine",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.5lhQ79p0Z3j1VsY3"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.tsxBwSRFqMoorMJ3",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:matsukis-medicinal-wine"
+      ]
+    }
+  ],
+  "complexRules": []
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "vvLaWN5iUKR5jWpz",
+  "group": "equipment",
+  "name": "Aurochs Jerky",
+  "labels": [
+    "consumable"
+  ],
+  "source": [
+    "Compendium.pf2e.equipment-srd.Item.CNDOlR00gFm3DDAu"
+  ],
+  "isActive": true,
+  "baseRules": [
+    {
+      "type": "base",
+      "triggerType": "use",
+      "extend": null,
+      "range": null,
+      "value": "Compendium.pf2e.equipment-effects.Item.4p6rOPyQ5ziKp1VP",
+      "target": "SelfOrTargetEffect",
+      "predicate": [
+        "consumable:aurochs-jerky"
+      ]
+    }
+  ],
+  "complexRules": []
+}
