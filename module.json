@@ -99,7 +99,7 @@
   },
   "url": "https://github.com/reyzor1991/pf2e-automations",
   "manifest": "https://raw.githubusercontent.com/reyzor1991/pf2e-automations/refs/heads/master/module.json",
-  "download": "https://github.com/reyzor1991/pf2e-automations/releases/download/1.4.5/pf2e-automations.zip",
+  "download": "https://github.com/reyzor1991/pf2e-automations/releases/download/1.4.6/pf2e-automations.zip",
   "relationships": {
     "systems": [
       {

@@ -423,7 +423,6 @@
 * Phoenix Flask
 * Poison Fizz
 * Potency Crystal
-* Preserved Moonflower
 * Potion of Acid Resistance
 * Potion of Cold Resistance
 * Potion of Electricity Resistance
@@ -435,6 +434,7 @@
 * Potion of Sonic Resistance
 * Potion of Stable Form
 * Potion of Swimming
+* Preserved Moonflower
 * Prey Mutagen
 * Pucker Pickle
 * Purple Pepper Powder
