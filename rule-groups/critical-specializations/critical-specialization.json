@@ -170,9 +170,7 @@
           ]
         },
         {
-          "not": [
-            "epithet-critical-specialization"
-          ]
+          "not": "epithet-critical-specialization"
         }
       ]
     },
