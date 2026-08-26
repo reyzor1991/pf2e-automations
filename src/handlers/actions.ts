@@ -1145,8 +1145,60 @@ export function getSelectedOptionValues(select: HTMLSelectElement, maxSelections
     return values;
 }
 
+async function wardingStatuetteAttack(rule: HandlerRule, mm: MessageForHandling) {
+    let tokens = mm.targetToken.scene.tokens.contents
+        .filter(a => distanceIsCorrect(a, mm.targetToken, 10))
+        .filter(t => t !== mm.targetToken)
+        .filter(t => t !== mm.mainToken)
+        .filter(t => t?.actor?.isAllyOf(mm.mainActor));
+
+    if (!tokens.length) {
+        return
+    }
+
+    let tokensMap = tokens
+        .reduce(function (obj, t) {
+            obj[t.uuid] = t;
+            return obj;
+        }, {});
+
+    const options = tokens
+        .map(t => `<option value="${t.uuid}">${t.name}</option>`)
+        .join("")
+
+    const {data} = await foundry.applications.api.DialogV2.wait({
+        window: {title: game.i18n.localize('patreon-v3.Messages.SelectTarget')},
+        content: `
+                    <select id="fob1" autofocus style="height: 50px; max-width: 100%">
+                        ${options}
+                    </select>
+                `,
+        buttons: [{
+            action: "ok", label: game.i18n.localize("patreon-v3.UI.Select"), icon: "<i class='fa-solid fa-hand-fist'></i>",
+            callback: (event, button, form) => {
+                const select = form.element.querySelector("#fob1") as HTMLSelectElement | null;
+                return {
+                    data: select ? getSelectedOptionValues(select, 1) : [],
+                }
+            }
+        }, {
+            action: "cancel",
+            label: game.i18n.localize("patreon-v3.UI.Cancel"),
+            icon: "<i class='fa-solid fa-ban'></i>",
+        }],
+        default: "ok"
+    });
+    if (!data) {
+        return
+    }
+    let selectTargetActor = data.map(t => tokensMap[t]).filter(t => !!t)?.[0]?.actor;
+    if (selectTargetActor) {
+        addItemToActor(selectTargetActor, await createItemObjectUuid("Compendium.pf2e.equipment-effects.Item.gwiyabYi92R97bXZ", mm))
+    }
+}
 
 export const ACTION_FUNCTIONS = {
     'weaponRunes': weaponRunes,
     'weaponShockRune': weaponShockRune,
+    'wardingStatuetteAttack': wardingStatuetteAttack,
 }

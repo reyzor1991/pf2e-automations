@@ -476,6 +476,7 @@
 * Vermin Repellent Agent
 * Viperous Elixir
 * War Blood Mutagen
+* Warding Statuette
 * Wemmuth Trinket
 * Wine of the Blood
 * Witch's Finger

@@ -1,0 +1,51 @@
+{
+  "uuid": "myo4RG2tqQQDcBmu",
+  "group": "equipment",
+  "name": "Warding Statuette",
+  "labels": [],
+  "source": [],
+  "isActive": true,
+  "baseRules": [
+    {
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.equipment-effects.Item.Empv55xGFN2Mk3cu",
+      "target": "SelfEffect",
+      "choiceSetSelection": "Compendium.pf2e.equipment-srd.Item.SW6JVF5SP59W8B0Q",
+      "predicate": [
+        "origin:item:slug:warding-statuette"
+      ]
+    },
+    {
+      "triggerType": "postInfo",
+      "value": "Compendium.pf2e.equipment-effects.Item.Empv55xGFN2Mk3cu",
+      "target": "SelfEffect",
+      "choiceSetSelection": "Compendium.pf2e.equipment-srd.Item.ap9Bn8MLUJa8AtGj",
+      "predicate": [
+        "origin:item:slug:warding-statuette-greater"
+      ]
+    }
+  ],
+  "handlerRules": [
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "value": "wardingStatuetteAttack",
+      "target": "none",
+      "predicate": [
+        "target",
+        {
+          "or": [
+            "outcome:success",
+            "outcome:criticalSuccess"
+          ]
+        },
+        {
+          "or": [
+            "sub-item:warding-statuette",
+            "sub-item:warding-statuette-greater"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -113,6 +113,9 @@ export async function getRollOptions(message: ChatMessage, item: Item) {
     if (message?.content.includes("shield") && message?.content.includes("absorb")) {
         data.push(`shield:block`)
     }
+    let subItems = item?.subitems?.map(a=>a.slug).map(a=>`sub-item:${a}`) || [];
+    data.push(...subItems);
+
     return new Set(data)
 }
 

@@ -1,3 +1,6 @@
+## Version 1.4.8
+- Add Warding Statuette
+
 ## Version 1.4.7
 - Fix Hammer Critical Specialization
 
