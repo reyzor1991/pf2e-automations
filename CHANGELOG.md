@@ -1,3 +1,6 @@
+## Version 1.4.9
+- Add Korean Lang Translation (Rutz179)
+
 ## Version 1.4.8
 - Add Warding Statuette
 
