@@ -13,8 +13,6 @@
     {
       "type": "base",
       "triggerType": "skill-check",
-      "extend": null,
-      "range": null,
       "value": "Compendium.pf2e.feat-effects.Item.uBJsxCzNhje8m8jj",
       "target": "SelfEffect",
       "predicate": [
@@ -35,8 +33,6 @@
     {
       "type": "complex",
       "triggerType": "skill-check",
-      "extend": null,
-      "range": null,
       "values": [
         {
           "conditions": [],
@@ -65,8 +61,6 @@
     {
       "type": "handler",
       "triggerType": "damage-roll",
-      "extend": null,
-      "range": null,
       "value": "deletePanache",
       "target": "none",
       "predicate": [
@@ -78,6 +72,30 @@
             "finisher:confident",
             "agile",
             "finesse"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "handler",
+      "triggerType": "attack-roll",
+      "value": "deletePanache",
+      "target": "none",
+      "predicate": [
+        "item:melee",
+        "finisher",
+        "self:effect:panache",
+        {
+          "or": [
+            "finisher:confident",
+            "agile",
+            "finesse"
+          ]
+        },
+        {
+          "or": [
+            "outcome:failure",
+            "outcome:criticalFailure"
           ]
         }
       ]
