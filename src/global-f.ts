@@ -253,7 +253,7 @@ export async function rollDamage(actor: Actor | undefined, token: Token | undefi
     if (!actor) {
         return
     }
-    const roll = new GlobalNamespace.DamageRoll(parseFormula(formula, actor, item));
+    const roll = new GlobalNamespace.DamageRoll(parseFormula(formula, actor));
     await roll.evaluate();
     roll.toMessage({speaker: {alias: actor.name}});
 }

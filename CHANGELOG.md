@@ -1,3 +1,6 @@
+## Version 1.4.11
+- Fix trip damage
+
 ## Version 1.4.10
 - Update panache rule
 
