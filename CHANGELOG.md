@@ -1,3 +1,6 @@
+## Version 1.4.12
+- Add incapacitation trait to stun Stunning Blows 
+
 ## Version 1.4.11
 - Fix trip damage
 

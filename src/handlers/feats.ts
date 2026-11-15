@@ -399,7 +399,7 @@ function stunningBlows(rule: BaseRule, mm: MessageForHandling) {
                 value: mm.mainActor.attributes.classDC.value
             },
             origin: mm.mainActor,
-            extraRollOptions: ["origin:item:stunning-blows"]
+            extraRollOptions: ["origin:item:stunning-blows", "item:trait:incapacitation"]
         },
     )
 }
