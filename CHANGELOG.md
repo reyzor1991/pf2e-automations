@@ -1,3 +1,6 @@
+## Version 1.4.13
+- Fix Runic Weapon
+
 ## Version 1.4.12
 - Add incapacitation trait to stun Stunning Blows 
 

@@ -35,6 +35,18 @@ export async function createItemObjectUuid(uuid: string, mm: MessageForHandling,
         if (cSet.length === 1) {
             cSet[0].selection = rule?.choiceSetSelection;
         }
+    } else if (obj.system.rules.filter(r => r.key === "ChoiceSet").length === 1 && mm.mainActor) {
+        const csRule = obj.system.rules.filter(r => r.key === "ChoiceSet")[0];
+
+        if (mm.mainActor && rule?.target === "SelfEffect") {
+            const effect = new CONFIG.Item.documentClass(obj, {parent: mm.mainActor});
+            const ele = new game.pf2e.RuleElements.builtin.ChoiceSet(foundry.utils.deepClone(csRule), {parent: effect});
+            await ele.preCreate({itemSource: obj, ruleSource: csRule, tempItems: []});
+        } else if (mm.targetActor && (rule?.target === "TargetEffect" || rule?.target === "SelfOrTargetEffect")) {
+            const effect = new CONFIG.Item.documentClass(obj, {parent: mm.targetActor});
+            const ele = new game.pf2e.RuleElements.builtin.ChoiceSet(foundry.utils.deepClone(csRule), {parent: effect});
+            await ele.preCreate({itemSource: obj, ruleSource: csRule, tempItems: []});
+        }
     }
 
     return obj
